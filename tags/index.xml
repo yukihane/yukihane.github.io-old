@@ -6,10 +6,28 @@
     <description>Recent content in Tags on 発火後忘失</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Thu, 30 Jan 2020 02:17:02 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 01 Feb 2020 05:09:38 +0000</lastBuildDate>
     
 	<atom:link href="https://yukihane.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>neon</title>
+      <link>https://yukihane.github.io/tags/neon/</link>
+      <pubDate>Sat, 01 Feb 2020 05:09:38 +0000</pubDate>
+      
+      <guid>https://yukihane.github.io/tags/neon/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>rust</title>
+      <link>https://yukihane.github.io/tags/rust/</link>
+      <pubDate>Sat, 01 Feb 2020 05:09:38 +0000</pubDate>
+      
+      <guid>https://yukihane.github.io/tags/rust/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>fluentd</title>

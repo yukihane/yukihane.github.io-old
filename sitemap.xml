@@ -3,12 +3,27 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://yukihane.github.io/tags/neon/</loc>
+    <lastmod>2020-02-01T05:09:38+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://yukihane.github.io/posts/202002/01/hello-rust-neon/</loc>
     <lastmod>2020-02-01T05:09:38+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://yukihane.github.io/posts/</loc>
+    <lastmod>2020-02-01T05:09:38+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yukihane.github.io/tags/rust/</loc>
+    <lastmod>2020-02-01T05:09:38+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yukihane.github.io/tags/</loc>
     <lastmod>2020-02-01T05:09:38+00:00</lastmod>
   </url>
   
@@ -24,11 +39,6 @@
   
   <url>
     <loc>https://yukihane.github.io/tags/fluentd/</loc>
-    <lastmod>2020-01-30T02:17:02+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://yukihane.github.io/tags/</loc>
     <lastmod>2020-01-30T02:17:02+00:00</lastmod>
   </url>
   
