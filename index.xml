@@ -6,10 +6,19 @@
     <description>Recent content on 発火後忘失</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Thu, 30 Jan 2020 02:17:02 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 01 Feb 2020 05:09:38 +0000</lastBuildDate>
     
 	<atom:link href="https://yukihane.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Nodeのnative moduleをRustで書いてみる(Neon)</title>
+      <link>https://yukihane.github.io/posts/202002/01/hello-rust-neon/</link>
+      <pubDate>Sat, 01 Feb 2020 05:09:38 +0000</pubDate>
+      
+      <guid>https://yukihane.github.io/posts/202002/01/hello-rust-neon/</guid>
+      <description>RustプログラムのGUIにElectronを使うことを考えています。 その前調査としてNodeのネイティブモジュールとしてRustプログラム</description>
+    </item>
     
     <item>
       <title>`fluent-plugin-bigquery` のパラメータ `request_timeout_sec` 、未設定の場合はどうなるの？</title>
