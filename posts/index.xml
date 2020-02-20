@@ -6,10 +6,19 @@
     <description>Recent content in Posts on 発火後忘失</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Sat, 01 Feb 2020 05:09:38 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 20 Feb 2020 06:25:59 +0000</lastBuildDate>
     
 	<atom:link href="https://yukihane.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Spring Bootでは `-parameters` オプションは有効化されている</title>
+      <link>https://yukihane.github.io/posts/202002/20/spring-boot-compiler-parameters/</link>
+      <pubDate>Thu, 20 Feb 2020 06:25:59 +0000</pubDate>
+      
+      <guid>https://yukihane.github.io/posts/202002/20/spring-boot-compiler-parameters/</guid>
+      <description>MyBatisの設定項目として useActualParamName というものがあります。マニュアルの説明によると、 ステートメントの引数を参照する際、メソッドシグネチャで宣言さ</description>
+    </item>
     
     <item>
       <title>Nodeのnative moduleをRustで書いてみる(Neon)</title>
