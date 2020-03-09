@@ -6,10 +6,19 @@
     <description>Recent content in fluentd on 発火後忘失</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Thu, 30 Jan 2020 02:17:02 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 09 Mar 2020 07:54:53 +0000</lastBuildDate>
     
 	<atom:link href="https://yukihane.github.io/tags/fluentd/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>td-agentにプロキシを設定する</title>
+      <link>https://yukihane.github.io/posts/202003/09/td-agent-with-proxy/</link>
+      <pubDate>Mon, 09 Mar 2020 07:54:53 +0000</pubDate>
+      
+      <guid>https://yukihane.github.io/posts/202003/09/td-agent-with-proxy/</guid>
+      <description>sudo systemctl edit td-agent で編集画面を開き、次を記述: [Service] Environment=&#34;HTTP_PROXY=http://myproxy.example.com:8080&#34;</description>
+    </item>
     
     <item>
       <title>`fluent-plugin-bigquery` のパラメータ `request_timeout_sec` 、未設定の場合はどうなるの？</title>

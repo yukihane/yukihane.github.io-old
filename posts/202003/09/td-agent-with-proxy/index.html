@@ -6,16 +6,16 @@
 
 
 
-<title>finalと実質finalの違い | 発火後忘失</title>
+<title>td-agentにプロキシを設定する | 発火後忘失</title>
 
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content='https://ja.stackoverflow.com/a/63099/2808 を見ていて気づいたのですが、 実質final というのは脳内(コンパイラ)で final を補完してくれる、というような処理が行われるわけではないのですね'>
-<meta name="keywords" content='java'>
+<meta name="description" content='sudo systemctl edit td-agent で編集画面を開き、次を記述: [Service] Environment=&#34;HTTP_PROXY=http://myproxy.example.com:8080&#34;'>
+<meta name="keywords" content='fluentd'>
 <meta name="msapplication-TileColor" content="#b91d47">
 <meta name="theme-color" content="#ffffff">
 
-<link rel="canonical" href="https://yukihane.github.io/posts/202002/21/effectively-final-difference/" />
+<link rel="canonical" href="https://yukihane.github.io/posts/202003/09/td-agent-with-proxy/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -23,16 +23,16 @@
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#007aa6">
 <meta name="theme-color" content="#ffffff">
 
-<meta property="og:title" content="finalと実質finalの違い" />
-<meta property="og:description" content="https://ja.stackoverflow.com/a/63099/2808 を見ていて気づいたのですが、 実質final というのは脳内(コンパイラ)で final を補完してくれる、というような処理が行われるわけではないのですね" />
+<meta property="og:title" content="td-agentにプロキシを設定する" />
+<meta property="og:description" content="sudo systemctl edit td-agent で編集画面を開き、次を記述: [Service] Environment=&#34;HTTP_PROXY=http://myproxy.example.com:8080&#34;" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://yukihane.github.io/posts/202002/21/effectively-final-difference/" />
-<meta property="article:published_time" content="2020-02-21T06:53:19+00:00" />
-<meta property="article:modified_time" content="2020-02-21T06:53:19+00:00" />
+<meta property="og:url" content="https://yukihane.github.io/posts/202003/09/td-agent-with-proxy/" />
+<meta property="article:published_time" content="2020-03-09T07:54:53+00:00" />
+<meta property="article:modified_time" content="2020-03-09T07:54:53+00:00" />
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="finalと実質finalの違い"/>
-<meta name="twitter:description" content="https://ja.stackoverflow.com/a/63099/2808 を見ていて気づいたのですが、 実質final というのは脳内(コンパイラ)で final を補完してくれる、というような処理が行われるわけではないのですね"/>
+<meta name="twitter:title" content="td-agentにプロキシを設定する"/>
+<meta name="twitter:description" content="sudo systemctl edit td-agent で編集画面を開き、次を記述: [Service] Environment=&#34;HTTP_PROXY=http://myproxy.example.com:8080&#34;"/>
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="">
@@ -91,7 +91,7 @@
 </header><div id="main-content">
 <header class="p-strip page-banner">
     <div class="row">
-        <h1>finalと実質finalの違い</h1>
+        <h1>td-agentにプロキシを設定する</h1>
     </div>
 
     
@@ -116,7 +116,7 @@
         
         <p class="p-media-object__content">
             <span class="u-capitalized">on</span>
-            2020-02-21
+            2020-03-09
         </p>
         
 
@@ -135,20 +135,20 @@
     </li>
     <li class="p-inline-list__item">
         <a class="p-icon--facebook" title='Share on Facebook' target="_blank"
-            rel="noreferrer" href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fyukihane.github.io%2fposts%2f202002%2f21%2feffectively-final-difference%2f">
+            rel="noreferrer" href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fyukihane.github.io%2fposts%2f202003%2f09%2ftd-agent-with-proxy%2f">
             Facebook
         </a>
     </li>
     <li class="p-inline-list__item">
         <a class="p-icon--twitter" title='Share on Twitter' target="_blank"
-            rel="noreferrer" href="http://twitter.com/share?text=final%e3%81%a8%e5%ae%9f%e8%b3%aafinal%e3%81%ae%e9%81%95%e3%81%84&amp;url=https%3a%2f%2fyukihane.github.io%2fposts%2f202002%2f21%2feffectively-final-difference%2f">
+            rel="noreferrer" href="http://twitter.com/share?text=td-agent%e3%81%ab%e3%83%97%e3%83%ad%e3%82%ad%e3%82%b7%e3%82%92%e8%a8%ad%e5%ae%9a%e3%81%99%e3%82%8b&amp;url=https%3a%2f%2fyukihane.github.io%2fposts%2f202003%2f09%2ftd-agent-with-proxy%2f">
             Twitter
         </a>
     </li>
     <li class="p-inline-list__item">
         <a class="p-icon--linkedin" title='Share on LinkedIn' target="_blank"
             rel="noreferrer"
-            href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fyukihane.github.io%2fposts%2f202002%2f21%2feffectively-final-difference%2f&amp;title=final%e3%81%a8%e5%ae%9f%e8%b3%aafinal%e3%81%ae%e9%81%95%e3%81%84">
+            href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fyukihane.github.io%2fposts%2f202003%2f09%2ftd-agent-with-proxy%2f&amp;title=td-agent%e3%81%ab%e3%83%97%e3%83%ad%e3%82%ad%e3%82%b7%e3%82%92%e8%a8%ad%e5%ae%9a%e3%81%99%e3%82%8b">
             LinkedIn
         </a>
     </li>
@@ -164,7 +164,7 @@
 <div class="row">
     <div class="col-12">
         
-<a href="https://yukihane.github.io/tags/java/">#java</a>&ensp;
+<a href="https://yukihane.github.io/tags/fluentd/">#fluentd</a>&ensp;
 
     </div>
 </div>
@@ -173,33 +173,18 @@
 
 <section class="p-strip is-shallow">
     <main class="row post-content">
-        <div class="paragraph">
-<p><a href="https://ja.stackoverflow.com/a/63099/2808" class="bare">https://ja.stackoverflow.com/a/63099/2808</a> を見ていて気づいたのですが、 <code>実質final</code> というのは脳内(コンパイラ)で <code>final</code> を補完してくれる、というような処理が行われるわけではないのですね。</p>
+        <div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-sh" data-lang="sh">sudo systemctl edit td-agent</code></pre>
+</div>
 </div>
 <div class="paragraph">
-<p>下記コード中の(2) と (3) の違いは、連結前の <code>String</code> 変数を <code>final</code> 付きで宣言しているか否かだけですが、結果がお互い異なっています。</p>
+<p>で編集画面を開き、次を記述:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">        String literal_neko = "ネコ";
-        String literal_ne_ko = "ネ" + "コ";
-
-        // (1) https://docs.oracle.com/javase/specs/jls/se13/html/jls-3.html#jls-3.10.5
-        System.out.println("literal_neko == literal_ne_and_ko: " + (literal_neko == literal_ne_ko)); // true
-
-        // (2) finalなStringの連結: true
-        final String final_ne = "ネ";
-        final String final_ko = "コ";
-        String final_ne_and_final_ko = final_ne + final_ko;
-
-        System.out.println("literal_neko == final_ne_final_ko: " + (literal_neko == final_ne_and_final_ko)); // true
-
-        // (3) 非final(だが実質final)なStringの連結: false
-        String ne = "ネ";
-        String ko = "コ";
-        String ne_and_ko = ne + ko;
-
-        System.out.println("literal_neko == ne_and_ko: " + (literal_neko == ne_and_ko)); // false</code></pre>
+<pre>[Service]
+Environment="HTTP_PROXY=http://myproxy.example.com:8080"</pre>
 </div>
 </div>
 
@@ -210,21 +195,14 @@
     <div class="row">
         <div class="p-article-pagination">
     
-    <a class="p-article-pagination__link--previous" href="https://yukihane.github.io/posts/202002/20/spring-boot-compiler-parameters/">
+    <a class="p-article-pagination__link--previous" href="https://yukihane.github.io/posts/202002/21/effectively-final-difference/">
         <span class="p-article-pagination__label">Previous</span>
         <span class="p-article-pagination__title">
-            Spring Bootでは `-parameters` オプションは有効化されている
+            finalと実質finalの違い
         </span>
     </a>
     
 
-    
-    <a class="p-article-pagination__link--next" href="https://yukihane.github.io/posts/202003/09/td-agent-with-proxy/">
-        <span class="p-article-pagination__label">Next</span>
-        <span class="p-article-pagination__title">
-            td-agentにプロキシを設定する
-        </span>
-    </a>
     
 </div>
     </div>
