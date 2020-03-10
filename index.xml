@@ -6,10 +6,19 @@
     <description>Recent content on 発火後忘失</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Mon, 09 Mar 2020 07:54:53 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 10 Mar 2020 05:44:01 +0000</lastBuildDate>
     
 	<atom:link href="https://yukihane.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>MyBatisでストアドプロシージャを実行する</title>
+      <link>https://yukihane.github.io/posts/202003/10/stored-procesure-with-mybatis/</link>
+      <pubDate>Tue, 10 Mar 2020 05:44:01 +0000</pubDate>
+      
+      <guid>https://yukihane.github.io/posts/202003/10/stored-procesure-with-mybatis/</guid>
+      <description>(もしかしたら以前どこかで書いたかも…) MyBatisでストアドプロシージャを実行する必要に迫られたことがありましたが、オフィシャルリファレ</description>
+    </item>
     
     <item>
       <title>td-agentにプロキシを設定する</title>

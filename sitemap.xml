@@ -3,27 +3,37 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://yukihane.github.io/tags/mybatis/</loc>
+    <lastmod>2020-03-10T05:44:01+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yukihane.github.io/posts/202003/10/stored-procesure-with-mybatis/</loc>
+    <lastmod>2020-03-10T05:44:01+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yukihane.github.io/posts/</loc>
+    <lastmod>2020-03-10T05:44:01+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yukihane.github.io/tags/</loc>
+    <lastmod>2020-03-10T05:44:01+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yukihane.github.io/</loc>
+    <lastmod>2020-03-10T05:44:01+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://yukihane.github.io/tags/fluentd/</loc>
     <lastmod>2020-03-09T07:54:53+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://yukihane.github.io/posts/</loc>
-    <lastmod>2020-03-09T07:54:53+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://yukihane.github.io/tags/</loc>
-    <lastmod>2020-03-09T07:54:53+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://yukihane.github.io/posts/202003/09/td-agent-with-proxy/</loc>
-    <lastmod>2020-03-09T07:54:53+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://yukihane.github.io/</loc>
     <lastmod>2020-03-09T07:54:53+00:00</lastmod>
   </url>
   
@@ -35,11 +45,6 @@
   <url>
     <loc>https://yukihane.github.io/tags/java/</loc>
     <lastmod>2020-02-21T06:53:19+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://yukihane.github.io/tags/mybatis/</loc>
-    <lastmod>2020-02-20T06:25:59+00:00</lastmod>
   </url>
   
   <url>
