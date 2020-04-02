@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    
+
+
+
+
+
+<title>いきなりJavaアプリケーションサーバの保守を任されることになった人のためのチートシート(1) | 発火後忘失</title>
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content='Table of Contents 目的 アプリケーションをデプロイする Tomcat にデプロイする WildFly にデプロイする デバッガを接続しステップ実行できるようにする Tomcat へ Eclipse でデバッガをアタッ'>
+<meta name="keywords" content='Java, javaee, spring'>
+<meta name="msapplication-TileColor" content="#b91d47">
+<meta name="theme-color" content="#ffffff">
+
+<link rel="canonical" href="https://yukihane.github.io/posts/202004/02/java-application-frameworks-cheat-sheet/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#007aa6">
+<meta name="theme-color" content="#ffffff">
+
+<meta property="og:title" content="いきなりJavaアプリケーションサーバの保守を任されることになった人のためのチートシート(1)" />
+<meta property="og:description" content="Table of Contents 目的 アプリケーションをデプロイする Tomcat にデプロイする WildFly にデプロイする デバッガを接続しステップ実行できるようにする Tomcat へ Eclipse でデバッガをアタッ" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://yukihane.github.io/posts/202004/02/java-application-frameworks-cheat-sheet/" />
+<meta property="article:published_time" content="2020-04-02T06:15:28+00:00" />
+<meta property="article:modified_time" content="2020-04-02T06:15:28+00:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="いきなりJavaアプリケーションサーバの保守を任されることになった人のためのチートシート(1)"/>
+<meta name="twitter:description" content="Table of Contents 目的 アプリケーションをデプロイする Tomcat にデプロイする WildFly にデプロイする デバッガを接続しステップ実行できるようにする Tomcat へ Eclipse でデバッガをアタッ"/>
+
+<meta itemprop="name" content="">
+<meta itemprop="description" content="">
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href='https://yukihane.github.io/css/style.css'>
+
+    
+
+
+<link href="https://fonts.googleapis.com/css?family=Hanuman:400,700|Inconsolata|Roboto:400,400i,700,700i&display=swap&subset=khmer" rel="stylesheet">
+</head><body><header id="navigation" class="p-navigation">
+    <div class="p-navigation__row">
+        <div class="p-navigation__banner">
+            <div class="p-navigation__logo">
+                <a class="p-navigation__link u-vertically-center p-link--logo" href="https://yukihane.github.io/">
+                    発火後忘失
+                </a>
+            </div>
+            
+            <a href="#navigation" class="p-navigation__toggle--open" title="menu">
+                <i class="p-icon--menu"></i>
+            </a>
+            <a href="#navigation-closed" class="p-navigation__toggle--close" title="close menu">
+                <i class="p-icon--close"></i>
+            </a>
+        </div>
+
+        <nav class="p-navigation__nav">
+            <span class="u-off-screen">
+                <a href="#main-content">Jump to main content</a>
+            </span>
+
+            <ul class="p-navigation__links" role="menu">
+                
+            </ul>
+
+            
+            <form class="p-search-box" action="https://www.google.com/search" target="_blank">
+    <input type="search" class="p-search-box__input" name="q" placeholder='Search'
+        required="" aria-label="Query">
+    <input type="hidden" name="sitesearch" value="https://yukihane.github.io/">
+    <button type="reset" class="p-search-box__reset" alt="reset" aria-label="Reset">
+        <i class="p-icon--close"></i>
+    </button>
+    <button type="submit" class="p-search-box__button" alt="search" aria-label="Search">
+        <i class="p-icon--search"></i>
+    </button>
+</form>
+            
+        </nav>
+    </div>
+</header><div id="main-content">
+<header class="p-strip page-banner">
+    <div class="row">
+        <h1>いきなりJavaアプリケーションサーバの保守を任されることになった人のためのチートシート(1)</h1>
+    </div>
+
+    
+
+<div class="row">
+
+    
+    <div class="col-8">
+        
+
+
+
+
+<div class="p-media-object">
+
+    
+
+    <div class="p-media-object__details">
+
+        
+
+        
+        <p class="p-media-object__content">
+            <span class="u-capitalized">on</span>
+            2020-04-02
+        </p>
+        
+
+    </div>
+</div>
+
+
+    </div>
+    
+
+    
+    <div class="col-4  col--share-links ">
+        <ul class="p-inline-list-icons p-inline-list-icons--share-links u-no-padding--left u-no-margin--left u-unselectable">
+    <li class="p-inline-list__item">
+        <i class="p-icon--share"></i>
+    </li>
+    <li class="p-inline-list__item">
+        <a class="p-icon--facebook" title='Share on Facebook' target="_blank"
+            rel="noreferrer" href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fyukihane.github.io%2fposts%2f202004%2f02%2fjava-application-frameworks-cheat-sheet%2f">
+            Facebook
+        </a>
+    </li>
+    <li class="p-inline-list__item">
+        <a class="p-icon--twitter" title='Share on Twitter' target="_blank"
+            rel="noreferrer" href="http://twitter.com/share?text=%e3%81%84%e3%81%8d%e3%81%aa%e3%82%8aJava%e3%82%a2%e3%83%97%e3%83%aa%e3%82%b1%e3%83%bc%e3%82%b7%e3%83%a7%e3%83%b3%e3%82%b5%e3%83%bc%e3%83%90%e3%81%ae%e4%bf%9d%e5%ae%88%e3%82%92%e4%bb%bb%e3%81%95%e3%82%8c%e3%82%8b%e3%81%93%e3%81%a8%e3%81%ab%e3%81%aa%e3%81%a3%e3%81%9f%e4%ba%ba%e3%81%ae%e3%81%9f%e3%82%81%e3%81%ae%e3%83%81%e3%83%bc%e3%83%88%e3%82%b7%e3%83%bc%e3%83%88%281%29&amp;url=https%3a%2f%2fyukihane.github.io%2fposts%2f202004%2f02%2fjava-application-frameworks-cheat-sheet%2f">
+            Twitter
+        </a>
+    </li>
+    <li class="p-inline-list__item">
+        <a class="p-icon--linkedin" title='Share on LinkedIn' target="_blank"
+            rel="noreferrer"
+            href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fyukihane.github.io%2fposts%2f202004%2f02%2fjava-application-frameworks-cheat-sheet%2f&amp;title=%e3%81%84%e3%81%8d%e3%81%aa%e3%82%8aJava%e3%82%a2%e3%83%97%e3%83%aa%e3%82%b1%e3%83%bc%e3%82%b7%e3%83%a7%e3%83%b3%e3%82%b5%e3%83%bc%e3%83%90%e3%81%ae%e4%bf%9d%e5%ae%88%e3%82%92%e4%bb%bb%e3%81%95%e3%82%8c%e3%82%8b%e3%81%93%e3%81%a8%e3%81%ab%e3%81%aa%e3%81%a3%e3%81%9f%e4%ba%ba%e3%81%ae%e3%81%9f%e3%82%81%e3%81%ae%e3%83%81%e3%83%bc%e3%83%88%e3%82%b7%e3%83%bc%e3%83%88%281%29">
+            LinkedIn
+        </a>
+    </li>
+</ul>
+    </div>
+    
+
+</div>
+
+
+
+
+<div class="row">
+    <div class="col-12">
+        
+<a href="https://yukihane.github.io/tags/java/">#Java</a>&ensp;
+
+<a href="https://yukihane.github.io/tags/javaee/">#javaee</a>&ensp;
+
+<a href="https://yukihane.github.io/tags/spring/">#spring</a>&ensp;
+
+    </div>
+</div>
+
+</header>
+
+<section class="p-strip is-shallow">
+    <main class="row post-content">
+        <div id="toc" class="toc">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#_目的">目的</a></li>
+<li><a href="#_アプリケーションをデプロイする">アプリケーションをデプロイする</a>
+<ul class="sectlevel2">
+<li><a href="#_tomcat_にデプロイする">Tomcat にデプロイする</a></li>
+<li><a href="#_wildfly_にデプロイする">WildFly にデプロイする</a></li>
+</ul>
+</li>
+<li><a href="#_デバッガを接続しステップ実行できるようにする">デバッガを接続しステップ実行できるようにする</a>
+<ul class="sectlevel2">
+<li><a href="#_tomcat_へ_eclipse_でデバッガをアタッチする">Tomcat へ Eclipse でデバッガをアタッチする</a></li>
+<li><a href="#_wildfly_へ_eclipse_でデバッガをアタッチする">WildFly へ Eclipse でデバッガをアタッチする</a></li>
+<li><a href="#_spring_boot_アプリケーションへ_eclipse_をアタッチする">Spring Boot アプリケーションへ Eclipse をアタッチする</a></li>
+<li><a href="#_その他のアプリケーションサーバideを利用する">その他のアプリケーションサーバ、IDEを利用する</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="sect1">
+<h2 id="_目的">目的</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Javaを用いた開発にある程度慣れている場合でも、初めてアプリケーションフレームワーク上で開発するとなると戸惑うことがあります。</p>
+</div>
+<div class="paragraph">
+<p>ここでは、ある程度Javaに対する知識が、Java EE/Spring Bootアプリケーションの保守を担当になって、ローカルで実行する、そしてデバッグを行おうとした際に引っかかりそうなポイントをまとめていきたいと考えています。</p>
+</div>
+<div class="paragraph">
+<p>説明に用いているコードは次になります:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://github.com/yukihane/java-application-frameworks-cheat-sheet" class="bare">https://github.com/yukihane/java-application-frameworks-cheat-sheet</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_アプリケーションをデプロイする">アプリケーションをデプロイする</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>ローカル実行環境でアプリケーションを実行する場合、アプリケーションサーバにアプリケーションをデプロイする必要があります。</p>
+</div>
+<div class="paragraph">
+<p>デプロイの方法はアプリケーションサーバのツールセットとしてMavenプラグインとして提供されていたり、IDEの機能として提供されていたり様々あります。</p>
+</div>
+<div class="paragraph">
+<p>ところでデプロイというのは何をやっているかというと、アプリケーションファイル( <code>.war</code> だったり <code>.jar</code> だったりします)をアプリケーションサーバの所定のディレクトリにコピーしているだけです。</p>
+</div>
+<div class="paragraph">
+<p>ですので、専用ツールやコマンドラインを使わずとも、デプロイすることは可能です。</p>
+</div>
+<div class="paragraph">
+<p>なお、Spring BootやWildFly Thorntailは <code>jar</code> の中にアプリケーションサーバー機能を組み込んでいるので、デプロイ操作が不要でそのまま <code>jar</code> ファイルを実行できるようになっています。</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>mvn clean package -pl servlet-sample</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>コマンドを実行すると、アプリケーション <code>servlet-sample/target/servlet-sample.war</code> がビルドできますので、これをデプロイして起動してみましょう。</p>
+</div>
+<div class="sect2">
+<h3 id="_tomcat_にデプロイする">Tomcat にデプロイする</h3>
+<div class="paragraph">
+<p>Tomcatのデプロイディレクトリは <code>webapps</code> なのでこの下に <code>servlet-sample.war</code> をコピーし、 <code>bin/startup.sh</code> コマンドを実行します。そして <a href="http://localhost:8080/servlet-sample/" class="bare">http://localhost:8080/servlet-sample/</a> にアクセスしてみます。 終了するには <code>bin/shutdown.sh</code> コマンドを実行します。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_wildfly_にデプロイする">WildFly にデプロイする</h3>
+<div class="paragraph">
+<p>WildFlyのデプロイディレクトリは <code>standalone/deployments</code> なのでこの下に <code>servlet-sample.war</code> をコピーし、 <code>/bin/standalone.sh</code> コマンドを実行します。して <a href="http://localhost:8080/servlet-sample/" class="bare">http://localhost:8080/servlet-sample/</a> にアクセスしてみます。終了するには <code>Ctrl + C</code> です。</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_デバッガを接続しステップ実行できるようにする">デバッガを接続しステップ実行できるようにする</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>アプリケーションサーバをデバッガ接続可能状態にするオプションをつけて起動した上で、IDEからデバッガをアタッチする、というのが基本的なデバッガ利用法になります。いわゆる「リモートデバッグ」という形態になります。</p>
+</div>
+<div class="paragraph">
+<p>これもまた、IDE組み込み機能でアプリケーションを起動させたりする方法もあったり、現場で実際にどう行っているかは様々だと思います。</p>
+</div>
+<div class="paragraph">
+<p>アプリケーション起動手順はアプリケーションサーバごとに違うのでリファレンスなど記載箇所を検索してください(あるいは、起動スクリプト内の記述がヒントになります(ex. <a href="https://github.com/apache/tomcat/blob/9.0.33/bin/catalina.sh#L632-L641">Tomcat</a>, <a href="https://github.com/wildfly/wildfly-core/blob/11.0.0.Final/core-feature-pack/src/main/resources/content/bin/standalone.sh#L3">WildFly</a>))。</p>
+</div>
+<div class="paragraph">
+<p>デバッガのアタッチ方法も IDE ごとに異なるのでこちらも検索が必要です。</p>
+</div>
+<div class="sect2">
+<h3 id="_tomcat_へ_eclipse_でデバッガをアタッチする">Tomcat へ Eclipse でデバッガをアタッチする</h3>
+<div class="paragraph">
+<p>Tomcatでリモートデバッグできるようにする設定は次に記載があります:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://cwiki.apache.org/confluence/display/TOMCAT/Developing#Developing-Q1" class="bare">https://cwiki.apache.org/confluence/display/TOMCAT/Developing#Developing-Q1</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>まず、<code>servlet-sample.war</code> をデプロイし、Tomcatに上記に記載されているJVMオプションをつけて起動します:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>JAVA_OPTS='-Xdebug -Xrunjdwp:transport=dt_socket,address=8000,server=y,suspend=n' bin/startup.sh</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>あるいは、これもリンク先に書いていますが、 <code>catalina</code> コマンドにデバッグ可能オプションをつけて起動するのが短くて良いかもしれません。</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>bin/catalina.sh jdpa start</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>これで 8000番ポートでデバッガ接続できる状態で起動しました。</p>
+</div>
+<div class="paragraph">
+<p>続いてEclipseからアタッチします。</p>
+</div>
+<div class="paragraph">
+<p>Eclipseで <code>servlet-sample</code> プロジェクトをインポートし、Package Explorer で右クリック、 Debug As &gt; Debug Configurations&#8230;&#8203; を選択します。</p>
+</div>
+<div class="paragraph">
+<figure>
+    <img src="/20200402/01eclipse-configuration.png"/> 
+</figure>
+
+</div>
+<div class="paragraph">
+<p>表示されたダイアログで "Remote Java Application" を右クリックし "New Configuration" を選択します。</p>
+</div>
+<div class="paragraph">
+<p>新しくデバッグのconfigurationが"servlet-sample"という名前で作成されますのでこれを編集していきます…が、今回はこのままの設定で動きますので何も触りません。</p>
+</div>
+<div class="paragraph">
+<p>ダイアログ右下の"Debug"ボタンを押してアタッチします。</p>
+</div>
+<div class="paragraph">
+<p>以上でデバッグ環境が整いました。 <a href="https://github.com/yukihane/java-application-frameworks-cheat-sheet/blob/5ac9fdcd16886ad43d9804750bc0943ccc1b6709/servlet-sample/src/main/java/jp/himeji_cs/example/servlet/ServletByAnnotation.java#L22"><code>ServletByAnnotation</code></a>クラスにbreakポイントを設定して <a href="http://localhost:8080/servlet-sample/annotation" class="bare">http://localhost:8080/servlet-sample/annotation</a> へアクセスすることで実行が一時停止することを確認してみましょう。</p>
+</div>
+<div class="paragraph">
+<p>デバッガをデタッチする場合はDebugパースペクティブに表示されている "Disconnect" ボタンを押します。</p>
+</div>
+<div class="paragraph">
+<figure>
+    <img src="/20200402/02disconnect.png"/> 
+</figure>
+
+</div>
+</div>
+<div class="sect2">
+<h3 id="_wildfly_へ_eclipse_でデバッガをアタッチする">WildFly へ Eclipse でデバッガをアタッチする</h3>
+<div class="paragraph">
+<p>WildFlyのリモートデバッグ方法の記述は次にあります <sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnotedef_1" title="View footnote.">1</a>]</sup>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://docs.wildfly.org/19/Getting_Started_Developing_Applications_Guide.html#debugging-project-with-intellij-and-as7" class="bare">https://docs.wildfly.org/19/Getting_Started_Developing_Applications_Guide.html#debugging-project-with-intellij-and-as7</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><code>servlet-sample.war</code> をデプロイした後、次のコマンドでWildFlyを起動します:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>bin/standalone.sh --debug</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>(Tomcatとは異なり)デフォルトでは8787番ポートでデバッガがアタッチできるような状態で起動します。</p>
+</div>
+<div class="paragraph">
+<p>続いてEclipseからアタッチします。手順の詳細は前述Tomcatの節を参照してください。ただし1点気をつけるべきは、デフォルト設定では8000番ポートへ接続しようとするので、 "Connect" タブの "Connection Properties" 設定の "Port" 値を <code>8787</code> に変更してください。</p>
+</div>
+<div class="paragraph">
+<p>実行確認、デタッチ方法はTomcat節に記載した手順と同じです。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_spring_boot_アプリケーションへ_eclipse_をアタッチする">Spring Boot アプリケーションへ Eclipse をアタッチする</h3>
+<div class="paragraph">
+<p>Spring Boot アプリケーションは前述の通りデプロイを必要とせず単独で実行できます。通常の実行コマンドにデバッグオプションを付与すれば良いです。</p>
+</div>
+<div class="paragraph">
+<p><code>spring-boot-sample</code> プロジェクトをビルドします:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>mvn clean package -pl spring-boot-sample</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>作成された <code>spring-boot-sample-0.0.1-SNAPSHOT.jar</code> をデバッガアタッチ可能な状態で起動します:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>java -Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=8000 \
+-jar spring-boot-sample/target/spring-boot-sample-0.0.1-SNAPSHOT.jar</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Eclipseからアタッチする方法は前述Tomcat節と同じです。</p>
+</div>
+<div class="paragraph">
+<p>また、Spring Bootアプリケーションにははじめから <a href="https://docs.spring.io/spring-boot/docs/current/maven-plugin/examples/run-debug.html">Spring Boot Maven Plugin</a>が組み込まれているため、こちらから起動することになるかもしれません。その場合はリンク先を参照してください。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_その他のアプリケーションサーバideを利用する">その他のアプリケーションサーバ、IDEを利用する</h3>
+<div class="paragraph">
+<p>ここまで書いてきて、次のサイトでも同じことについて言及しているの気づきました。WebLogic, Glassfish, Jetty, IntelliJなどについての言及もあるようでしたので参照してください:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://www.baeldung.com/spring-debugging" class="bare">https://www.baeldung.com/spring-debugging</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="footnotes">
+<hr>
+<div class="footnote" id="_footnotedef_1">
+<a href="#_footnoteref_1">1</a>. 久しぶりにWildFlyのリファレンス見ましたが、以前にも増して混沌としていますね…
+</div>
+</div>
+
+    </main>
+</section>
+
+<footer class="p-strip is-wrapper">
+    <div class="row">
+        <div class="p-article-pagination">
+    
+    <a class="p-article-pagination__link--previous" href="https://yukihane.github.io/posts/202003/30/skip-maven-enforcer-plugin/">
+        <span class="p-article-pagination__label">Previous</span>
+        <span class="p-article-pagination__title">
+            Maven Enforcer Pluginの実行をスキップする
+        </span>
+    </a>
+    
+
+    
+</div>
+    </div>
+</footer>
+
+        </div><footer class="p-strip is-shallow page-footer">
+    <div class="row">
+        <div class="col-12  u-align--center">
+            <p>
+                © 2020 発火後忘失
+            </p>
+        </div>
+    </div>
+</footer>
+
+
+
+
+</body>
+</html>

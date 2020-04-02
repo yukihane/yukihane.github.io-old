@@ -6,10 +6,19 @@
     <description>Recent content in java on 発火後忘失</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Mon, 30 Mar 2020 05:37:45 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 02 Apr 2020 06:15:28 +0000</lastBuildDate>
     
 	<atom:link href="https://yukihane.github.io/tags/java/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>いきなりJavaアプリケーションサーバの保守を任されることになった人のためのチートシート(1)</title>
+      <link>https://yukihane.github.io/posts/202004/02/java-application-frameworks-cheat-sheet/</link>
+      <pubDate>Thu, 02 Apr 2020 06:15:28 +0000</pubDate>
+      
+      <guid>https://yukihane.github.io/posts/202004/02/java-application-frameworks-cheat-sheet/</guid>
+      <description>Table of Contents 目的 アプリケーションをデプロイする Tomcat にデプロイする WildFly にデプロイする デバッガを接続しステップ実行できるようにする Tomcat へ Eclipse でデバッガをアタッ</description>
+    </item>
     
     <item>
       <title>Maven Enforcer Pluginの実行をスキップする</title>
