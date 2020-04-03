@@ -6,10 +6,19 @@
     <description>Recent content in javaee on 発火後忘失</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Thu, 02 Apr 2020 06:15:28 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 03 Apr 2020 02:44:22 +0000</lastBuildDate>
     
 	<atom:link href="https://yukihane.github.io/tags/javaee/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>いきなりJavaアプリケーションサーバの保守を任されることになった人のためのチートシート(2)</title>
+      <link>https://yukihane.github.io/posts/202004/03/java-application-frameworks-cheat-sheet2/</link>
+      <pubDate>Fri, 03 Apr 2020 02:44:22 +0000</pubDate>
+      
+      <guid>https://yukihane.github.io/posts/202004/03/java-application-frameworks-cheat-sheet2/</guid>
+      <description>Table of Contents はじめに ポイント: xmlファイルを見逃さないようにする どんな(オレオレ)フレームワークを使っているか: web.xml 起動時処理(等): @PostConstgruct Servlet fileter, Servlet listener JSF</description>
+    </item>
     
     <item>
       <title>いきなりJavaアプリケーションサーバの保守を任されることになった人のためのチートシート(1)</title>
