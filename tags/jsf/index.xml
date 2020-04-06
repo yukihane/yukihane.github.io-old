@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>jsf on 発火後忘失</title>
+    <link>https://yukihane.github.io/tags/jsf/</link>
+    <description>Recent content in jsf on 発火後忘失</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Mon, 06 Apr 2020 01:52:30 +0000</lastBuildDate>
+    
+	<atom:link href="https://yukihane.github.io/tags/jsf/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Hello, JSF</title>
+      <link>https://yukihane.github.io/posts/202004/06/hello-jsf/</link>
+      <pubDate>Mon, 06 Apr 2020 01:52:30 +0000</pubDate>
+      
+      <guid>https://yukihane.github.io/posts/202004/06/hello-jsf/</guid>
+      <description>はじめに JSFを少し触ってみようと思ったのですが、もはやロストテクノロジーでどう始めるのかすらドキュメントを探すのが大変… 今回はかろうじてこ</description>
+    </item>
+    
+  </channel>
+</rss>

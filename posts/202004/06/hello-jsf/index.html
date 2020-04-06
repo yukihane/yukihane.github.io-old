@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    
+
+
+
+
+
+<title>Hello, JSF | 発火後忘失</title>
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content='はじめに JSFを少し触ってみようと思ったのですが、もはやロストテクノロジーでどう始めるのかすらドキュメントを探すのが大変… 今回はかろうじてこ'>
+<meta name="keywords" content='java, javaee, jsf'>
+<meta name="msapplication-TileColor" content="#b91d47">
+<meta name="theme-color" content="#ffffff">
+
+<link rel="canonical" href="https://yukihane.github.io/posts/202004/06/hello-jsf/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#007aa6">
+<meta name="theme-color" content="#ffffff">
+
+<meta property="og:title" content="Hello, JSF" />
+<meta property="og:description" content="はじめに JSFを少し触ってみようと思ったのですが、もはやロストテクノロジーでどう始めるのかすらドキュメントを探すのが大変… 今回はかろうじてこ" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://yukihane.github.io/posts/202004/06/hello-jsf/" />
+<meta property="article:published_time" content="2020-04-06T01:52:30+00:00" />
+<meta property="article:modified_time" content="2020-04-06T01:52:30+00:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Hello, JSF"/>
+<meta name="twitter:description" content="はじめに JSFを少し触ってみようと思ったのですが、もはやロストテクノロジーでどう始めるのかすらドキュメントを探すのが大変… 今回はかろうじてこ"/>
+
+<meta itemprop="name" content="">
+<meta itemprop="description" content="">
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href='https://yukihane.github.io/css/style.css'>
+
+    
+
+
+<link href="https://fonts.googleapis.com/css?family=Hanuman:400,700|Inconsolata|Roboto:400,400i,700,700i&display=swap&subset=khmer" rel="stylesheet">
+</head><body><header id="navigation" class="p-navigation">
+    <div class="p-navigation__row">
+        <div class="p-navigation__banner">
+            <div class="p-navigation__logo">
+                <a class="p-navigation__link u-vertically-center p-link--logo" href="https://yukihane.github.io/">
+                    発火後忘失
+                </a>
+            </div>
+            
+            <a href="#navigation" class="p-navigation__toggle--open" title="menu">
+                <i class="p-icon--menu"></i>
+            </a>
+            <a href="#navigation-closed" class="p-navigation__toggle--close" title="close menu">
+                <i class="p-icon--close"></i>
+            </a>
+        </div>
+
+        <nav class="p-navigation__nav">
+            <span class="u-off-screen">
+                <a href="#main-content">Jump to main content</a>
+            </span>
+
+            <ul class="p-navigation__links" role="menu">
+                
+            </ul>
+
+            
+            <form class="p-search-box" action="https://www.google.com/search" target="_blank">
+    <input type="search" class="p-search-box__input" name="q" placeholder='Search'
+        required="" aria-label="Query">
+    <input type="hidden" name="sitesearch" value="https://yukihane.github.io/">
+    <button type="reset" class="p-search-box__reset" alt="reset" aria-label="Reset">
+        <i class="p-icon--close"></i>
+    </button>
+    <button type="submit" class="p-search-box__button" alt="search" aria-label="Search">
+        <i class="p-icon--search"></i>
+    </button>
+</form>
+            
+        </nav>
+    </div>
+</header><div id="main-content">
+<header class="p-strip page-banner">
+    <div class="row">
+        <h1>Hello, JSF</h1>
+    </div>
+
+    
+
+<div class="row">
+
+    
+    <div class="col-8">
+        
+
+
+
+
+<div class="p-media-object">
+
+    
+
+    <div class="p-media-object__details">
+
+        
+
+        
+        <p class="p-media-object__content">
+            <span class="u-capitalized">on</span>
+            2020-04-06
+        </p>
+        
+
+    </div>
+</div>
+
+
+    </div>
+    
+
+    
+    <div class="col-4  col--share-links ">
+        <ul class="p-inline-list-icons p-inline-list-icons--share-links u-no-padding--left u-no-margin--left u-unselectable">
+    <li class="p-inline-list__item">
+        <i class="p-icon--share"></i>
+    </li>
+    <li class="p-inline-list__item">
+        <a class="p-icon--facebook" title='Share on Facebook' target="_blank"
+            rel="noreferrer" href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fyukihane.github.io%2fposts%2f202004%2f06%2fhello-jsf%2f">
+            Facebook
+        </a>
+    </li>
+    <li class="p-inline-list__item">
+        <a class="p-icon--twitter" title='Share on Twitter' target="_blank"
+            rel="noreferrer" href="http://twitter.com/share?text=Hello%2c%20JSF&amp;url=https%3a%2f%2fyukihane.github.io%2fposts%2f202004%2f06%2fhello-jsf%2f">
+            Twitter
+        </a>
+    </li>
+    <li class="p-inline-list__item">
+        <a class="p-icon--linkedin" title='Share on LinkedIn' target="_blank"
+            rel="noreferrer"
+            href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fyukihane.github.io%2fposts%2f202004%2f06%2fhello-jsf%2f&amp;title=Hello%2c%20JSF">
+            LinkedIn
+        </a>
+    </li>
+</ul>
+    </div>
+    
+
+</div>
+
+
+
+
+<div class="row">
+    <div class="col-12">
+        
+<a href="https://yukihane.github.io/tags/java/">#java</a>&ensp;
+
+<a href="https://yukihane.github.io/tags/javaee/">#javaee</a>&ensp;
+
+<a href="https://yukihane.github.io/tags/jsf/">#jsf</a>&ensp;
+
+    </div>
+</div>
+
+</header>
+
+<section class="p-strip is-shallow">
+    <main class="row post-content">
+        <div class="sect1">
+<h2 id="_はじめに">はじめに</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>JSFを少し触ってみようと思ったのですが、もはやロストテクノロジーでどう始めるのかすらドキュメントを探すのが大変…</p>
+</div>
+<div class="paragraph">
+<p>今回はかろうじてこちらを探し当てられました:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://eclipse-ee4j.github.io/mojarra/" class="bare">https://eclipse-ee4j.github.io/mojarra/</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>MojarraというのはWildFlyに組み込まれているJSF実装ですね。
+今回はこちらを参考にしています。</p>
+</div>
+<div class="paragraph">
+<p>また、上記ドキュメントからリンクされていたページにも説明がありました:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://docs.oracle.com/javaee/7/tutorial/partwebtier.htm">The Web Tier - Java Platform, Enterprise Edition: The Java EE Tutorial</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>その他参考:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://maven.apache.org/archetypes/maven-archetype-webapp/index.html">Maven Webapp Archetype</a></p>
+</li>
+<li>
+<p><a href="https://kokuzawa.github.io/blog/2015/04/07/web-dot-xmlfalsebaziyonbie-dtdxsdfalsexuan-yan-fang-fa/">web.xmlのバージョン別DTD・XSDの宣言方法 | KATSUMI KOKUZAWA&#39;S BLOG</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_雛形作成">雛形作成</h2>
+<div class="sectionbody">
+<div class="literalblock">
+<div class="content">
+<pre>mvn archetype:generate -DarchetypeGroupId=org.apache.maven.archetypes -DarchetypeArtifactId=maven-archetype-webapp -DarchetypeVersion=1.4</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>でMavenプロジェクト作成。</p>
+</div>
+<div class="paragraph">
+<p>デフォルトだとJava1.7を用いる設定になっているので11に変更:</p>
+</div>
+<div class="listingblock">
+<div class="title">pom.xml</div>
+<div class="content">
+<pre>...
+  &lt;properties&gt;
+    &lt;project.build.sourceEncoding&gt;UTF-8&lt;/project.build.sourceEncoding&gt;
+    &lt;maven.compiler.source&gt;11&lt;/maven.compiler.source&gt;
+    &lt;maven.compiler.target&gt;11&lt;/maven.compiler.target&gt;
+  &lt;/properties&gt;
+...</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><code>src/main/webapp/WEB-INF/web.xml</code> で指定されているServletのバージョンが2.3と古いので4.0に更新します。また、前述参考ページにある通り <code>.xhtml</code> 拡張子を <code>FacesServlet</code> で処理するようにします:</p>
+</div>
+<div class="listingblock">
+<div class="title">src/main/webapp/WEB-INF/web.xml</div>
+<div class="content">
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+         http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+  version="4.0"&gt;
+  &lt;servlet&gt;
+    &lt;servlet-name&gt;facesServlet&lt;/servlet-name&gt;
+    &lt;servlet-class&gt;javax.faces.webapp.FacesServlet&lt;/servlet-class&gt;
+  &lt;/servlet&gt;
+  &lt;servlet-mapping&gt;
+    &lt;servlet-name&gt;facesServlet&lt;/servlet-name&gt;
+    &lt;url-pattern&gt;*.xhtml&lt;/url-pattern&gt;
+  &lt;/servlet-mapping&gt;
+&lt;/web-app&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_view_model_実装">View, Model 実装</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>特に何も変わること無く <a href="https://eclipse-ee4j.github.io/mojarra/">参考ページ</a> にある通り <code>src/main/java/com/example/Hello.java</code>, <code>src/main/webapp/hello.xhtml</code> を作成。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_ビルドデプロイ">ビルド&amp;デプロイ</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>特に他のwarと変わりありません。</p>
+</div>
+<div class="paragraph">
+<p>今回作成したソースをWildFlyにデプロイした場合、デフォルトだと次のURLへアクセスすれば参照できます:
+<a href="http://localhost:8080/jsf-sample/hello.xhtml" class="bare">http://localhost:8080/jsf-sample/hello.xhtml</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_サンプル実装">サンプル実装</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="https://github.com/yukihane/hello-java/tree/master/javaee/jsf-sample" class="bare">https://github.com/yukihane/hello-java/tree/master/javaee/jsf-sample</a></p>
+</div>
+</div>
+</div>
+
+    </main>
+</section>
+
+<footer class="p-strip is-wrapper">
+    <div class="row">
+        <div class="p-article-pagination">
+    
+    <a class="p-article-pagination__link--previous" href="https://yukihane.github.io/posts/202004/03/java-application-frameworks-cheat-sheet2/">
+        <span class="p-article-pagination__label">Previous</span>
+        <span class="p-article-pagination__title">
+            いきなりJavaアプリケーションサーバの保守を任されることになった人のためのチートシート(2)
+        </span>
+    </a>
+    
+
+    
+</div>
+    </div>
+</footer>
+
+        </div><footer class="p-strip is-shallow page-footer">
+    <div class="row">
+        <div class="col-12  u-align--center">
+            <p>
+                © 2020 発火後忘失
+            </p>
+        </div>
+    </div>
+</footer>
+
+
+
+
+</body>
+</html>

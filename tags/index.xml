@@ -6,7 +6,7 @@
     <description>Recent content in Tags on 発火後忘失</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Fri, 03 Apr 2020 02:44:22 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 06 Apr 2020 01:52:30 +0000</lastBuildDate>
     
 	<atom:link href="https://yukihane.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>java</title>
       <link>https://yukihane.github.io/tags/java/</link>
-      <pubDate>Fri, 03 Apr 2020 02:44:22 +0000</pubDate>
+      <pubDate>Mon, 06 Apr 2020 01:52:30 +0000</pubDate>
       
       <guid>https://yukihane.github.io/tags/java/</guid>
       <description></description>
@@ -23,9 +23,18 @@
     <item>
       <title>javaee</title>
       <link>https://yukihane.github.io/tags/javaee/</link>
-      <pubDate>Fri, 03 Apr 2020 02:44:22 +0000</pubDate>
+      <pubDate>Mon, 06 Apr 2020 01:52:30 +0000</pubDate>
       
       <guid>https://yukihane.github.io/tags/javaee/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>jsf</title>
+      <link>https://yukihane.github.io/tags/jsf/</link>
+      <pubDate>Mon, 06 Apr 2020 01:52:30 +0000</pubDate>
+      
+      <guid>https://yukihane.github.io/tags/jsf/</guid>
       <description></description>
     </item>
     

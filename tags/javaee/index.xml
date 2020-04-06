@@ -6,10 +6,19 @@
     <description>Recent content in javaee on 発火後忘失</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Fri, 03 Apr 2020 02:44:22 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 06 Apr 2020 01:52:30 +0000</lastBuildDate>
     
 	<atom:link href="https://yukihane.github.io/tags/javaee/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Hello, JSF</title>
+      <link>https://yukihane.github.io/posts/202004/06/hello-jsf/</link>
+      <pubDate>Mon, 06 Apr 2020 01:52:30 +0000</pubDate>
+      
+      <guid>https://yukihane.github.io/posts/202004/06/hello-jsf/</guid>
+      <description>はじめに JSFを少し触ってみようと思ったのですが、もはやロストテクノロジーでどう始めるのかすらドキュメントを探すのが大変… 今回はかろうじてこ</description>
+    </item>
     
     <item>
       <title>いきなりJavaアプリケーションサーバの保守を任されることになった人のためのチートシート(2)</title>
