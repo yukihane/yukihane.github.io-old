@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    
+
+
+
+
+
+<title>Hello, Wasm with Rust | 発火後忘失</title>
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content='はじめに wasmに挑戦してみようとHello, worldをやってみようとしました。 公式っぽいドキュメントとしてはググると次のものが見つかりま'>
+<meta name="keywords" content='rust, wasm'>
+<meta name="msapplication-TileColor" content="#b91d47">
+<meta name="theme-color" content="#ffffff">
+
+<link rel="canonical" href="https://yukihane.github.io/posts/202004/08/hello-wasm-with-rust/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#007aa6">
+<meta name="theme-color" content="#ffffff">
+
+<meta property="og:title" content="Hello, Wasm with Rust" />
+<meta property="og:description" content="はじめに wasmに挑戦してみようとHello, worldをやってみようとしました。 公式っぽいドキュメントとしてはググると次のものが見つかりま" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://yukihane.github.io/posts/202004/08/hello-wasm-with-rust/" />
+<meta property="article:published_time" content="2020-04-07T22:39:49+00:00" />
+<meta property="article:modified_time" content="2020-04-07T22:39:49+00:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Hello, Wasm with Rust"/>
+<meta name="twitter:description" content="はじめに wasmに挑戦してみようとHello, worldをやってみようとしました。 公式っぽいドキュメントとしてはググると次のものが見つかりま"/>
+
+<meta itemprop="name" content="">
+<meta itemprop="description" content="">
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href='https://yukihane.github.io/css/style.css'>
+
+    
+
+
+<link href="https://fonts.googleapis.com/css?family=Hanuman:400,700|Inconsolata|Roboto:400,400i,700,700i&display=swap&subset=khmer" rel="stylesheet">
+</head><body><header id="navigation" class="p-navigation">
+    <div class="p-navigation__row">
+        <div class="p-navigation__banner">
+            <div class="p-navigation__logo">
+                <a class="p-navigation__link u-vertically-center p-link--logo" href="https://yukihane.github.io/">
+                    発火後忘失
+                </a>
+            </div>
+            
+            <a href="#navigation" class="p-navigation__toggle--open" title="menu">
+                <i class="p-icon--menu"></i>
+            </a>
+            <a href="#navigation-closed" class="p-navigation__toggle--close" title="close menu">
+                <i class="p-icon--close"></i>
+            </a>
+        </div>
+
+        <nav class="p-navigation__nav">
+            <span class="u-off-screen">
+                <a href="#main-content">Jump to main content</a>
+            </span>
+
+            <ul class="p-navigation__links" role="menu">
+                
+            </ul>
+
+            
+            <form class="p-search-box" action="https://www.google.com/search" target="_blank">
+    <input type="search" class="p-search-box__input" name="q" placeholder='Search'
+        required="" aria-label="Query">
+    <input type="hidden" name="sitesearch" value="https://yukihane.github.io/">
+    <button type="reset" class="p-search-box__reset" alt="reset" aria-label="Reset">
+        <i class="p-icon--close"></i>
+    </button>
+    <button type="submit" class="p-search-box__button" alt="search" aria-label="Search">
+        <i class="p-icon--search"></i>
+    </button>
+</form>
+            
+        </nav>
+    </div>
+</header><div id="main-content">
+<header class="p-strip page-banner">
+    <div class="row">
+        <h1>Hello, Wasm with Rust</h1>
+    </div>
+
+    
+
+<div class="row">
+
+    
+    <div class="col-8">
+        
+
+
+
+
+<div class="p-media-object">
+
+    
+
+    <div class="p-media-object__details">
+
+        
+
+        
+        <p class="p-media-object__content">
+            <span class="u-capitalized">on</span>
+            2020-04-07
+        </p>
+        
+
+    </div>
+</div>
+
+
+    </div>
+    
+
+    
+    <div class="col-4  col--share-links ">
+        <ul class="p-inline-list-icons p-inline-list-icons--share-links u-no-padding--left u-no-margin--left u-unselectable">
+    <li class="p-inline-list__item">
+        <i class="p-icon--share"></i>
+    </li>
+    <li class="p-inline-list__item">
+        <a class="p-icon--facebook" title='Share on Facebook' target="_blank"
+            rel="noreferrer" href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fyukihane.github.io%2fposts%2f202004%2f08%2fhello-wasm-with-rust%2f">
+            Facebook
+        </a>
+    </li>
+    <li class="p-inline-list__item">
+        <a class="p-icon--twitter" title='Share on Twitter' target="_blank"
+            rel="noreferrer" href="http://twitter.com/share?text=Hello%2c%20Wasm%20with%20Rust&amp;url=https%3a%2f%2fyukihane.github.io%2fposts%2f202004%2f08%2fhello-wasm-with-rust%2f">
+            Twitter
+        </a>
+    </li>
+    <li class="p-inline-list__item">
+        <a class="p-icon--linkedin" title='Share on LinkedIn' target="_blank"
+            rel="noreferrer"
+            href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fyukihane.github.io%2fposts%2f202004%2f08%2fhello-wasm-with-rust%2f&amp;title=Hello%2c%20Wasm%20with%20Rust">
+            LinkedIn
+        </a>
+    </li>
+</ul>
+    </div>
+    
+
+</div>
+
+
+
+
+<div class="row">
+    <div class="col-12">
+        
+<a href="https://yukihane.github.io/tags/rust/">#rust</a>&ensp;
+
+<a href="https://yukihane.github.io/tags/wasm/">#wasm</a>&ensp;
+
+    </div>
+</div>
+
+</header>
+
+<section class="p-strip is-shallow">
+    <main class="row post-content">
+        <div class="sect1">
+<h2 id="_はじめに">はじめに</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>wasmに挑戦してみようとHello, worldをやってみようとしました。</p>
+</div>
+<div class="paragraph">
+<p>公式っぽいドキュメントとしてはググると次のものが見つかりました:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://rustwasm.github.io/docs/book/">The Rust and WebAssembly Book</a> (<a href="https://github.com/rustwasm/book">GitHub repo</a>)</p>
+</li>
+<li>
+<p><a href="https://developer.mozilla.org/ja/docs/WebAssembly/Rust_to_wasm">Rust から WebAssembly にコンパイルする - WebAssembly | MDN</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>最初は1つめのドキュメントを見ながらやり始めたのですが、どうも記述が古いっぽい気がしてリポジトリを見てみると最終コミットが5ヶ月前で、ちょっとどうかと思ったので2つめを見てみたのですが、こちらはこちらで本当にHello, world部分しか説明されておらず先に進めそうもありませんでした。</p>
+</div>
+<div class="paragraph">
+<p>それ以外のものを探したところ、 <a href="https://rustwasm.github.io/" class="bare">https://rustwasm.github.io/</a> から辿れる次のドキュメントを見つけました:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://rustwasm.github.io/docs/wasm-pack/">The wasm-pack Book</a></p>
+</li>
+<li>
+<p><a href="https://rustwasm.github.io/docs/wasm-bindgen/">The wasm-bindgen Guide</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>…がこちらも少し現状に即していないように見えました。</p>
+</div>
+<div class="paragraph">
+<p>以下、上記のドキュメントを継ぎ接ぎしてHello, worldを作成してみた記録です。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_プロジェクト作成の前に">プロジェクト作成の前に</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_ツールの種類と概要">ツールの種類と概要</h3>
+<div class="paragraph">
+<p>似た名前のツール/コマンドが登場するので最初に一覧を見ておくと良いかと考えます。The Rust Wasm Bookに説明があります。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://rustwasm.github.io/docs/book/reference/crates.html">5.1. Crates You Should Know</a></p>
+</li>
+<li>
+<p><a href="https://rustwasm.github.io/docs/book/reference/tools.html">5.2. Tools You Should Know</a></p>
+</li>
+<li>
+<p><a href="https://rustwasm.github.io/docs/book/reference/project-templates.html">5.3. Project Templates</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_プロジェクトテンプレート">プロジェクトテンプレート</h3>
+<div class="paragraph">
+<p>前述リンク <a href="https://rustwasm.github.io/docs/book/reference/project-templates.html">5.3. Project Templates</a> 先には3種類のプロジェクトテンプレートが紹介されています。</p>
+</div>
+<div class="paragraph">
+<p>いろいろなチュートリアルを見ていると、このテンプレートが事前説明無く使われている(あるいはテンプレート無しで進めていく)のでどのチュートリアルを参考にすれば良いのか混乱しました。</p>
+</div>
+<div class="paragraph">
+<p>ですのでここで簡単に触れておきます。</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><a href="https://github.com/rustwasm/wasm-pack-template">wasm-pack-template</a></dt>
+<dd>
+<p>RustのコードをWasmプロジェクトにパッケージングするためのテンプレート。JavaScriptの世界とは無関係です(ので <code>package.json</code> などが含まれない)。</p>
+</dd>
+<dt class="hdlist1"><a href="https://github.com/rustwasm/create-wasm-app">create-wasm-app</a></dt>
+<dd>
+<p>Rustから生成したWasmのNPMパッケージを利用するようなJavaScriptプロジェクトのテンプレート。Rustの世界とは無関係です(ので <code>Cargo.toml</code> などが含まれない)。</p>
+</dd>
+<dt class="hdlist1"><a href="https://github.com/rustwasm/rust-webpack-template">rust-webpack-template</a></dt>
+<dd>
+<p>JavaScriptプロジェクトですが、一部をRustで実装し、Wasmに変換して利用するようなプロジェクト。</p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p>"Hello, worldをWasmでやってみよう！"という場合、おそらく利用することになるのは rust-webpack-template ではないでしょうか。</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_プロジェクト作成">プロジェクト作成</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The wasm-pack Book の <a href="https://rustwasm.github.io/docs/wasm-pack/tutorials/hybrid-applications-with-webpack/index.html">5.1. Hybrid applications with Webpack</a> が <code>rust-webpack-template</code> を利用したプロジェクト作成チュートリアルになっているのでこれをなぞります。</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>npm init rust-webpack wasm-app</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>( <code>wasm-pack</code> のチュートリアルで用いられているのは <a href="https://github.com/rustwasm/wasm-pack-template"><code>wasm-pack-template</code></a> でなく <a href="https://github.com/rustwasm/rust-webpack-template"><code>rust-webpack-template</code></a> &#8230;&#8203;これだけで混乱するには十分です&#8230;&#8203;)</p>
+</div>
+<div class="paragraph">
+<p>ちなみに <code>yarn create rust-webpack</code> は何故か失敗します(<a href="https://github.com/rustwasm/create-wasm-app/issues/143">こちら</a> と同じ原因でしょうか)。
+ですので、 <code>yarn</code> を利用する場合もここだけ <code>npm</code> コマンドで実行する必要がありそうです。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_hello_world_加筆">Hello, world 加筆</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>上で参考にしたチュートリアルの続きを進めたいのですが、 <a href="https://rustwasm.github.io/docs/wasm-pack/tutorials/hybrid-applications-with-webpack/using-your-library.html#your-rust-crate">Your Rust Crate</a> に書かれているコード</p>
+</div>
+<div class="literalblock">
+<div class="title">src/lib.rs</div>
+<div class="content">
+<pre>// Your code goes here!
+let p: web_sys::Node = document.create_element("p")?.into();
+p.set_text_content(Some("Hello from Rust, WebAssembly, and Webpack!"));</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>を追加してもコンパイルが通りません。</p>
+</div>
+<div class="paragraph">
+<p>これを解決するには The <code>wasm-bindgen</code> Guide の <a href="https://rustwasm.github.io/docs/wasm-bindgen/examples/dom.html">1.9. web-sys: DOM hello world</a> に書かれている通り、 <code>web-sys</code> の features 設定を行う必要があります。</p>
+</div>
+<div class="paragraph">
+<p>また、そもそもコード自体も間違っており features 追加した後コード修正も必要になります。これも上記ページが参考になります。</p>
+</div>
+<div class="literalblock">
+<div class="title">Cargo.toml</div>
+<div class="content">
+<pre>[dependencies.web-sys]
+version = "0.3.22"
+features = ["console", 'Document', 'Element', 'HtmlElement', 'Node', 'Window']</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="title">src/lib.rs</div>
+<div class="content">
+<pre>// Your code goes here!
+let window = web_sys::window().expect("no global `window` exists");
+let document = window.document().expect("should have a document on window");
+let body = document.body().expect("document should have a body");
+
+let val = document.create_element("p")?;
+val.set_text_content(Some("Hello from Rust, WebAssembly, and Webpack!"));
+
+body.append_child(&amp;val)?;</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_サンプル実装リンク">サンプル実装リンク</h2>
+<div class="sectionbody">
+
+</div>
+</div>
+
+    </main>
+</section>
+
+<footer class="p-strip is-wrapper">
+    <div class="row">
+        <div class="p-article-pagination">
+    
+    <a class="p-article-pagination__link--previous" href="https://yukihane.github.io/posts/202004/08/twitter-on-firefox-security-issue/">
+        <span class="p-article-pagination__label">Previous</span>
+        <span class="p-article-pagination__title">
+            TwitterをFirefoxで利用した際のセキュリティ問題
+        </span>
+    </a>
+    
+
+    
+</div>
+    </div>
+</footer>
+
+        </div><footer class="p-strip is-shallow page-footer">
+    <div class="row">
+        <div class="col-12  u-align--center">
+            <p>
+                © 2020 発火後忘失
+            </p>
+        </div>
+    </div>
+</footer>
+
+
+
+
+</body>
+</html>

@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>rust on 発火後忘失</title>
-    <link>https://yukihane.github.io/tags/rust/</link>
-    <description>Recent content in rust on 発火後忘失</description>
+    <title>wasm on 発火後忘失</title>
+    <link>https://yukihane.github.io/tags/wasm/</link>
+    <description>Recent content in wasm on 発火後忘失</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
     <lastBuildDate>Tue, 07 Apr 2020 22:39:49 +0000</lastBuildDate>
     
-	<atom:link href="https://yukihane.github.io/tags/rust/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://yukihane.github.io/tags/wasm/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -18,15 +18,6 @@
       
       <guid>https://yukihane.github.io/posts/202004/08/hello-wasm-with-rust/</guid>
       <description>はじめに wasmに挑戦してみようとHello, worldをやってみようとしました。 公式っぽいドキュメントとしてはググると次のものが見つかりま</description>
-    </item>
-    
-    <item>
-      <title>Nodeのnative moduleをRustで書いてみる(Neon)</title>
-      <link>https://yukihane.github.io/posts/202002/01/hello-rust-neon/</link>
-      <pubDate>Sat, 01 Feb 2020 05:09:38 +0000</pubDate>
-      
-      <guid>https://yukihane.github.io/posts/202002/01/hello-rust-neon/</guid>
-      <description>RustプログラムのGUIにElectronを使うことを考えています。 その前調査としてNodeのネイティブモジュールとしてRustプログラム</description>
     </item>
     
   </channel>
