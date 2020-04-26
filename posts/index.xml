@@ -6,10 +6,28 @@
     <description>Recent content in Posts on 発火後忘失</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Tue, 07 Apr 2020 22:39:49 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 26 Apr 2020 13:00:50 +0000</lastBuildDate>
     
 	<atom:link href="https://yukihane.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Kubernetes the hard way を最新版の1.18.2でやってみた</title>
+      <link>https://yukihane.github.io/posts/202004/26/kubernetes-the-hard-way-v1.18.2/</link>
+      <pubDate>Sun, 26 Apr 2020 13:00:50 +0000</pubDate>
+      
+      <guid>https://yukihane.github.io/posts/202004/26/kubernetes-the-hard-way-v1.18.2/</guid>
+      <description>要約 kube-apiserver の起動引数を --runtime-config=api/all=true に修正すれば v1.18.2 でも記述どおりで動作する。 本文 現時点で本家 Kubernetes The Hard Way は1.15.3をターゲットにして構築を行っていますが、せ</description>
+    </item>
+    
+    <item>
+      <title>Kubernetes the hard wayを試すためのtmux基礎知識</title>
+      <link>https://yukihane.github.io/posts/202004/25/tmux/</link>
+      <pubDate>Sat, 25 Apr 2020 02:43:13 +0000</pubDate>
+      
+      <guid>https://yukihane.github.io/posts/202004/25/tmux/</guid>
+      <description>Kubernetes the hard wayをやるのに`tmux`の操作を覚えておくのが良さそうだったので使いそうなものを記載しておくことにしました。 Ctrl キーと b キーの同時押</description>
+    </item>
     
     <item>
       <title>Hello, Wasm with Rust</title>

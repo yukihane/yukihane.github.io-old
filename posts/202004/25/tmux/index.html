@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    
+
+
+
+
+
+<title>Kubernetes the hard wayを試すためのtmux基礎知識 | 発火後忘失</title>
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content='Kubernetes the hard wayをやるのに`tmux`の操作を覚えておくのが良さそうだったので使いそうなものを記載しておくことにしました。 Ctrl キーと b キーの同時押'>
+<meta name="keywords" content='tmux, kubernetes'>
+<meta name="msapplication-TileColor" content="#b91d47">
+<meta name="theme-color" content="#ffffff">
+
+<link rel="canonical" href="https://yukihane.github.io/posts/202004/25/tmux/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#007aa6">
+<meta name="theme-color" content="#ffffff">
+
+<meta property="og:title" content="Kubernetes the hard wayを試すためのtmux基礎知識" />
+<meta property="og:description" content="Kubernetes the hard wayをやるのに`tmux`の操作を覚えておくのが良さそうだったので使いそうなものを記載しておくことにしました。 Ctrl キーと b キーの同時押" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://yukihane.github.io/posts/202004/25/tmux/" />
+<meta property="article:published_time" content="2020-04-25T02:43:13+00:00" />
+<meta property="article:modified_time" content="2020-04-25T02:43:13+00:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Kubernetes the hard wayを試すためのtmux基礎知識"/>
+<meta name="twitter:description" content="Kubernetes the hard wayをやるのに`tmux`の操作を覚えておくのが良さそうだったので使いそうなものを記載しておくことにしました。 Ctrl キーと b キーの同時押"/>
+
+<meta itemprop="name" content="">
+<meta itemprop="description" content="">
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href='https://yukihane.github.io/css/style.css'>
+
+    
+
+
+<link href="https://fonts.googleapis.com/css?family=Hanuman:400,700|Inconsolata|Roboto:400,400i,700,700i&display=swap&subset=khmer" rel="stylesheet">
+</head><body><header id="navigation" class="p-navigation">
+    <div class="p-navigation__row">
+        <div class="p-navigation__banner">
+            <div class="p-navigation__logo">
+                <a class="p-navigation__link u-vertically-center p-link--logo" href="https://yukihane.github.io/">
+                    発火後忘失
+                </a>
+            </div>
+            
+            <a href="#navigation" class="p-navigation__toggle--open" title="menu">
+                <i class="p-icon--menu"></i>
+            </a>
+            <a href="#navigation-closed" class="p-navigation__toggle--close" title="close menu">
+                <i class="p-icon--close"></i>
+            </a>
+        </div>
+
+        <nav class="p-navigation__nav">
+            <span class="u-off-screen">
+                <a href="#main-content">Jump to main content</a>
+            </span>
+
+            <ul class="p-navigation__links" role="menu">
+                
+            </ul>
+
+            
+            <form class="p-search-box" action="https://www.google.com/search" target="_blank">
+    <input type="search" class="p-search-box__input" name="q" placeholder='Search'
+        required="" aria-label="Query">
+    <input type="hidden" name="sitesearch" value="https://yukihane.github.io/">
+    <button type="reset" class="p-search-box__reset" alt="reset" aria-label="Reset">
+        <i class="p-icon--close"></i>
+    </button>
+    <button type="submit" class="p-search-box__button" alt="search" aria-label="Search">
+        <i class="p-icon--search"></i>
+    </button>
+</form>
+            
+        </nav>
+    </div>
+</header><div id="main-content">
+<header class="p-strip page-banner">
+    <div class="row">
+        <h1>Kubernetes the hard wayを試すためのtmux基礎知識</h1>
+    </div>
+
+    
+
+<div class="row">
+
+    
+    <div class="col-8">
+        
+
+
+
+
+<div class="p-media-object">
+
+    
+
+    <div class="p-media-object__details">
+
+        
+
+        
+        <p class="p-media-object__content">
+            <span class="u-capitalized">on</span>
+            2020-04-25
+        </p>
+        
+
+    </div>
+</div>
+
+
+    </div>
+    
+
+    
+    <div class="col-4  col--share-links ">
+        <ul class="p-inline-list-icons p-inline-list-icons--share-links u-no-padding--left u-no-margin--left u-unselectable">
+    <li class="p-inline-list__item">
+        <i class="p-icon--share"></i>
+    </li>
+    <li class="p-inline-list__item">
+        <a class="p-icon--facebook" title='Share on Facebook' target="_blank"
+            rel="noreferrer" href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fyukihane.github.io%2fposts%2f202004%2f25%2ftmux%2f">
+            Facebook
+        </a>
+    </li>
+    <li class="p-inline-list__item">
+        <a class="p-icon--twitter" title='Share on Twitter' target="_blank"
+            rel="noreferrer" href="http://twitter.com/share?text=Kubernetes%20the%20hard%20way%e3%82%92%e8%a9%a6%e3%81%99%e3%81%9f%e3%82%81%e3%81%aetmux%e5%9f%ba%e7%a4%8e%e7%9f%a5%e8%ad%98&amp;url=https%3a%2f%2fyukihane.github.io%2fposts%2f202004%2f25%2ftmux%2f">
+            Twitter
+        </a>
+    </li>
+    <li class="p-inline-list__item">
+        <a class="p-icon--linkedin" title='Share on LinkedIn' target="_blank"
+            rel="noreferrer"
+            href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fyukihane.github.io%2fposts%2f202004%2f25%2ftmux%2f&amp;title=Kubernetes%20the%20hard%20way%e3%82%92%e8%a9%a6%e3%81%99%e3%81%9f%e3%82%81%e3%81%aetmux%e5%9f%ba%e7%a4%8e%e7%9f%a5%e8%ad%98">
+            LinkedIn
+        </a>
+    </li>
+</ul>
+    </div>
+    
+
+</div>
+
+
+
+
+<div class="row">
+    <div class="col-12">
+        
+<a href="https://yukihane.github.io/tags/tmux/">#tmux</a>&ensp;
+
+<a href="https://yukihane.github.io/tags/kubernetes/">#kubernetes</a>&ensp;
+
+    </div>
+</div>
+
+</header>
+
+<section class="p-strip is-shallow">
+    <main class="row post-content">
+        <div class="paragraph">
+<p><a href="https://github.com/yukihane/kubernetes-the-hard-way">Kubernetes the hard wayをやる</a>のに`tmux`の操作を覚えておくのが良さそうだったので使いそうなものを記載しておくことにしました。</p>
+</div>
+<div class="paragraph">
+<p><code>Ctrl</code> キーと <code>b</code> キーの同時押しを <code>^b</code> と表記しています。</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">機能</th>
+<th class="tableblock halign-left valign-top">キー操作</th>
+<th class="tableblock halign-left valign-top">補足・説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">起動</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>tmux</code> コマンド</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">当然ですが tmux のセッション外で実行します。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">デタッチ</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>^b</code> <code>d</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">終了とは異なり状態が保存されます。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">アタッチ</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>tmux a</code> コマンド</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>-t &lt;session名&gt;</code> でアタッチするセッションを選択可能。セッション一覧は <code>tmux list-sessions</code> コマンド。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">上下分割</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>^b</code> <code>"</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">分割されたエリアはpaneと呼ばれます。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">上下分割したpaneの高さを均等にする</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>^b</code> <code>Alt+2</code></p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">pane移動</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>^b</code> <code>矢印キー</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">マウスクリックでも。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">全paneに同じ入力を行う/解除する</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>^b</code> <code>:setw synchronize-panes</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/yukihane/kubernetes-the-hard-way/blob/master/docs/01-prerequisites.md#running-commands-in-parallel-with-tmux">the hard wayの説明</a>では <code>setw</code> でなく <code>set</code> を用いているが、 <code>set</code> はセッションに対して適用するコマンド(<code>setw</code> はウィンドウに対して適用)。</p></td>
+</tr>
+</tbody>
+</table>
+
+    </main>
+</section>
+
+<footer class="p-strip is-wrapper">
+    <div class="row">
+        <div class="p-article-pagination">
+    
+    <a class="p-article-pagination__link--previous" href="https://yukihane.github.io/posts/202004/08/hello-wasm-with-rust/">
+        <span class="p-article-pagination__label">Previous</span>
+        <span class="p-article-pagination__title">
+            Hello, Wasm with Rust
+        </span>
+    </a>
+    
+
+    
+    <a class="p-article-pagination__link--next" href="https://yukihane.github.io/posts/202004/26/kubernetes-the-hard-way-v1.18.2/">
+        <span class="p-article-pagination__label">Next</span>
+        <span class="p-article-pagination__title">
+            Kubernetes the hard way を最新版の1.18.2でやってみた
+        </span>
+    </a>
+    
+</div>
+    </div>
+</footer>
+
+        </div><footer class="p-strip is-shallow page-footer">
+    <div class="row">
+        <div class="col-12  u-align--center">
+            <p>
+                © 2020 発火後忘失
+            </p>
+        </div>
+    </div>
+</footer>
+
+
+
+
+</body>
+</html>
