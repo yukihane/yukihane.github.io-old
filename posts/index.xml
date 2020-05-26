@@ -6,10 +6,28 @@
     <description>Recent content in Posts on 発火後忘失</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Sun, 26 Apr 2020 13:00:50 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 26 May 2020 21:58:21 +0000</lastBuildDate>
     
 	<atom:link href="https://yukihane.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>ミニマル `.vimrc`</title>
+      <link>https://yukihane.github.io/posts/202005/27/minimal-vimrc/</link>
+      <pubDate>Tue, 26 May 2020 21:58:21 +0000</pubDate>
+      
+      <guid>https://yukihane.github.io/posts/202005/27/minimal-vimrc/</guid>
+      <description>kubernetesの試験を受けるに当たって、最小限の .vimrc を覚えておくためのメモ: &#34; Tab文字を半角スペースにする set expandtab &#34; 行頭以外のTab文字の</description>
+    </item>
+    
+    <item>
+      <title>GKE(Goole Kubernetes Engine)の始め方</title>
+      <link>https://yukihane.github.io/posts/202004/26/gke-getting-started/</link>
+      <pubDate>Sun, 26 Apr 2020 14:05:12 +0000</pubDate>
+      
+      <guid>https://yukihane.github.io/posts/202004/26/gke-getting-started/</guid>
+      <description>Kubernetes入門の書籍やドキュメントの中には、Kubernetes環境が既に手元にある前提で書かれているものも多いです。 そういう場合</description>
+    </item>
     
     <item>
       <title>Kubernetes the hard way を最新版の1.18.2でやってみた</title>

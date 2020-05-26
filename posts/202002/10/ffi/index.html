@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    
+
+
+
+
+
+<title>現実世界のFFI実装について調べる | 発火後忘失</title>
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content='Dart ドキュメント caller - Dart callee - C calee が malloc で領域確保し関数戻り値でポインタを返している。 サンプルコードだからか、領域を開放する実装は無い(ためこのまま'>
+<meta name="keywords" content=''>
+<meta name="msapplication-TileColor" content="#b91d47">
+<meta name="theme-color" content="#ffffff">
+
+<link rel="canonical" href="http://localhost:1313/posts/202002/10/ffi/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#007aa6">
+<meta name="theme-color" content="#ffffff">
+
+<meta property="og:title" content="現実世界のFFI実装について調べる" />
+<meta property="og:description" content="Dart ドキュメント caller - Dart callee - C calee が malloc で領域確保し関数戻り値でポインタを返している。 サンプルコードだからか、領域を開放する実装は無い(ためこのまま" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/posts/202002/10/ffi/" />
+<meta property="article:published_time" content="2020-02-10T12:58:59+00:00" />
+<meta property="article:modified_time" content="2020-02-10T12:58:59+00:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="現実世界のFFI実装について調べる"/>
+<meta name="twitter:description" content="Dart ドキュメント caller - Dart callee - C calee が malloc で領域確保し関数戻り値でポインタを返している。 サンプルコードだからか、領域を開放する実装は無い(ためこのまま"/>
+
+<meta itemprop="name" content="">
+<meta itemprop="description" content="">
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href='http://localhost:1313/css/style.css'>
+
+    
+
+
+<link href="https://fonts.googleapis.com/css?family=Hanuman:400,700|Inconsolata|Roboto:400,400i,700,700i&display=swap&subset=khmer" rel="stylesheet">
+</head><body><header id="navigation" class="p-navigation">
+    <div class="p-navigation__row">
+        <div class="p-navigation__banner">
+            <div class="p-navigation__logo">
+                <a class="p-navigation__link u-vertically-center p-link--logo" href="http://localhost:1313/">
+                    発火後忘失
+                </a>
+            </div>
+            
+            <a href="#navigation" class="p-navigation__toggle--open" title="menu">
+                <i class="p-icon--menu"></i>
+            </a>
+            <a href="#navigation-closed" class="p-navigation__toggle--close" title="close menu">
+                <i class="p-icon--close"></i>
+            </a>
+        </div>
+
+        <nav class="p-navigation__nav">
+            <span class="u-off-screen">
+                <a href="#main-content">Jump to main content</a>
+            </span>
+
+            <ul class="p-navigation__links" role="menu">
+                
+            </ul>
+
+            
+            <form class="p-search-box" action="https://www.google.com/search" target="_blank">
+    <input type="search" class="p-search-box__input" name="q" placeholder='Search'
+        required="" aria-label="Query">
+    <input type="hidden" name="sitesearch" value="http://localhost:1313/">
+    <button type="reset" class="p-search-box__reset" alt="reset" aria-label="Reset">
+        <i class="p-icon--close"></i>
+    </button>
+    <button type="submit" class="p-search-box__button" alt="search" aria-label="Search">
+        <i class="p-icon--search"></i>
+    </button>
+</form>
+            
+        </nav>
+    </div>
+</header><div id="main-content">
+<header class="p-strip page-banner">
+    <div class="row">
+        <h1>現実世界のFFI実装について調べる</h1>
+    </div>
+
+    
+
+<div class="row">
+
+    
+    <div class="col-8">
+        
+
+
+
+
+<div class="p-media-object">
+
+    
+
+    <div class="p-media-object__details">
+
+        
+
+        
+        <p class="p-media-object__content">
+            <span class="u-capitalized">on</span>
+            2020-02-10
+        </p>
+        
+
+    </div>
+</div>
+
+
+    </div>
+    
+
+    
+    <div class="col-4  col--share-links ">
+        <ul class="p-inline-list-icons p-inline-list-icons--share-links u-no-padding--left u-no-margin--left u-unselectable">
+    <li class="p-inline-list__item">
+        <i class="p-icon--share"></i>
+    </li>
+    <li class="p-inline-list__item">
+        <a class="p-icon--facebook" title='Share on Facebook' target="_blank"
+            rel="noreferrer" href="//www.facebook.com/sharer/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fposts%2f202002%2f10%2fffi%2f">
+            Facebook
+        </a>
+    </li>
+    <li class="p-inline-list__item">
+        <a class="p-icon--twitter" title='Share on Twitter' target="_blank"
+            rel="noreferrer" href="http://twitter.com/share?text=%e7%8f%be%e5%ae%9f%e4%b8%96%e7%95%8c%e3%81%aeFFI%e5%ae%9f%e8%a3%85%e3%81%ab%e3%81%a4%e3%81%84%e3%81%a6%e8%aa%bf%e3%81%b9%e3%82%8b&amp;url=http%3a%2f%2flocalhost%3a1313%2fposts%2f202002%2f10%2fffi%2f">
+            Twitter
+        </a>
+    </li>
+    <li class="p-inline-list__item">
+        <a class="p-icon--linkedin" title='Share on LinkedIn' target="_blank"
+            rel="noreferrer"
+            href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http%3a%2f%2flocalhost%3a1313%2fposts%2f202002%2f10%2fffi%2f&amp;title=%e7%8f%be%e5%ae%9f%e4%b8%96%e7%95%8c%e3%81%aeFFI%e5%ae%9f%e8%a3%85%e3%81%ab%e3%81%a4%e3%81%84%e3%81%a6%e8%aa%bf%e3%81%b9%e3%82%8b">
+            LinkedIn
+        </a>
+    </li>
+</ul>
+    </div>
+    
+
+</div>
+
+
+
+
+</header>
+
+<section class="p-strip is-shallow">
+    <main class="row post-content">
+        <div class="sect1">
+<h2 id="_dart">Dart</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://dart.dev/guides/libraries/c-interop">ドキュメント</a></p>
+</li>
+<li>
+<p><a href="https://github.com/dart-lang/samples/blob/b8bac3a6c45c5b330dc5be70ed86df2dfd94b1b1/ffi/structs/structs.dart#L74">caller</a> - Dart</p>
+</li>
+<li>
+<p><a href="https://github.com/dart-lang/samples/blob/b8bac3a6c4/ffi/structs/structs_library/structs.c#L22">callee</a> - C</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>calee が <code>malloc</code> で領域確保し関数戻り値でポインタを返している。
+サンプルコードだからか、領域を開放する実装は無い(ためこのままだとメモリリークする)。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_go">Go</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>ドキュメント - <a href="https://golang.org/cmd/cgo/">Command cgo</a>, <a href="https://github.com/golang/go/wiki/cgo">wiki</a>, <a href="https://blog.golang.org/c-go-cgo">blog</a></p>
+</li>
+</ul>
+</div>
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p>Memory allocations made by C code are not known to Go&#8217;s memory manager. When you create a C string with C.CString (or any C memory allocation) you must remember to free the memory when you&#8217;re done with it by calling C.free.</p>
+</div>
+<div class="paragraph">
+<p>The call to C.CString returns a pointer to the start of the char array, so before the function exits we convert it to an unsafe.Pointer and release the memory allocation with C.free. A common idiom in cgo programs is to defer the free immediately after allocating (especially when the code that follows is more complex than a single function call), as in this rewrite of Print:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-golang" data-lang="golang">func main() {
+	cs := C.CString("Hello from stdio")
+	C.myprint(cs)
+	C.free(unsafe.Pointer(cs))
+}</code></pre>
+</div>
+</div>
+</blockquote>
+<div class="attribution">
+&#8212; 2011年のblog記事
+</div>
+</div>
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p>Of course, you aren&#8217;t required to use defer to call C.free(). You can free the C string whenever you like, but it is your responsibility to make sure it happens.</p>
+</div>
+</blockquote>
+<div class="attribution">
+&#8212; wiki
+</div>
+</div>
+</div>
+</div>
+
+    </main>
+</section>
+
+<footer class="p-strip is-wrapper">
+    <div class="row">
+        <div class="p-article-pagination">
+    
+    <a class="p-article-pagination__link--previous" href="http://localhost:1313/posts/202002/01/hello-rust-neon/">
+        <span class="p-article-pagination__label">Previous</span>
+        <span class="p-article-pagination__title">
+            Nodeのnative moduleをRustで書いてみる(Neon)
+        </span>
+    </a>
+    
+
+    
+    <a class="p-article-pagination__link--next" href="http://localhost:1313/posts/202002/13/twitter-client/">
+        <span class="p-article-pagination__label">Next</span>
+        <span class="p-article-pagination__title">
+            Twitter Client
+        </span>
+    </a>
+    
+</div>
+    </div>
+</footer>
+
+        </div><footer class="p-strip is-shallow page-footer">
+    <div class="row">
+        <div class="col-12  u-align--center">
+            <p>
+                © 2020 発火後忘失
+            </p>
+        </div>
+    </div>
+</footer>
+
+
+
+
+<script data-no-instant>document.write('<script src="/livereload.js?port=1313&mindelay=10&v=2"></' + 'script>')</script></body>
+</html>

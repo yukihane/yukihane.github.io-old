@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    
+
+
+
+
+
+<title>GKE(Goole Kubernetes Engine)の始め方 | 発火後忘失</title>
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content='Kubernetes入門の書籍やドキュメントの中には、Kubernetes環境が既に手元にある前提で書かれているものも多いです。 そういう場合'>
+<meta name="keywords" content='kubernetes'>
+<meta name="msapplication-TileColor" content="#b91d47">
+<meta name="theme-color" content="#ffffff">
+
+<link rel="canonical" href="https://yukihane.github.io/posts/202004/26/gke-getting-started/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#007aa6">
+<meta name="theme-color" content="#ffffff">
+
+<meta property="og:title" content="GKE(Goole Kubernetes Engine)の始め方" />
+<meta property="og:description" content="Kubernetes入門の書籍やドキュメントの中には、Kubernetes環境が既に手元にある前提で書かれているものも多いです。 そういう場合" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://yukihane.github.io/posts/202004/26/gke-getting-started/" />
+<meta property="article:published_time" content="2020-04-26T14:05:12+00:00" />
+<meta property="article:modified_time" content="2020-04-26T14:05:12+00:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="GKE(Goole Kubernetes Engine)の始め方"/>
+<meta name="twitter:description" content="Kubernetes入門の書籍やドキュメントの中には、Kubernetes環境が既に手元にある前提で書かれているものも多いです。 そういう場合"/>
+
+<meta itemprop="name" content="">
+<meta itemprop="description" content="">
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href='https://yukihane.github.io/css/style.css'>
+
+    
+
+
+<link href="https://fonts.googleapis.com/css?family=Hanuman:400,700|Inconsolata|Roboto:400,400i,700,700i&display=swap&subset=khmer" rel="stylesheet">
+</head><body><header id="navigation" class="p-navigation">
+    <div class="p-navigation__row">
+        <div class="p-navigation__banner">
+            <div class="p-navigation__logo">
+                <a class="p-navigation__link u-vertically-center p-link--logo" href="https://yukihane.github.io/">
+                    発火後忘失
+                </a>
+            </div>
+            
+            <a href="#navigation" class="p-navigation__toggle--open" title="menu">
+                <i class="p-icon--menu"></i>
+            </a>
+            <a href="#navigation-closed" class="p-navigation__toggle--close" title="close menu">
+                <i class="p-icon--close"></i>
+            </a>
+        </div>
+
+        <nav class="p-navigation__nav">
+            <span class="u-off-screen">
+                <a href="#main-content">Jump to main content</a>
+            </span>
+
+            <ul class="p-navigation__links" role="menu">
+                
+            </ul>
+
+            
+            <form class="p-search-box" action="https://www.google.com/search" target="_blank">
+    <input type="search" class="p-search-box__input" name="q" placeholder='Search'
+        required="" aria-label="Query">
+    <input type="hidden" name="sitesearch" value="https://yukihane.github.io/">
+    <button type="reset" class="p-search-box__reset" alt="reset" aria-label="Reset">
+        <i class="p-icon--close"></i>
+    </button>
+    <button type="submit" class="p-search-box__button" alt="search" aria-label="Search">
+        <i class="p-icon--search"></i>
+    </button>
+</form>
+            
+        </nav>
+    </div>
+</header><div id="main-content">
+<header class="p-strip page-banner">
+    <div class="row">
+        <h1>GKE(Goole Kubernetes Engine)の始め方</h1>
+    </div>
+
+    
+
+<div class="row">
+
+    
+    <div class="col-8">
+        
+
+
+
+
+<div class="p-media-object">
+
+    
+
+    <div class="p-media-object__details">
+
+        
+
+        
+        <p class="p-media-object__content">
+            <span class="u-capitalized">on</span>
+            2020-04-26
+        </p>
+        
+
+    </div>
+</div>
+
+
+    </div>
+    
+
+    
+    <div class="col-4  col--share-links ">
+        <ul class="p-inline-list-icons p-inline-list-icons--share-links u-no-padding--left u-no-margin--left u-unselectable">
+    <li class="p-inline-list__item">
+        <i class="p-icon--share"></i>
+    </li>
+    <li class="p-inline-list__item">
+        <a class="p-icon--facebook" title='Share on Facebook' target="_blank"
+            rel="noreferrer" href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fyukihane.github.io%2fposts%2f202004%2f26%2fgke-getting-started%2f">
+            Facebook
+        </a>
+    </li>
+    <li class="p-inline-list__item">
+        <a class="p-icon--twitter" title='Share on Twitter' target="_blank"
+            rel="noreferrer" href="http://twitter.com/share?text=GKE%28Goole%20Kubernetes%20Engine%29%e3%81%ae%e5%a7%8b%e3%82%81%e6%96%b9&amp;url=https%3a%2f%2fyukihane.github.io%2fposts%2f202004%2f26%2fgke-getting-started%2f">
+            Twitter
+        </a>
+    </li>
+    <li class="p-inline-list__item">
+        <a class="p-icon--linkedin" title='Share on LinkedIn' target="_blank"
+            rel="noreferrer"
+            href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fyukihane.github.io%2fposts%2f202004%2f26%2fgke-getting-started%2f&amp;title=GKE%28Goole%20Kubernetes%20Engine%29%e3%81%ae%e5%a7%8b%e3%82%81%e6%96%b9">
+            LinkedIn
+        </a>
+    </li>
+</ul>
+    </div>
+    
+
+</div>
+
+
+
+
+<div class="row">
+    <div class="col-12">
+        
+<a href="https://yukihane.github.io/tags/kubernetes/">#kubernetes</a>&ensp;
+
+    </div>
+</div>
+
+</header>
+
+<section class="p-strip is-shallow">
+    <main class="row post-content">
+        <div class="paragraph">
+<p>Kubernetes入門の書籍やドキュメントの中には、Kubernetes環境が既に手元にある前提で書かれているものも多いです。</p>
+</div>
+<div class="paragraph">
+<p>そういう場合、どうやってKubernetes環境を調達して良いのかわからず、一つの手段として自前で環境を作る <a href="https://yukihane.github.io/posts/202004/26/kubernetes-the-hard-way-v1.18.2/">Kubernetes the hard way</a> をやってみたのですが、一旦環境を作ってしまうとインスタンスを起動させ続けねばならず(作り直すの面倒だし)、財布に優しくないので断念しました。</p>
+</div>
+<div class="paragraph">
+<p>代わりに、表題のKubernetesマネージド環境であるところのGKEを利用することにしました。初回の3万円無料枠で利用可能です。</p>
+</div>
+<div class="paragraph">
+<p>ドキュメントはここですね:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://cloud.google.com/kubernetes-engine/docs/how-to?hl=ja" class="bare">https://cloud.google.com/kubernetes-engine/docs/how-to?hl=ja</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>「単一ゾーンクラスタの作成」を読めば良いでしょう。</p>
+</div>
+<div class="paragraph">
+<p>katacodaのplaygroundは完全無料で試すことができます。レスポンスは少し遅いです。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://www.katacoda.com/courses/kubernetes/playground" class="bare">https://www.katacoda.com/courses/kubernetes/playground</a></p>
+</li>
+</ul>
+</div>
+
+    </main>
+</section>
+
+<footer class="p-strip is-wrapper">
+    <div class="row">
+        <div class="p-article-pagination">
+    
+    <a class="p-article-pagination__link--previous" href="https://yukihane.github.io/posts/202004/26/kubernetes-the-hard-way-v1.18.2/">
+        <span class="p-article-pagination__label">Previous</span>
+        <span class="p-article-pagination__title">
+            Kubernetes the hard way を最新版の1.18.2でやってみた
+        </span>
+    </a>
+    
+
+    
+    <a class="p-article-pagination__link--next" href="https://yukihane.github.io/posts/202005/27/minimal-vimrc/">
+        <span class="p-article-pagination__label">Next</span>
+        <span class="p-article-pagination__title">
+            ミニマル `.vimrc`
+        </span>
+    </a>
+    
+</div>
+    </div>
+</footer>
+
+        </div><footer class="p-strip is-shallow page-footer">
+    <div class="row">
+        <div class="col-12  u-align--center">
+            <p>
+                © 2020 発火後忘失
+            </p>
+        </div>
+    </div>
+</footer>
+
+
+
+
+</body>
+</html>
