@@ -6,10 +6,19 @@
     <description>Recent content in Posts on 発火後忘失</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Tue, 26 May 2020 21:58:21 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 29 May 2020 08:28:07 +0000</lastBuildDate>
     
 	<atom:link href="https://yukihane.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Javaのソースファイルはpackageに対応したディレクトリ階層に置かなくても良い？</title>
+      <link>https://yukihane.github.io/posts/202005/29/java-source-location/</link>
+      <pubDate>Fri, 29 May 2020 08:28:07 +0000</pubDate>
+      
+      <guid>https://yukihane.github.io/posts/202005/29/java-source-location/</guid>
+      <description>https://twitter.com/hishidama/status/1266177837049864192 packageの宣言と実際のディレクトリが一致していなくてもmvn compile（やjavac）が成功するんですが、そういうもんでしたっけ</description>
+    </item>
     
     <item>
       <title>ミニマル `.vimrc`</title>

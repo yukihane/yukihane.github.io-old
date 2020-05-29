@@ -3,27 +3,37 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://yukihane.github.io/tags/java/</loc>
+    <lastmod>2020-05-29T08:28:07+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yukihane.github.io/posts/202005/29/java-source-location/</loc>
+    <lastmod>2020-05-29T08:28:07+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yukihane.github.io/posts/</loc>
+    <lastmod>2020-05-29T08:28:07+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yukihane.github.io/tags/</loc>
+    <lastmod>2020-05-29T08:28:07+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yukihane.github.io/</loc>
+    <lastmod>2020-05-29T08:28:07+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://yukihane.github.io/tags/kubernetes/</loc>
     <lastmod>2020-05-26T21:58:21+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://yukihane.github.io/posts/</loc>
-    <lastmod>2020-05-26T21:58:21+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://yukihane.github.io/tags/</loc>
-    <lastmod>2020-05-26T21:58:21+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://yukihane.github.io/posts/202005/27/minimal-vimrc/</loc>
-    <lastmod>2020-05-26T21:58:21+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://yukihane.github.io/</loc>
     <lastmod>2020-05-26T21:58:21+00:00</lastmod>
   </url>
   
@@ -74,11 +84,6 @@
   
   <url>
     <loc>https://yukihane.github.io/posts/202004/06/hello-jsf/</loc>
-    <lastmod>2020-04-06T01:52:30+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://yukihane.github.io/tags/java/</loc>
     <lastmod>2020-04-06T01:52:30+00:00</lastmod>
   </url>
   
