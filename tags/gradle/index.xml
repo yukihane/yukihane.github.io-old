@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>gradle on 発火後忘失</title>
+    <link>https://yukihane.github.io/tags/gradle/</link>
+    <description>Recent content in gradle on 発火後忘失</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Mon, 15 Jun 2020 07:42:25 +0000</lastBuildDate>
+    
+	<atom:link href="https://yukihane.github.io/tags/gradle/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Spring BootのGradleでのデバッグ実行方法</title>
+      <link>https://yukihane.github.io/posts/202006/15/spring-boot-debugging/</link>
+      <pubDate>Mon, 15 Jun 2020 07:42:25 +0000</pubDate>
+      
+      <guid>https://yukihane.github.io/posts/202006/15/spring-boot-debugging/</guid>
+      <description>gradle bootRun --debug-jvm というように、--debug-jvm オプションを付与すれば良いようです。 これで、デバッガ接続の待受状態で起動します。 BootRun は JavaExec を継承してい</description>
+    </item>
+    
+  </channel>
+</rss>

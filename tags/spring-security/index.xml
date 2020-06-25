@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>spring-security on 発火後忘失</title>
+    <link>https://yukihane.github.io/tags/spring-security/</link>
+    <description>Recent content in spring-security on 発火後忘失</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Wed, 17 Jun 2020 09:24:57 +0000</lastBuildDate>
+    
+	<atom:link href="https://yukihane.github.io/tags/spring-security/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Spring Security OAuth 2.0 Client(OAuth 2.0 Login)でトークンの管理をしているのはOAuth2AuthorizedClientService</title>
+      <link>https://yukihane.github.io/posts/202006/17/oauth2authorizedclientservice/</link>
+      <pubDate>Wed, 17 Jun 2020 09:24:57 +0000</pubDate>
+      
+      <guid>https://yukihane.github.io/posts/202006/17/oauth2authorizedclientservice/</guid>
+      <description>私も今回の質問(本文末参照)を見たとき少しの間勘違いしてしまったのですが、OAuth2.0のクライアントがどこで各リソースオーナーのトークン</description>
+    </item>
+    
+    <item>
+      <title>UserDetailsServiceは誤解されている</title>
+      <link>https://yukihane.github.io/posts/202006/12/userdetailsservice-conidered-harmful/</link>
+      <pubDate>Fri, 12 Jun 2020 09:37:26 +0000</pubDate>
+      
+      <guid>https://yukihane.github.io/posts/202006/12/userdetailsservice-conidered-harmful/</guid>
+      <description>サンプルコード等だけを見ていると UserDetailsService を利用することがSpring Securityの唯一の認証処理実現方法だと誤解しがちですが、 UserDetailsService はむしろユーテ</description>
+    </item>
+    
+  </channel>
+</rss>

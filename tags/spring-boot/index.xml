@@ -6,10 +6,46 @@
     <description>Recent content in spring-boot on 発火後忘失</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Sun, 26 Jan 2020 14:48:47 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 20 Jun 2020 08:16:28 +0000</lastBuildDate>
     
 	<atom:link href="https://yukihane.github.io/tags/spring-boot/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Spring MVCにはJPA EntityのIDからエンティティオブジェクトに変換する機能がある(が、2.3.1では機能しない)</title>
+      <link>https://yukihane.github.io/posts/202006/20/spring-boot-thymeleaf-converts-id-to-entity/</link>
+      <pubDate>Sat, 20 Jun 2020 08:16:28 +0000</pubDate>
+      
+      <guid>https://yukihane.github.io/posts/202006/20/spring-boot-thymeleaf-converts-id-to-entity/</guid>
+      <description>Spring Bootは[Spring Data Commons](https://docs.spring.io/spring-data/commons/docs</description>
+    </item>
+    
+    <item>
+      <title>Spring Security OAuth 2.0 Client(OAuth 2.0 Login)でトークンの管理をしているのはOAuth2AuthorizedClientService</title>
+      <link>https://yukihane.github.io/posts/202006/17/oauth2authorizedclientservice/</link>
+      <pubDate>Wed, 17 Jun 2020 09:24:57 +0000</pubDate>
+      
+      <guid>https://yukihane.github.io/posts/202006/17/oauth2authorizedclientservice/</guid>
+      <description>私も今回の質問(本文末参照)を見たとき少しの間勘違いしてしまったのですが、OAuth2.0のクライアントがどこで各リソースオーナーのトークン</description>
+    </item>
+    
+    <item>
+      <title>Spring BootのGradleでのデバッグ実行方法</title>
+      <link>https://yukihane.github.io/posts/202006/15/spring-boot-debugging/</link>
+      <pubDate>Mon, 15 Jun 2020 07:42:25 +0000</pubDate>
+      
+      <guid>https://yukihane.github.io/posts/202006/15/spring-boot-debugging/</guid>
+      <description>gradle bootRun --debug-jvm というように、--debug-jvm オプションを付与すれば良いようです。 これで、デバッガ接続の待受状態で起動します。 BootRun は JavaExec を継承してい</description>
+    </item>
+    
+    <item>
+      <title>UserDetailsServiceは誤解されている</title>
+      <link>https://yukihane.github.io/posts/202006/12/userdetailsservice-conidered-harmful/</link>
+      <pubDate>Fri, 12 Jun 2020 09:37:26 +0000</pubDate>
+      
+      <guid>https://yukihane.github.io/posts/202006/12/userdetailsservice-conidered-harmful/</guid>
+      <description>サンプルコード等だけを見ていると UserDetailsService を利用することがSpring Securityの唯一の認証処理実現方法だと誤解しがちですが、 UserDetailsService はむしろユーテ</description>
+    </item>
     
     <item>
       <title>Spring BootのRestTemplateで text/plain;Windows-31J なRESTレスポンスを処理する</title>
