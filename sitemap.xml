@@ -53,6 +53,16 @@
   </url>
   
   <url>
+    <loc>https://yukihane.github.io/tags/java/</loc>
+    <lastmod>2020-06-13T10:34:19+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yukihane.github.io/posts/202006/13/list-contains-null/</loc>
+    <lastmod>2020-06-13T10:34:19+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://yukihane.github.io/posts/202006/12/userdetailsservice-conidered-harmful/</loc>
     <lastmod>2020-06-12T09:37:26+00:00</lastmod>
   </url>
@@ -69,11 +79,6 @@
   
   <url>
     <loc>https://yukihane.github.io/posts/202006/02/note-of-completablefuture/</loc>
-    <lastmod>2020-06-02T07:54:25+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://yukihane.github.io/tags/java/</loc>
     <lastmod>2020-06-02T07:54:25+00:00</lastmod>
   </url>
   

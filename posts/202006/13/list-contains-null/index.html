@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    
+
+
+
+
+
+<title>List#contains(null)は使わないほうが良い | 発火後忘失</title>
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content='List(などのコレクション)が要素に null を含むかどうかの判定に、 contains(null) を利用すると NullPointerException が発生することがあります。 リファレンスには次のようにあります'>
+<meta name="keywords" content='java'>
+<meta name="msapplication-TileColor" content="#b91d47">
+<meta name="theme-color" content="#ffffff">
+
+<link rel="canonical" href="https://yukihane.github.io/posts/202006/13/list-contains-null/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#007aa6">
+<meta name="theme-color" content="#ffffff">
+
+<meta property="og:title" content="List#contains(null)は使わないほうが良い" />
+<meta property="og:description" content="List(などのコレクション)が要素に null を含むかどうかの判定に、 contains(null) を利用すると NullPointerException が発生することがあります。 リファレンスには次のようにあります" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://yukihane.github.io/posts/202006/13/list-contains-null/" />
+<meta property="article:published_time" content="2020-06-13T10:34:19+00:00" />
+<meta property="article:modified_time" content="2020-06-13T10:34:19+00:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="List#contains(null)は使わないほうが良い"/>
+<meta name="twitter:description" content="List(などのコレクション)が要素に null を含むかどうかの判定に、 contains(null) を利用すると NullPointerException が発生することがあります。 リファレンスには次のようにあります"/>
+
+<meta itemprop="name" content="">
+<meta itemprop="description" content="">
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href='https://yukihane.github.io/css/style.css'>
+
+    
+
+
+<link href="https://fonts.googleapis.com/css?family=Hanuman:400,700|Inconsolata|Roboto:400,400i,700,700i&display=swap&subset=khmer" rel="stylesheet">
+</head><body><header id="navigation" class="p-navigation">
+    <div class="p-navigation__row">
+        <div class="p-navigation__banner">
+            <div class="p-navigation__logo">
+                <a class="p-navigation__link u-vertically-center p-link--logo" href="https://yukihane.github.io/">
+                    発火後忘失
+                </a>
+            </div>
+            
+            <a href="#navigation" class="p-navigation__toggle--open" title="menu">
+                <i class="p-icon--menu"></i>
+            </a>
+            <a href="#navigation-closed" class="p-navigation__toggle--close" title="close menu">
+                <i class="p-icon--close"></i>
+            </a>
+        </div>
+
+        <nav class="p-navigation__nav">
+            <span class="u-off-screen">
+                <a href="#main-content">Jump to main content</a>
+            </span>
+
+            <ul class="p-navigation__links" role="menu">
+                
+            </ul>
+
+            
+            <form class="p-search-box" action="https://www.google.com/search" target="_blank">
+    <input type="search" class="p-search-box__input" name="q" placeholder='Search'
+        required="" aria-label="Query">
+    <input type="hidden" name="sitesearch" value="https://yukihane.github.io/">
+    <button type="reset" class="p-search-box__reset" alt="reset" aria-label="Reset">
+        <i class="p-icon--close"></i>
+    </button>
+    <button type="submit" class="p-search-box__button" alt="search" aria-label="Search">
+        <i class="p-icon--search"></i>
+    </button>
+</form>
+            
+        </nav>
+    </div>
+</header><div id="main-content">
+<header class="p-strip page-banner">
+    <div class="row">
+        <h1>List#contains(null)は使わないほうが良い</h1>
+    </div>
+
+    
+
+<div class="row">
+
+    
+    <div class="col-8">
+        
+
+
+
+
+<div class="p-media-object">
+
+    
+
+    <div class="p-media-object__details">
+
+        
+
+        
+        <p class="p-media-object__content">
+            <span class="u-capitalized">on</span>
+            2020-06-13
+        </p>
+        
+
+    </div>
+</div>
+
+
+    </div>
+    
+
+    
+    <div class="col-4  col--share-links ">
+        <ul class="p-inline-list-icons p-inline-list-icons--share-links u-no-padding--left u-no-margin--left u-unselectable">
+    <li class="p-inline-list__item">
+        <i class="p-icon--share"></i>
+    </li>
+    <li class="p-inline-list__item">
+        <a class="p-icon--facebook" title='Share on Facebook' target="_blank"
+            rel="noreferrer" href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fyukihane.github.io%2fposts%2f202006%2f13%2flist-contains-null%2f">
+            Facebook
+        </a>
+    </li>
+    <li class="p-inline-list__item">
+        <a class="p-icon--twitter" title='Share on Twitter' target="_blank"
+            rel="noreferrer" href="http://twitter.com/share?text=List%23contains%28null%29%e3%81%af%e4%bd%bf%e3%82%8f%e3%81%aa%e3%81%84%e3%81%bb%e3%81%86%e3%81%8c%e8%89%af%e3%81%84&amp;url=https%3a%2f%2fyukihane.github.io%2fposts%2f202006%2f13%2flist-contains-null%2f">
+            Twitter
+        </a>
+    </li>
+    <li class="p-inline-list__item">
+        <a class="p-icon--linkedin" title='Share on LinkedIn' target="_blank"
+            rel="noreferrer"
+            href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fyukihane.github.io%2fposts%2f202006%2f13%2flist-contains-null%2f&amp;title=List%23contains%28null%29%e3%81%af%e4%bd%bf%e3%82%8f%e3%81%aa%e3%81%84%e3%81%bb%e3%81%86%e3%81%8c%e8%89%af%e3%81%84">
+            LinkedIn
+        </a>
+    </li>
+</ul>
+    </div>
+    
+
+</div>
+
+
+
+
+<div class="row">
+    <div class="col-12">
+        
+<a href="https://yukihane.github.io/tags/java/">#java</a>&ensp;
+
+    </div>
+</div>
+
+</header>
+
+<section class="p-strip is-shallow">
+    <main class="row post-content">
+        <div class="paragraph">
+<p><code>List</code>(などのコレクション)が要素に <code>null</code> を含むかどうかの判定に、 <code>contains(null)</code> を利用すると <code>NullPointerException</code> が発生することがあります。</p>
+</div>
+<div class="paragraph">
+<p>リファレンスには次のようにあります:</p>
+</div>
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p><code>NullPointerException</code> - 指定された要素が <code>null</code> で、このリストが <code>null</code> 要素を許可しない場合(オプション)</p>
+</div>
+</blockquote>
+<div class="attribution">
+&#8212; <a href="https://docs.oracle.com/javase/jp/11/docs/api/java.base/java/util/List.html#contains(java.lang.Object" class="bare">https://docs.oracle.com/javase/jp/11/docs/api/java.base/java/util/List.html#contains(java.lang.Object</a>)
+</div>
+</div>
+<div class="paragraph">
+<p>オプション、とあるが、そういう型は実際に存在するのか、というと、Java9から導入された <code>List.of()</code> メソッドで生成される <a href="https://docs.oracle.com/javase/jp/11/docs/api/java.base/java/util/List.html#unmodifiable">インスタンス(変更不能なリスト)</a>がそれです。
+簡単に試せます:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>List&lt;String&gt; list = List.of("hello");
+list.contains(null);</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>代わりに、例えば次のようなコードで実現できます:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>list.stream().anyMatch(Objects::isNull);</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>ただし、lambdaを使うとオーバヘッドがあるため、Spring Framework内部では利用しない方針のようで、Springプロジェクトでは <a href="https://github.com/spring-projects/spring-framework/blob/v5.2.7.RELEASE/spring-core/src/main/java/org/springframework/util/CollectionUtils.java#L119-L135">CollectionUtils.contains()</a> というユーティリティメソッドが用意されていました。これを使うと次のようになります:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>CollectionUtils.contains(list.iterator(), null);</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>関連リンク:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://github.com/spring-projects/spring-security/issues/8689">ProviderManager#checkState() throws NullPointerException #8689</a> - Spring Security issues</p>
+</li>
+</ul>
+</div>
+
+    </main>
+</section>
+
+<footer class="p-strip is-wrapper">
+    <div class="row">
+        <div class="p-article-pagination">
+    
+    <a class="p-article-pagination__link--previous" href="https://yukihane.github.io/posts/202006/12/userdetailsservice-conidered-harmful/">
+        <span class="p-article-pagination__label">Previous</span>
+        <span class="p-article-pagination__title">
+            UserDetailsServiceは誤解されている
+        </span>
+    </a>
+    
+
+    
+    <a class="p-article-pagination__link--next" href="https://yukihane.github.io/posts/202006/15/spring-boot-debugging/">
+        <span class="p-article-pagination__label">Next</span>
+        <span class="p-article-pagination__title">
+            Spring BootのGradleでのデバッグ実行方法
+        </span>
+    </a>
+    
+</div>
+    </div>
+</footer>
+
+        </div><footer class="p-strip is-shallow page-footer">
+    <div class="row">
+        <div class="col-12  u-align--center">
+            <p>
+                © 2020 発火後忘失
+            </p>
+        </div>
+    </div>
+</footer>
+
+
+
+
+</body>
+</html>
