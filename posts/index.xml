@@ -6,10 +6,19 @@
     <description>Recent content in Posts on 発火後忘失</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Sat, 20 Jun 2020 08:16:28 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 02 Jul 2020 00:31:47 +0000</lastBuildDate>
     
 	<atom:link href="https://yukihane.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>${...}と#{...}の違い</title>
+      <link>https://yukihane.github.io/posts/202007/02/difference-between-doller-and-hash/</link>
+      <pubDate>Thu, 02 Jul 2020 00:31:47 +0000</pubDate>
+      
+      <guid>https://yukihane.github.io/posts/202007/02/difference-between-doller-and-hash/</guid>
+      <description>Spring Expression Language (SpEL) with @Value: dollar vs. hash ($ vs. #) より。 ${&amp;#8230;&amp;#8203;} は単なるプロパティのプレースホルダ。 #{&amp;#8230;&amp;#8203;} は Spring Expression Language(SpEL) の構文。 プレースホルダは置き換えるだけだけれども、SpELはも</description>
+    </item>
     
     <item>
       <title>Spring MVCにはJPA EntityのIDからエンティティオブジェクトに変換する機能がある(が、2.3.1では機能しない)</title>
