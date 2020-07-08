@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    
+
+
+
+
+
+<title>ちょっと待って！そのUserDetails、本当に必要ですか？ | 発火後忘失</title>
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content='概要 Spring Boot の認証を実装してみた系のサンプルでよく UserDetails や UserDetailsService が用いられているが、必然性が不明なものがほとんどである。 (おそらく当の実装者も理解してい'>
+<meta name="keywords" content=''>
+<meta name="msapplication-TileColor" content="#b91d47">
+<meta name="theme-color" content="#ffffff">
+
+<link rel="canonical" href="https://yukihane.github.io/posts/201907/03/you-dont-need-userdetails/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#007aa6">
+<meta name="theme-color" content="#ffffff">
+
+<meta property="og:title" content="ちょっと待って！そのUserDetails、本当に必要ですか？" />
+<meta property="og:description" content="概要 Spring Boot の認証を実装してみた系のサンプルでよく UserDetails や UserDetailsService が用いられているが、必然性が不明なものがほとんどである。 (おそらく当の実装者も理解してい" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://yukihane.github.io/posts/201907/03/you-dont-need-userdetails/" />
+<meta property="article:published_time" content="2019-07-03T21:55:20+00:00" />
+<meta property="article:modified_time" content="2019-07-03T21:55:20+00:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="ちょっと待って！そのUserDetails、本当に必要ですか？"/>
+<meta name="twitter:description" content="概要 Spring Boot の認証を実装してみた系のサンプルでよく UserDetails や UserDetailsService が用いられているが、必然性が不明なものがほとんどである。 (おそらく当の実装者も理解してい"/>
+
+<meta itemprop="name" content="">
+<meta itemprop="description" content="">
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href='https://yukihane.github.io/css/style.css'>
+
+    
+
+
+<link href="https://fonts.googleapis.com/css?family=Hanuman:400,700|Inconsolata|Roboto:400,400i,700,700i&display=swap&subset=khmer" rel="stylesheet">
+</head><body><header id="navigation" class="p-navigation">
+    <div class="p-navigation__row">
+        <div class="p-navigation__banner">
+            <div class="p-navigation__logo">
+                <a class="p-navigation__link u-vertically-center p-link--logo" href="https://yukihane.github.io/">
+                    発火後忘失
+                </a>
+            </div>
+            
+            <a href="#navigation" class="p-navigation__toggle--open" title="menu">
+                <i class="p-icon--menu"></i>
+            </a>
+            <a href="#navigation-closed" class="p-navigation__toggle--close" title="close menu">
+                <i class="p-icon--close"></i>
+            </a>
+        </div>
+
+        <nav class="p-navigation__nav">
+            <span class="u-off-screen">
+                <a href="#main-content">Jump to main content</a>
+            </span>
+
+            <ul class="p-navigation__links" role="menu">
+                
+            </ul>
+
+            
+            <form class="p-search-box" action="https://www.google.com/search" target="_blank">
+    <input type="search" class="p-search-box__input" name="q" placeholder='Search'
+        required="" aria-label="Query">
+    <input type="hidden" name="sitesearch" value="https://yukihane.github.io/">
+    <button type="reset" class="p-search-box__reset" alt="reset" aria-label="Reset">
+        <i class="p-icon--close"></i>
+    </button>
+    <button type="submit" class="p-search-box__button" alt="search" aria-label="Search">
+        <i class="p-icon--search"></i>
+    </button>
+</form>
+            
+        </nav>
+    </div>
+</header><div id="main-content">
+<header class="p-strip page-banner">
+    <div class="row">
+        <h1>ちょっと待って！そのUserDetails、本当に必要ですか？</h1>
+    </div>
+
+    
+
+<div class="row">
+
+    
+    <div class="col-8">
+        
+
+
+
+
+<div class="p-media-object">
+
+    
+
+    <div class="p-media-object__details">
+
+        
+
+        
+        <p class="p-media-object__content">
+            <span class="u-capitalized">on</span>
+            2019-07-03
+        </p>
+        
+
+    </div>
+</div>
+
+
+    </div>
+    
+
+    
+    <div class="col-4  col--share-links ">
+        <ul class="p-inline-list-icons p-inline-list-icons--share-links u-no-padding--left u-no-margin--left u-unselectable">
+    <li class="p-inline-list__item">
+        <i class="p-icon--share"></i>
+    </li>
+    <li class="p-inline-list__item">
+        <a class="p-icon--facebook" title='Share on Facebook' target="_blank"
+            rel="noreferrer" href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fyukihane.github.io%2fposts%2f201907%2f03%2fyou-dont-need-userdetails%2f">
+            Facebook
+        </a>
+    </li>
+    <li class="p-inline-list__item">
+        <a class="p-icon--twitter" title='Share on Twitter' target="_blank"
+            rel="noreferrer" href="http://twitter.com/share?text=%e3%81%a1%e3%82%87%e3%81%a3%e3%81%a8%e5%be%85%e3%81%a3%e3%81%a6%ef%bc%81%e3%81%9d%e3%81%aeUserDetails%e3%80%81%e6%9c%ac%e5%bd%93%e3%81%ab%e5%bf%85%e8%a6%81%e3%81%a7%e3%81%99%e3%81%8b%ef%bc%9f&amp;url=https%3a%2f%2fyukihane.github.io%2fposts%2f201907%2f03%2fyou-dont-need-userdetails%2f">
+            Twitter
+        </a>
+    </li>
+    <li class="p-inline-list__item">
+        <a class="p-icon--linkedin" title='Share on LinkedIn' target="_blank"
+            rel="noreferrer"
+            href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fyukihane.github.io%2fposts%2f201907%2f03%2fyou-dont-need-userdetails%2f&amp;title=%e3%81%a1%e3%82%87%e3%81%a3%e3%81%a8%e5%be%85%e3%81%a3%e3%81%a6%ef%bc%81%e3%81%9d%e3%81%aeUserDetails%e3%80%81%e6%9c%ac%e5%bd%93%e3%81%ab%e5%bf%85%e8%a6%81%e3%81%a7%e3%81%99%e3%81%8b%ef%bc%9f">
+            LinkedIn
+        </a>
+    </li>
+</ul>
+    </div>
+    
+
+</div>
+
+
+
+
+</header>
+
+<section class="p-strip is-shallow">
+    <main class="row post-content">
+        <h1 id="概要">概要</h1>
+<p>Spring Boot の認証を実装してみた系のサンプルでよく <code>UserDetails</code> や <code>UserDetailsService</code> が用いられているが、必然性が不明なものがほとんどである。
+(おそらく当の実装者も理解していない<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>。)</p>
+<p>ここでは <code>UserDetails</code> を使わない、よりシンプルな認証を実装してみた。</p>
+<h1 id="参考リンク">参考リンク</h1>
+<ul>
+<li><a href="https://spring.io/guides/topicals/spring-security-architecture/">Spring Security Architecture</a> の Authentication and Access Control
+<ul>
+<li><a href="http://terasolunaorg.github.io/guideline/5.5.1.RELEASE/ja/Security/Authentication.html#id3">TERASOLUNA のリファレンス</a>なら日本語で読める！</li>
+</ul>
+</li>
+<li><a href="https://docs.spring.io/spring-security/site/docs/5.1.5.RELEASE/reference/htmlsingle/#oauth2resourceserver-sansboot">6.8.4 Overriding or Replacing Boot Auto Configuration</a> - Spring Security Reference</li>
+</ul>
+<h1 id="実装サンプル">実装サンプル</h1>
+<ul>
+<li><a href="https://github.com/yukihane/hello-java/tree/tags/simple-authentication-example/spring/spring-security-auth-example"><code>tags/simple-authentication-example</code> タグ</a>
+<ul>
+<li>user テーブルを select して id/password を検証するバージョンは<a href="https://github.com/yukihane/hello-java/tree/tags/simple-authentication-db-example/spring/spring-security-auth-example"><code>tags/simple-authentication-db-example</code> タグ</a></li>
+</ul>
+</li>
+</ul>
+<h1 id="解説">解説</h1>
+<p>参考リンク先にある通り、自分で認証処理を作りたい場合、 <code>AuthenticationProvider</code> を実装してそれを用いるように設定すれば良い。</p>
+<p>サンプルコードでは、 <a href="https://github.com/yukihane/hello-java/blob/tags/simple-authentication-example/spring/spring-security-auth-example/src/main/java/com/github/yukihane/springsecurityauthexample/security/MyAuthenticationProvider.java">MyAuthenticationProvider</a>が該当の認証プロバイダで、これを用いるように設定しているのが <a href="https://github.com/yukihane/hello-java/blob/tags/simple-authentication-example/spring/spring-security-auth-example/src/main/java/com/github/yukihane/springsecurityauthexample/config/MyWebSecurityConfigurerAdapter.java#L22">MyWebSecurityConfigurerAdapter</a>である。</p>
+<p>(終わり)</p>
+<h1 id="実行して確認">実行して確認</h1>
+<p>http://localhost:8080/hello へアクセスすると Basic 認証のダイアログが出るので、 <code>tags/simple-authentication-example</code> であれば username に <a href="https://github.com/yukihane/hello-java/blob/tags/simple-authentication-example/spring/spring-security-auth-example/src/main/java/com/github/yukihane/springsecurityauthexample/security/MyAuthenticationProvider.java#L17"><strong>myname</strong></a>を(パスワードは何でも良い)、<code>tags/simple-authentication-db-example</code>タグのものであれば <a href="https://github.com/yukihane/hello-java/blob/tags/simple-authentication-db-example/spring/spring-security-auth-example/src/main/resources/data.sql#L1">username に <strong>user1</strong>, password に<strong>password1</strong></a>を入力すれば認証が通る。</p>
+<h1 id="追記-んで結局-userdetails-ってなんなのさ">追記: んで結局 UserDetails ってなんなのさ</h1>
+<p><a href="https://docs.spring.io/spring-security/site/docs/5.1.5.RELEASE/reference/htmlsingle/#tech-userdetailsservice">https://docs.spring.io/spring-security/site/docs/5.1.5.RELEASE/reference/htmlsingle/#tech-userdetailsservice</a></p>
+<blockquote>
+<p>Think of <code>UserDetails</code> as the adapter between your own user database and what Spring Security needs inside the <code>SecurityContextHolder</code>.</p>
+</blockquote>
+<p>だって。そんな汎用的に使えるもんかあ？余計なメソッド多すぎじゃね…？</p>
+<hr>
+<p>spring-security-oauth2 を使ったとき principal を完全に独自の型にしていたらフレームワーク内の <a href="https://github.com/spring-projects/spring-security/blob/5.1.5.RELEASE/core/src/main/java/org/springframework/security/authentication/AbstractAuthenticationToken.java#L93"><code>getName()</code>呼び出しで<code>toString()</code>されて困った</a>ので、<code>UserDetails</code>は実装しなくとも<a href="https://github.com/spring-projects/spring-security/blob/5.1.5.RELEASE/core/src/main/java/org/springframework/security/authentication/AbstractAuthenticationToken.java#L86">AuthenticatedPrincipal</a>は実装しといたほうが良さげ。</p>
+<section class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p>もちろん私もそんなコードを理解できません。 <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
+
+    </main>
+</section>
+
+<footer class="p-strip is-wrapper">
+    <div class="row">
+        <div class="p-article-pagination">
+    
+    <a class="p-article-pagination__link--previous" href="https://yukihane.github.io/posts/201906/20/dont-use-getrealpath/">
+        <span class="p-article-pagination__label">Previous</span>
+        <span class="p-article-pagination__title">
+            ファイル出力先にServletContext#getRealPathを使うな
+        </span>
+    </a>
+    
+
+    
+    <a class="p-article-pagination__link--next" href="https://yukihane.github.io/posts/201907/04/spring-boot-and-spring-security/">
+        <span class="p-article-pagination__label">Next</span>
+        <span class="p-article-pagination__title">
+            spring-boot-starter-security を入れたら認証画面が！
+        </span>
+    </a>
+    
+</div>
+    </div>
+</footer>
+
+        </div><footer class="p-strip is-shallow page-footer">
+    <div class="row">
+        <div class="col-12  u-align--center">
+            <p>
+                © 2020 発火後忘失
+            </p>
+        </div>
+    </div>
+</footer>
+
+
+
+
+</body>
+</html>

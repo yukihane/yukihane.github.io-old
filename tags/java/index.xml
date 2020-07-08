@@ -93,6 +93,15 @@
     </item>
     
     <item>
+      <title>native-imageコマンドを実行するために行ったWindows10 への GraalVM インストールがエキサイティングな件</title>
+      <link>https://yukihane.github.io/posts/201911/09/graalvm-install-to-windows10/</link>
+      <pubDate>Sat, 09 Nov 2019 21:57:08 +0000</pubDate>
+      
+      <guid>https://yukihane.github.io/posts/201911/09/graalvm-install-to-windows10/</guid>
+      <description>悪い意味で。 なお試した時点での GraalVM 最新リリースバージョンは 19.2.1でした。 GraalVM インストール &amp;amp; 実行 GraalVM のインストール方法はいくつかあるのでお好み</description>
+    </item>
+    
+    <item>
       <title>Spring Bootは、セキュリティフィルタBeanを作っている分だけ、無料で認証できちまうんだ</title>
       <link>https://yukihane.github.io/posts/201907/18/spring-boot-filter-bean/</link>
       <pubDate>Thu, 18 Jul 2019 20:34:56 +0000</pubDate>
@@ -156,7 +165,7 @@
     </item>
     
     <item>
-      <title>Hibernate Map Char to String</title>
+      <title>Hibernate で CHAR を String にマップする</title>
       <link>https://yukihane.github.io/posts/201902/04/hibernate-map-char-to-string/</link>
       <pubDate>Mon, 04 Feb 2019 20:01:19 +0000</pubDate>
       
@@ -207,6 +216,15 @@
       
       <guid>https://yukihane.github.io/posts/201807/08/java-compiler-error-in-japanese/</guid>
       <description>Java でメッセージを英語にする 環境変数 JAVA_TOOL_OPTIONS に設定しよう。 export JAVA_TOOL_OPTIONS=&amp;quot;-Duser.language=en -Duser.country=US&amp;quot;</description>
+    </item>
+    
+    <item>
+      <title>Tomcat上でJSF実現</title>
+      <link>https://yukihane.github.io/posts/201807/07/jsf-on-tomcat/</link>
+      <pubDate>Sat, 07 Jul 2018 21:47:59 +0000</pubDate>
+      
+      <guid>https://yukihane.github.io/posts/201807/07/jsf-on-tomcat/</guid>
+      <description>非 JavaEE なサーブレットコンテナ上で JSF を実行するように変更する手順。 TL;DR Mojarra を依存関係に含める JSF リソースを javax.faces.webapp.FacesServlet にマップするよう web.xml で設定する 実装例 https://github.com/yukihane/hello-jsf/tree/feature/server/tomcat feature/server/tomcat ブラ</description>
     </item>
     
     <item>

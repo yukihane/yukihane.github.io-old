@@ -12,7 +12,7 @@
     
     
     <item>
-      <title>Polymer2 で &lt;input&gt;の値を「親エレメントの値と」バインドする</title>
+      <title>Polymer2 で &amp;lt;input&amp;gt; の値を「親エレメントの値と」バインドする</title>
       <link>https://yukihane.github.io/posts/201801/21/polymer2-input-bind-to-parent/</link>
       <pubDate>Sun, 21 Jan 2018 19:12:25 +0000</pubDate>
       
@@ -21,7 +21,7 @@
     </item>
     
     <item>
-      <title>Polymer2 で &lt;input&gt;の値をバインドする</title>
+      <title>Polymer2 で &amp;lt;input&amp;gt; の値をバインドする</title>
       <link>https://yukihane.github.io/posts/201801/21/polymer2-input-bind/</link>
       <pubDate>Sun, 21 Jan 2018 19:08:22 +0000</pubDate>
       
