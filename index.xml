@@ -6,10 +6,19 @@
     <description>Recent content on 発火後忘失</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Thu, 02 Jul 2020 00:31:47 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 02 Jul 2020 21:11:04 +0000</lastBuildDate>
     
 	<atom:link href="https://yukihane.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Spring Boot でなるべく依存関係を小さくしてWebMVCを使ってみる</title>
+      <link>https://yukihane.github.io/posts/202007/02/minimal-webmvc-with-springboot/</link>
+      <pubDate>Thu, 02 Jul 2020 21:11:04 +0000</pubDate>
+      
+      <guid>https://yukihane.github.io/posts/202007/02/minimal-webmvc-with-springboot/</guid>
+      <description>特に実用性とかは考えていない。何となくやってみたというだけ。 動かしたいやつ @RestController @RequestMapping(&amp;#34;/&amp;#34;) public class MyController { @GetMapping(&amp;#34;/&amp;#34;) public String index() { return &amp;#34;hello&amp;#34;; } } 設定 &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;spring-boot&amp;lt;/artifactId&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.springframework&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;spring-webmvc&amp;lt;/artifactId&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.apache.tomcat.embed&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;tomcat-embed-core&amp;lt;/artifactId&amp;gt; &amp;lt;/dependency&amp;gt; @Configuration @EnableWebMvc public class</description>
+    </item>
     
     <item>
       <title>${...}と#{...}の違い</title>
@@ -18,6 +27,24 @@
       
       <guid>https://yukihane.github.io/posts/202007/02/difference-between-doller-and-hash/</guid>
       <description>Spring Expression Language (SpEL) with @Value: dollar vs. hash ($ vs. #) より。 ${&amp;#8230;&amp;#8203;} は単なるプロパティのプレースホルダ。 #{&amp;#8230;&amp;#8203;} は Spring Expression Language(SpEL) の構文。 プレースホルダは置き換えるだけだけれども、SpELはも</description>
+    </item>
+    
+    <item>
+      <title>Spring 2.3.0 で時刻オフセットの書式コロン付き&#43;09:00みたいに変わっとるやん</title>
+      <link>https://yukihane.github.io/posts/202006/30/json-datetime-format-changed-on-springboot-2.3/</link>
+      <pubDate>Tue, 30 Jun 2020 21:09:44 +0000</pubDate>
+      
+      <guid>https://yukihane.github.io/posts/202006/30/json-datetime-format-changed-on-springboot-2.3/</guid>
+      <description>正確には jackson-databind 2.11.0 で。 jackson 2.11 リリースノート Change default textual serialization of java.util.Date/Calendar to include colon in timezone offset #2643 このへん見ると分かるけど、Spring Boot 2.2 系列は jackson-databind 2.10.x が採用されていて、 2.3.0 で 2.11.0 が採</description>
+    </item>
+    
+    <item>
+      <title>Spring Boot 2.3.0 から H2Database の名前 jdbc:h2:mem:testdb じゃなくなっとるやん(デフォルトでは)</title>
+      <link>https://yukihane.github.io/posts/202006/28/h2database-name-random-on-springboot-2.3/</link>
+      <pubDate>Sun, 28 Jun 2020 21:05:14 +0000</pubDate>
+      
+      <guid>https://yukihane.github.io/posts/202006/28/h2database-name-random-on-springboot-2.3/</guid>
+      <description>前はここに書いた通り固定で jdbc:h2:mem:testdb という名前だったのにこれでアクセスできんようになってしもた。 起動ログに o.s.b.a.h2.H2ConsoleAutoConfiguration : H2 console available at &#39;/h2-console&#39;. Database available at &#39;jdbc:h2:mem:30591993-9fe2-4068-a5e2-05b263e3495b&#39; みたいに出るのでここ</description>
     </item>
     
     <item>
@@ -45,6 +72,15 @@
       
       <guid>https://yukihane.github.io/posts/202006/15/spring-boot-debugging/</guid>
       <description>gradle bootRun --debug-jvm というように、--debug-jvm オプションを付与すれば良いようです。 これで、デバッガ接続の待受状態で起動します。 BootRun は JavaExec を継承してい</description>
+    </item>
+    
+    <item>
+      <title>So many UserDetailsService samples considered harmful for beginners</title>
+      <link>https://yukihane.github.io/posts/202006/13/userdetailsservice-samples-considered-harmful-for-biginners/</link>
+      <pubDate>Sat, 13 Jun 2020 21:07:40 +0000</pubDate>
+      
+      <guid>https://yukihane.github.io/posts/202006/13/userdetailsservice-samples-considered-harmful-for-biginners/</guid>
+      <description>やっぱり一発目の Spring Security やってみたで UserDetailsService 使うのは止めようず。So many UserDetailsService samples considered harmful for beginners. はじめに ちょっと待って！その UserDetails、本当に必要ですか</description>
     </item>
     
     <item>
@@ -102,6 +138,15 @@
     </item>
     
     <item>
+      <title>DockerfileのENTRYPOINTに対応するのはcommand, CMDに対応するのがargs</title>
+      <link>https://yukihane.github.io/posts/202005/06/k8s-command-args/</link>
+      <pubDate>Wed, 06 May 2020 21:03:24 +0000</pubDate>
+      
+      <guid>https://yukihane.github.io/posts/202005/06/k8s-command-args/</guid>
+      <description>CMD と command が対応しているわけではないのでまぎらわしい… Kubernetes リファレンス: Container v1 core 参考として Dockerfile リファレンス: ENTRYPOINT CMD</description>
+    </item>
+    
+    <item>
       <title>GKE(Goole Kubernetes Engine)の始め方</title>
       <link>https://yukihane.github.io/posts/202004/26/gke-getting-started/</link>
       <pubDate>Sun, 26 Apr 2020 14:05:12 +0000</pubDate>
@@ -126,6 +171,51 @@
       
       <guid>https://yukihane.github.io/posts/202004/25/tmux/</guid>
       <description>Kubernetes the hard wayをやるのに`tmux`の操作を覚えておくのが良さそうだったので使いそうなものを記載しておくことにしました。 Ctrl キーと b キーの同時押</description>
+    </item>
+    
+    <item>
+      <title>redux-devtools-extension をTypeScriptで使う</title>
+      <link>https://yukihane.github.io/posts/202004/24/redux-devtools-extension-with-typescript/</link>
+      <pubDate>Fri, 24 Apr 2020 21:00:56 +0000</pubDate>
+      
+      <guid>https://yukihane.github.io/posts/202004/24/redux-devtools-extension-with-typescript/</guid>
+      <description>https://github.com/zalmoxisus/redux-devtools-extension/blob/master/README.md#13-use-redux-devtools-extension-package-from-npm というわけで型付けされているので const store = createStore(rootReducer, undefined, devToolsEnhancer({})); で良い。 何か Qiia の記事とかを見てるとこっちの方法でばっかり書いてあるが。 Electron から使う場合はElec</description>
+    </item>
+    
+    <item>
+      <title>Electronでfs(File IO)</title>
+      <link>https://yukihane.github.io/posts/202004/22/electron-fileio/</link>
+      <pubDate>Wed, 22 Apr 2020 20:59:12 +0000</pubDate>
+      
+      <guid>https://yukihane.github.io/posts/202004/22/electron-fileio/</guid>
+      <description>Electron で File の Open と Save - Qiita を写経させてもらっていますが、、、動かない。 リンク先では Electron v4.x を利用していますが現在の最新版は v8.2.3。このバージョン差</description>
+    </item>
+    
+    <item>
+      <title>ReduxのBasic TutorialにTypeScriptで型を付けただけ</title>
+      <link>https://yukihane.github.io/posts/202004/15/redux-basic-tutorial/</link>
+      <pubDate>Wed, 15 Apr 2020 20:56:22 +0000</pubDate>
+      
+      <guid>https://yukihane.github.io/posts/202004/15/redux-basic-tutorial/</guid>
+      <description>Redux 多分使わないけど理解のため写経。 答え合わせに他の方が似たようなことやってないかググったけれども プラスアルファ要素(Redux Toolkit を使う、fe</description>
+    </item>
+    
+    <item>
+      <title>React Router &lt;Route&gt; で描画したいコンポーネントの指定方法が人によってまちまちなんだけどどれが正解なの？</title>
+      <link>https://yukihane.github.io/posts/202004/13/react-router/</link>
+      <pubDate>Mon, 13 Apr 2020 20:54:12 +0000</pubDate>
+      
+      <guid>https://yukihane.github.io/posts/202004/13/react-router/</guid>
+      <description>https://reacttraining.com/react-router/web/api/Route/route-render-methods The recommended method of rendering something with a is to use children elements, as shown above. There are, however, a few other methods you can use to render something with a . These are provided mostly for supporting apps that were built with earlier versions of the router before hooks were introduced. &amp;lt;Route component&amp;gt; &amp;lt;Route render&amp;gt; &amp;lt;Route children&amp;gt; function つまり、引用部の直前</description>
+    </item>
+    
+    <item>
+      <title>rustでwasmでhello, world(2020-04-08版) の次</title>
+      <link>https://yukihane.github.io/posts/202004/09/hello-wasm-next/</link>
+      <pubDate>Thu, 09 Apr 2020 20:52:10 +0000</pubDate>
+      
+      <guid>https://yukihane.github.io/posts/202004/09/hello-wasm-next/</guid>
+      <description>目標 rust で wasm で hello, worldの次として、JavaScript で実装されたプロジェクトを Rust に書き直してみます。 最近N 予備校のプログラミング入門 Web ア</description>
     </item>
     
     <item>
@@ -219,6 +309,15 @@
     </item>
     
     <item>
+      <title>Hello Project Panama</title>
+      <link>https://yukihane.github.io/posts/202002/11/hello-project-panama/</link>
+      <pubDate>Tue, 11 Feb 2020 20:43:43 +0000</pubDate>
+      
+      <guid>https://yukihane.github.io/posts/202002/11/hello-project-panama/</guid>
+      <description>はじめに 今個人的にすごく知りたいのはこちらです。ご回答よろしくお願いします！！！！ 動的確保したメモリー領域の解放戦略 - スタック・オーバーフロ</description>
+    </item>
+    
+    <item>
       <title>Nodeのnative moduleをRustで書いてみる(Neon)</title>
       <link>https://yukihane.github.io/posts/202002/01/hello-rust-neon/</link>
       <pubDate>Sat, 01 Feb 2020 05:09:38 +0000</pubDate>
@@ -243,6 +342,375 @@
       
       <guid>https://yukihane.github.io/posts/202001/26/resttemplate-with-illformed-json/</guid>
       <description>要旨 JSONを返してくるのだけれどMIME typeが text/plain;charset=Windows-31J なレスポンスを、RestTemplateで扱いたい。 @GetMapping(produces = &#34;text/plain;charset=Windows-31J&#34;) public String response() { return &#34;{\&#34;text\&#34;: \&#34;こんにちは世</description>
+    </item>
+    
+    <item>
+      <title>reqwest使おうとしたけどよくわからん</title>
+      <link>https://yukihane.github.io/posts/202001/01/rust-reqwest/</link>
+      <pubDate>Wed, 01 Jan 2020 20:42:42 +0000</pubDate>
+      
+      <guid>https://yukihane.github.io/posts/202001/01/rust-reqwest/</guid>
+      <description>はじめに 年の瀬にスクレイピングしたくなって Rust 勉強し始めたけれど、直前に reqwest ライブラリに更新が入ったみたいでコピペコーディングが阻まれた。 知っと</description>
+    </item>
+    
+    <item>
+      <title>RestTemplateBuilderに関する覚書</title>
+      <link>https://yukihane.github.io/posts/201912/10/resttemplatebuilder/</link>
+      <pubDate>Tue, 10 Dec 2019 20:41:15 +0000</pubDate>
+      
+      <guid>https://yukihane.github.io/posts/201912/10/resttemplatebuilder/</guid>
+      <description>RestTemplateBuilder RestTemplate は Spring Framework(spring-web)だけれども RestTemplateBuilder は Spring Boot。 Java の世界の なんちゃらBuilder (StringBuilderと</description>
+    </item>
+    
+    <item>
+      <title>https://hatena.ne.jp/ にアクセスできてるとお思いで？</title>
+      <link>https://yukihane.github.io/posts/201912/03/auto-redirecting-chrome/</link>
+      <pubDate>Tue, 03 Dec 2019 20:39:39 +0000</pubDate>
+      
+      <guid>https://yukihane.github.io/posts/201912/03/auto-redirecting-chrome/</guid>
+      <description>はじめに: 試した環境 Windows10 の現時点での最新安定版 Google Chrome および Firefox を用いました。 Google Chrome 78.0.3904.108 Firefox 70.0.1 また実行に際しては、キャッシュ等の影響を避けるため、Chro</description>
+    </item>
+    
+    <item>
+      <title>Spring Boot のプロパティではkebab-formatが推奨されている</title>
+      <link>https://yukihane.github.io/posts/201911/28/kebab-format-recommended-on-spring-boot-properties/</link>
+      <pubDate>Thu, 28 Nov 2019 20:38:12 +0000</pubDate>
+      
+      <guid>https://yukihane.github.io/posts/201911/28/kebab-format-recommended-on-spring-boot-properties/</guid>
+      <description>Relaxed Binding 2.0 という仕組みにより spring.jpa.database-platform=mysql spring.jpa.databasePlatform=mysql spring.JPA.database_platform=mysql いずれの形式でも正しくバインドできる。 が、公式ドキュメントからは一番上の database-platform が推奨されているように読み取れる。 Relaxed</description>
+    </item>
+    
+    <item>
+      <title>MockMvc でURLエンコード済みのpathを渡したいときは new URI(...) を引数にする</title>
+      <link>https://yukihane.github.io/posts/201910/29/encoded-url-passing-to-mockmvc/</link>
+      <pubDate>Tue, 29 Oct 2019 20:36:42 +0000</pubDate>
+      
+      <guid>https://yukihane.github.io/posts/201910/29/encoded-url-passing-to-mockmvc/</guid>
+      <description>OAuth2.0 の redirect_uri をゴニョった実装をテストしたいときにハマった。 mockMvc.perform(get(new URI(&amp;quot;/line/oauth/authorize?redirece_uri=https%3A%2F%2Fexample.com&amp;quot;) ってやらないと二重にエンコードされてしまう。 参考 MockMvc needs to accept prepared URI with encoded URI path variables [SPR-11441] #16067 EncodedUriTests.java</description>
+    </item>
+    
+    <item>
+      <title>Spring Bootは、セキュリティフィルタBeanを作っている分だけ、無料で認証できちまうんだ</title>
+      <link>https://yukihane.github.io/posts/201907/18/spring-boot-filter-bean/</link>
+      <pubDate>Thu, 18 Jul 2019 20:34:56 +0000</pubDate>
+      
+      <guid>https://yukihane.github.io/posts/201907/18/spring-boot-filter-bean/</guid>
+      <description>要約 78.10 Add a Servlet, Filter, or Listener to an Application曰く。 any Servlet or Filter beans are registered with the servlet container automatically. Spring Security 使った自前の認証フィルタを @Component 付けて作ったりなんかした際に意図し</description>
+    </item>
+    
+    <item>
+      <title>h2-consoleとspring-boot-starter-securityと私</title>
+      <link>https://yukihane.github.io/posts/201907/12/h2-console-on-spring-boot/</link>
+      <pubDate>Fri, 12 Jul 2019 20:33:40 +0000</pubDate>
+      
+      <guid>https://yukihane.github.io/posts/201907/12/h2-console-on-spring-boot/</guid>
+      <description>概要 spring-boot-starter-security を導入しても http://localhost:8080/h2-console にアクセスしたかった。 作業結果: https://github.com/yukihane/hello-java/tree/master/spring/h2-console-spring-security-example 手順 h2-console が使える依存関係を追加してプロジェクトセットアップ 8113d7 &amp;lt;dependencies&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;spring-boot-starter-web&amp;lt;/artifactId&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;spring-boot-starter-jdbc&amp;lt;/artifactId&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;com.h2database&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;h2&amp;lt;/artifactId&amp;gt; &amp;lt;scope&amp;gt;runtime&amp;lt;/scope&amp;gt; &amp;lt;/dependency&amp;gt;</description>
+    </item>
+    
+    <item>
+      <title>spring-boot-starter-security を入れたら認証画面が！</title>
+      <link>https://yukihane.github.io/posts/201907/04/spring-boot-and-spring-security/</link>
+      <pubDate>Thu, 04 Jul 2019 20:32:21 +0000</pubDate>
+      
+      <guid>https://yukihane.github.io/posts/201907/04/spring-boot-and-spring-security/</guid>
+      <description>WebSecurityConfigurerAdapter#configure(HttpSecurity) で form 認証を有効化しているのでこれをディスる。 WebSecurityConfigurerAdapterを継承した Spring コンポーネントをスキャン対</description>
+    </item>
+    
+    <item>
+      <title>ファイル出力先にServletContext#getRealPathを使うな</title>
+      <link>https://yukihane.github.io/posts/201906/20/dont-use-getrealpath/</link>
+      <pubDate>Thu, 20 Jun 2019 20:26:49 +0000</pubDate>
+      
+      <guid>https://yukihane.github.io/posts/201906/20/dont-use-getrealpath/</guid>
+      <description>色んなところでそういうサンプルコードが見つかる、と聞いて嘘やん思いながら検索してみたところ、日本語英語を問わず確かに多い。 例えば Qiita では(順不</description>
+    </item>
+    
+    <item>
+      <title>元号が令和に変わったことを知らない人のための日付処理方法</title>
+      <link>https://yukihane.github.io/posts/201906/12/java-datetime/</link>
+      <pubDate>Wed, 12 Jun 2019 20:24:45 +0000</pubDate>
+      
+      <guid>https://yukihane.github.io/posts/201906/12/java-datetime/</guid>
+      <description>問題 JapaneseDate.of(や LocalDate.of)を使うと厳密(strict)に検証されてしまう。 結果、例外が出る。 // 平成31</description>
+    </item>
+    
+    <item>
+      <title>SimpleDateFormat もこれもうわかんねぇな</title>
+      <link>https://yukihane.github.io/posts/201906/11/simpledateformat/</link>
+      <pubDate>Tue, 11 Jun 2019 20:23:06 +0000</pubDate>
+      
+      <guid>https://yukihane.github.io/posts/201906/11/simpledateformat/</guid>
+      <description>結果 1.8 H 11 平成 環境 1.8 java version &amp;quot;1.8.0_201&amp;quot; Java(TM) SE Runtime Environment (build 1.8.0_201-b09) Java HotSpot(TM) 64-Bit Server VM (build 25.201-b09, mixed mode) 11 openjdk version &amp;quot;11.0.2&amp;quot; 2019-01-15 OpenJDK Runtime Environment 18.9 (build 11.0.2+9) OpenJDK 64-Bit Server VM 18.9 (build 11.0.2+9, mixed mode) コード import java.text.SimpleDateFormat; import java.time.LocalDate; import java.util.Date; import java.util.Locale; public class Main { public static void main(final String[] args) {</description>
+    </item>
+    
+    <item>
+      <title>%s に null を渡したらどうなるんだっけ</title>
+      <link>https://yukihane.github.io/posts/201906/11/format-pass-to-null/</link>
+      <pubDate>Tue, 11 Jun 2019 20:19:09 +0000</pubDate>
+      
+      <guid>https://yukihane.github.io/posts/201906/11/format-pass-to-null/</guid>
+      <description>こたえ 文字列 null が出力される。 コード final String text = null; System.out.printf(&amp;quot;%s&amp;quot;, text); 参考 java.util.Formatter For category General, Character, Numberic, Integral and Date/Time conversion, unless otherwise specified, if the argument arg is null, then the result is &amp;ldquo;null&amp;rdquo;. リンク先の表にある通り、 s はカテゴリ&amp;q</description>
+    </item>
+    
+    <item>
+      <title>DateTimeFormatter とかこれもうわかんねぇな</title>
+      <link>https://yukihane.github.io/posts/201906/04/datetimeformatter/</link>
+      <pubDate>Tue, 04 Jun 2019 20:16:49 +0000</pubDate>
+      
+      <guid>https://yukihane.github.io/posts/201906/04/datetimeformatter/</guid>
+      <description>コード import java.time.LocalDate; import java.time.format.DateTimeFormatter; import java.util.Locale; public class App { private static String format(final LocalDate date, final String pattern) { return date.format(DateTimeFormatter.ofPattern(pattern, Locale.JAPAN)); } public static void main(final String[] args) { final LocalDate today = LocalDate.of(2019, 6, 4); System.out.println(format(today, &amp;quot;M&amp;quot;)); System.out.println(format(today, &amp;quot;MM&amp;quot;)); System.out.println(format(today, &amp;quot;MMM&amp;quot;)); System.out.println(format(today, &amp;quot;MMMM&amp;quot;)); System.out.println(format(today, &amp;quot;MMMMM&amp;quot;)); System.out.println(format(today, &amp;quot;MMMMMM&amp;quot;)); } } 結果 パターン 結果 M 6 MM 06 MMM 6 月</description>
+    </item>
+    
+    <item>
+      <title>Spring Bootで コンポーネント外からコンポーネントを取得したかった</title>
+      <link>https://yukihane.github.io/posts/201906/01/spring-boot-component-out-of-container/</link>
+      <pubDate>Sat, 01 Jun 2019 20:15:54 +0000</pubDate>
+      
+      <guid>https://yukihane.github.io/posts/201906/01/spring-boot-component-out-of-container/</guid>
+      <description>動機 CDI で言うところの CDI.current().getBeans(...) とか CDI.current().select(...)とかそんな感じのことをやりたかった。 参考リファレンス ドキュメント</description>
+    </item>
+    
+    <item>
+      <title>Spring Boot 2.1 でテスト時 @Bean を挿げ替えたかった</title>
+      <link>https://yukihane.github.io/posts/201905/31/spring-boot-bean-on-testing/</link>
+      <pubDate>Fri, 31 May 2019 20:14:41 +0000</pubDate>
+      
+      <guid>https://yukihane.github.io/posts/201905/31/spring-boot-bean-on-testing/</guid>
+      <description>動機 ユニットテスト実行時に java.time.Clock を挿げ替えてストップ・ザ・ワールド(GC的な意味でなくジョジョ的な意味で)したかった。 考え方/方針 @Configuration で @Bean を定義し</description>
+    </item>
+    
+    <item>
+      <title>text/plain で JSON を投げつけてくるヤツに対処する</title>
+      <link>https://yukihane.github.io/posts/201905/21/spring-boog-json-convert/</link>
+      <pubDate>Tue, 21 May 2019 20:12:30 +0000</pubDate>
+      
+      <guid>https://yukihane.github.io/posts/201905/21/spring-boog-json-convert/</guid>
+      <description>RestTemplate でレスポンスの Content-Type を変更する。 の別解。 @Autowired private RestTemplateBuilder builder; ... final MappingJackson2HttpMessageConverter converter = new MappingJackson2HttpMessageConverter(); converter.setSupportedMediaTypes(Arrays.asList(MediaType.TEXT_PLAIN)); final RestTemplate restTemplate = builder.additionalMessageConverters(converter).build(); ちなみに上記のようにコンバータを明示的に設定しない場合だと次のような</description>
+    </item>
+    
+    <item>
+      <title>Java9以降.propertiesファイルをUTF-8で書けるようになった、は正しい？</title>
+      <link>https://yukihane.github.io/posts/201904/27/java-properties-is-not-utf8/</link>
+      <pubDate>Sat, 27 Apr 2019 20:08:10 +0000</pubDate>
+      
+      <guid>https://yukihane.github.io/posts/201904/27/java-properties-is-not-utf8/</guid>
+      <description>解答 正しくない。 Java9(JEP226)で変わったのはリソースバンドルの取り扱い(PropertyResourceBundle) であって プ</description>
+    </item>
+    
+    <item>
+      <title>Testing the Web Layer のコードを JUnit Jupiter にマイグレーションしてみる</title>
+      <link>https://yukihane.github.io/posts/201904/16/migration-to-junit5/</link>
+      <pubDate>Tue, 16 Apr 2019 20:06:33 +0000</pubDate>
+      
+      <guid>https://yukihane.github.io/posts/201904/16/migration-to-junit5/</guid>
+      <description>概要 (追記: ここで試したのは2.1.4.RELEASE時点のもの。2.2.0.M3以降では #14736の通り JUnit5 がデフォルトになっている模様。</description>
+    </item>
+    
+    <item>
+      <title>Spring Validator(でラップされたBean Validation)のメッセージをi18nしたときの覚え書き</title>
+      <link>https://yukihane.github.io/posts/201903/26/change-spring-validator-message/</link>
+      <pubDate>Tue, 26 Mar 2019 20:04:13 +0000</pubDate>
+      
+      <guid>https://yukihane.github.io/posts/201903/26/change-spring-validator-message/</guid>
+      <description>やりたかったこと BeanValidation のプロパティファイル ValidationMessages.properties でなく、 Spring のメッセージプロパティに統合したい。 Spring のメッセージプロパティとは？ Accept-Langu</description>
+    </item>
+    
+    <item>
+      <title>RPGツクールMVをバージョン管理するための初期設定</title>
+      <link>https://yukihane.github.io/posts/201903/24/versioning-rpg-maker/</link>
+      <pubDate>Sun, 24 Mar 2019 20:02:46 +0000</pubDate>
+      
+      <guid>https://yukihane.github.io/posts/201903/24/versioning-rpg-maker/</guid>
+      <description>他の方が同じ話題で次のエントリを書かれていましたが、gulp 何それ状態なので理解できませんでした。理解できる方はそちらの方が良いのかもしれま</description>
+    </item>
+    
+    <item>
+      <title>Hibernate Map Char to String</title>
+      <link>https://yukihane.github.io/posts/201902/04/hibernate-map-char-to-string/</link>
+      <pubDate>Mon, 04 Feb 2019 20:01:19 +0000</pubDate>
+      
+      <guid>https://yukihane.github.io/posts/201902/04/hibernate-map-char-to-string/</guid>
+      <description>例えば、生 JDBC でchar型カラムのクエリを書くとString型にマップされます final Connection connection = DriverManager.getConnection(...); final Statement statement = connection.createStatement(); final ResultSet resultSet = statement.executeQuery(&amp;quot;select char_column from foo_table&amp;quot;); // java.lang.String resultSet.getMetaData().getColumnClassName(1); が、Hibernate</description>
+    </item>
+    
+    <item>
+      <title>Eclipseの起動に使用するJDKを指定する（Mac）</title>
+      <link>https://yukihane.github.io/posts/201901/16/set-jvm-to-eclipse-on-mac/</link>
+      <pubDate>Wed, 16 Jan 2019 19:58:26 +0000</pubDate>
+      
+      <guid>https://yukihane.github.io/posts/201901/16/set-jvm-to-eclipse-on-mac/</guid>
+      <description>最新の JDK をインストールしたが、古いバージョンの Eclipse も利用したい(が最新のバージョンでは起動できない)ような場合に必要となる設定です。 設定するフ</description>
+    </item>
+    
+    <item>
+      <title>Ubuntu18.04 端末の不快なエラー音 消す方法</title>
+      <link>https://yukihane.github.io/posts/201811/10/ubuntu-mute-tab-sound/</link>
+      <pubDate>Sat, 10 Nov 2018 19:56:46 +0000</pubDate>
+      
+      <guid>https://yukihane.github.io/posts/201811/10/ubuntu-mute-tab-sound/</guid>
+      <description>Ubuntu を 18.04 にアップグレードしたら端末の補完処理で tab キーを押す度にヴヴッという不快なビープ音が鳴るようになってしまった。 端末のメニューから 設定 を選</description>
+    </item>
+    
+    <item>
+      <title>OpenJDK11をWindowsで自前ビルドする</title>
+      <link>https://yukihane.github.io/posts/201809/30/selfbuild-openjdk/</link>
+      <pubDate>Sun, 30 Sep 2018 19:53:56 +0000</pubDate>
+      
+      <guid>https://yukihane.github.io/posts/201809/30/selfbuild-openjdk/</guid>
+      <description>Java の有償化ってより身近なところでは GPL 化と言った方が現状に即してるな、と思っています。 それはともかく、何となく OpenJDK をデバッグ情報付きでビルドした</description>
+    </item>
+    
+    <item>
+      <title>Azure FunctionsでPowerShell使えなくなっとる</title>
+      <link>https://yukihane.github.io/posts/201809/29/pwsh-on-azure-function/</link>
+      <pubDate>Sat, 29 Sep 2018 19:51:56 +0000</pubDate>
+      
+      <guid>https://yukihane.github.io/posts/201809/29/pwsh-on-azure-function/</guid>
+      <description>v1 で実験的サポートだった PowerShell が、実行環境のバージョンが上がったとかで v2 になり、選べなくなっているみたい？一時的な話？ 実行環境を作る https://portal.azure.com/ から 「リソ</description>
+    </item>
+    
+    <item>
+      <title>Invoke-WebRequestやCompress-Archiveを使っていると画面上部に一瞬表示される何かの表示を非表示に</title>
+      <link>https://yukihane.github.io/posts/201809/08/pwsh-progress-silent/</link>
+      <pubDate>Sat, 08 Sep 2018 19:50:04 +0000</pubDate>
+      
+      <guid>https://yukihane.github.io/posts/201809/08/pwsh-progress-silent/</guid>
+      <description>進捗状況(progress)が表示されているそうです。少量のデータを扱っている場合には画面の一部がフラッシュしているように見えており、何のた</description>
+    </item>
+    
+    <item>
+      <title>Windows向けrsyncがなくなったみたい？</title>
+      <link>https://yukihane.github.io/posts/201808/22/windows-rsync-unavailable/</link>
+      <pubDate>Wed, 22 Aug 2018 19:48:21 +0000</pubDate>
+      
+      <guid>https://yukihane.github.io/posts/201808/22/windows-rsync-unavailable/</guid>
+      <description>vagrantでrsyncが使いたくなった。 そこでscoopでrsyncをインストールしようとしたが、見つからない。 おや？と思い検索してみる</description>
+    </item>
+    
+    <item>
+      <title>vim で E117 未知の関数です</title>
+      <link>https://yukihane.github.io/posts/201808/08/gvim-unknown-function/</link>
+      <pubDate>Wed, 08 Aug 2018 19:43:44 +0000</pubDate>
+      
+      <guid>https://yukihane.github.io/posts/201808/08/gvim-unknown-function/</guid>
+      <description>vim は ~/.vim ディレクトリを読むのに対し gvim は~/vimfilesディレクトリを読むためだそうです。Windows ならジャンクションを作りましょう。 cd</description>
+    </item>
+    
+    <item>
+      <title>gitで利用するエディタを設定したかった</title>
+      <link>https://yukihane.github.io/posts/201807/27/set-git-commit-editor/</link>
+      <pubDate>Fri, 27 Jul 2018 19:40:03 +0000</pubDate>
+      
+      <guid>https://yukihane.github.io/posts/201807/27/set-git-commit-editor/</guid>
+      <description>あるいは vim-plug をセットアップしたら git commit したときに E492: Not an editor command って怒られるようになっちゃった。 Vagrant で CentOS の Box を作るたびにひっかかる。 Git が使う editor を(vi で</description>
+    </item>
+    
+    <item>
+      <title>M2_HOMEは不要</title>
+      <link>https://yukihane.github.io/posts/201807/25/not-required-m2_home/</link>
+      <pubDate>Wed, 25 Jul 2018 19:38:38 +0000</pubDate>
+      
+      <guid>https://yukihane.github.io/posts/201807/25/not-required-m2_home/</guid>
+      <description>M2_HOME は削除されました。 MNGSITE-283 Remove M2_HOME from documentation MNG-5607 Don&#39;t use M2_HOME in mvn shell/command scripts anymore 3.5.0 リリースノート &amp;ldquo;Based on problems in using M2_HOME related to different Maven versions installed and to simplify things, the usage of M2_HOME has been removed and is not supported any more MNG-5823, MNG-5836, MNG-5607.&amp;rdquo; (変更 commit) 敢え</description>
+    </item>
+    
+    <item>
+      <title>Git for Windowsでzipコマンドを再現する</title>
+      <link>https://yukihane.github.io/posts/201807/13/zip-on-git-for-windows/</link>
+      <pubDate>Fri, 13 Jul 2018 19:36:48 +0000</pubDate>
+      
+      <guid>https://yukihane.github.io/posts/201807/13/zip-on-git-for-windows/</guid>
+      <description>git-archive使えば何とかなることに気付きました。 ちなみにunzipコマンドは標準で使えます。 mkdir workrepo cd workrepo git init cp -r [target_file_or_dir] . git add . git commit -m commit git archive</description>
+    </item>
+    
+    <item>
+      <title>Undertow上でJSF実現</title>
+      <link>https://yukihane.github.io/posts/201807/08/jsf-on-undertow/</link>
+      <pubDate>Sun, 08 Jul 2018 19:33:26 +0000</pubDate>
+      
+      <guid>https://yukihane.github.io/posts/201807/08/jsf-on-undertow/</guid>
+      <description>手順 FacesInitializer#onStartupでやっていることを自力で書く 標準パス(WEB-INF/classes)に無いので、M</description>
+    </item>
+    
+    <item>
+      <title>エラーメッセージでググろうと思ったんだけど日本語だからかヒットしない</title>
+      <link>https://yukihane.github.io/posts/201807/08/java-compiler-error-in-japanese/</link>
+      <pubDate>Sun, 08 Jul 2018 19:30:29 +0000</pubDate>
+      
+      <guid>https://yukihane.github.io/posts/201807/08/java-compiler-error-in-japanese/</guid>
+      <description>Java でメッセージを英語にする 環境変数 JAVA_TOOL_OPTIONS に設定しよう。 export JAVA_TOOL_OPTIONS=&amp;quot;-Duser.language=en -Duser.country=US&amp;quot;</description>
+    </item>
+    
+    <item>
+      <title>Building Java Project</title>
+      <link>https://yukihane.github.io/posts/201805/19/building-java-project/</link>
+      <pubDate>Sat, 19 May 2018 19:28:37 +0000</pubDate>
+      
+      <guid>https://yukihane.github.io/posts/201805/19/building-java-project/</guid>
+      <description>はじめに 他者が作成したプログラムにちょっと変更を加えて使いたい その言語は未経験だけれど、コードの変更自体は検索したり周辺コードのコピペで何と</description>
+    </item>
+    
+    <item>
+      <title>yamlの継承っぽいのは継承というよりハッシュのマージ</title>
+      <link>https://yukihane.github.io/posts/201805/09/yaml/</link>
+      <pubDate>Wed, 09 May 2018 19:26:26 +0000</pubDate>
+      
+      <guid>https://yukihane.github.io/posts/201805/09/yaml/</guid>
+      <description>なので配列(Array)には使えない。 database: &amp;amp;default ip: 192.168.1.5 port: 2000 db_name: test foo_database: &amp;lt;&amp;lt;: *default port: 2001 db_name: foo 上は実現できても下のようにはできない。 database_attr: &amp;amp;default - ip - port www_attr: &amp;lt;&amp;lt;: *default - name 関連: https://github.com/yaml/yaml/issues/35</description>
+    </item>
+    
+    <item>
+      <title>ワンライナー sudoers 編集</title>
+      <link>https://yukihane.github.io/posts/201805/09/edit-sudoers-oneliner/</link>
+      <pubDate>Wed, 09 May 2018 19:24:15 +0000</pubDate>
+      
+      <guid>https://yukihane.github.io/posts/201805/09/edit-sudoers-oneliner/</guid>
+      <description>Dockerfile 内で sudoers を編集しユーザ情報を追加したかった。 RUN echo &#39;myuser ALL=(ALL) NOPASSWD: ALL&#39; | EDITOR=&#39;tee -a&#39; visudo 参考: linux - How do I edit /etc/sudoers from a script? - Stack Overflow</description>
+    </item>
+    
+    <item>
+      <title>手っ取り早くRPMパッケージを作成したかった</title>
+      <link>https://yukihane.github.io/posts/201803/20/building-rpm/</link>
+      <pubDate>Tue, 20 Mar 2018 19:21:51 +0000</pubDate>
+      
+      <guid>https://yukihane.github.io/posts/201803/20/building-rpm/</guid>
+      <description>前提 既にビルド方法は確立しており、パッケージシステムに配布方法だけ任せたい、という場合に最小限の手間で RPM パッケージを作ることを考えます ビルド</description>
+    </item>
+    
+    <item>
+      <title>maven-archetype-plugin と archetype-catalog.xml 生成場所/読み取り場所</title>
+      <link>https://yukihane.github.io/posts/201802/25/maven-archetype-catalog/</link>
+      <pubDate>Sun, 25 Feb 2018 19:18:52 +0000</pubDate>
+      
+      <guid>https://yukihane.github.io/posts/201802/25/maven-archetype-catalog/</guid>
+      <description>(注: 文中に記載の localRepository 設定有無、というのは間違った条件かも知れません(検証中)) 問題 mvn archetype:generate -DarchetypeCatalog=local コマンドを実行したところ、次のようなメッセージが出力</description>
+    </item>
+    
+    <item>
+      <title>Java9でJettyでJerseyのMaven</title>
+      <link>https://yukihane.github.io/posts/201801/28/java9-jetty-jersey/</link>
+      <pubDate>Sun, 28 Jan 2018 19:16:07 +0000</pubDate>
+      
+      <guid>https://yukihane.github.io/posts/201801/28/java9-jetty-jersey/</guid>
+      <description>dependency について、2.3.2. Servlet based server-side applicationをみると最小構成はjersey-container-servletだけでいいように見える</description>
+    </item>
+    
+    <item>
+      <title>Polymer2 で &lt;input&gt;の値を「親エレメントの値と」バインドする</title>
+      <link>https://yukihane.github.io/posts/201801/21/polymer2-input-bind-to-parent/</link>
+      <pubDate>Sun, 21 Jan 2018 19:12:25 +0000</pubDate>
+      
+      <guid>https://yukihane.github.io/posts/201801/21/polymer2-input-bind-to-parent/</guid>
+      <description>Polymer2 で の値をバインドする で my-input なるカスタムエレメントを作成しました。&amp;lt;input&amp;gt;の入力値をそのまま表示するだけのエレメントです。 &amp;lt;dom-module</description>
+    </item>
+    
+    <item>
+      <title>Polymer2 で &lt;input&gt;の値をバインドする</title>
+      <link>https://yukihane.github.io/posts/201801/21/polymer2-input-bind/</link>
+      <pubDate>Sun, 21 Jan 2018 19:08:22 +0000</pubDate>
+      
+      <guid>https://yukihane.github.io/posts/201801/21/polymer2-input-bind/</guid>
+      <description>ドキュメントのstartを読み終えて、さあなにか作ってみるか、そうだよく 2-way binding の例で出てくるinputタグ入力値を画面に反映させるのをやってみ</description>
     </item>
     
   </channel>

@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    
+
+
+
+
+
+<title>spring-boot | 発火後忘失</title>
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content=''>
+<meta name="keywords" content=''>
+<meta name="msapplication-TileColor" content="#b91d47">
+<meta name="theme-color" content="#ffffff">
+
+<link rel="canonical" href="https://yukihane.github.io/tags/spring-boot/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#007aa6">
+<meta name="theme-color" content="#ffffff">
+
+<meta property="og:title" content="spring-boot" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://yukihane.github.io/tags/spring-boot/" />
+<meta property="og:updated_time" content="2020-07-02T21:11:04+00:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="spring-boot"/>
+<meta name="twitter:description" content=""/>
+
+<meta itemprop="name" content="">
+<meta itemprop="description" content="">
+    
+    
+    <link href="/tags/spring-boot/index.xml" rel="alternate" type="application/rss+xml" title="発火後忘失" />
+    
+    
+    
+    
+    <link rel="stylesheet" href='https://yukihane.github.io/css/style.css'>
+
+    
+
+
+<link href="https://fonts.googleapis.com/css?family=Hanuman:400,700|Inconsolata|Roboto:400,400i,700,700i&display=swap&subset=khmer" rel="stylesheet">
+</head><body><header id="navigation" class="p-navigation">
+    <div class="p-navigation__row">
+        <div class="p-navigation__banner">
+            <div class="p-navigation__logo">
+                <a class="p-navigation__link u-vertically-center p-link--logo" href="https://yukihane.github.io/">
+                    発火後忘失
+                </a>
+            </div>
+            
+            <a href="#navigation" class="p-navigation__toggle--open" title="menu">
+                <i class="p-icon--menu"></i>
+            </a>
+            <a href="#navigation-closed" class="p-navigation__toggle--close" title="close menu">
+                <i class="p-icon--close"></i>
+            </a>
+        </div>
+
+        <nav class="p-navigation__nav">
+            <span class="u-off-screen">
+                <a href="#main-content">Jump to main content</a>
+            </span>
+
+            <ul class="p-navigation__links" role="menu">
+                
+            </ul>
+
+            
+            <form class="p-search-box" action="https://www.google.com/search" target="_blank">
+    <input type="search" class="p-search-box__input" name="q" placeholder='Search'
+        required="" aria-label="Query">
+    <input type="hidden" name="sitesearch" value="https://yukihane.github.io/">
+    <button type="reset" class="p-search-box__reset" alt="reset" aria-label="Reset">
+        <i class="p-icon--close"></i>
+    </button>
+    <button type="submit" class="p-search-box__button" alt="search" aria-label="Search">
+        <i class="p-icon--search"></i>
+    </button>
+</form>
+            
+        </nav>
+    </div>
+</header><div id="main-content">
+
+
+
+<div class="p-strip page-banner">
+    <div class="row">
+        <h1>
+            <span class="u-capitalized">tag</span>:
+            spring-boot
+        </h1>
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+<div class="p-strip is-wrapper posts">
+    <div class="row">
+        
+
+        
+
+        <div class="col-12">
+            <div class="p-card">
+                <h3><a href="https://yukihane.github.io/posts/201911/28/kebab-format-recommended-on-spring-boot-properties/">Spring Boot のプロパティではkebab-formatが推奨されている</a></h3>
+
+                
+                
+                <p>
+
+
+<span class=" u-capitalized ">
+    on
+</span>
+2019-11-28
+</p>
+                
+
+                
+                <p>Relaxed Binding 2.0 という仕組みにより spring.jpa.database-platform=mysql spring.jpa.databasePlatform=mysql spring.JPA.database_platform=mysql いずれの形式でも正しくバインドできる。 が、公式ドキュメントからは一番上の database-platform が推奨されているように読み取れる。 Relaxed</p>
+                
+
+                
+                <p>
+<a class="p-link--hashtag" href="https://yukihane.github.io/tags/spring-boot/">
+    #spring-boot</a>&ensp;
+</p>
+                
+
+                
+                <p><a href="https://yukihane.github.io/posts/201911/28/kebab-format-recommended-on-spring-boot-properties/">Read more</a></p>
+                
+            </div>
+        </div>
+        
+
+        
+
+        <div class="col-12">
+            <div class="p-card">
+                <h3><a href="https://yukihane.github.io/posts/201910/29/encoded-url-passing-to-mockmvc/">MockMvc でURLエンコード済みのpathを渡したいときは new URI(&hellip;) を引数にする</a></h3>
+
+                
+                
+                <p>
+
+
+<span class=" u-capitalized ">
+    on
+</span>
+2019-10-29
+</p>
+                
+
+                
+                <p>OAuth2.0 の redirect_uri をゴニョった実装をテストしたいときにハマった。 mockMvc.perform(get(new URI(&quot;/line/oauth/authorize?redirece_uri=https%3A%2F%2Fexample.com&quot;) ってやらないと二重にエンコードされてしまう。 参考 MockMvc needs to accept prepared URI with encoded URI path variables [SPR-11441] #16067 EncodedUriTests.java</p>
+                
+
+                
+                <p>
+<a class="p-link--hashtag" href="https://yukihane.github.io/tags/spring-boot/">
+    #spring-boot</a>&ensp;
+</p>
+                
+
+                
+            </div>
+        </div>
+        
+
+        
+
+        <div class="col-12">
+            <div class="p-card">
+                <h3><a href="https://yukihane.github.io/posts/201907/12/h2-console-on-spring-boot/">h2-consoleとspring-boot-starter-securityと私</a></h3>
+
+                
+                
+                <p>
+
+
+<span class=" u-capitalized ">
+    on
+</span>
+2019-07-12
+</p>
+                
+
+                
+                <p>概要 spring-boot-starter-security を導入しても http://localhost:8080/h2-console にアクセスしたかった。 作業結果: https://github.com/yukihane/hello-java/tree/master/spring/h2-console-spring-security-example 手順 h2-console が使える依存関係を追加してプロジェクトセットアップ 8113d7 &lt;dependencies&gt; &lt;dependency&gt; &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt; &lt;artifactId&gt;spring-boot-starter-web&lt;/artifactId&gt; &lt;/dependency&gt; &lt;dependency&gt; &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt; &lt;artifactId&gt;spring-boot-starter-jdbc&lt;/artifactId&gt; &lt;/dependency&gt; &lt;dependency&gt; &lt;groupId&gt;com.h2database&lt;/groupId&gt; &lt;artifactId&gt;h2&lt;/artifactId&gt; &lt;scope&gt;runtime&lt;/scope&gt; &lt;/dependency&gt;</p>
+                
+
+                
+                <p>
+<a class="p-link--hashtag" href="https://yukihane.github.io/tags/spring-boot/">
+    #spring-boot</a>&ensp;
+</p>
+                
+
+                
+                <p><a href="https://yukihane.github.io/posts/201907/12/h2-console-on-spring-boot/">Read more</a></p>
+                
+            </div>
+        </div>
+        
+
+        
+
+        <div class="col-12">
+            <div class="p-card">
+                <h3><a href="https://yukihane.github.io/posts/201907/04/spring-boot-and-spring-security/">spring-boot-starter-security を入れたら認証画面が！</a></h3>
+
+                
+                
+                <p>
+
+
+<span class=" u-capitalized ">
+    on
+</span>
+2019-07-04
+</p>
+                
+
+                
+                <p>WebSecurityConfigurerAdapter#configure(HttpSecurity) で form 認証を有効化しているのでこれをディスる。 WebSecurityConfigurerAdapterを継承した Spring コンポーネントをスキャン対</p>
+                
+
+                
+                <p>
+<a class="p-link--hashtag" href="https://yukihane.github.io/tags/spring-boot/">
+    #spring-boot</a>&ensp;
+
+<a class="p-link--hashtag" href="https://yukihane.github.io/tags/spring-security/">
+    #spring-security</a>&ensp;
+</p>
+                
+
+                
+                <p><a href="https://yukihane.github.io/posts/201907/04/spring-boot-and-spring-security/">Read more</a></p>
+                
+            </div>
+        </div>
+        
+
+        
+
+        <div class="col-12">
+            <div class="p-card">
+                <h3><a href="https://yukihane.github.io/posts/201906/01/spring-boot-component-out-of-container/">Spring Bootで コンポーネント外からコンポーネントを取得したかった</a></h3>
+
+                
+                
+                <p>
+
+
+<span class=" u-capitalized ">
+    on
+</span>
+2019-06-01
+</p>
+                
+
+                
+                <p>動機 CDI で言うところの CDI.current().getBeans(...) とか CDI.current().select(...)とかそんな感じのことをやりたかった。 参考リファレンス ドキュメント</p>
+                
+
+                
+                <p>
+<a class="p-link--hashtag" href="https://yukihane.github.io/tags/spring-boot/">
+    #spring-boot</a>&ensp;
+</p>
+                
+
+                
+                <p><a href="https://yukihane.github.io/posts/201906/01/spring-boot-component-out-of-container/">Read more</a></p>
+                
+            </div>
+        </div>
+        
+
+        
+
+        <div class="col-12">
+            <div class="p-card">
+                <h3><a href="https://yukihane.github.io/posts/201905/31/spring-boot-bean-on-testing/">Spring Boot 2.1 でテスト時 @Bean を挿げ替えたかった</a></h3>
+
+                
+                
+                <p>
+
+
+<span class=" u-capitalized ">
+    on
+</span>
+2019-05-31
+</p>
+                
+
+                
+                <p>動機 ユニットテスト実行時に java.time.Clock を挿げ替えてストップ・ザ・ワールド(GC的な意味でなくジョジョ的な意味で)したかった。 考え方/方針 @Configuration で @Bean を定義し</p>
+                
+
+                
+                <p>
+<a class="p-link--hashtag" href="https://yukihane.github.io/tags/spring-boot/">
+    #spring-boot</a>&ensp;
+</p>
+                
+
+                
+                <p><a href="https://yukihane.github.io/posts/201905/31/spring-boot-bean-on-testing/">Read more</a></p>
+                
+            </div>
+        </div>
+        
+
+        
+
+        <div class="col-12">
+            <div class="p-card">
+                <h3><a href="https://yukihane.github.io/posts/201905/21/spring-boog-json-convert/">text/plain で JSON を投げつけてくるヤツに対処する</a></h3>
+
+                
+                
+                <p>
+
+
+<span class=" u-capitalized ">
+    on
+</span>
+2019-05-21
+</p>
+                
+
+                
+                <p>RestTemplate でレスポンスの Content-Type を変更する。 の別解。 @Autowired private RestTemplateBuilder builder; ... final MappingJackson2HttpMessageConverter converter = new MappingJackson2HttpMessageConverter(); converter.setSupportedMediaTypes(Arrays.asList(MediaType.TEXT_PLAIN)); final RestTemplate restTemplate = builder.additionalMessageConverters(converter).build(); ちなみに上記のようにコンバータを明示的に設定しない場合だと次のような</p>
+                
+
+                
+                <p>
+<a class="p-link--hashtag" href="https://yukihane.github.io/tags/spring-boot/">
+    #spring-boot</a>&ensp;
+</p>
+                
+
+                
+                <p><a href="https://yukihane.github.io/posts/201905/21/spring-boog-json-convert/">Read more</a></p>
+                
+            </div>
+        </div>
+        
+
+        
+
+        <div class="col-12">
+            <div class="p-card">
+                <h3><a href="https://yukihane.github.io/posts/201904/16/migration-to-junit5/">Testing the Web Layer のコードを JUnit Jupiter にマイグレーションしてみる</a></h3>
+
+                
+                
+                <p>
+
+
+<span class=" u-capitalized ">
+    on
+</span>
+2019-04-16
+</p>
+                
+
+                
+                <p>概要 (追記: ここで試したのは2.1.4.RELEASE時点のもの。2.2.0.M3以降では #14736の通り JUnit5 がデフォルトになっている模様。</p>
+                
+
+                
+                <p>
+<a class="p-link--hashtag" href="https://yukihane.github.io/tags/spring-boot/">
+    #spring-boot</a>&ensp;
+</p>
+                
+
+                
+                <p><a href="https://yukihane.github.io/posts/201904/16/migration-to-junit5/">Read more</a></p>
+                
+            </div>
+        </div>
+        
+
+        
+
+        <div class="col-12">
+            <div class="p-card">
+                <h3><a href="https://yukihane.github.io/posts/201903/26/change-spring-validator-message/">Spring Validator(でラップされたBean Validation)のメッセージをi18nしたときの覚え書き</a></h3>
+
+                
+                
+                <p>
+
+
+<span class=" u-capitalized ">
+    on
+</span>
+2019-03-26
+</p>
+                
+
+                
+                <p>やりたかったこと BeanValidation のプロパティファイル ValidationMessages.properties でなく、 Spring のメッセージプロパティに統合したい。 Spring のメッセージプロパティとは？ Accept-Langu</p>
+                
+
+                
+                <p>
+<a class="p-link--hashtag" href="https://yukihane.github.io/tags/spring-boot/">
+    #spring-boot</a>&ensp;
+</p>
+                
+
+                
+                <p><a href="https://yukihane.github.io/posts/201903/26/change-spring-validator-message/">Read more</a></p>
+                
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+<div class="p-strip is-wrapper">
+    <div class="row">
+        <footer class="p-article-pagination">
+    
+    <a class="p-article-pagination__link--previous p-article-pagination__link--no-title" href="/tags/spring-boot/">
+        <span class="p-article-pagination__label">Previous</span>
+    </a>
+    
+
+    
+</footer>
+    </div>
+</div>
+
+
+        </div><footer class="p-strip is-shallow page-footer">
+    <div class="row">
+        <div class="col-12  u-align--center">
+            <p>
+                © 2020 発火後忘失
+            </p>
+        </div>
+    </div>
+</footer>
+
+
+
+
+</body>
+</html>

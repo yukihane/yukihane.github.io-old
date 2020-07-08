@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    
+
+
+
+
+
+<title>Hello Project Panama | 発火後忘失</title>
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content='はじめに 今個人的にすごく知りたいのはこちらです。ご回答よろしくお願いします！！！！ 動的確保したメモリー領域の解放戦略 - スタック・オーバーフロ'>
+<meta name="keywords" content='java'>
+<meta name="msapplication-TileColor" content="#b91d47">
+<meta name="theme-color" content="#ffffff">
+
+<link rel="canonical" href="https://yukihane.github.io/posts/202002/11/hello-project-panama/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#007aa6">
+<meta name="theme-color" content="#ffffff">
+
+<meta property="og:title" content="Hello Project Panama" />
+<meta property="og:description" content="はじめに 今個人的にすごく知りたいのはこちらです。ご回答よろしくお願いします！！！！ 動的確保したメモリー領域の解放戦略 - スタック・オーバーフロ" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://yukihane.github.io/posts/202002/11/hello-project-panama/" />
+<meta property="article:published_time" content="2020-02-11T20:43:43+00:00" />
+<meta property="article:modified_time" content="2020-02-11T20:43:43+00:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Hello Project Panama"/>
+<meta name="twitter:description" content="はじめに 今個人的にすごく知りたいのはこちらです。ご回答よろしくお願いします！！！！ 動的確保したメモリー領域の解放戦略 - スタック・オーバーフロ"/>
+
+<meta itemprop="name" content="">
+<meta itemprop="description" content="">
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href='https://yukihane.github.io/css/style.css'>
+
+    
+
+
+<link href="https://fonts.googleapis.com/css?family=Hanuman:400,700|Inconsolata|Roboto:400,400i,700,700i&display=swap&subset=khmer" rel="stylesheet">
+</head><body><header id="navigation" class="p-navigation">
+    <div class="p-navigation__row">
+        <div class="p-navigation__banner">
+            <div class="p-navigation__logo">
+                <a class="p-navigation__link u-vertically-center p-link--logo" href="https://yukihane.github.io/">
+                    発火後忘失
+                </a>
+            </div>
+            
+            <a href="#navigation" class="p-navigation__toggle--open" title="menu">
+                <i class="p-icon--menu"></i>
+            </a>
+            <a href="#navigation-closed" class="p-navigation__toggle--close" title="close menu">
+                <i class="p-icon--close"></i>
+            </a>
+        </div>
+
+        <nav class="p-navigation__nav">
+            <span class="u-off-screen">
+                <a href="#main-content">Jump to main content</a>
+            </span>
+
+            <ul class="p-navigation__links" role="menu">
+                
+            </ul>
+
+            
+            <form class="p-search-box" action="https://www.google.com/search" target="_blank">
+    <input type="search" class="p-search-box__input" name="q" placeholder='Search'
+        required="" aria-label="Query">
+    <input type="hidden" name="sitesearch" value="https://yukihane.github.io/">
+    <button type="reset" class="p-search-box__reset" alt="reset" aria-label="Reset">
+        <i class="p-icon--close"></i>
+    </button>
+    <button type="submit" class="p-search-box__button" alt="search" aria-label="Search">
+        <i class="p-icon--search"></i>
+    </button>
+</form>
+            
+        </nav>
+    </div>
+</header><div id="main-content">
+<header class="p-strip page-banner">
+    <div class="row">
+        <h1>Hello Project Panama</h1>
+    </div>
+
+    
+
+<div class="row">
+
+    
+    <div class="col-8">
+        
+
+
+
+
+<div class="p-media-object">
+
+    
+
+    <div class="p-media-object__details">
+
+        
+
+        
+        <p class="p-media-object__content">
+            <span class="u-capitalized">on</span>
+            2020-02-11
+        </p>
+        
+
+    </div>
+</div>
+
+
+    </div>
+    
+
+    
+    <div class="col-4  col--share-links ">
+        <ul class="p-inline-list-icons p-inline-list-icons--share-links u-no-padding--left u-no-margin--left u-unselectable">
+    <li class="p-inline-list__item">
+        <i class="p-icon--share"></i>
+    </li>
+    <li class="p-inline-list__item">
+        <a class="p-icon--facebook" title='Share on Facebook' target="_blank"
+            rel="noreferrer" href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fyukihane.github.io%2fposts%2f202002%2f11%2fhello-project-panama%2f">
+            Facebook
+        </a>
+    </li>
+    <li class="p-inline-list__item">
+        <a class="p-icon--twitter" title='Share on Twitter' target="_blank"
+            rel="noreferrer" href="http://twitter.com/share?text=Hello%20Project%20Panama&amp;url=https%3a%2f%2fyukihane.github.io%2fposts%2f202002%2f11%2fhello-project-panama%2f">
+            Twitter
+        </a>
+    </li>
+    <li class="p-inline-list__item">
+        <a class="p-icon--linkedin" title='Share on LinkedIn' target="_blank"
+            rel="noreferrer"
+            href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fyukihane.github.io%2fposts%2f202002%2f11%2fhello-project-panama%2f&amp;title=Hello%20Project%20Panama">
+            LinkedIn
+        </a>
+    </li>
+</ul>
+    </div>
+    
+
+</div>
+
+
+
+
+<div class="row">
+    <div class="col-12">
+        
+<a href="https://yukihane.github.io/tags/java/">#java</a>&ensp;
+
+    </div>
+</div>
+
+</header>
+
+<section class="p-strip is-shallow">
+    <main class="row post-content">
+        <h2 id="はじめに">はじめに</h2>
+<p>今個人的にすごく知りたいのはこちらです。ご回答よろしくお願いします！！！！</p>
+<ul>
+<li><a href="https://ja.stackoverflow.com/q/62868/2808">動的確保したメモリー領域の解放戦略</a> - スタック・オーバーフロー</li>
+</ul>
+<p>(質問読んでもらえれば(というかタイトル見てもらえれば)わかると思うんですけど、別に Java がわからん、とか Rust がわからん、という質問では無いです。念の為。もちろん Java も Rust もわからない(多分コード正しくない)ですけどそれは別の話。)</p>
+<h2 id="目的">目的</h2>
+<p>プログラミング言語 Rust を勉強したいと考えているのですが、自転車本を頭からスルッと読んだは良いものの全然身についていなくて、取り敢えず何か応用アプリ作ってみるか！と思い立ちました。</p>
+<p>…思い立ったものの、Rust で GUI 作るのはハードル高そう(だし、やりたいことの本質から逸れていく)なので GUI 部分は既にある知識でなんとかしようと考えました。</p>
+<p>ここで、今どきの Web フロントエンダーの皆様であれば Electron(powered by Node.js)なんかを選択肢に入れるところかと思いますが、自分はそっち方面知らないので Java の Swing でやってみました。</p>
+<p>せっかくなんで Project Panama(プロパナ)を使ってみました。</p>
+<h2 id="全体コード">全体コード</h2>
+<p><a href="https://github.com/yukihane/stackoverflow-qa/tree/master/so62868">https://github.com/yukihane/stackoverflow-qa/tree/master/so62868</a></p>
+<p>にあります。
+Rust(1.41.0)と Java(<a href="https://jdk.java.net/panama/">14-panama</a>)を使っています。
+ビルド方法は <code>build.sh</code> 参照のこと。</p>
+<h2 id="実装">実装</h2>
+<p>ハローワールド案件です。Java で処理を要求&amp;結果を受け取る、Rust では要求された処理を行って結果を返します。</p>
+<p>まず Rust 側。<code>name</code>を受け取って文字列連結して<code>message</code>として返します。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rust" data-lang="rust"><span style="color:#75715e">#[</span><span style="color:#75715e">no_mangle</span><span style="color:#75715e">]</span>
+<span style="color:#66d9ef">pub</span> <span style="color:#66d9ef">unsafe</span> <span style="color:#66d9ef">extern</span> <span style="color:#e6db74">&#34;C&#34;</span> <span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">greet</span>(name: <span style="color:#f92672">*</span><span style="color:#66d9ef">const</span> c_char, message: <span style="color:#f92672">*</span><span style="color:#66d9ef">mut</span> c_char, count: <span style="color:#a6e22e">size_t</span>) {
+    <span style="color:#66d9ef">let</span> name <span style="color:#f92672">=</span> CStr::from_ptr(name);
+    <span style="color:#66d9ef">let</span> name <span style="color:#f92672">=</span> name.to_str().unwrap();
+    <span style="color:#66d9ef">let</span> text <span style="color:#f92672">=</span> format<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;こんにちは、{}！&#34;</span>, name);
+    <span style="color:#66d9ef">let</span> text <span style="color:#f92672">=</span> CString::new(text).unwrap();
+
+    message.copy_from(text.as_ptr(), count);
+}
+</code></pre></div><p>上の関数に対応する C ヘッダファイルを生成します。
+<a href="https://github.com/eqrion/cbindgen">cbindgen</a>というツールで自動生成できました。</p>
+<pre><code>cbindgen -l c -o bridges/greeter.h librust
+</code></pre>
+<p>自動生成したそのままでも使えると思うのですが、冗長だと思ったので、今回は不要部分を削って commit してしまっています。</p>
+<p>続いてヘッダファイルと cdylib から<code>jextract</code>を用いてプロパナ の glue 部分を自動生成します。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">jextract <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>-L librust/target/release/ <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>-l greeter <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>-o bridges/greeter.jar <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>./bridges/greeter.h
+</code></pre></div><p>上記で生成された jar を利用して Rust 呼び出し部分を Java で実装します。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">final</span> JButton greetButton <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> JButton<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;greet&#34;</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+greetButton<span style="color:#f92672">.</span><span style="color:#a6e22e">addActionListener</span><span style="color:#f92672">(</span><span style="color:#f92672">(</span>e<span style="color:#f92672">)</span> <span style="color:#f92672">-</span><span style="color:#f92672">&gt;</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">final</span> Scope scope <span style="color:#f92672">=</span> Scope<span style="color:#f92672">.</span><span style="color:#a6e22e">globalScope</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+
+    <span style="color:#66d9ef">final</span> Pointer<span style="color:#f92672">&lt;</span>Byte<span style="color:#f92672">&gt;</span> name <span style="color:#f92672">=</span> scope<span style="color:#f92672">.</span><span style="color:#a6e22e">allocateCString</span><span style="color:#f92672">(</span>nameField<span style="color:#f92672">.</span><span style="color:#a6e22e">getText</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">final</span> <span style="color:#66d9ef">long</span> size <span style="color:#f92672">=</span> 256<span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">final</span> Pointer<span style="color:#f92672">&lt;</span>Byte<span style="color:#f92672">&gt;</span> message <span style="color:#f92672">=</span> scope<span style="color:#f92672">.</span><span style="color:#a6e22e">allocateArray</span><span style="color:#f92672">(</span>NativeTypes<span style="color:#f92672">.</span><span style="color:#a6e22e">UINT8</span><span style="color:#f92672">,</span> size<span style="color:#f92672">)</span><span style="color:#f92672">.</span><span style="color:#a6e22e">elementPointer</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+
+    greeter_lib<span style="color:#f92672">.</span><span style="color:#a6e22e">greet</span><span style="color:#f92672">(</span>name<span style="color:#f92672">,</span> message<span style="color:#f92672">,</span> size<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+
+    <span style="color:#66d9ef">final</span> String retval <span style="color:#f92672">=</span> Pointer<span style="color:#f92672">.</span><span style="color:#a6e22e">toString</span><span style="color:#f92672">(</span>message<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+    outputField<span style="color:#f92672">.</span><span style="color:#a6e22e">setText</span><span style="color:#f92672">(</span>retval<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+<span style="color:#f92672">}</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+</code></pre></div><p>以上。</p>
+
+    </main>
+</section>
+
+<footer class="p-strip is-wrapper">
+    <div class="row">
+        <div class="p-article-pagination">
+    
+    <a class="p-article-pagination__link--previous" href="https://yukihane.github.io/posts/202002/01/hello-rust-neon/">
+        <span class="p-article-pagination__label">Previous</span>
+        <span class="p-article-pagination__title">
+            Nodeのnative moduleをRustで書いてみる(Neon)
+        </span>
+    </a>
+    
+
+    
+    <a class="p-article-pagination__link--next" href="https://yukihane.github.io/posts/202002/20/spring-boot-compiler-parameters/">
+        <span class="p-article-pagination__label">Next</span>
+        <span class="p-article-pagination__title">
+            Spring Bootでは `-parameters` オプションは有効化されている
+        </span>
+    </a>
+    
+</div>
+    </div>
+</footer>
+
+        </div><footer class="p-strip is-shallow page-footer">
+    <div class="row">
+        <div class="col-12  u-align--center">
+            <p>
+                © 2020 発火後忘失
+            </p>
+        </div>
+    </div>
+</footer>
+
+
+
+
+</body>
+</html>

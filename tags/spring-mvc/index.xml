@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>spring-mvc on 発火後忘失</title>
+    <link>https://yukihane.github.io/tags/spring-mvc/</link>
+    <description>Recent content in spring-mvc on 発火後忘失</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Thu, 02 Jul 2020 21:11:04 +0000</lastBuildDate>
+    
+	<atom:link href="https://yukihane.github.io/tags/spring-mvc/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Spring Boot でなるべく依存関係を小さくしてWebMVCを使ってみる</title>
+      <link>https://yukihane.github.io/posts/202007/02/minimal-webmvc-with-springboot/</link>
+      <pubDate>Thu, 02 Jul 2020 21:11:04 +0000</pubDate>
+      
+      <guid>https://yukihane.github.io/posts/202007/02/minimal-webmvc-with-springboot/</guid>
+      <description>特に実用性とかは考えていない。何となくやってみたというだけ。 動かしたいやつ @RestController @RequestMapping(&amp;#34;/&amp;#34;) public class MyController { @GetMapping(&amp;#34;/&amp;#34;) public String index() { return &amp;#34;hello&amp;#34;; } } 設定 &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;spring-boot&amp;lt;/artifactId&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.springframework&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;spring-webmvc&amp;lt;/artifactId&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.apache.tomcat.embed&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;tomcat-embed-core&amp;lt;/artifactId&amp;gt; &amp;lt;/dependency&amp;gt; @Configuration @EnableWebMvc public class</description>
+    </item>
+    
+  </channel>
+</rss>

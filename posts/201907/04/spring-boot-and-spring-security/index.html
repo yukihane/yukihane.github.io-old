@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    
+
+
+
+
+
+<title>spring-boot-starter-security を入れたら認証画面が！ | 発火後忘失</title>
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content='WebSecurityConfigurerAdapter#configure(HttpSecurity) で form 認証を有効化しているのでこれをディスる。 WebSecurityConfigurerAdapterを継承した Spring コンポーネントをスキャン対'>
+<meta name="keywords" content='spring-boot, spring-security'>
+<meta name="msapplication-TileColor" content="#b91d47">
+<meta name="theme-color" content="#ffffff">
+
+<link rel="canonical" href="https://yukihane.github.io/posts/201907/04/spring-boot-and-spring-security/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#007aa6">
+<meta name="theme-color" content="#ffffff">
+
+<meta property="og:title" content="spring-boot-starter-security を入れたら認証画面が！" />
+<meta property="og:description" content="WebSecurityConfigurerAdapter#configure(HttpSecurity) で form 認証を有効化しているのでこれをディスる。 WebSecurityConfigurerAdapterを継承した Spring コンポーネントをスキャン対" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://yukihane.github.io/posts/201907/04/spring-boot-and-spring-security/" />
+<meta property="article:published_time" content="2019-07-04T20:32:21+00:00" />
+<meta property="article:modified_time" content="2019-07-04T20:32:21+00:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="spring-boot-starter-security を入れたら認証画面が！"/>
+<meta name="twitter:description" content="WebSecurityConfigurerAdapter#configure(HttpSecurity) で form 認証を有効化しているのでこれをディスる。 WebSecurityConfigurerAdapterを継承した Spring コンポーネントをスキャン対"/>
+
+<meta itemprop="name" content="">
+<meta itemprop="description" content="">
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href='https://yukihane.github.io/css/style.css'>
+
+    
+
+
+<link href="https://fonts.googleapis.com/css?family=Hanuman:400,700|Inconsolata|Roboto:400,400i,700,700i&display=swap&subset=khmer" rel="stylesheet">
+</head><body><header id="navigation" class="p-navigation">
+    <div class="p-navigation__row">
+        <div class="p-navigation__banner">
+            <div class="p-navigation__logo">
+                <a class="p-navigation__link u-vertically-center p-link--logo" href="https://yukihane.github.io/">
+                    発火後忘失
+                </a>
+            </div>
+            
+            <a href="#navigation" class="p-navigation__toggle--open" title="menu">
+                <i class="p-icon--menu"></i>
+            </a>
+            <a href="#navigation-closed" class="p-navigation__toggle--close" title="close menu">
+                <i class="p-icon--close"></i>
+            </a>
+        </div>
+
+        <nav class="p-navigation__nav">
+            <span class="u-off-screen">
+                <a href="#main-content">Jump to main content</a>
+            </span>
+
+            <ul class="p-navigation__links" role="menu">
+                
+            </ul>
+
+            
+            <form class="p-search-box" action="https://www.google.com/search" target="_blank">
+    <input type="search" class="p-search-box__input" name="q" placeholder='Search'
+        required="" aria-label="Query">
+    <input type="hidden" name="sitesearch" value="https://yukihane.github.io/">
+    <button type="reset" class="p-search-box__reset" alt="reset" aria-label="Reset">
+        <i class="p-icon--close"></i>
+    </button>
+    <button type="submit" class="p-search-box__button" alt="search" aria-label="Search">
+        <i class="p-icon--search"></i>
+    </button>
+</form>
+            
+        </nav>
+    </div>
+</header><div id="main-content">
+<header class="p-strip page-banner">
+    <div class="row">
+        <h1>spring-boot-starter-security を入れたら認証画面が！</h1>
+    </div>
+
+    
+
+<div class="row">
+
+    
+    <div class="col-8">
+        
+
+
+
+
+<div class="p-media-object">
+
+    
+
+    <div class="p-media-object__details">
+
+        
+
+        
+        <p class="p-media-object__content">
+            <span class="u-capitalized">on</span>
+            2019-07-04
+        </p>
+        
+
+    </div>
+</div>
+
+
+    </div>
+    
+
+    
+    <div class="col-4  col--share-links ">
+        <ul class="p-inline-list-icons p-inline-list-icons--share-links u-no-padding--left u-no-margin--left u-unselectable">
+    <li class="p-inline-list__item">
+        <i class="p-icon--share"></i>
+    </li>
+    <li class="p-inline-list__item">
+        <a class="p-icon--facebook" title='Share on Facebook' target="_blank"
+            rel="noreferrer" href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fyukihane.github.io%2fposts%2f201907%2f04%2fspring-boot-and-spring-security%2f">
+            Facebook
+        </a>
+    </li>
+    <li class="p-inline-list__item">
+        <a class="p-icon--twitter" title='Share on Twitter' target="_blank"
+            rel="noreferrer" href="http://twitter.com/share?text=spring-boot-starter-security%20%e3%82%92%e5%85%a5%e3%82%8c%e3%81%9f%e3%82%89%e8%aa%8d%e8%a8%bc%e7%94%bb%e9%9d%a2%e3%81%8c%ef%bc%81&amp;url=https%3a%2f%2fyukihane.github.io%2fposts%2f201907%2f04%2fspring-boot-and-spring-security%2f">
+            Twitter
+        </a>
+    </li>
+    <li class="p-inline-list__item">
+        <a class="p-icon--linkedin" title='Share on LinkedIn' target="_blank"
+            rel="noreferrer"
+            href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fyukihane.github.io%2fposts%2f201907%2f04%2fspring-boot-and-spring-security%2f&amp;title=spring-boot-starter-security%20%e3%82%92%e5%85%a5%e3%82%8c%e3%81%9f%e3%82%89%e8%aa%8d%e8%a8%bc%e7%94%bb%e9%9d%a2%e3%81%8c%ef%bc%81">
+            LinkedIn
+        </a>
+    </li>
+</ul>
+    </div>
+    
+
+</div>
+
+
+
+
+<div class="row">
+    <div class="col-12">
+        
+<a href="https://yukihane.github.io/tags/spring-boot/">#spring-boot</a>&ensp;
+
+<a href="https://yukihane.github.io/tags/spring-security/">#spring-security</a>&ensp;
+
+    </div>
+</div>
+
+</header>
+
+<section class="p-strip is-shallow">
+    <main class="row post-content">
+        <p><code>WebSecurityConfigurerAdapter#configure(HttpSecurity)</code> で form 認証を有効化しているのでこれをディスる。
+<code>WebSecurityConfigurerAdapter</code>を継承した Spring コンポーネントをスキャン対象に含めれば良い。</p>
+<pre><code>@Configuration
+public class MyWebSecConfig extends WebSecurityConfigurerAdapter {
+
+    @Override
+    protected void configure(final HttpSecurity http) throws Exception {
+        // 空実装でオーバライド
+    }
+}
+</code></pre><h1 id="別解">別解</h1>
+<p><code>SecurityAutoConfiguration</code>をディスる。(form 認証だけでなく他のセキュリティ自動設定も無効化される)</p>
+<pre><code>@SpringBootApplication(exclude = { SecurityAutoConfiguration.class })
+public class MyApplication {
+    public static void main(final String[] args) {
+        SpringApplication.run(MyApplication.class, args);
+    }
+}
+</code></pre>
+    </main>
+</section>
+
+<footer class="p-strip is-wrapper">
+    <div class="row">
+        <div class="p-article-pagination">
+    
+    <a class="p-article-pagination__link--previous" href="https://yukihane.github.io/posts/201906/20/dont-use-getrealpath/">
+        <span class="p-article-pagination__label">Previous</span>
+        <span class="p-article-pagination__title">
+            ファイル出力先にServletContext#getRealPathを使うな
+        </span>
+    </a>
+    
+
+    
+    <a class="p-article-pagination__link--next" href="https://yukihane.github.io/posts/201907/12/h2-console-on-spring-boot/">
+        <span class="p-article-pagination__label">Next</span>
+        <span class="p-article-pagination__title">
+            h2-consoleとspring-boot-starter-securityと私
+        </span>
+    </a>
+    
+</div>
+    </div>
+</footer>
+
+        </div><footer class="p-strip is-shallow page-footer">
+    <div class="row">
+        <div class="col-12  u-align--center">
+            <p>
+                © 2020 発火後忘失
+            </p>
+        </div>
+    </div>
+</footer>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    
+
+
+
+
+
+<title>元号が令和に変わったことを知らない人のための日付処理方法 | 発火後忘失</title>
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content='問題 JapaneseDate.of(や LocalDate.of)を使うと厳密(strict)に検証されてしまう。 結果、例外が出る。 // 平成31'>
+<meta name="keywords" content='java'>
+<meta name="msapplication-TileColor" content="#b91d47">
+<meta name="theme-color" content="#ffffff">
+
+<link rel="canonical" href="https://yukihane.github.io/posts/201906/12/java-datetime/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#007aa6">
+<meta name="theme-color" content="#ffffff">
+
+<meta property="og:title" content="元号が令和に変わったことを知らない人のための日付処理方法" />
+<meta property="og:description" content="問題 JapaneseDate.of(や LocalDate.of)を使うと厳密(strict)に検証されてしまう。 結果、例外が出る。 // 平成31" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://yukihane.github.io/posts/201906/12/java-datetime/" />
+<meta property="article:published_time" content="2019-06-12T20:24:45+00:00" />
+<meta property="article:modified_time" content="2019-06-12T20:24:45+00:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="元号が令和に変わったことを知らない人のための日付処理方法"/>
+<meta name="twitter:description" content="問題 JapaneseDate.of(や LocalDate.of)を使うと厳密(strict)に検証されてしまう。 結果、例外が出る。 // 平成31"/>
+
+<meta itemprop="name" content="">
+<meta itemprop="description" content="">
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href='https://yukihane.github.io/css/style.css'>
+
+    
+
+
+<link href="https://fonts.googleapis.com/css?family=Hanuman:400,700|Inconsolata|Roboto:400,400i,700,700i&display=swap&subset=khmer" rel="stylesheet">
+</head><body><header id="navigation" class="p-navigation">
+    <div class="p-navigation__row">
+        <div class="p-navigation__banner">
+            <div class="p-navigation__logo">
+                <a class="p-navigation__link u-vertically-center p-link--logo" href="https://yukihane.github.io/">
+                    発火後忘失
+                </a>
+            </div>
+            
+            <a href="#navigation" class="p-navigation__toggle--open" title="menu">
+                <i class="p-icon--menu"></i>
+            </a>
+            <a href="#navigation-closed" class="p-navigation__toggle--close" title="close menu">
+                <i class="p-icon--close"></i>
+            </a>
+        </div>
+
+        <nav class="p-navigation__nav">
+            <span class="u-off-screen">
+                <a href="#main-content">Jump to main content</a>
+            </span>
+
+            <ul class="p-navigation__links" role="menu">
+                
+            </ul>
+
+            
+            <form class="p-search-box" action="https://www.google.com/search" target="_blank">
+    <input type="search" class="p-search-box__input" name="q" placeholder='Search'
+        required="" aria-label="Query">
+    <input type="hidden" name="sitesearch" value="https://yukihane.github.io/">
+    <button type="reset" class="p-search-box__reset" alt="reset" aria-label="Reset">
+        <i class="p-icon--close"></i>
+    </button>
+    <button type="submit" class="p-search-box__button" alt="search" aria-label="Search">
+        <i class="p-icon--search"></i>
+    </button>
+</form>
+            
+        </nav>
+    </div>
+</header><div id="main-content">
+<header class="p-strip page-banner">
+    <div class="row">
+        <h1>元号が令和に変わったことを知らない人のための日付処理方法</h1>
+    </div>
+
+    
+
+<div class="row">
+
+    
+    <div class="col-8">
+        
+
+
+
+
+<div class="p-media-object">
+
+    
+
+    <div class="p-media-object__details">
+
+        
+
+        
+        <p class="p-media-object__content">
+            <span class="u-capitalized">on</span>
+            2019-06-12
+        </p>
+        
+
+    </div>
+</div>
+
+
+    </div>
+    
+
+    
+    <div class="col-4  col--share-links ">
+        <ul class="p-inline-list-icons p-inline-list-icons--share-links u-no-padding--left u-no-margin--left u-unselectable">
+    <li class="p-inline-list__item">
+        <i class="p-icon--share"></i>
+    </li>
+    <li class="p-inline-list__item">
+        <a class="p-icon--facebook" title='Share on Facebook' target="_blank"
+            rel="noreferrer" href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fyukihane.github.io%2fposts%2f201906%2f12%2fjava-datetime%2f">
+            Facebook
+        </a>
+    </li>
+    <li class="p-inline-list__item">
+        <a class="p-icon--twitter" title='Share on Twitter' target="_blank"
+            rel="noreferrer" href="http://twitter.com/share?text=%e5%85%83%e5%8f%b7%e3%81%8c%e4%bb%a4%e5%92%8c%e3%81%ab%e5%a4%89%e3%82%8f%e3%81%a3%e3%81%9f%e3%81%93%e3%81%a8%e3%82%92%e7%9f%a5%e3%82%89%e3%81%aa%e3%81%84%e4%ba%ba%e3%81%ae%e3%81%9f%e3%82%81%e3%81%ae%e6%97%a5%e4%bb%98%e5%87%a6%e7%90%86%e6%96%b9%e6%b3%95&amp;url=https%3a%2f%2fyukihane.github.io%2fposts%2f201906%2f12%2fjava-datetime%2f">
+            Twitter
+        </a>
+    </li>
+    <li class="p-inline-list__item">
+        <a class="p-icon--linkedin" title='Share on LinkedIn' target="_blank"
+            rel="noreferrer"
+            href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fyukihane.github.io%2fposts%2f201906%2f12%2fjava-datetime%2f&amp;title=%e5%85%83%e5%8f%b7%e3%81%8c%e4%bb%a4%e5%92%8c%e3%81%ab%e5%a4%89%e3%82%8f%e3%81%a3%e3%81%9f%e3%81%93%e3%81%a8%e3%82%92%e7%9f%a5%e3%82%89%e3%81%aa%e3%81%84%e4%ba%ba%e3%81%ae%e3%81%9f%e3%82%81%e3%81%ae%e6%97%a5%e4%bb%98%e5%87%a6%e7%90%86%e6%96%b9%e6%b3%95">
+            LinkedIn
+        </a>
+    </li>
+</ul>
+    </div>
+    
+
+</div>
+
+
+
+
+<div class="row">
+    <div class="col-12">
+        
+<a href="https://yukihane.github.io/tags/java/">#java</a>&ensp;
+
+    </div>
+</div>
+
+</header>
+
+<section class="p-strip is-shallow">
+    <main class="row post-content">
+        <h1 id="問題">問題</h1>
+<p><code>JapaneseDate.of</code>(や <code>LocalDate.of</code>)を使うと厳密(strict)に検証されてしまう。
+結果、例外が出る。</p>
+<pre><code>// 平成31年6月12日
+final JapaneseDate today = JapaneseDate.of(JapaneseEra.HEISEI, 31, 6, 12);
+System.out.println(today);
+</code></pre><pre><code>Exception in thread &quot;main&quot; java.time.DateTimeException: year, month, and day not valid for Era
+	at java.base/java.time.chrono.JapaneseDate.of(JapaneseDate.java:231)
+	at com.github.yukihane.datetime.App.main(App.java:21)
+</code></pre><h1 id="解決策">解決策</h1>
+<p><code>JapaneseChronology#resolveDate</code>(や <code>IsoChronology#resolveDate</code>)を使えばゆるふわ(lenient)な検証でゆるしてくれたりも。</p>
+<pre><code>final Map&lt;TemporalField, Long&gt; fieldValues = new HashMap&lt;&gt;();
+fieldValues.put(ChronoField.ERA, (long) JapaneseEra.HEISEI.getValue());
+fieldValues.put(ChronoField.YEAR_OF_ERA, 31L);
+fieldValues.put(ChronoField.MONTH_OF_YEAR, 6L);
+fieldValues.put(ChronoField.DAY_OF_MONTH, 12L);
+final JapaneseDate today = JapaneseChronology.INSTANCE.resolveDate(fieldValues, ResolverStyle.LENIENT);
+System.out.println(today);
+</code></pre><pre><code>Japanese Reiwa 1-06-12
+</code></pre><p>しかしよく考えるとデフォルト(的)挙動が strict モードって和暦扱うところでは怖いよな。
+お隠れになると(※もはや改元はお隠れになられた場合だけではなくなったが)今までちゃんと動いていたところが例外出るようになるんだぜ…</p>
+<h1 id="参考">参考</h1>
+<ul>
+<li><a href="https://docs.oracle.com/javase/jp/12/docs/api/java.base/java/time/chrono/AbstractChronology.html#resolveDate(java.util.Map,java.time.format.ResolverStyle)">AbstractChronology#resolveDate - Java API doc</a></li>
+</ul>
+<blockquote>
+<ul>
+<li>YEAR_OF_ERA と ERA - 両方とも存在する場合、それらが組み合わされて YEAR を形成します。 lenient モードでは YEAR_OF_ERA の範囲は検証されず、smart および strict モードでは検証されます。</li>
+</ul>
+</blockquote>
+<p><code>smart</code>は平成 31 年 6 月は許してくれるけど平成 32 年 6 月は許してくれない。賢いか…？
+(※ 検証するのは&quot;YEAR_OF_ERA の範囲&quot;だけだから言ってることとやってることは合ってる)</p>
+
+    </main>
+</section>
+
+<footer class="p-strip is-wrapper">
+    <div class="row">
+        <div class="p-article-pagination">
+    
+    <a class="p-article-pagination__link--previous" href="https://yukihane.github.io/posts/201906/11/simpledateformat/">
+        <span class="p-article-pagination__label">Previous</span>
+        <span class="p-article-pagination__title">
+            SimpleDateFormat もこれもうわかんねぇな
+        </span>
+    </a>
+    
+
+    
+    <a class="p-article-pagination__link--next" href="https://yukihane.github.io/posts/201906/20/dont-use-getrealpath/">
+        <span class="p-article-pagination__label">Next</span>
+        <span class="p-article-pagination__title">
+            ファイル出力先にServletContext#getRealPathを使うな
+        </span>
+    </a>
+    
+</div>
+    </div>
+</footer>
+
+        </div><footer class="p-strip is-shallow page-footer">
+    <div class="row">
+        <div class="col-12  u-align--center">
+            <p>
+                © 2020 発火後忘失
+            </p>
+        </div>
+    </div>
+</footer>
+
+
+
+
+</body>
+</html>

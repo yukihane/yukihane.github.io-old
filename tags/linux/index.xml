@@ -20,5 +20,23 @@
       <description>…と少し思い返していました。といっても思い出せたのは次の2つなのですが。 alpine Linuxへのawscliインストール alpineでgitがcol</description>
     </item>
     
+    <item>
+      <title>ワンライナー sudoers 編集</title>
+      <link>https://yukihane.github.io/posts/201805/09/edit-sudoers-oneliner/</link>
+      <pubDate>Wed, 09 May 2018 19:24:15 +0000</pubDate>
+      
+      <guid>https://yukihane.github.io/posts/201805/09/edit-sudoers-oneliner/</guid>
+      <description>Dockerfile 内で sudoers を編集しユーザ情報を追加したかった。 RUN echo &#39;myuser ALL=(ALL) NOPASSWD: ALL&#39; | EDITOR=&#39;tee -a&#39; visudo 参考: linux - How do I edit /etc/sudoers from a script? - Stack Overflow</description>
+    </item>
+    
+    <item>
+      <title>手っ取り早くRPMパッケージを作成したかった</title>
+      <link>https://yukihane.github.io/posts/201803/20/building-rpm/</link>
+      <pubDate>Tue, 20 Mar 2018 19:21:51 +0000</pubDate>
+      
+      <guid>https://yukihane.github.io/posts/201803/20/building-rpm/</guid>
+      <description>前提 既にビルド方法は確立しており、パッケージシステムに配布方法だけ任せたい、という場合に最小限の手間で RPM パッケージを作ることを考えます ビルド</description>
+    </item>
+    
   </channel>
 </rss>

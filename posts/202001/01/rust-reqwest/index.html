@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    
+
+
+
+
+
+<title>reqwest使おうとしたけどよくわからん | 発火後忘失</title>
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content='はじめに 年の瀬にスクレイピングしたくなって Rust 勉強し始めたけれど、直前に reqwest ライブラリに更新が入ったみたいでコピペコーディングが阻まれた。 知っと'>
+<meta name="keywords" content='rust'>
+<meta name="msapplication-TileColor" content="#b91d47">
+<meta name="theme-color" content="#ffffff">
+
+<link rel="canonical" href="https://yukihane.github.io/posts/202001/01/rust-reqwest/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#007aa6">
+<meta name="theme-color" content="#ffffff">
+
+<meta property="og:title" content="reqwest使おうとしたけどよくわからん" />
+<meta property="og:description" content="はじめに 年の瀬にスクレイピングしたくなって Rust 勉強し始めたけれど、直前に reqwest ライブラリに更新が入ったみたいでコピペコーディングが阻まれた。 知っと" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://yukihane.github.io/posts/202001/01/rust-reqwest/" />
+<meta property="article:published_time" content="2020-01-01T20:42:42+00:00" />
+<meta property="article:modified_time" content="2020-01-01T20:42:42+00:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="reqwest使おうとしたけどよくわからん"/>
+<meta name="twitter:description" content="はじめに 年の瀬にスクレイピングしたくなって Rust 勉強し始めたけれど、直前に reqwest ライブラリに更新が入ったみたいでコピペコーディングが阻まれた。 知っと"/>
+
+<meta itemprop="name" content="">
+<meta itemprop="description" content="">
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href='https://yukihane.github.io/css/style.css'>
+
+    
+
+
+<link href="https://fonts.googleapis.com/css?family=Hanuman:400,700|Inconsolata|Roboto:400,400i,700,700i&display=swap&subset=khmer" rel="stylesheet">
+</head><body><header id="navigation" class="p-navigation">
+    <div class="p-navigation__row">
+        <div class="p-navigation__banner">
+            <div class="p-navigation__logo">
+                <a class="p-navigation__link u-vertically-center p-link--logo" href="https://yukihane.github.io/">
+                    発火後忘失
+                </a>
+            </div>
+            
+            <a href="#navigation" class="p-navigation__toggle--open" title="menu">
+                <i class="p-icon--menu"></i>
+            </a>
+            <a href="#navigation-closed" class="p-navigation__toggle--close" title="close menu">
+                <i class="p-icon--close"></i>
+            </a>
+        </div>
+
+        <nav class="p-navigation__nav">
+            <span class="u-off-screen">
+                <a href="#main-content">Jump to main content</a>
+            </span>
+
+            <ul class="p-navigation__links" role="menu">
+                
+            </ul>
+
+            
+            <form class="p-search-box" action="https://www.google.com/search" target="_blank">
+    <input type="search" class="p-search-box__input" name="q" placeholder='Search'
+        required="" aria-label="Query">
+    <input type="hidden" name="sitesearch" value="https://yukihane.github.io/">
+    <button type="reset" class="p-search-box__reset" alt="reset" aria-label="Reset">
+        <i class="p-icon--close"></i>
+    </button>
+    <button type="submit" class="p-search-box__button" alt="search" aria-label="Search">
+        <i class="p-icon--search"></i>
+    </button>
+</form>
+            
+        </nav>
+    </div>
+</header><div id="main-content">
+<header class="p-strip page-banner">
+    <div class="row">
+        <h1>reqwest使おうとしたけどよくわからん</h1>
+    </div>
+
+    
+
+<div class="row">
+
+    
+    <div class="col-8">
+        
+
+
+
+
+<div class="p-media-object">
+
+    
+
+    <div class="p-media-object__details">
+
+        
+
+        
+        <p class="p-media-object__content">
+            <span class="u-capitalized">on</span>
+            2020-01-01
+        </p>
+        
+
+    </div>
+</div>
+
+
+    </div>
+    
+
+    
+    <div class="col-4  col--share-links ">
+        <ul class="p-inline-list-icons p-inline-list-icons--share-links u-no-padding--left u-no-margin--left u-unselectable">
+    <li class="p-inline-list__item">
+        <i class="p-icon--share"></i>
+    </li>
+    <li class="p-inline-list__item">
+        <a class="p-icon--facebook" title='Share on Facebook' target="_blank"
+            rel="noreferrer" href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fyukihane.github.io%2fposts%2f202001%2f01%2frust-reqwest%2f">
+            Facebook
+        </a>
+    </li>
+    <li class="p-inline-list__item">
+        <a class="p-icon--twitter" title='Share on Twitter' target="_blank"
+            rel="noreferrer" href="http://twitter.com/share?text=reqwest%e4%bd%bf%e3%81%8a%e3%81%86%e3%81%a8%e3%81%97%e3%81%9f%e3%81%91%e3%81%a9%e3%82%88%e3%81%8f%e3%82%8f%e3%81%8b%e3%82%89%e3%82%93&amp;url=https%3a%2f%2fyukihane.github.io%2fposts%2f202001%2f01%2frust-reqwest%2f">
+            Twitter
+        </a>
+    </li>
+    <li class="p-inline-list__item">
+        <a class="p-icon--linkedin" title='Share on LinkedIn' target="_blank"
+            rel="noreferrer"
+            href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fyukihane.github.io%2fposts%2f202001%2f01%2frust-reqwest%2f&amp;title=reqwest%e4%bd%bf%e3%81%8a%e3%81%86%e3%81%a8%e3%81%97%e3%81%9f%e3%81%91%e3%81%a9%e3%82%88%e3%81%8f%e3%82%8f%e3%81%8b%e3%82%89%e3%82%93">
+            LinkedIn
+        </a>
+    </li>
+</ul>
+    </div>
+    
+
+</div>
+
+
+
+
+<div class="row">
+    <div class="col-12">
+        
+<a href="https://yukihane.github.io/tags/rust/">#rust</a>&ensp;
+
+    </div>
+</div>
+
+</header>
+
+<section class="p-strip is-shallow">
+    <main class="row post-content">
+        <h1 id="はじめに">はじめに</h1>
+<p>年の瀬にスクレイピングしたくなって Rust 勉強し始めたけれど、直前に reqwest ライブラリに更新が入ったみたいでコピペコーディングが阻まれた。</p>
+<h1 id="知っとかないといけなかったこと">知っとかないといけなかったこと</h1>
+<ul>
+<li>今回の更新 <a href="https://seanmonstar.com/post/189960517042/reqwest-v010">reqwest 0.10.0</a> で async/await がデフォルトになった(ので従来のサンプルコードは動かなくなった)。</li>
+<li>Cargo には <a href="https://doc.rust-lang.org/stable/cargo/reference/manifest.html#the-features-section">feature flag(feature toggle)</a> 機能があって、reqwest やら(オフィシャルサンプルで利用している)tokio やらもこれを利用している。
+<ul>
+<li>(async/await を使わない、従来の)blocking 版をどうやって使うのか全然わからなかったけれど、features で明示的に指定する必要があった。</li>
+<li><a href="https://github.com/seanmonstar/reqwest/issues/755">オフィシャルサンプルを動かすにしてもこれを知っておかないといけなかった</a>。</li>
+</ul>
+</li>
+<li><a href="https://crates.io/crates/tokio">tokio</a>を用いる必要があった。
+<ul>
+<li>自分が見ていた(古い)サンプルでは<a href="https://crates.io/crates/futures">futures</a>の<code>futures::executor::block_on</code>を利用していたので当初それをコピペったのだが次のエラーが出た: &lsquo;not currently running on the Tokio runtime.',</li>
+<li>async/await 構文が標準に取り込まれた、ということは非同期ランタイムを別のものにすげ替えることが可能、みたいなイメージを持っていたのだが、そうではなさそう。</li>
+<li>おそらく<a href="https://github.com/ghmagazine/rustbook/pull/2">自転車本の補遺</a>が言うところの「非同期エコシステム」が関係する話題。</li>
+</ul>
+</li>
+</ul>
+<h1 id="サンプルを動かすには">サンプルを動かすには</h1>
+<p><a href="https://github.com/seanmonstar/reqwest">https://github.com/seanmonstar/reqwest</a></p>
+<pre><code>use std::collections::HashMap;
+
+#[tokio::main]
+async fn main() -&gt; Result&lt;(), Box&lt;dyn std::error::Error&gt;&gt; {
+    let resp: HashMap&lt;String, String&gt; = reqwest::get(&quot;https://httpbin.org/ip&quot;)
+        .await?
+        .json()
+        .await?;
+    println!(&quot;{:#?}&quot;, resp);
+    Ok(())
+}
+</code></pre><p>を動かすためには、 <code>Cargo.toml</code> の <code>[dependencies]</code> セクションに次のように書く必要があった。</p>
+<pre><code>[dependencies]
+reqwest = {version = &quot;0.10.0&quot;, features=[&quot;json&quot;]}
+tokio = {version = &quot;0.2.6&quot;, features = [&quot;macros&quot;]}
+</code></pre><p>また、blocking 版</p>
+<pre><code>use std::collections::HashMap;
+
+fn main() -&gt; Result&lt;(), Box&lt;dyn std::error::Error&gt;&gt; {
+    let resp: HashMap&lt;String, String&gt; = reqwest::blocking::get(&quot;https://httpbin.org/ip&quot;)?
+        .json()?;
+    println!(&quot;{:#?}&quot;, resp);
+    Ok(())
+}
+</code></pre><p>は、</p>
+<pre><code>[dependencies]
+reqwest = {version = &quot;0.10.0&quot;, features=[&quot;json&quot;,&quot;blocking&quot;]}
+</code></pre><p>であった。</p>
+<p>ちなみに reqwest の feature flag 一覧は</p>
+<ul>
+<li><a href="https://docs.rs/reqwest/0.10.0/reqwest/#optional-features">https://docs.rs/reqwest/0.10.0/reqwest/#optional-features</a></li>
+</ul>
+<p>にある。</p>
+
+    </main>
+</section>
+
+<footer class="p-strip is-wrapper">
+    <div class="row">
+        <div class="p-article-pagination">
+    
+    <a class="p-article-pagination__link--previous" href="https://yukihane.github.io/posts/201912/10/resttemplatebuilder/">
+        <span class="p-article-pagination__label">Previous</span>
+        <span class="p-article-pagination__title">
+            RestTemplateBuilderに関する覚書
+        </span>
+    </a>
+    
+
+    
+    <a class="p-article-pagination__link--next" href="https://yukihane.github.io/posts/202001/26/resttemplate-with-illformed-json/">
+        <span class="p-article-pagination__label">Next</span>
+        <span class="p-article-pagination__title">
+            Spring BootのRestTemplateで text/plain;Windows-31J なRESTレスポンスを処理する
+        </span>
+    </a>
+    
+</div>
+    </div>
+</footer>
+
+        </div><footer class="p-strip is-shallow page-footer">
+    <div class="row">
+        <div class="col-12  u-align--center">
+            <p>
+                © 2020 発火後忘失
+            </p>
+        </div>
+    </div>
+</footer>
+
+
+
+
+</body>
+</html>

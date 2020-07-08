@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    
+
+
+
+
+
+<title>Hibernate Map Char to String | 発火後忘失</title>
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content='例えば、生 JDBC でchar型カラムのクエリを書くとString型にマップされます final Connection connection = DriverManager.getConnection(...); final Statement statement = connection.createStatement(); final ResultSet resultSet = statement.executeQuery(&quot;select char_column from foo_table&quot;); // java.lang.String resultSet.getMetaData().getColumnClassName(1); が、Hibernate'>
+<meta name="keywords" content='hibernate, java'>
+<meta name="msapplication-TileColor" content="#b91d47">
+<meta name="theme-color" content="#ffffff">
+
+<link rel="canonical" href="https://yukihane.github.io/posts/201902/04/hibernate-map-char-to-string/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#007aa6">
+<meta name="theme-color" content="#ffffff">
+
+<meta property="og:title" content="Hibernate Map Char to String" />
+<meta property="og:description" content="例えば、生 JDBC でchar型カラムのクエリを書くとString型にマップされます final Connection connection = DriverManager.getConnection(...); final Statement statement = connection.createStatement(); final ResultSet resultSet = statement.executeQuery(&quot;select char_column from foo_table&quot;); // java.lang.String resultSet.getMetaData().getColumnClassName(1); が、Hibernate" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://yukihane.github.io/posts/201902/04/hibernate-map-char-to-string/" />
+<meta property="article:published_time" content="2019-02-04T20:01:19+00:00" />
+<meta property="article:modified_time" content="2019-02-04T20:01:19+00:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Hibernate Map Char to String"/>
+<meta name="twitter:description" content="例えば、生 JDBC でchar型カラムのクエリを書くとString型にマップされます final Connection connection = DriverManager.getConnection(...); final Statement statement = connection.createStatement(); final ResultSet resultSet = statement.executeQuery(&quot;select char_column from foo_table&quot;); // java.lang.String resultSet.getMetaData().getColumnClassName(1); が、Hibernate"/>
+
+<meta itemprop="name" content="">
+<meta itemprop="description" content="">
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href='https://yukihane.github.io/css/style.css'>
+
+    
+
+
+<link href="https://fonts.googleapis.com/css?family=Hanuman:400,700|Inconsolata|Roboto:400,400i,700,700i&display=swap&subset=khmer" rel="stylesheet">
+</head><body><header id="navigation" class="p-navigation">
+    <div class="p-navigation__row">
+        <div class="p-navigation__banner">
+            <div class="p-navigation__logo">
+                <a class="p-navigation__link u-vertically-center p-link--logo" href="https://yukihane.github.io/">
+                    発火後忘失
+                </a>
+            </div>
+            
+            <a href="#navigation" class="p-navigation__toggle--open" title="menu">
+                <i class="p-icon--menu"></i>
+            </a>
+            <a href="#navigation-closed" class="p-navigation__toggle--close" title="close menu">
+                <i class="p-icon--close"></i>
+            </a>
+        </div>
+
+        <nav class="p-navigation__nav">
+            <span class="u-off-screen">
+                <a href="#main-content">Jump to main content</a>
+            </span>
+
+            <ul class="p-navigation__links" role="menu">
+                
+            </ul>
+
+            
+            <form class="p-search-box" action="https://www.google.com/search" target="_blank">
+    <input type="search" class="p-search-box__input" name="q" placeholder='Search'
+        required="" aria-label="Query">
+    <input type="hidden" name="sitesearch" value="https://yukihane.github.io/">
+    <button type="reset" class="p-search-box__reset" alt="reset" aria-label="Reset">
+        <i class="p-icon--close"></i>
+    </button>
+    <button type="submit" class="p-search-box__button" alt="search" aria-label="Search">
+        <i class="p-icon--search"></i>
+    </button>
+</form>
+            
+        </nav>
+    </div>
+</header><div id="main-content">
+<header class="p-strip page-banner">
+    <div class="row">
+        <h1>Hibernate Map Char to String</h1>
+    </div>
+
+    
+
+<div class="row">
+
+    
+    <div class="col-8">
+        
+
+
+
+
+<div class="p-media-object">
+
+    
+
+    <div class="p-media-object__details">
+
+        
+
+        
+        <p class="p-media-object__content">
+            <span class="u-capitalized">on</span>
+            2019-02-04
+        </p>
+        
+
+    </div>
+</div>
+
+
+    </div>
+    
+
+    
+    <div class="col-4  col--share-links ">
+        <ul class="p-inline-list-icons p-inline-list-icons--share-links u-no-padding--left u-no-margin--left u-unselectable">
+    <li class="p-inline-list__item">
+        <i class="p-icon--share"></i>
+    </li>
+    <li class="p-inline-list__item">
+        <a class="p-icon--facebook" title='Share on Facebook' target="_blank"
+            rel="noreferrer" href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fyukihane.github.io%2fposts%2f201902%2f04%2fhibernate-map-char-to-string%2f">
+            Facebook
+        </a>
+    </li>
+    <li class="p-inline-list__item">
+        <a class="p-icon--twitter" title='Share on Twitter' target="_blank"
+            rel="noreferrer" href="http://twitter.com/share?text=Hibernate%20Map%20Char%20to%20String&amp;url=https%3a%2f%2fyukihane.github.io%2fposts%2f201902%2f04%2fhibernate-map-char-to-string%2f">
+            Twitter
+        </a>
+    </li>
+    <li class="p-inline-list__item">
+        <a class="p-icon--linkedin" title='Share on LinkedIn' target="_blank"
+            rel="noreferrer"
+            href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fyukihane.github.io%2fposts%2f201902%2f04%2fhibernate-map-char-to-string%2f&amp;title=Hibernate%20Map%20Char%20to%20String">
+            LinkedIn
+        </a>
+    </li>
+</ul>
+    </div>
+    
+
+</div>
+
+
+
+
+<div class="row">
+    <div class="col-12">
+        
+<a href="https://yukihane.github.io/tags/hibernate/">#hibernate</a>&ensp;
+
+<a href="https://yukihane.github.io/tags/java/">#java</a>&ensp;
+
+    </div>
+</div>
+
+</header>
+
+<section class="p-strip is-shallow">
+    <main class="row post-content">
+        <p>例えば、生 JDBC で<code>char</code>型カラムのクエリを書くと<code>String</code>型にマップされます</p>
+<pre><code>    final Connection connection = DriverManager.getConnection(...);
+    final Statement statement = connection.createStatement();
+    final ResultSet resultSet = statement.executeQuery(&quot;select char_column from foo_table&quot;);
+
+    // java.lang.String
+    resultSet.getMetaData().getColumnClassName(1);
+</code></pre>
+<p>が、Hibernate の Native query を用いて同じように実行すると<code>Character</code>型にマップされます:</p>
+<pre><code>    final EntityManagerFactory factory = Persistence.createEntityManagerFactory(...);
+    final EntityManager em = factory.createEntityManager();
+    final Query q = em.createNativeQuery(&quot;select char_column from foo_table&quot;, Tuple.class);
+    final List&lt;Tuple&gt; res = q.getResultList();
+
+    // java.lang.Character
+    res.get(0).get(0).getClass();
+</code></pre>
+<p>この挙動を決めているのは <a href="https://github.com/hibernate/hibernate-orm/blob/5.4.1/hibernate-core/src/main/java/org/hibernate/dialect/Dialect.java#L221-L223"><code>org.hibernate.dialect.Dialect</code>のこの辺り</a>です:</p>
+<pre><code>    registerHibernateType( Types.CHAR, StandardBasicTypes.CHARACTER.getName() );
+    registerHibernateType( Types.CHAR, 1, StandardBasicTypes.CHARACTER.getName() );
+    registerHibernateType( Types.CHAR, 255, StandardBasicTypes.STRING.getName() );
+</code></pre>
+<p>この挙動を変えるには、カスタムの Dialect を実装し、それを <code>persistence.xml</code> なりで指定するようにします。</p>
+<p>カスタム Dialect の例:</p>
+<pre><code>package com.example.dialect;
+
+import java.sql.Types;
+
+import org.hibernate.dialect.H2Dialect;
+import org.hibernate.type.StandardBasicTypes;
+
+public class H2CustomDialect extends H2Dialect {
+
+    public H2CustomDialect() {
+        super();
+
+        registerHibernateType(Types.CHAR, StandardBasicTypes.STRING.getName());
+        registerHibernateType(Types.CHAR, 1, StandardBasicTypes.STRING.getName());
+        registerHibernateType(Types.CHAR, 255, StandardBasicTypes.STRING.getName());
+
+    }
+
+}
+</code></pre>
+<p>参考:</p>
+<ul>
+<li><a href="https://hibernate.atlassian.net/browse/HHH-2304">HHH-2304 Wrong type detection for sql type char(x) columns</a></li>
+<li><a href="https://docs.oracle.com/javase/jp/1.5.0/guide/jdbc/getstart/mapping.html">JDBC API 入門 - 9. SQL と Java の型のマッピング</a></li>
+</ul>
+
+    </main>
+</section>
+
+<footer class="p-strip is-wrapper">
+    <div class="row">
+        <div class="p-article-pagination">
+    
+    <a class="p-article-pagination__link--previous" href="https://yukihane.github.io/posts/201901/16/set-jvm-to-eclipse-on-mac/">
+        <span class="p-article-pagination__label">Previous</span>
+        <span class="p-article-pagination__title">
+            Eclipseの起動に使用するJDKを指定する（Mac）
+        </span>
+    </a>
+    
+
+    
+    <a class="p-article-pagination__link--next" href="https://yukihane.github.io/posts/201903/24/versioning-rpg-maker/">
+        <span class="p-article-pagination__label">Next</span>
+        <span class="p-article-pagination__title">
+            RPGツクールMVをバージョン管理するための初期設定
+        </span>
+    </a>
+    
+</div>
+    </div>
+</footer>
+
+        </div><footer class="p-strip is-shallow page-footer">
+    <div class="row">
+        <div class="col-12  u-align--center">
+            <p>
+                © 2020 発火後忘失
+            </p>
+        </div>
+    </div>
+</footer>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    
+
+
+
+
+
+<title>Eclipseの起動に使用するJDKを指定する（Mac） | 発火後忘失</title>
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content='最新の JDK をインストールしたが、古いバージョンの Eclipse も利用したい(が最新のバージョンでは起動できない)ような場合に必要となる設定です。 設定するフ'>
+<meta name="keywords" content='mac, java, eclipse'>
+<meta name="msapplication-TileColor" content="#b91d47">
+<meta name="theme-color" content="#ffffff">
+
+<link rel="canonical" href="https://yukihane.github.io/posts/201901/16/set-jvm-to-eclipse-on-mac/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#007aa6">
+<meta name="theme-color" content="#ffffff">
+
+<meta property="og:title" content="Eclipseの起動に使用するJDKを指定する（Mac）" />
+<meta property="og:description" content="最新の JDK をインストールしたが、古いバージョンの Eclipse も利用したい(が最新のバージョンでは起動できない)ような場合に必要となる設定です。 設定するフ" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://yukihane.github.io/posts/201901/16/set-jvm-to-eclipse-on-mac/" />
+<meta property="article:published_time" content="2019-01-16T19:58:26+00:00" />
+<meta property="article:modified_time" content="2019-01-16T19:58:26+00:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Eclipseの起動に使用するJDKを指定する（Mac）"/>
+<meta name="twitter:description" content="最新の JDK をインストールしたが、古いバージョンの Eclipse も利用したい(が最新のバージョンでは起動できない)ような場合に必要となる設定です。 設定するフ"/>
+
+<meta itemprop="name" content="">
+<meta itemprop="description" content="">
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href='https://yukihane.github.io/css/style.css'>
+
+    
+
+
+<link href="https://fonts.googleapis.com/css?family=Hanuman:400,700|Inconsolata|Roboto:400,400i,700,700i&display=swap&subset=khmer" rel="stylesheet">
+</head><body><header id="navigation" class="p-navigation">
+    <div class="p-navigation__row">
+        <div class="p-navigation__banner">
+            <div class="p-navigation__logo">
+                <a class="p-navigation__link u-vertically-center p-link--logo" href="https://yukihane.github.io/">
+                    発火後忘失
+                </a>
+            </div>
+            
+            <a href="#navigation" class="p-navigation__toggle--open" title="menu">
+                <i class="p-icon--menu"></i>
+            </a>
+            <a href="#navigation-closed" class="p-navigation__toggle--close" title="close menu">
+                <i class="p-icon--close"></i>
+            </a>
+        </div>
+
+        <nav class="p-navigation__nav">
+            <span class="u-off-screen">
+                <a href="#main-content">Jump to main content</a>
+            </span>
+
+            <ul class="p-navigation__links" role="menu">
+                
+            </ul>
+
+            
+            <form class="p-search-box" action="https://www.google.com/search" target="_blank">
+    <input type="search" class="p-search-box__input" name="q" placeholder='Search'
+        required="" aria-label="Query">
+    <input type="hidden" name="sitesearch" value="https://yukihane.github.io/">
+    <button type="reset" class="p-search-box__reset" alt="reset" aria-label="Reset">
+        <i class="p-icon--close"></i>
+    </button>
+    <button type="submit" class="p-search-box__button" alt="search" aria-label="Search">
+        <i class="p-icon--search"></i>
+    </button>
+</form>
+            
+        </nav>
+    </div>
+</header><div id="main-content">
+<header class="p-strip page-banner">
+    <div class="row">
+        <h1>Eclipseの起動に使用するJDKを指定する（Mac）</h1>
+    </div>
+
+    
+
+<div class="row">
+
+    
+    <div class="col-8">
+        
+
+
+
+
+<div class="p-media-object">
+
+    
+
+    <div class="p-media-object__details">
+
+        
+
+        
+        <p class="p-media-object__content">
+            <span class="u-capitalized">on</span>
+            2019-01-16
+        </p>
+        
+
+    </div>
+</div>
+
+
+    </div>
+    
+
+    
+    <div class="col-4  col--share-links ">
+        <ul class="p-inline-list-icons p-inline-list-icons--share-links u-no-padding--left u-no-margin--left u-unselectable">
+    <li class="p-inline-list__item">
+        <i class="p-icon--share"></i>
+    </li>
+    <li class="p-inline-list__item">
+        <a class="p-icon--facebook" title='Share on Facebook' target="_blank"
+            rel="noreferrer" href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fyukihane.github.io%2fposts%2f201901%2f16%2fset-jvm-to-eclipse-on-mac%2f">
+            Facebook
+        </a>
+    </li>
+    <li class="p-inline-list__item">
+        <a class="p-icon--twitter" title='Share on Twitter' target="_blank"
+            rel="noreferrer" href="http://twitter.com/share?text=Eclipse%e3%81%ae%e8%b5%b7%e5%8b%95%e3%81%ab%e4%bd%bf%e7%94%a8%e3%81%99%e3%82%8bJDK%e3%82%92%e6%8c%87%e5%ae%9a%e3%81%99%e3%82%8b%ef%bc%88Mac%ef%bc%89&amp;url=https%3a%2f%2fyukihane.github.io%2fposts%2f201901%2f16%2fset-jvm-to-eclipse-on-mac%2f">
+            Twitter
+        </a>
+    </li>
+    <li class="p-inline-list__item">
+        <a class="p-icon--linkedin" title='Share on LinkedIn' target="_blank"
+            rel="noreferrer"
+            href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fyukihane.github.io%2fposts%2f201901%2f16%2fset-jvm-to-eclipse-on-mac%2f&amp;title=Eclipse%e3%81%ae%e8%b5%b7%e5%8b%95%e3%81%ab%e4%bd%bf%e7%94%a8%e3%81%99%e3%82%8bJDK%e3%82%92%e6%8c%87%e5%ae%9a%e3%81%99%e3%82%8b%ef%bc%88Mac%ef%bc%89">
+            LinkedIn
+        </a>
+    </li>
+</ul>
+    </div>
+    
+
+</div>
+
+
+
+
+<div class="row">
+    <div class="col-12">
+        
+<a href="https://yukihane.github.io/tags/mac/">#mac</a>&ensp;
+
+<a href="https://yukihane.github.io/tags/java/">#java</a>&ensp;
+
+<a href="https://yukihane.github.io/tags/eclipse/">#eclipse</a>&ensp;
+
+    </div>
+</div>
+
+</header>
+
+<section class="p-strip is-shallow">
+    <main class="row post-content">
+        <p>最新の JDK をインストールしたが、古いバージョンの Eclipse も利用したい(が最新のバージョンでは起動できない)ような場合に必要となる設定です。</p>
+<h1 id="設定するファイルと設定方法">設定するファイルと設定方法</h1>
+<p><code>Eclipse.app/Contents/Eclipse</code>　にある <code>eclipse.ini</code> に、所望のバージョンの <code>java</code> コマンドが入っているディレクトリを指定します。
+<code>/usr/libexec/java_home -V</code> で <code>JAVA_HOME</code> 候補一覧が参照できますので、このディレクトリ + <code>/bin</code> を指定することになります。</p>
+<p>例えば</p>
+<pre><code>$ /usr/libexec/java_home -V
+Matching Java Virtual Machines (2):
+    11.0.1, x86_64:     &quot;OpenJDK 11.0.1&quot;        /Library/Java/JavaVirtualMachines/openjdk-11.0.1.jdk/Contents/Home
+    1.8.0_192, x86_64:  &quot;Java SE 8&quot;     /Library/Java/JavaVirtualMachines/jdk1.8.0_192.jdk/Contents/Home
+</code></pre>
+<p>のような状況で、 バージョン <code>1.8</code> を Eclipse を実行する JVM として指定したい場合には、冒頭で説明した <code>eclipse.ini</code> に</p>
+<pre><code>-vm
+/Library/Java/JavaVirtualMachines/jdk1.8.0_192.jdk/Contents/Home/bin
+</code></pre>
+<p>と追記します。
+なお追記する行は<code>-vmargs</code>より上にしてください。</p>
+<p>参考: <a href="https://wiki.eclipse.org/Eclipse.ini#-vm_value:_Mac_OS_X_Example">https://wiki.eclipse.org/Eclipse.ini#-vm_value:_Mac_OS_X_Example</a></p>
+<h1 id="おまけ">おまけ</h1>
+<h2 id="eclipse-がどの-jvm-で実行されているのかを調べるには">Eclipse がどの JVM で実行されているのかを調べるには？</h2>
+<p>メニューの Eclipe &gt; Eclipse について で &ldquo;About Eclipse&rdquo; ダイアログを開き、&ldquo;Installation Details&quot;ボタン &gt; &ldquo;Configuration&quot;タブに表示されている情報から <code>-vm</code> オプションを探します。</p>
+<h2 id="-vmを明示的に指定しなかった場合には何が使われるの"><code>-vm</code>を明示的に指定しなかった場合には何が使われるの？</h2>
+<blockquote>
+<p>If not specified, the Eclipse executable uses a search algorithm to locate a suitable VM.</p>
+</blockquote>
+<p>参考: <a href="https://help.eclipse.org/2018-12/index.jsp?topic=%2Forg.eclipse.platform.doc.isv%2Freference%2Fmisc%2Fruntime-options.html&amp;resultof=%22Runtime%22%20%22runtim%22%20%22Options%22%20%22option%22%20">The Eclipse runtime options - Eclipse documentation</a></p>
+<h2 id="usrbinを指定しておけばjava_homeを切り替えるだけで良いんじゃ"><code>/usr/bin</code>を指定しておけば<code>JAVA_HOME</code>を切り替えるだけで良いんじゃ？</h2>
+<p>確かに <code>java</code>コマンドを実行したときのバージョンが切り替わるのですが、Eclipse には効かないようです。
+このように指定した場合、 <code>/usr/libexec/java_home</code> で出力される場所のバージョンを用いるようです。
+この出力は通常インストールされているバージョンのうち最新のものとなっているでしょう。</p>
+<p>なお、起動に失敗した場合には、その時使用しようとした JVM の情報はエラーログ(場所は起動失敗時のエラーダイアログに示されます)に出力されています。</p>
+<h2 id="usrlibexecjava_home-の出力を切り替えることはできるの"><code>/usr/libexec/java_home</code> の出力を切り替えることはできるの？</h2>
+<p>実際には、<code>/usr/libexec/java_home -V</code> の最上行が<code>/usr/libexec/java_home</code>として出力されているように見えます。</p>
+<p>この並びは、 <code>/Library/Java/JavaVirtualMachines/&lt;それぞれのバージョンディレクトリ&gt;/Contents/Info.plist</code>　に書かれている <code>JVMVersion</code>値の逆順になるようなので、この値を書き換えることにより　<code>/usr/libexec/java_home</code>　出力結果をすげ替えることが可能です。
+参考: <a href="https://stackoverflow.com/a/20994919/4506703">How can I change Mac OS's default Java VM returned from /usr/libexec/java_home - Stack Overflow</a></p>
+
+    </main>
+</section>
+
+<footer class="p-strip is-wrapper">
+    <div class="row">
+        <div class="p-article-pagination">
+    
+    <a class="p-article-pagination__link--previous" href="https://yukihane.github.io/posts/201811/10/ubuntu-mute-tab-sound/">
+        <span class="p-article-pagination__label">Previous</span>
+        <span class="p-article-pagination__title">
+            Ubuntu18.04 端末の不快なエラー音 消す方法
+        </span>
+    </a>
+    
+
+    
+    <a class="p-article-pagination__link--next" href="https://yukihane.github.io/posts/201902/04/hibernate-map-char-to-string/">
+        <span class="p-article-pagination__label">Next</span>
+        <span class="p-article-pagination__title">
+            Hibernate Map Char to String
+        </span>
+    </a>
+    
+</div>
+    </div>
+</footer>
+
+        </div><footer class="p-strip is-shallow page-footer">
+    <div class="row">
+        <div class="col-12  u-align--center">
+            <p>
+                © 2020 発火後忘失
+            </p>
+        </div>
+    </div>
+</footer>
+
+
+
+
+</body>
+</html>

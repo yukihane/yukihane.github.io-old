@@ -27,7 +27,7 @@
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://yukihane.github.io/posts/" />
-<meta property="og:updated_time" content="2020-07-02T00:31:47+00:00" />
+<meta property="og:updated_time" content="2020-07-02T21:11:04+00:00" />
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Posts"/>
@@ -215,11 +215,258 @@
     
     
 
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+
 
 
 
 <div class="p-strip is-wrapper posts">
     <div class="row">
+        
+
+        
+
+        <div class="col-12">
+            <div class="p-card">
+                <h3><a href="https://yukihane.github.io/posts/202007/02/minimal-webmvc-with-springboot/">Spring Boot でなるべく依存関係を小さくしてWebMVCを使ってみる</a></h3>
+
+                
+                
+                <p>
+
+
+<span class=" u-capitalized ">
+    on
+</span>
+2020-07-02
+</p>
+                
+
+                
+                <p>特に実用性とかは考えていない。何となくやってみたというだけ。 動かしたいやつ @RestController @RequestMapping(&#34;/&#34;) public class MyController { @GetMapping(&#34;/&#34;) public String index() { return &#34;hello&#34;; } } 設定 &lt;dependency&gt; &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt; &lt;artifactId&gt;spring-boot&lt;/artifactId&gt; &lt;/dependency&gt; &lt;dependency&gt; &lt;groupId&gt;org.springframework&lt;/groupId&gt; &lt;artifactId&gt;spring-webmvc&lt;/artifactId&gt; &lt;/dependency&gt; &lt;dependency&gt; &lt;groupId&gt;org.apache.tomcat.embed&lt;/groupId&gt; &lt;artifactId&gt;tomcat-embed-core&lt;/artifactId&gt; &lt;/dependency&gt; @Configuration @EnableWebMvc public class</p>
+                
+
+                
+                <p>
+<a class="p-link--hashtag" href="https://yukihane.github.io/tags/spring-boot/">
+    #spring-boot</a>&ensp;
+
+<a class="p-link--hashtag" href="https://yukihane.github.io/tags/spring-mvc/">
+    #spring-mvc</a>&ensp;
+</p>
+                
+
+                
+                <p><a href="https://yukihane.github.io/posts/202007/02/minimal-webmvc-with-springboot/">Read more</a></p>
+                
+            </div>
+        </div>
         
 
         
@@ -253,6 +500,76 @@
 
                 
                 <p><a href="https://yukihane.github.io/posts/202007/02/difference-between-doller-and-hash/">Read more</a></p>
+                
+            </div>
+        </div>
+        
+
+        
+
+        <div class="col-12">
+            <div class="p-card">
+                <h3><a href="https://yukihane.github.io/posts/202006/30/json-datetime-format-changed-on-springboot-2.3/">Spring 2.3.0 で時刻オフセットの書式コロン付き+09:00みたいに変わっとるやん</a></h3>
+
+                
+                
+                <p>
+
+
+<span class=" u-capitalized ">
+    on
+</span>
+2020-06-30
+</p>
+                
+
+                
+                <p>正確には jackson-databind 2.11.0 で。 jackson 2.11 リリースノート Change default textual serialization of java.util.Date/Calendar to include colon in timezone offset #2643 このへん見ると分かるけど、Spring Boot 2.2 系列は jackson-databind 2.10.x が採用されていて、 2.3.0 で 2.11.0 が採</p>
+                
+
+                
+                <p>
+<a class="p-link--hashtag" href="https://yukihane.github.io/tags/jackson/">
+    #jackson</a>&ensp;
+
+<a class="p-link--hashtag" href="https://yukihane.github.io/tags/spring-boot/">
+    #spring-boot</a>&ensp;
+</p>
+                
+
+                
+                <p><a href="https://yukihane.github.io/posts/202006/30/json-datetime-format-changed-on-springboot-2.3/">Read more</a></p>
+                
+            </div>
+        </div>
+        
+
+        
+
+        <div class="col-12">
+            <div class="p-card">
+                <h3><a href="https://yukihane.github.io/posts/202006/28/h2database-name-random-on-springboot-2.3/">Spring Boot 2.3.0 から H2Database の名前 jdbc:h2:mem:testdb じゃなくなっとるやん(デフォルトでは)</a></h3>
+
+                
+                
+                <p>
+
+
+<span class=" u-capitalized ">
+    on
+</span>
+2020-06-28
+</p>
+                
+
+                
+                <p>前はここに書いた通り固定で jdbc:h2:mem:testdb という名前だったのにこれでアクセスできんようになってしもた。 起動ログに o.s.b.a.h2.H2ConsoleAutoConfiguration : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:30591993-9fe2-4068-a5e2-05b263e3495b' みたいに出るのでここ</p>
+                
+
+                
+
+                
+                <p><a href="https://yukihane.github.io/posts/202006/28/h2database-name-random-on-springboot-2.3/">Read more</a></p>
                 
             </div>
         </div>
@@ -379,6 +696,45 @@
 
         <div class="col-12">
             <div class="p-card">
+                <h3><a href="https://yukihane.github.io/posts/202006/13/userdetailsservice-samples-considered-harmful-for-biginners/">So many UserDetailsService samples considered harmful for beginners</a></h3>
+
+                
+                
+                <p>
+
+
+<span class=" u-capitalized ">
+    on
+</span>
+2020-06-13
+</p>
+                
+
+                
+                <p>やっぱり一発目の Spring Security やってみたで UserDetailsService 使うのは止めようず。So many UserDetailsService samples considered harmful for beginners. はじめに ちょっと待って！その UserDetails、本当に必要ですか</p>
+                
+
+                
+                <p>
+<a class="p-link--hashtag" href="https://yukihane.github.io/tags/spring-boot/">
+    #spring-boot</a>&ensp;
+
+<a class="p-link--hashtag" href="https://yukihane.github.io/tags/spring-security/">
+    #spring-security</a>&ensp;
+</p>
+                
+
+                
+                <p><a href="https://yukihane.github.io/posts/202006/13/userdetailsservice-samples-considered-harmful-for-biginners/">Read more</a></p>
+                
+            </div>
+        </div>
+        
+
+        
+
+        <div class="col-12">
+            <div class="p-card">
                 <h3><a href="https://yukihane.github.io/posts/202006/13/list-contains-null/">List#contains(null)は使わないほうが良い</a></h3>
 
                 
@@ -445,148 +801,6 @@
 
                 
                 <p><a href="https://yukihane.github.io/posts/202006/12/userdetailsservice-conidered-harmful/">Read more</a></p>
-                
-            </div>
-        </div>
-        
-
-        
-
-        <div class="col-12">
-            <div class="p-card">
-                <h3><a href="https://yukihane.github.io/posts/202006/10/alpine-and-glibc-problems/">Alpine Linuxでglibcじゃないことに起因する問題ってちょくちょくあるよね</a></h3>
-
-                
-                
-                <p>
-
-
-<span class=" u-capitalized ">
-    on
-</span>
-2020-06-10
-</p>
-                
-
-                
-                <p>…と少し思い返していました。といっても思い出せたのは次の2つなのですが。 alpine Linuxへのawscliインストール alpineでgitがcol</p>
-                
-
-                
-                <p>
-<a class="p-link--hashtag" href="https://yukihane.github.io/tags/linux/">
-    #linux</a>&ensp;
-</p>
-                
-
-                
-                <p><a href="https://yukihane.github.io/posts/202006/10/alpine-and-glibc-problems/">Read more</a></p>
-                
-            </div>
-        </div>
-        
-
-        
-
-        <div class="col-12">
-            <div class="p-card">
-                <h3><a href="https://yukihane.github.io/posts/202006/02/note-of-completablefuture/">CompletableFuture覚え書き</a></h3>
-
-                
-                
-                <p>
-
-
-<span class=" u-capitalized ">
-    on
-</span>
-2020-06-02
-</p>
-                
-
-                
-                <p>CompletableFuture の一連の非同期処理 ほげAsync は、デフォルトでは ForkJoinPool.commonPool() という ExecutorService で実行されます。 そしてこの ExecutorService のワーカスレッドはデーモンスレッドであるため、非デ</p>
-                
-
-                
-                <p>
-<a class="p-link--hashtag" href="https://yukihane.github.io/tags/java/">
-    #java</a>&ensp;
-</p>
-                
-
-                
-                <p><a href="https://yukihane.github.io/posts/202006/02/note-of-completablefuture/">Read more</a></p>
-                
-            </div>
-        </div>
-        
-
-        
-
-        <div class="col-12">
-            <div class="p-card">
-                <h3><a href="https://yukihane.github.io/posts/202005/29/java-source-location/">Javaのソースファイルはpackageに対応したディレクトリ階層に置かなくても良い？</a></h3>
-
-                
-                
-                <p>
-
-
-<span class=" u-capitalized ">
-    on
-</span>
-2020-05-29
-</p>
-                
-
-                
-                <p>https://twitter.com/hishidama/status/1266176675768745984 packageの宣言と実際のディレクトリが一致していなくてもmvn compile（やjavac）が成功するんですが、そういうもんでしたっけ</p>
-                
-
-                
-                <p>
-<a class="p-link--hashtag" href="https://yukihane.github.io/tags/java/">
-    #java</a>&ensp;
-</p>
-                
-
-                
-                <p><a href="https://yukihane.github.io/posts/202005/29/java-source-location/">Read more</a></p>
-                
-            </div>
-        </div>
-        
-
-        
-
-        <div class="col-12">
-            <div class="p-card">
-                <h3><a href="https://yukihane.github.io/posts/202005/27/minimal-vimrc/">ミニマル <code>.vimrc</code></a></h3>
-
-                
-                
-                <p>
-
-
-<span class=" u-capitalized ">
-    on
-</span>
-2020-05-26
-</p>
-                
-
-                
-                <p>kubernetesの試験を受けるに当たって、最小限の .vimrc を覚えておくためのメモ: set autoindent set expandtab set tabstop=2 set shiftwidth=2</p>
-                
-
-                
-                <p>
-<a class="p-link--hashtag" href="https://yukihane.github.io/tags/kubernetes/">
-    #kubernetes</a>&ensp;
-</p>
-                
-
                 
             </div>
         </div>

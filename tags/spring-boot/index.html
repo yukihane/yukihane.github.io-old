@@ -27,7 +27,7 @@
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://yukihane.github.io/tags/spring-boot/" />
-<meta property="og:updated_time" content="2020-07-02T00:31:47+00:00" />
+<meta property="og:updated_time" content="2020-07-02T21:11:04+00:00" />
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="spring-boot"/>
@@ -117,6 +117,45 @@
 
         <div class="col-12">
             <div class="p-card">
+                <h3><a href="https://yukihane.github.io/posts/202007/02/minimal-webmvc-with-springboot/">Spring Boot でなるべく依存関係を小さくしてWebMVCを使ってみる</a></h3>
+
+                
+                
+                <p>
+
+
+<span class=" u-capitalized ">
+    on
+</span>
+2020-07-02
+</p>
+                
+
+                
+                <p>特に実用性とかは考えていない。何となくやってみたというだけ。 動かしたいやつ @RestController @RequestMapping(&#34;/&#34;) public class MyController { @GetMapping(&#34;/&#34;) public String index() { return &#34;hello&#34;; } } 設定 &lt;dependency&gt; &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt; &lt;artifactId&gt;spring-boot&lt;/artifactId&gt; &lt;/dependency&gt; &lt;dependency&gt; &lt;groupId&gt;org.springframework&lt;/groupId&gt; &lt;artifactId&gt;spring-webmvc&lt;/artifactId&gt; &lt;/dependency&gt; &lt;dependency&gt; &lt;groupId&gt;org.apache.tomcat.embed&lt;/groupId&gt; &lt;artifactId&gt;tomcat-embed-core&lt;/artifactId&gt; &lt;/dependency&gt; @Configuration @EnableWebMvc public class</p>
+                
+
+                
+                <p>
+<a class="p-link--hashtag" href="https://yukihane.github.io/tags/spring-boot/">
+    #spring-boot</a>&ensp;
+
+<a class="p-link--hashtag" href="https://yukihane.github.io/tags/spring-mvc/">
+    #spring-mvc</a>&ensp;
+</p>
+                
+
+                
+                <p><a href="https://yukihane.github.io/posts/202007/02/minimal-webmvc-with-springboot/">Read more</a></p>
+                
+            </div>
+        </div>
+        
+
+        
+
+        <div class="col-12">
+            <div class="p-card">
                 <h3><a href="https://yukihane.github.io/posts/202007/02/difference-between-doller-and-hash/">${&hellip;}と#{&hellip;}の違い</a></h3>
 
                 
@@ -144,6 +183,45 @@
 
                 
                 <p><a href="https://yukihane.github.io/posts/202007/02/difference-between-doller-and-hash/">Read more</a></p>
+                
+            </div>
+        </div>
+        
+
+        
+
+        <div class="col-12">
+            <div class="p-card">
+                <h3><a href="https://yukihane.github.io/posts/202006/30/json-datetime-format-changed-on-springboot-2.3/">Spring 2.3.0 で時刻オフセットの書式コロン付き+09:00みたいに変わっとるやん</a></h3>
+
+                
+                
+                <p>
+
+
+<span class=" u-capitalized ">
+    on
+</span>
+2020-06-30
+</p>
+                
+
+                
+                <p>正確には jackson-databind 2.11.0 で。 jackson 2.11 リリースノート Change default textual serialization of java.util.Date/Calendar to include colon in timezone offset #2643 このへん見ると分かるけど、Spring Boot 2.2 系列は jackson-databind 2.10.x が採用されていて、 2.3.0 で 2.11.0 が採</p>
+                
+
+                
+                <p>
+<a class="p-link--hashtag" href="https://yukihane.github.io/tags/jackson/">
+    #jackson</a>&ensp;
+
+<a class="p-link--hashtag" href="https://yukihane.github.io/tags/spring-boot/">
+    #spring-boot</a>&ensp;
+</p>
+                
+
+                
+                <p><a href="https://yukihane.github.io/posts/202006/30/json-datetime-format-changed-on-springboot-2.3/">Read more</a></p>
                 
             </div>
         </div>
@@ -270,6 +348,45 @@
 
         <div class="col-12">
             <div class="p-card">
+                <h3><a href="https://yukihane.github.io/posts/202006/13/userdetailsservice-samples-considered-harmful-for-biginners/">So many UserDetailsService samples considered harmful for beginners</a></h3>
+
+                
+                
+                <p>
+
+
+<span class=" u-capitalized ">
+    on
+</span>
+2020-06-13
+</p>
+                
+
+                
+                <p>やっぱり一発目の Spring Security やってみたで UserDetailsService 使うのは止めようず。So many UserDetailsService samples considered harmful for beginners. はじめに ちょっと待って！その UserDetails、本当に必要ですか</p>
+                
+
+                
+                <p>
+<a class="p-link--hashtag" href="https://yukihane.github.io/tags/spring-boot/">
+    #spring-boot</a>&ensp;
+
+<a class="p-link--hashtag" href="https://yukihane.github.io/tags/spring-security/">
+    #spring-security</a>&ensp;
+</p>
+                
+
+                
+                <p><a href="https://yukihane.github.io/posts/202006/13/userdetailsservice-samples-considered-harmful-for-biginners/">Read more</a></p>
+                
+            </div>
+        </div>
+        
+
+        
+
+        <div class="col-12">
+            <div class="p-card">
                 <h3><a href="https://yukihane.github.io/posts/202006/12/userdetailsservice-conidered-harmful/">UserDetailsServiceは誤解されている</a></h3>
 
                 
@@ -343,6 +460,42 @@
             </div>
         </div>
         
+
+        
+
+        <div class="col-12">
+            <div class="p-card">
+                <h3><a href="https://yukihane.github.io/posts/201912/10/resttemplatebuilder/">RestTemplateBuilderに関する覚書</a></h3>
+
+                
+                
+                <p>
+
+
+<span class=" u-capitalized ">
+    on
+</span>
+2019-12-10
+</p>
+                
+
+                
+                <p>RestTemplateBuilder RestTemplate は Spring Framework(spring-web)だけれども RestTemplateBuilder は Spring Boot。 Java の世界の なんちゃらBuilder (StringBuilderと</p>
+                
+
+                
+                <p>
+<a class="p-link--hashtag" href="https://yukihane.github.io/tags/spring-boot/">
+    #spring-boot</a>&ensp;
+</p>
+                
+
+                
+                <p><a href="https://yukihane.github.io/posts/201912/10/resttemplatebuilder/">Read more</a></p>
+                
+            </div>
+        </div>
+        
     </div>
 </div>
 
@@ -351,6 +504,10 @@
         <footer class="p-article-pagination">
     
 
+    
+    <a class="p-article-pagination__link--next p-article-pagination__link--no-title" href="/tags/spring-boot/page/2/">
+        <span class="p-article-pagination__label">Next</span>
+    </a>
     
 </footer>
     </div>

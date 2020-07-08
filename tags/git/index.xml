@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>git on 発火後忘失</title>
+    <link>https://yukihane.github.io/tags/git/</link>
+    <description>Recent content in git on 発火後忘失</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Fri, 27 Jul 2018 19:40:03 +0000</lastBuildDate>
+    
+	<atom:link href="https://yukihane.github.io/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>gitで利用するエディタを設定したかった</title>
+      <link>https://yukihane.github.io/posts/201807/27/set-git-commit-editor/</link>
+      <pubDate>Fri, 27 Jul 2018 19:40:03 +0000</pubDate>
+      
+      <guid>https://yukihane.github.io/posts/201807/27/set-git-commit-editor/</guid>
+      <description>あるいは vim-plug をセットアップしたら git commit したときに E492: Not an editor command って怒られるようになっちゃった。 Vagrant で CentOS の Box を作るたびにひっかかる。 Git が使う editor を(vi で</description>
+    </item>
+    
+    <item>
+      <title>Git for Windowsでzipコマンドを再現する</title>
+      <link>https://yukihane.github.io/posts/201807/13/zip-on-git-for-windows/</link>
+      <pubDate>Fri, 13 Jul 2018 19:36:48 +0000</pubDate>
+      
+      <guid>https://yukihane.github.io/posts/201807/13/zip-on-git-for-windows/</guid>
+      <description>git-archive使えば何とかなることに気付きました。 ちなみにunzipコマンドは標準で使えます。 mkdir workrepo cd workrepo git init cp -r [target_file_or_dir] . git add . git commit -m commit git archive</description>
+    </item>
+    
+  </channel>
+</rss>

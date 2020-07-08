@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ubuntu on 発火後忘失</title>
+    <link>https://yukihane.github.io/tags/ubuntu/</link>
+    <description>Recent content in ubuntu on 発火後忘失</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Sat, 10 Nov 2018 19:56:46 +0000</lastBuildDate>
+    
+	<atom:link href="https://yukihane.github.io/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Ubuntu18.04 端末の不快なエラー音 消す方法</title>
+      <link>https://yukihane.github.io/posts/201811/10/ubuntu-mute-tab-sound/</link>
+      <pubDate>Sat, 10 Nov 2018 19:56:46 +0000</pubDate>
+      
+      <guid>https://yukihane.github.io/posts/201811/10/ubuntu-mute-tab-sound/</guid>
+      <description>Ubuntu を 18.04 にアップグレードしたら端末の補完処理で tab キーを押す度にヴヴッという不快なビープ音が鳴るようになってしまった。 端末のメニューから 設定 を選</description>
+    </item>
+    
+  </channel>
+</rss>

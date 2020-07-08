@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    
+
+
+
+
+
+<title>Polymer2 で &lt;input&gt;の値を「親エレメントの値と」バインドする | 発火後忘失</title>
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content='Polymer2 で の値をバインドする で my-input なるカスタムエレメントを作成しました。&lt;input&gt;の入力値をそのまま表示するだけのエレメントです。 &lt;dom-module'>
+<meta name="keywords" content='polymer, frontend'>
+<meta name="msapplication-TileColor" content="#b91d47">
+<meta name="theme-color" content="#ffffff">
+
+<link rel="canonical" href="https://yukihane.github.io/posts/201801/21/polymer2-input-bind-to-parent/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#007aa6">
+<meta name="theme-color" content="#ffffff">
+
+<meta property="og:title" content="Polymer2 で &lt;input&gt;の値を「親エレメントの値と」バインドする" />
+<meta property="og:description" content="Polymer2 で の値をバインドする で my-input なるカスタムエレメントを作成しました。&lt;input&gt;の入力値をそのまま表示するだけのエレメントです。 &lt;dom-module" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://yukihane.github.io/posts/201801/21/polymer2-input-bind-to-parent/" />
+<meta property="article:published_time" content="2018-01-21T19:12:25+00:00" />
+<meta property="article:modified_time" content="2018-01-21T19:12:25+00:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Polymer2 で &lt;input&gt;の値を「親エレメントの値と」バインドする"/>
+<meta name="twitter:description" content="Polymer2 で の値をバインドする で my-input なるカスタムエレメントを作成しました。&lt;input&gt;の入力値をそのまま表示するだけのエレメントです。 &lt;dom-module"/>
+
+<meta itemprop="name" content="">
+<meta itemprop="description" content="">
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href='https://yukihane.github.io/css/style.css'>
+
+    
+
+
+<link href="https://fonts.googleapis.com/css?family=Hanuman:400,700|Inconsolata|Roboto:400,400i,700,700i&display=swap&subset=khmer" rel="stylesheet">
+</head><body><header id="navigation" class="p-navigation">
+    <div class="p-navigation__row">
+        <div class="p-navigation__banner">
+            <div class="p-navigation__logo">
+                <a class="p-navigation__link u-vertically-center p-link--logo" href="https://yukihane.github.io/">
+                    発火後忘失
+                </a>
+            </div>
+            
+            <a href="#navigation" class="p-navigation__toggle--open" title="menu">
+                <i class="p-icon--menu"></i>
+            </a>
+            <a href="#navigation-closed" class="p-navigation__toggle--close" title="close menu">
+                <i class="p-icon--close"></i>
+            </a>
+        </div>
+
+        <nav class="p-navigation__nav">
+            <span class="u-off-screen">
+                <a href="#main-content">Jump to main content</a>
+            </span>
+
+            <ul class="p-navigation__links" role="menu">
+                
+            </ul>
+
+            
+            <form class="p-search-box" action="https://www.google.com/search" target="_blank">
+    <input type="search" class="p-search-box__input" name="q" placeholder='Search'
+        required="" aria-label="Query">
+    <input type="hidden" name="sitesearch" value="https://yukihane.github.io/">
+    <button type="reset" class="p-search-box__reset" alt="reset" aria-label="Reset">
+        <i class="p-icon--close"></i>
+    </button>
+    <button type="submit" class="p-search-box__button" alt="search" aria-label="Search">
+        <i class="p-icon--search"></i>
+    </button>
+</form>
+            
+        </nav>
+    </div>
+</header><div id="main-content">
+<header class="p-strip page-banner">
+    <div class="row">
+        <h1>Polymer2 で <!-- raw HTML omitted -->の値を「親エレメントの値と」バインドする</h1>
+    </div>
+
+    
+
+<div class="row">
+
+    
+    <div class="col-8">
+        
+
+
+
+
+<div class="p-media-object">
+
+    
+
+    <div class="p-media-object__details">
+
+        
+
+        
+        <p class="p-media-object__content">
+            <span class="u-capitalized">on</span>
+            2018-01-21
+        </p>
+        
+
+    </div>
+</div>
+
+
+    </div>
+    
+
+    
+    <div class="col-4  col--share-links ">
+        <ul class="p-inline-list-icons p-inline-list-icons--share-links u-no-padding--left u-no-margin--left u-unselectable">
+    <li class="p-inline-list__item">
+        <i class="p-icon--share"></i>
+    </li>
+    <li class="p-inline-list__item">
+        <a class="p-icon--facebook" title='Share on Facebook' target="_blank"
+            rel="noreferrer" href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fyukihane.github.io%2fposts%2f201801%2f21%2fpolymer2-input-bind-to-parent%2f">
+            Facebook
+        </a>
+    </li>
+    <li class="p-inline-list__item">
+        <a class="p-icon--twitter" title='Share on Twitter' target="_blank"
+            rel="noreferrer" href="http://twitter.com/share?text=Polymer2%20%e3%81%a7%20%3cinput%3e%e3%81%ae%e5%80%a4%e3%82%92%e3%80%8c%e8%a6%aa%e3%82%a8%e3%83%ac%e3%83%a1%e3%83%b3%e3%83%88%e3%81%ae%e5%80%a4%e3%81%a8%e3%80%8d%e3%83%90%e3%82%a4%e3%83%b3%e3%83%89%e3%81%99%e3%82%8b&amp;url=https%3a%2f%2fyukihane.github.io%2fposts%2f201801%2f21%2fpolymer2-input-bind-to-parent%2f">
+            Twitter
+        </a>
+    </li>
+    <li class="p-inline-list__item">
+        <a class="p-icon--linkedin" title='Share on LinkedIn' target="_blank"
+            rel="noreferrer"
+            href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fyukihane.github.io%2fposts%2f201801%2f21%2fpolymer2-input-bind-to-parent%2f&amp;title=Polymer2%20%e3%81%a7%20%3cinput%3e%e3%81%ae%e5%80%a4%e3%82%92%e3%80%8c%e8%a6%aa%e3%82%a8%e3%83%ac%e3%83%a1%e3%83%b3%e3%83%88%e3%81%ae%e5%80%a4%e3%81%a8%e3%80%8d%e3%83%90%e3%82%a4%e3%83%b3%e3%83%89%e3%81%99%e3%82%8b">
+            LinkedIn
+        </a>
+    </li>
+</ul>
+    </div>
+    
+
+</div>
+
+
+
+
+<div class="row">
+    <div class="col-12">
+        
+<a href="https://yukihane.github.io/tags/polymer/">#polymer</a>&ensp;
+
+<a href="https://yukihane.github.io/tags/frontend/">#frontend</a>&ensp;
+
+    </div>
+</div>
+
+</header>
+
+<section class="p-strip is-shallow">
+    <main class="row post-content">
+        <p><a href="https://qiita.com/yukihane/items/2cf963901a6c49b390dc">Polymer2 で <!-- raw HTML omitted -->の値をバインドする</a> で <code>my-input</code> なるカスタムエレメントを作成しました。<code>&lt;input&gt;</code>の入力値をそのまま表示するだけのエレメントです。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">dom-module</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;my-input&#34;</span>&gt;
+  &lt;<span style="color:#f92672">template</span>&gt;
+    &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text&#34;</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{text::input}}&#34;</span> /&gt;
+    [[text]]
+  &lt;/<span style="color:#f92672">template</span>&gt;
+  ...
+&lt;/<span style="color:#f92672">dom-module</span>&gt;
+</code></pre></div><p>さて、この入力値を受け取れるよう、親エレメントを次のように作成しました。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">dom-module</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;my-parent&#34;</span>&gt;
+  &lt;<span style="color:#f92672">template</span>&gt;
+    &lt;<span style="color:#f92672">my-input</span> <span style="color:#a6e22e">text</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{parentText}}&#34;</span>&gt;&lt;/<span style="color:#f92672">my-input</span>&gt;
+    [[parentText]]
+  &lt;/<span style="color:#f92672">template</span>&gt;
+  ...
+&lt;/<span style="color:#f92672">dom-module</span>&gt;
+</code></pre></div><p>そして<code>&lt;input&gt;</code>に値を入力してみると…親に反映されない。</p>
+<p>いろいろ試行錯誤してみた所、親エレメント側にも <code>::input</code> を足して</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">dom-module</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;my-parent&#34;</span>&gt;
+  &lt;<span style="color:#f92672">template</span>&gt;
+    &lt;<span style="color:#f92672">my-input</span> <span style="color:#a6e22e">text</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{parentText::input}}&#34;</span>&gt;&lt;/<span style="color:#f92672">my-input</span>&gt;
+    [[parentText]]
+  &lt;/<span style="color:#f92672">template</span>&gt;
+  ...
+&lt;/<span style="color:#f92672">dom-module</span>&gt;
+</code></pre></div><p>とすれば反映されるようになりました。けど、これはどうなんだろう？
+子(<code>my-input</code>エレメント)は、まあ自分が<code>&lt;input&gt;</code>を扱っているのを知っているから良いとして、親(<code>my-parent</code>エレメント)が子の事情を考慮して実装しないといけないとは。</p>
+<hr>
+<p>これの答えはここでした。</p>
+<ul>
+<li><a href="https://www.polymer-project.org/2.0/docs/devguide/data-system#data-flow-control">Data system concepts - How data flow is controlled</a></li>
+<li>和訳: <a href="https://qiita.com/jtakiguchi/items/2a89e5c080a58e8b750b#%E3%83%87%E3%83%BC%E3%82%BF%E3%83%95%E3%83%AD%E3%83%BC%E3%81%AE%E5%88%B6%E5%BE%A1%E3%81%AE%E4%BB%95%E7%B5%84%E3%81%BF">データフローの制御の仕組み</a></li>
+</ul>
+<p>てっきりカーリーブラケット<code>{{}}</code>は、子エレメントへも親エレメントへも自動で反映してくれるものだと思っていたのですが、正確には、「親エレメントへも反映<strong>できる</strong>」だけで、デフォルトでは反映してくれないようです。</p>
+<blockquote>
+<p><strong>Automatic</strong>, which allows upward (target to host) and downwards (host to target) data flow. Automatic bindings use double curly brackets ({{ }}):</p>
+</blockquote>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<blockquote>
+<p><code>notify</code>. A notifying property supports upward data flow. By default, properties are non-notifying, and don't support upward data flow.</p>
+</blockquote>
+<p>そんなわけで、<code>notify</code>を明示的に<code>true</code>に設定してやる必要がありました。</p>
+<p>子エレメント(今回の場合だと<code>my-input</code>)のプロパティ定義で次のようにすれば良いことになります。</p>
+<p>冒頭に書いたような、親エレメント(今回の場合は<code>my-parent</code>)に<code>::input</code>は必要ありません。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">      <span style="color:#66d9ef">static</span> <span style="color:#a6e22e">get</span> <span style="color:#a6e22e">properties</span>() {
+        <span style="color:#66d9ef">return</span> {
+          <span style="color:#a6e22e">text</span><span style="color:#f92672">:</span>{
+            <span style="color:#a6e22e">type</span><span style="color:#f92672">:</span> String,
+            <span style="color:#a6e22e">notify</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>
+          }
+        }
+      }
+</code></pre></div>
+    </main>
+</section>
+
+<footer class="p-strip is-wrapper">
+    <div class="row">
+        <div class="p-article-pagination">
+    
+    <a class="p-article-pagination__link--previous" href="https://yukihane.github.io/posts/201801/21/polymer2-input-bind/">
+        <span class="p-article-pagination__label">Previous</span>
+        <span class="p-article-pagination__title">
+            Polymer2 で &lt;input&gt;の値をバインドする
+        </span>
+    </a>
+    
+
+    
+    <a class="p-article-pagination__link--next" href="https://yukihane.github.io/posts/201801/28/java9-jetty-jersey/">
+        <span class="p-article-pagination__label">Next</span>
+        <span class="p-article-pagination__title">
+            Java9でJettyでJerseyのMaven
+        </span>
+    </a>
+    
+</div>
+    </div>
+</footer>
+
+        </div><footer class="p-strip is-shallow page-footer">
+    <div class="row">
+        <div class="col-12  u-align--center">
+            <p>
+                © 2020 発火後忘失
+            </p>
+        </div>
+    </div>
+</footer>
+
+
+
+
+</body>
+</html>
