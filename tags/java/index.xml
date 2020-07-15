@@ -6,10 +6,19 @@
     <description>Recent content in java on 発火後忘失</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Sat, 13 Jun 2020 10:34:19 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 14 Jul 2020 15:58:57 +0000</lastBuildDate>
     
 	<atom:link href="https://yukihane.github.io/tags/java/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Gradleプラグイン/アノテーションプロセッシング調査</title>
+      <link>https://yukihane.github.io/posts/202007/15/research-gradle-plugins/</link>
+      <pubDate>Tue, 14 Jul 2020 15:58:57 +0000</pubDate>
+      
+      <guid>https://yukihane.github.io/posts/202007/15/research-gradle-plugins/</guid>
+      <description>元々JBoss/WildFlyの流れで開発してきたのでずっとMavenを利用してきたのですが、今度のプロジェクトではGradleを使うことに</description>
+    </item>
     
     <item>
       <title>List#contains(null)は使わないほうが良い</title>

@@ -12,11 +12,11 @@
     
     
     <item>
-      <title>ISO 8601では 24:00 は妥当だったが改訂により駄目になった</title>
-      <link>https://yukihane.github.io/posts/202007/14/iso-8601-2400-is-valid/</link>
+      <title>ISO 8601では 24:00 は妥当だったが改訂によりNGになった</title>
+      <link>https://yukihane.github.io/posts/202007/14/iso-8601-2400-is-invalid/</link>
       <pubDate>Mon, 13 Jul 2020 18:45:43 +0000</pubDate>
       
-      <guid>https://yukihane.github.io/posts/202007/14/iso-8601-2400-is-valid/</guid>
+      <guid>https://yukihane.github.io/posts/202007/14/iso-8601-2400-is-invalid/</guid>
       <description>moment().isValid()での24時00分00秒の挙動について - スタック・オーバーフロー より。 ISO 8601 の以前のspecでは、 0:00 も 24:00 も両</description>
     </item>
     
