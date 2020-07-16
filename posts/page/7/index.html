@@ -27,7 +27,7 @@
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://yukihane.github.io/posts/" />
-<meta property="og:updated_time" content="2020-07-14T23:47:11+00:00" />
+<meta property="og:updated_time" content="2020-07-16T17:41:09+00:00" />
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Posts"/>
@@ -455,11 +455,91 @@
     
     
 
+    
+    
+    
+
+    
+    
+    
+
 
 
 
 <div class="p-strip is-wrapper posts">
     <div class="row">
+        
+
+        
+
+        <div class="col-12">
+            <div class="p-card">
+                <h3><a href="https://yukihane.github.io/posts/201905/31/spring-boot-bean-on-testing/">Spring Boot 2.1 でテスト時 @Bean を挿げ替えたかった</a></h3>
+
+                
+                
+                <p>
+
+
+<span class=" u-capitalized ">
+    on
+</span>
+2019-05-31
+</p>
+                
+
+                
+                <p>動機 ユニットテスト実行時に java.time.Clock を挿げ替えてストップ・ザ・ワールド(GC的な意味でなくジョジョ的な意味で)したかった。 考え方/方針 @Configuration で @Bean を定義し</p>
+                
+
+                
+                <p>
+<a class="p-link--hashtag" href="https://yukihane.github.io/tags/spring-boot/">
+    #spring-boot</a>&ensp;
+</p>
+                
+
+                
+                <p><a href="https://yukihane.github.io/posts/201905/31/spring-boot-bean-on-testing/">Read more</a></p>
+                
+            </div>
+        </div>
+        
+
+        
+
+        <div class="col-12">
+            <div class="p-card">
+                <h3><a href="https://yukihane.github.io/posts/201905/21/spring-boog-json-convert/">text/plain で JSON を投げつけてくるヤツに対処する</a></h3>
+
+                
+                
+                <p>
+
+
+<span class=" u-capitalized ">
+    on
+</span>
+2019-05-21
+</p>
+                
+
+                
+                <p>RestTemplate でレスポンスの Content-Type を変更する。 の別解。 @Autowired private RestTemplateBuilder builder; ... final MappingJackson2HttpMessageConverter converter = new MappingJackson2HttpMessageConverter(); converter.setSupportedMediaTypes(Arrays.asList(MediaType.TEXT_PLAIN)); final RestTemplate restTemplate = builder.additionalMessageConverters(converter).build(); ちなみに上記のようにコンバータを明示的に設定しない場合だと次のような</p>
+                
+
+                
+                <p>
+<a class="p-link--hashtag" href="https://yukihane.github.io/tags/spring-boot/">
+    #spring-boot</a>&ensp;
+</p>
+                
+
+                
+                <p><a href="https://yukihane.github.io/posts/201905/21/spring-boog-json-convert/">Read more</a></p>
+                
+            </div>
+        </div>
         
 
         
@@ -757,81 +837,6 @@
 
                 
                 <p><a href="https://yukihane.github.io/posts/201809/30/selfbuild-openjdk/">Read more</a></p>
-                
-            </div>
-        </div>
-        
-
-        
-
-        <div class="col-12">
-            <div class="p-card">
-                <h3><a href="https://yukihane.github.io/posts/201809/29/pwsh-on-azure-function/">Azure FunctionsでPowerShell使えなくなっとる</a></h3>
-
-                
-                
-                <p>
-
-
-<span class=" u-capitalized ">
-    on
-</span>
-2018-09-29
-</p>
-                
-
-                
-                <p>v1 で実験的サポートだった PowerShell が、実行環境のバージョンが上がったとかで v2 になり、選べなくなっているみたい？一時的な話？ 実行環境を作る https://portal.azure.com/ から 「リソ</p>
-                
-
-                
-                <p>
-<a class="p-link--hashtag" href="https://yukihane.github.io/tags/azure/">
-    #azure</a>&ensp;
-</p>
-                
-
-                
-                <p><a href="https://yukihane.github.io/posts/201809/29/pwsh-on-azure-function/">Read more</a></p>
-                
-            </div>
-        </div>
-        
-
-        
-
-        <div class="col-12">
-            <div class="p-card">
-                <h3><a href="https://yukihane.github.io/posts/201809/08/pwsh-progress-silent/">Invoke-WebRequestやCompress-Archiveを使っていると画面上部に一瞬表示される何かの表示を非表示に</a></h3>
-
-                
-                
-                <p>
-
-
-<span class=" u-capitalized ">
-    on
-</span>
-2018-09-08
-</p>
-                
-
-                
-                <p>進捗状況(progress)が表示されているそうです。少量のデータを扱っている場合には画面の一部がフラッシュしているように見えており、何のた</p>
-                
-
-                
-                <p>
-<a class="p-link--hashtag" href="https://yukihane.github.io/tags/windows/">
-    #windows</a>&ensp;
-
-<a class="p-link--hashtag" href="https://yukihane.github.io/tags/pwsh/">
-    #pwsh</a>&ensp;
-</p>
-                
-
-                
-                <p><a href="https://yukihane.github.io/posts/201809/08/pwsh-progress-silent/">Read more</a></p>
                 
             </div>
         </div>
