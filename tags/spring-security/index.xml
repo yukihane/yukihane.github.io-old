@@ -6,10 +6,19 @@
     <description>Recent content in spring-security on 発火後忘失</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Tue, 14 Jul 2020 23:47:11 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 19 Jul 2020 06:10:14 +0000</lastBuildDate>
     
 	<atom:link href="https://yukihane.github.io/tags/spring-security/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Spring Security から認可サーバサポートが無くなる、というのは取り敢えず見直されています</title>
+      <link>https://yukihane.github.io/posts/202007/19/spring-security-authentication-server/</link>
+      <pubDate>Sun, 19 Jul 2020 06:10:14 +0000</pubDate>
+      
+      <guid>https://yukihane.github.io/posts/202007/19/spring-security-authentication-server/</guid>
+      <description>世の中に認可サーバー製品がたくさんあるので、Spring Securityではサポートしないことを決定しました &amp;#8212; Spring Security OAuth2はあと数年でサ</description>
+    </item>
     
     <item>
       <title>Spring SecurityのOAuth2.0関連の歴史を調査し実装してみた</title>

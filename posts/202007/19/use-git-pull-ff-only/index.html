@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    
+
+
+
+
+
+<title>`git config pull.ff only` を設定しておこう | 発火後忘失</title>
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content='私は普段全く git pull は使わず、 git fetch で賄ってきたのですが、今日たまたま git pull を行ったところ、いつの頃からか次のようなメッセージが出るようになっている'>
+<meta name="keywords" content='git'>
+<meta name="msapplication-TileColor" content="#b91d47">
+<meta name="theme-color" content="#ffffff">
+
+<link rel="canonical" href="https://yukihane.github.io/posts/202007/19/use-git-pull-ff-only/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#007aa6">
+<meta name="theme-color" content="#ffffff">
+
+<meta property="og:title" content="`git config pull.ff only` を設定しておこう" />
+<meta property="og:description" content="私は普段全く git pull は使わず、 git fetch で賄ってきたのですが、今日たまたま git pull を行ったところ、いつの頃からか次のようなメッセージが出るようになっている" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://yukihane.github.io/posts/202007/19/use-git-pull-ff-only/" />
+<meta property="article:published_time" content="2020-07-19T06:47:48+00:00" />
+<meta property="article:modified_time" content="2020-07-19T06:47:48+00:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="`git config pull.ff only` を設定しておこう"/>
+<meta name="twitter:description" content="私は普段全く git pull は使わず、 git fetch で賄ってきたのですが、今日たまたま git pull を行ったところ、いつの頃からか次のようなメッセージが出るようになっている"/>
+
+<meta itemprop="name" content="">
+<meta itemprop="description" content="">
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href='https://yukihane.github.io/css/style.css'>
+
+    
+
+
+<link href="https://fonts.googleapis.com/css?family=Hanuman:400,700|Inconsolata|Roboto:400,400i,700,700i&display=swap&subset=khmer" rel="stylesheet">
+</head><body><header id="navigation" class="p-navigation">
+    <div class="p-navigation__row">
+        <div class="p-navigation__banner">
+            <div class="p-navigation__logo">
+                <a class="p-navigation__link u-vertically-center p-link--logo" href="https://yukihane.github.io/">
+                    発火後忘失
+                </a>
+            </div>
+            
+            <a href="#navigation" class="p-navigation__toggle--open" title="menu">
+                <i class="p-icon--menu"></i>
+            </a>
+            <a href="#navigation-closed" class="p-navigation__toggle--close" title="close menu">
+                <i class="p-icon--close"></i>
+            </a>
+        </div>
+
+        <nav class="p-navigation__nav">
+            <span class="u-off-screen">
+                <a href="#main-content">Jump to main content</a>
+            </span>
+
+            <ul class="p-navigation__links" role="menu">
+                
+            </ul>
+
+            
+            <form class="p-search-box" action="https://www.google.com/search" target="_blank">
+    <input type="search" class="p-search-box__input" name="q" placeholder='Search'
+        required="" aria-label="Query">
+    <input type="hidden" name="sitesearch" value="https://yukihane.github.io/">
+    <button type="reset" class="p-search-box__reset" alt="reset" aria-label="Reset">
+        <i class="p-icon--close"></i>
+    </button>
+    <button type="submit" class="p-search-box__button" alt="search" aria-label="Search">
+        <i class="p-icon--search"></i>
+    </button>
+</form>
+            
+        </nav>
+    </div>
+</header><div id="main-content">
+<header class="p-strip page-banner">
+    <div class="row">
+        <h1><code>git config pull.ff only</code> を設定しておこう</h1>
+    </div>
+
+    
+
+<div class="row">
+
+    
+    <div class="col-8">
+        
+
+
+
+
+<div class="p-media-object">
+
+    
+
+    <div class="p-media-object__details">
+
+        
+
+        
+        <p class="p-media-object__content">
+            <span class="u-capitalized">on</span>
+            2020-07-19
+        </p>
+        
+
+    </div>
+</div>
+
+
+    </div>
+    
+
+    
+    <div class="col-4  col--share-links ">
+        <ul class="p-inline-list-icons p-inline-list-icons--share-links u-no-padding--left u-no-margin--left u-unselectable">
+    <li class="p-inline-list__item">
+        <i class="p-icon--share"></i>
+    </li>
+    <li class="p-inline-list__item">
+        <a class="p-icon--facebook" title='Share on Facebook' target="_blank"
+            rel="noreferrer" href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fyukihane.github.io%2fposts%2f202007%2f19%2fuse-git-pull-ff-only%2f">
+            Facebook
+        </a>
+    </li>
+    <li class="p-inline-list__item">
+        <a class="p-icon--twitter" title='Share on Twitter' target="_blank"
+            rel="noreferrer" href="http://twitter.com/share?text=%60git%20config%20pull.ff%20only%60%20%e3%82%92%e8%a8%ad%e5%ae%9a%e3%81%97%e3%81%a6%e3%81%8a%e3%81%93%e3%81%86&amp;url=https%3a%2f%2fyukihane.github.io%2fposts%2f202007%2f19%2fuse-git-pull-ff-only%2f">
+            Twitter
+        </a>
+    </li>
+    <li class="p-inline-list__item">
+        <a class="p-icon--linkedin" title='Share on LinkedIn' target="_blank"
+            rel="noreferrer"
+            href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fyukihane.github.io%2fposts%2f202007%2f19%2fuse-git-pull-ff-only%2f&amp;title=%60git%20config%20pull.ff%20only%60%20%e3%82%92%e8%a8%ad%e5%ae%9a%e3%81%97%e3%81%a6%e3%81%8a%e3%81%93%e3%81%86">
+            LinkedIn
+        </a>
+    </li>
+</ul>
+    </div>
+    
+
+</div>
+
+
+
+
+<div class="row">
+    <div class="col-12">
+        
+<a href="https://yukihane.github.io/tags/git/">#git</a>&ensp;
+
+    </div>
+</div>
+
+</header>
+
+<section class="p-strip is-shallow">
+    <main class="row post-content">
+        <div class="paragraph">
+<p>私は普段全く <code>git pull</code> は使わず、 <code>git fetch</code> で賄ってきたのですが、今日たまたま <code>git pull</code> を行ったところ、いつの頃からか次のようなメッセージが出るようになっていることに気づきました:</p>
+</div>
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p>warning: Pulling without specifying how to reconcile divergent branches is
+discouraged. You can squelch this message by running one of the following
+commands sometime before your next pull:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>git config pull.rebase false  # merge (the default strategy)
+git config pull.rebase true   # rebase
+git config pull.ff only       # fast-forward only</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You can replace "git config" with "git config --global" to set a default
+preference for all repositories. You can also pass --rebase, --no-rebase,
+or --ff-only on the command line to override the configured default per
+invocation.</p>
+</div>
+</blockquote>
+</div>
+<div class="paragraph">
+<p>この中で推奨されている設定のうち、私のお薦めは</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>git config --global pull.ff only</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>です。</p>
+</div>
+<div class="paragraph">
+<p>これは、 <code>git pull</code> を行ったとき fast-forward でマージできる状況でなければマージを行わず、 fetch だけに留める、というオプションです。ローカルブランチは何も変更されません。</p>
+</div>
+<div class="paragraph">
+<p>fast-forwardされなかった旨のメッセージが出るので、fetchしたリモートリポジトリをどう取り込むかは改めて考えることができます。</p>
+</div>
+<div class="paragraph">
+<p>デフォルトだと <code>merge</code> なり <code>fast-forward</code> なりが自動で走ってしい、意図しない変更を自動で加えられてしまうので、元に戻すのが大変でした。</p>
+</div>
+
+    </main>
+</section>
+
+<footer class="p-strip is-wrapper">
+    <div class="row">
+        <div class="p-article-pagination">
+    
+    <a class="p-article-pagination__link--previous" href="https://yukihane.github.io/posts/202007/19/spring-security-authentication-server/">
+        <span class="p-article-pagination__label">Previous</span>
+        <span class="p-article-pagination__title">
+            Spring Security から認可サーバサポートが無くなる、というのは取り敢えず見直されています
+        </span>
+    </a>
+    
+
+    
+    <a class="p-article-pagination__link--next" href="https://yukihane.github.io/posts/202007/19/cookies-and-same-origin-policy/">
+        <span class="p-article-pagination__label">Next</span>
+        <span class="p-article-pagination__title">
+            クッキーの挙動は Same Origin Policy に従う…わけではない
+        </span>
+    </a>
+    
+</div>
+    </div>
+</footer>
+
+        </div><footer class="p-strip is-shallow page-footer">
+    <div class="row">
+        <div class="col-12  u-align--center">
+            <p>
+                © 2020 発火後忘失
+            </p>
+        </div>
+    </div>
+</footer>
+
+
+
+
+</body>
+</html>
