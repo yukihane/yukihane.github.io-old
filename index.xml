@@ -6,10 +6,19 @@
     <description>Recent content on 発火後忘失</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Mon, 20 Jul 2020 06:36:51 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 20 Jul 2020 17:59:29 +0000</lastBuildDate>
     
 	<atom:link href="https://yukihane.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>いつもGitブランチ運用でこまること、考慮すべきポイントのまとめ</title>
+      <link>https://yukihane.github.io/posts/202007/21/why-git-branching-is-difficult/</link>
+      <pubDate>Mon, 20 Jul 2020 17:59:29 +0000</pubDate>
+      
+      <guid>https://yukihane.github.io/posts/202007/21/why-git-branching-is-difficult/</guid>
+      <description>現在、新しいプロジェクトに参画してGitのブランチ戦略を考えています。 何回かブランチ戦略を考え、そして運用してきたのですが、思うところを書い</description>
+    </item>
     
     <item>
       <title>Spring Security OAuth 2.0 Client の auto-configuration</title>

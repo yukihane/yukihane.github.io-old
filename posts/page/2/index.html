@@ -27,7 +27,7 @@
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://yukihane.github.io/posts/" />
-<meta property="og:updated_time" content="2020-07-20T06:36:51+00:00" />
+<meta property="og:updated_time" content="2020-07-20T17:59:29+00:00" />
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Posts"/>
@@ -479,11 +479,51 @@
     
     
 
+    
+    
+    
+
 
 
 
 <div class="p-strip is-wrapper posts">
     <div class="row">
+        
+
+        
+
+        <div class="col-12">
+            <div class="p-card">
+                <h3><a href="https://yukihane.github.io/posts/202007/11/same-class-controller-and-repository/">Spring Boot で Controller と Repositoryを同じクラスで併用する</a></h3>
+
+                
+                
+                <p>
+
+
+<span class=" u-capitalized ">
+    on
+</span>
+2020-07-11
+</p>
+                
+
+                
+                <p>…なんてことができたんですね。こんなコード: @RestController @Repository public interface VehicleInterface extends JpaRepository&lt;vehicle, Long&gt; { @Query("select u from vehicle u where u.year = :year") @RequestMapping(value = "/vehicles", method = RequestMethod.GET) List&lt;vehicle&gt; findByYearEquals(@Param("year") Integer year); } http://localhost:8080/vehicles?year=2010 的なURLでアクセスします。 サンプル</p>
+                
+
+                
+                <p>
+<a class="p-link--hashtag" href="https://yukihane.github.io/tags/spring-boot/">
+    #spring-boot</a>&ensp;
+</p>
+                
+
+                
+                <p><a href="https://yukihane.github.io/posts/202007/11/same-class-controller-and-repository/">Read more</a></p>
+                
+            </div>
+        </div>
         
 
         
@@ -821,42 +861,6 @@
 
                 
                 <p><a href="https://yukihane.github.io/posts/202006/13/userdetailsservice-samples-considered-harmful-for-biginners/">Read more</a></p>
-                
-            </div>
-        </div>
-        
-
-        
-
-        <div class="col-12">
-            <div class="p-card">
-                <h3><a href="https://yukihane.github.io/posts/202006/13/list-contains-null/">List#contains(null)は使わないほうが良い</a></h3>
-
-                
-                
-                <p>
-
-
-<span class=" u-capitalized ">
-    on
-</span>
-2020-06-13
-</p>
-                
-
-                
-                <p>List(などのコレクション)が要素に null を含むかどうかの判定に、 contains(null) を利用すると NullPointerException が発生することがあります。 リファレンスには次のようにあります</p>
-                
-
-                
-                <p>
-<a class="p-link--hashtag" href="https://yukihane.github.io/tags/java/">
-    #java</a>&ensp;
-</p>
-                
-
-                
-                <p><a href="https://yukihane.github.io/posts/202006/13/list-contains-null/">Read more</a></p>
                 
             </div>
         </div>
