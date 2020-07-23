@@ -979,7 +979,7 @@
 <meta property="og:url" content="https://yukihane.github.io/blog/202001/01/rust-reqwest/">
 <meta property="og:type" content="article">
 
-<meta name="generator" content="Hugo 0.62.2" />
+<meta name="generator" content="Hugo 0.74.1" />
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="theme-color" content="#ffffff">
 <link rel="canonical" href="https://yukihane.github.io/blog/202001/01/rust-reqwest/">
@@ -3539,7 +3539,7 @@
 </li>
 <li><a href="https://crates.io/crates/tokio" target="_blank">tokio</a>を用いる必要があった。
 <ul>
-<li>自分が見ていた(古い)サンプルでは<a href="https://crates.io/crates/futures" target="_blank">futures</a>の<code>futures::executor::block_on</code>を利用していたので当初それをコピペったのだが次のエラーが出た: &lsquo;not currently running on the Tokio runtime.',</li>
+<li>自分が見ていた(古い)サンプルでは<a href="https://crates.io/crates/futures" target="_blank">futures</a>の<code>futures::executor::block_on</code>を利用していたので当初それをコピペったのだが次のエラーが出た: &lsquo;not currently running on the Tokio runtime.&rsquo;,</li>
 <li>async/await 構文が標準に取り込まれた、ということは非同期ランタイムを別のものにすげ替えることが可能、みたいなイメージを持っていたのだが、そうではなさそう。</li>
 <li>おそらく<a href="https://github.com/ghmagazine/rustbook/pull/2" target="_blank">自転車本の補遺</a>が言うところの「非同期エコシステム」が関係する話題。</li>
 </ul>

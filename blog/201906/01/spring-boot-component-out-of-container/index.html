@@ -979,7 +979,7 @@
 <meta property="og:url" content="https://yukihane.github.io/blog/201906/01/spring-boot-component-out-of-container/">
 <meta property="og:type" content="article">
 
-<meta name="generator" content="Hugo 0.62.2" />
+<meta name="generator" content="Hugo 0.74.1" />
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="theme-color" content="#ffffff">
 <link rel="canonical" href="https://yukihane.github.io/blog/201906/01/spring-boot-component-out-of-container/">
@@ -3693,7 +3693,7 @@ public class AspectjApplication implements CommandLineRunner {
 [ERROR]  [Xlint:cantFindType]
 </code></pre><p>これもググったら回答があった:</p>
 <ul>
-<li><a href="https://stackoverflow.com/a/7352398/4506703" target="_blank">IDEA 10.5.2 Aspectj compiler - can't determine superclass of missing type org.springframework.transaction.interceptor.TransactionAspectSupport<br />
+<li><a href="https://stackoverflow.com/a/7352398/4506703" target="_blank">IDEA 10.5.2 Aspectj compiler - can&rsquo;t determine superclass of missing type org.springframework.transaction.interceptor.TransactionAspectSupport<br />
 Ask Question - Stack Overflow</a></li>
 </ul>
 <p>ただし最も upvoted されている回答は何を言っているのかさっぱり理解できない。</p>
@@ -3706,7 +3706,7 @@ Ask Question - Stack Overflow</a></li>
              &lt;/configuration&gt;
 </code></pre><h2 id="警告メッセージ対応">警告メッセージ対応</h2>
 <p>ここまでで <code>mvn clean process-classes</code> は正常終了するようになった。ただし、いくつかの warning が残っているのでそれらを対処した。</p>
-<h3 id="couldnt-find-aspectjrtjar-on-classpath">couldn't find aspectjrt.jar on classpath</h3>
+<h3 id="couldnt-find-aspectjrtjar-on-classpath">couldn&rsquo;t find aspectjrt.jar on classpath</h3>
 <p><code>aspectjrt</code>を依存関係に追加した。</p>
 <p><a href="https://github.com/yukihane/hello-java/commit/5311573ab6b8dd45cf921e9d234e9e4fdd51e3a7#diff-59f621b35bac66c30e783ac3af61dc70" target="_blank">5311573ab6b8dd45cf921e9d234e9e4fdd51e3a7</a>:</p>
 <pre><code>       &lt;groupId&gt;org.springframework&lt;/groupId&gt;
@@ -3806,7 +3806,7 @@ public class ApplicationContextProvider implements ApplicationContextAware {
   <div class="toc__body">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#enablespringconfigured-configurable-付与">@EnableSpringConfigured @Configurable 付与</a></li>
+    <li><a href="#enablespringconfigured-configurable-付与"><code>@EnableSpringConfigured</code> <code>@Configurable</code> 付与</a></li>
     <li><a href="#依存関係追加">依存関係追加</a></li>
     <li><a href="#aspectj-アノテーションプロセッシング">AspectJ アノテーションプロセッシング</a></li>
     <li><a href="#aspectj-maven-plugin-の-java11-対応">aspectj-maven-plugin の Java11 対応</a></li>
@@ -3814,7 +3814,7 @@ public class ApplicationContextProvider implements ApplicationContextAware {
     <li><a href="#weaving-時の問題対処">weaving 時の問題対処</a></li>
     <li><a href="#警告メッセージ対応">警告メッセージ対応</a>
       <ul>
-        <li><a href="#couldnt-find-aspectjrtjar-on-classpath">couldn't find aspectjrt.jar on classpath</a></li>
+        <li><a href="#couldnt-find-aspectjrtjar-on-classpath">couldn&rsquo;t find aspectjrt.jar on classpath</a></li>
         <li><a href="#bad-version-number-found-in-homeyukim2repositoryorgaspectjaspectjrt194aspectjrt-194jar-expected-192-found-194">bad version number found in /home/yuki/.m2/repository/org/aspectj/aspectjrt/1.9.4/aspectjrt-1.9.4.jar expected 1.9.2 found 1.9.4</a></li>
       </ul>
     </li>

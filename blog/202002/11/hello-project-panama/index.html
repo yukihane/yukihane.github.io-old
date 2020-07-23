@@ -979,7 +979,7 @@
 <meta property="og:url" content="https://yukihane.github.io/blog/202002/11/hello-project-panama/">
 <meta property="og:type" content="article">
 
-<meta name="generator" content="Hugo 0.62.2" />
+<meta name="generator" content="Hugo 0.74.1" />
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="theme-color" content="#ffffff">
 <link rel="canonical" href="https://yukihane.github.io/blog/202002/11/hello-project-panama/">
@@ -3558,14 +3558,14 @@ Rust(1.41.0)と Java(<a href="https://jdk.java.net/panama/" target="_blank">14-p
 </span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-rust" data-lang="rust"><span class="cp">#[</span><span class="cp">no_mangle</span><span class="cp">]</span><span class="w">
+<pre class="chroma"><code class="language-rust" data-lang="rust"><span class="cp">#[no_mangle]</span><span class="w">
 </span><span class="w"></span><span class="k">pub</span><span class="w"> </span><span class="k">unsafe</span><span class="w"> </span><span class="k">extern</span><span class="w"> </span><span class="s">&#34;C&#34;</span><span class="w"> </span><span class="k">fn</span> <span class="nf">greet</span><span class="p">(</span><span class="n">name</span>: <span class="o">*</span><span class="k">const</span><span class="w"> </span><span class="n">c_char</span><span class="p">,</span><span class="w"> </span><span class="n">message</span>: <span class="o">*</span><span class="k">mut</span><span class="w"> </span><span class="n">c_char</span><span class="p">,</span><span class="w"> </span><span class="n">count</span>: <span class="nc">size_t</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span><span class="w"></span><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CStr</span>::<span class="n">from_ptr</span><span class="p">(</span><span class="n">name</span><span class="p">)</span><span class="p">;</span><span class="w">
-</span><span class="w"></span><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">name</span><span class="p">.</span><span class="n">to_str</span><span class="p">(</span><span class="p">)</span><span class="p">.</span><span class="n">unwrap</span><span class="p">(</span><span class="p">)</span><span class="p">;</span><span class="w">
-</span><span class="w"></span><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">format</span><span class="o">!</span><span class="p">(</span><span class="s">&#34;こんにちは、{}！&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="p">)</span><span class="p">;</span><span class="w">
-</span><span class="w"></span><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CString</span>::<span class="n">new</span><span class="p">(</span><span class="n">text</span><span class="p">)</span><span class="p">.</span><span class="n">unwrap</span><span class="p">(</span><span class="p">)</span><span class="p">;</span><span class="w">
-</span><span class="w"></span><span class="w">
-</span><span class="w"></span><span class="w">    </span><span class="n">message</span><span class="p">.</span><span class="n">copy_from</span><span class="p">(</span><span class="n">text</span><span class="p">.</span><span class="n">as_ptr</span><span class="p">(</span><span class="p">)</span><span class="p">,</span><span class="w"> </span><span class="n">count</span><span class="p">)</span><span class="p">;</span><span class="w">
+</span><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CStr</span>::<span class="n">from_ptr</span><span class="p">(</span><span class="n">name</span><span class="p">);</span><span class="w">
+</span><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">name</span><span class="p">.</span><span class="n">to_str</span><span class="p">().</span><span class="n">unwrap</span><span class="p">();</span><span class="w">
+</span><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">format</span><span class="o">!</span><span class="p">(</span><span class="s">&#34;こんにちは、{}！&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="p">);</span><span class="w">
+</span><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CString</span>::<span class="n">new</span><span class="p">(</span><span class="n">text</span><span class="p">).</span><span class="n">unwrap</span><span class="p">();</span><span class="w">
+</span><span class="w">
+</span><span class="w">    </span><span class="n">message</span><span class="p">.</span><span class="n">copy_from</span><span class="p">(</span><span class="n">text</span><span class="p">.</span><span class="n">as_ptr</span><span class="p">(),</span><span class="w"> </span><span class="n">count</span><span class="p">);</span><span class="w">
 </span><span class="w"></span><span class="p">}</span><span class="w">
 </span></code></pre></td></tr></table>
 </div>
@@ -3609,19 +3609,19 @@ Rust(1.41.0)と Java(<a href="https://jdk.java.net/panama/" target="_blank">14-p
 </span><span class="lnt">13
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-java" data-lang="java"><span class="kd">final</span> <span class="n">JButton</span> <span class="n">greetButton</span> <span class="o">=</span> <span class="k">new</span> <span class="n">JButton</span><span class="o">(</span><span class="s">&#34;greet&#34;</span><span class="o">)</span><span class="o">;</span>
-<span class="n">greetButton</span><span class="o">.</span><span class="na">addActionListener</span><span class="o">(</span><span class="o">(</span><span class="n">e</span><span class="o">)</span> <span class="o">-</span><span class="o">&gt;</span> <span class="o">{</span>
-    <span class="kd">final</span> <span class="n">Scope</span> <span class="n">scope</span> <span class="o">=</span> <span class="n">Scope</span><span class="o">.</span><span class="na">globalScope</span><span class="o">(</span><span class="o">)</span><span class="o">;</span>
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="kd">final</span> <span class="n">JButton</span> <span class="n">greetButton</span> <span class="o">=</span> <span class="k">new</span> <span class="n">JButton</span><span class="o">(</span><span class="s">&#34;greet&#34;</span><span class="o">);</span>
+<span class="n">greetButton</span><span class="o">.</span><span class="na">addActionListener</span><span class="o">((</span><span class="n">e</span><span class="o">)</span> <span class="o">-&gt;</span> <span class="o">{</span>
+    <span class="kd">final</span> <span class="n">Scope</span> <span class="n">scope</span> <span class="o">=</span> <span class="n">Scope</span><span class="o">.</span><span class="na">globalScope</span><span class="o">();</span>
 
-    <span class="kd">final</span> <span class="n">Pointer</span><span class="o">&lt;</span><span class="n">Byte</span><span class="o">&gt;</span> <span class="n">name</span> <span class="o">=</span> <span class="n">scope</span><span class="o">.</span><span class="na">allocateCString</span><span class="o">(</span><span class="n">nameField</span><span class="o">.</span><span class="na">getText</span><span class="o">(</span><span class="o">)</span><span class="o">)</span><span class="o">;</span>
+    <span class="kd">final</span> <span class="n">Pointer</span><span class="o">&lt;</span><span class="n">Byte</span><span class="o">&gt;</span> <span class="n">name</span> <span class="o">=</span> <span class="n">scope</span><span class="o">.</span><span class="na">allocateCString</span><span class="o">(</span><span class="n">nameField</span><span class="o">.</span><span class="na">getText</span><span class="o">());</span>
     <span class="kd">final</span> <span class="kt">long</span> <span class="n">size</span> <span class="o">=</span> <span class="n">256</span><span class="o">;</span>
-    <span class="kd">final</span> <span class="n">Pointer</span><span class="o">&lt;</span><span class="n">Byte</span><span class="o">&gt;</span> <span class="n">message</span> <span class="o">=</span> <span class="n">scope</span><span class="o">.</span><span class="na">allocateArray</span><span class="o">(</span><span class="n">NativeTypes</span><span class="o">.</span><span class="na">UINT8</span><span class="o">,</span> <span class="n">size</span><span class="o">)</span><span class="o">.</span><span class="na">elementPointer</span><span class="o">(</span><span class="o">)</span><span class="o">;</span>
+    <span class="kd">final</span> <span class="n">Pointer</span><span class="o">&lt;</span><span class="n">Byte</span><span class="o">&gt;</span> <span class="n">message</span> <span class="o">=</span> <span class="n">scope</span><span class="o">.</span><span class="na">allocateArray</span><span class="o">(</span><span class="n">NativeTypes</span><span class="o">.</span><span class="na">UINT8</span><span class="o">,</span> <span class="n">size</span><span class="o">).</span><span class="na">elementPointer</span><span class="o">();</span>
 
-    <span class="n">greeter_lib</span><span class="o">.</span><span class="na">greet</span><span class="o">(</span><span class="n">name</span><span class="o">,</span> <span class="n">message</span><span class="o">,</span> <span class="n">size</span><span class="o">)</span><span class="o">;</span>
+    <span class="n">greeter_lib</span><span class="o">.</span><span class="na">greet</span><span class="o">(</span><span class="n">name</span><span class="o">,</span> <span class="n">message</span><span class="o">,</span> <span class="n">size</span><span class="o">);</span>
 
-    <span class="kd">final</span> <span class="n">String</span> <span class="n">retval</span> <span class="o">=</span> <span class="n">Pointer</span><span class="o">.</span><span class="na">toString</span><span class="o">(</span><span class="n">message</span><span class="o">)</span><span class="o">;</span>
-    <span class="n">outputField</span><span class="o">.</span><span class="na">setText</span><span class="o">(</span><span class="n">retval</span><span class="o">)</span><span class="o">;</span>
-<span class="o">}</span><span class="o">)</span><span class="o">;</span>
+    <span class="kd">final</span> <span class="n">String</span> <span class="n">retval</span> <span class="o">=</span> <span class="n">Pointer</span><span class="o">.</span><span class="na">toString</span><span class="o">(</span><span class="n">message</span><span class="o">);</span>
+    <span class="n">outputField</span><span class="o">.</span><span class="na">setText</span><span class="o">(</span><span class="n">retval</span><span class="o">);</span>
+<span class="o">});</span>
 </code></pre></td></tr></table>
 </div>
 </div><p>以上。</p>

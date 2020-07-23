@@ -979,7 +979,7 @@
 <meta property="og:url" content="https://yukihane.github.io/blog/201801/21/polymer2-input-bind/">
 <meta property="og:type" content="article">
 
-<meta name="generator" content="Hugo 0.62.2" />
+<meta name="generator" content="Hugo 0.74.1" />
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="theme-color" content="#ffffff">
 <link rel="canonical" href="https://yukihane.github.io/blog/201801/21/polymer2-input-bind/">
@@ -3535,10 +3535,10 @@
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">template</span><span class="p"></span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">div</span><span class="p"></span><span class="p">&gt;</span><span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;{{text}}&#34;</span> <span class="p">/</span><span class="p">&gt;</span><span class="p">&lt;</span><span class="p">/</span><span class="nt">div</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">div</span><span class="p"></span><span class="p">&gt;</span>[[text]]<span class="p">&lt;</span><span class="p">/</span><span class="nt">div</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="p">/</span><span class="nt">template</span><span class="p">&gt;</span>
+<pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;{{text}}&#34;</span> <span class="p">/&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>[[text]]<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
 </code></pre></td></tr></table>
 </div>
 </div><p>とかやってみたものの上手く行かなかった。</p>
@@ -3556,10 +3556,10 @@
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">template</span><span class="p"></span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">div</span><span class="p"></span><span class="p">&gt;</span><span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;{{text::input}}&#34;</span> <span class="p">/</span><span class="p">&gt;</span><span class="p">&lt;</span><span class="p">/</span><span class="nt">div</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">div</span><span class="p"></span><span class="p">&gt;</span>[[text]]<span class="p">&lt;</span><span class="p">/</span><span class="nt">div</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="p">/</span><span class="nt">template</span><span class="p">&gt;</span>
+<pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;{{text::input}}&#34;</span> <span class="p">/&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>[[text]]<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
 </code></pre></td></tr></table>
 </div>
 </div><p>参考: <a href="https://stackoverflow.com/q/44711223/4506703" target="_blank">Cannot data bind to &lt;input&gt; in Polymer 2.0 - Stack Overflow</a></p>
@@ -3613,47 +3613,47 @@
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
-<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&#34;ja&#34;</span><span class="p"></span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">head</span><span class="p"></span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#34;UTF-8&#34;</span> <span class="p">/</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">http-equiv</span><span class="o">=</span><span class="s">&#34;X-UA-Compatible&#34;</span> <span class="na">content</span><span class="o">=</span><span class="s">&#34;ie=edge&#34;</span> <span class="p">/</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">base</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://polygit.org/components/&#34;</span> <span class="p">/</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;webcomponentsjs/webcomponents-lite.js&#34;</span><span class="p"></span><span class="p">&gt;</span><span class="p">&lt;</span><span class="p">/</span><span class="nt">script</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;import&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;polymer/polymer.html&#34;</span> <span class="p">/</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;import&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;polymer/polymer-element.html&#34;</span> <span class="p">/</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="p">/</span><span class="nt">head</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">body</span><span class="p"></span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">my-input</span><span class="p"></span><span class="p">&gt;</span><span class="p">&lt;</span><span class="p">/</span><span class="nt">my-input</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&#34;ja&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#34;UTF-8&#34;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">http-equiv</span><span class="o">=</span><span class="s">&#34;X-UA-Compatible&#34;</span> <span class="na">content</span><span class="o">=</span><span class="s">&#34;ie=edge&#34;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">base</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://polygit.org/components/&#34;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;webcomponentsjs/webcomponents-lite.js&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;import&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;polymer/polymer.html&#34;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;import&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;polymer/polymer-element.html&#34;</span> <span class="p">/&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">my-input</span><span class="p">&gt;&lt;/</span><span class="nt">my-input</span><span class="p">&gt;</span>
 
-    <span class="p">&lt;</span><span class="nt">dom-module</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;my-input&#34;</span><span class="p"></span><span class="p">&gt;</span>
-      <span class="p">&lt;</span><span class="nt">template</span><span class="p"></span><span class="p">&gt;</span>
-        <span class="p">&lt;</span><span class="nt">div</span><span class="p"></span><span class="p">&gt;</span><span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;{{text::input}}&#34;</span> <span class="p">/</span><span class="p">&gt;</span><span class="p">&lt;</span><span class="p">/</span><span class="nt">div</span><span class="p">&gt;</span>
-        <span class="p">&lt;</span><span class="nt">div</span><span class="p"></span><span class="p">&gt;</span>[[text]]<span class="p">&lt;</span><span class="p">/</span><span class="nt">div</span><span class="p">&gt;</span>
-      <span class="p">&lt;</span><span class="p">/</span><span class="nt">template</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">dom-module</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;my-input&#34;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;{{text::input}}&#34;</span> <span class="p">/&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>[[text]]<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+      <span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
 
-      <span class="p">&lt;</span><span class="nt">script</span><span class="p"></span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
         <span class="c1">// For Firefox
 </span><span class="c1"></span>        <span class="c1">// https://github.com/Polymer/polymer-bundler/issues/234#issuecomment-133379949
-</span><span class="c1"></span>        <span class="nb">window</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">&#34;WebComponentsReady&#34;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="p">)</span> <span class="p">{</span>
+</span><span class="c1"></span>        <span class="nb">window</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">&#34;WebComponentsReady&#34;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
           <span class="kr">class</span> <span class="nx">MyInput</span> <span class="kr">extends</span> <span class="nx">Polymer</span><span class="p">.</span><span class="nx">Element</span> <span class="p">{</span>
-            <span class="kr">static</span> <span class="nx">get</span> <span class="nx">is</span><span class="p">(</span><span class="p">)</span> <span class="p">{</span>
+            <span class="kr">static</span> <span class="nx">get</span> <span class="nx">is</span><span class="p">()</span> <span class="p">{</span>
               <span class="k">return</span> <span class="s2">&#34;my-input&#34;</span><span class="p">;</span>
             <span class="p">}</span>
-            <span class="kr">static</span> <span class="nx">get</span> <span class="nx">properties</span><span class="p">(</span><span class="p">)</span> <span class="p">{</span>
+            <span class="kr">static</span> <span class="nx">get</span> <span class="nx">properties</span><span class="p">()</span> <span class="p">{</span>
               <span class="k">return</span> <span class="p">{</span>
                 <span class="nx">text</span><span class="o">:</span> <span class="nb">String</span><span class="p">,</span>
-              <span class="p">}</span><span class="p">;</span>
+              <span class="p">};</span>
             <span class="p">}</span>
-            <span class="nx">constructor</span><span class="p">(</span><span class="p">)</span> <span class="p">{</span>
-              <span class="kr">super</span><span class="p">(</span><span class="p">)</span><span class="p">;</span>
+            <span class="nx">constructor</span><span class="p">()</span> <span class="p">{</span>
+              <span class="kr">super</span><span class="p">();</span>
             <span class="p">}</span>
           <span class="p">}</span>
-          <span class="nx">customElements</span><span class="p">.</span><span class="nx">define</span><span class="p">(</span><span class="nx">MyInput</span><span class="p">.</span><span class="nx">is</span><span class="p">,</span> <span class="nx">MyInput</span><span class="p">)</span><span class="p">;</span>
-        <span class="p">}</span><span class="p">)</span><span class="p">;</span>
-      <span class="p">&lt;</span><span class="p">/</span><span class="nt">script</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="p">/</span><span class="nt">dom-module</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="p">/</span><span class="nt">body</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="p">/</span><span class="nt">html</span><span class="p">&gt;</span>
+          <span class="nx">customElements</span><span class="p">.</span><span class="nx">define</span><span class="p">(</span><span class="nx">MyInput</span><span class="p">.</span><span class="nx">is</span><span class="p">,</span> <span class="nx">MyInput</span><span class="p">);</span>
+        <span class="p">});</span>
+      <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">dom-module</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></td></tr></table>
 </div>
 </div>

@@ -979,7 +979,7 @@
 <meta property="og:url" content="https://yukihane.github.io/blog/201901/16/set-jvm-to-eclipse-on-mac/">
 <meta property="og:type" content="article">
 
-<meta name="generator" content="Hugo 0.62.2" />
+<meta name="generator" content="Hugo 0.74.1" />
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="theme-color" content="#ffffff">
 <link rel="canonical" href="https://yukihane.github.io/blog/201901/16/set-jvm-to-eclipse-on-mac/">
@@ -3559,7 +3559,7 @@ Matching Java Virtual Machines (2):
 <h2 id="usrlibexecjava_home-の出力を切り替えることはできるの"><code>/usr/libexec/java_home</code> の出力を切り替えることはできるの？</h2>
 <p>実際には、<code>/usr/libexec/java_home -V</code> の最上行が<code>/usr/libexec/java_home</code>として出力されているように見えます。</p>
 <p>この並びは、 <code>/Library/Java/JavaVirtualMachines/&lt;それぞれのバージョンディレクトリ&gt;/Contents/Info.plist</code>　に書かれている <code>JVMVersion</code>値の逆順になるようなので、この値を書き換えることにより　<code>/usr/libexec/java_home</code>　出力結果をすげ替えることが可能です。<br />
-参考: <a href="https://stackoverflow.com/a/20994919/4506703" target="_blank">How can I change Mac OS's default Java VM returned from /usr/libexec/java_home - Stack Overflow</a></p>
+参考: <a href="https://stackoverflow.com/a/20994919/4506703" target="_blank">How can I change Mac OS&rsquo;s default Java VM returned from /usr/libexec/java_home - Stack Overflow</a></p>
 
   </article>
 </div>
@@ -3598,9 +3598,9 @@ Matching Java Virtual Machines (2):
     <nav id="TableOfContents">
   <ul>
     <li><a href="#eclipse-がどの-jvm-で実行されているのかを調べるには">Eclipse がどの JVM で実行されているのかを調べるには？</a></li>
-    <li><a href="#-vmを明示的に指定しなかった場合には何が使われるの">-vmを明示的に指定しなかった場合には何が使われるの？</a></li>
-    <li><a href="#usrbinを指定しておけばjava_homeを切り替えるだけで良いんじゃ">/usr/binを指定しておけばJAVA_HOMEを切り替えるだけで良いんじゃ？</a></li>
-    <li><a href="#usrlibexecjava_home-の出力を切り替えることはできるの">/usr/libexec/java_home の出力を切り替えることはできるの？</a></li>
+    <li><a href="#-vmを明示的に指定しなかった場合には何が使われるの"><code>-vm</code>を明示的に指定しなかった場合には何が使われるの？</a></li>
+    <li><a href="#usrbinを指定しておけばjava_homeを切り替えるだけで良いんじゃ"><code>/usr/bin</code>を指定しておけば<code>JAVA_HOME</code>を切り替えるだけで良いんじゃ？</a></li>
+    <li><a href="#usrlibexecjava_home-の出力を切り替えることはできるの"><code>/usr/libexec/java_home</code> の出力を切り替えることはできるの？</a></li>
   </ul>
 </nav>
   </div>

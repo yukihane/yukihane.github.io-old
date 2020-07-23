@@ -23,6 +23,24 @@
         <description>世の中に認可サーバー製品がたくさんあるので、Spring Securityではサポートしないことを決定しました &amp;#8212; Spring Security OAuth2はあと数年でサ</description>
       </item>
       
+      <item>
+        <title>Spring SecurityのOAuth2.0関連の歴史を調査し実装してみた</title>
+        <link>https://yukihane.github.io/blog/202007/15/history-of-spring-oauth2-libraries/</link>
+        <pubDate>Tue, 14 Jul 2020 23:47:11 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/blog/202007/15/history-of-spring-oauth2-libraries/</guid>
+        <description>Qiita に昔(2019年中頃)書いていた資料を転記し忘れていたので構成を見直してアップロードし直します。 2020年現在の状況はまた更新されています</description>
+      </item>
+      
+      <item>
+        <title>Spring Security OAuth 2.0 Client(OAuth 2.0 Login)でトークンの管理をしているのはOAuth2AuthorizedClientService</title>
+        <link>https://yukihane.github.io/blog/202006/17/oauth2authorizedclientservice/</link>
+        <pubDate>Wed, 17 Jun 2020 09:24:57 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/blog/202006/17/oauth2authorizedclientservice/</guid>
+        <description>私も今回の質問(本文末参照)を見たとき少しの間勘違いしてしまったのですが、OAuth2.0のクライアントがどこで各リソースオーナーのトークン</description>
+      </item>
+      
     
   </channel>
 </rss>

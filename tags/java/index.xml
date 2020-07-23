@@ -209,7 +209,7 @@
         <pubDate>Wed, 25 Jul 2018 19:38:38 +0000</pubDate>
         
         <guid>https://yukihane.github.io/blog/201807/25/not-required-m2_home/</guid>
-        <description>M2_HOME は削除されました。 MNGSITE-283 Remove M2_HOME from documentation MNG-5607 Don&#39;t use M2_HOME in mvn shell/command scripts anymore 3.5.0 リリースノート &amp;ldquo;Based on problems in using M2_HOME related to different Maven versions installed and to simplify things, the usage of M2_HOME has been removed and is not supported any more MNG-5823, MNG-5836, MNG-5607.&amp;rdquo; (変更 commit) 敢え</description>
+        <description>M2_HOME は削除されました。 MNGSITE-283 Remove M2_HOME from documentation MNG-5607 Don&amp;rsquo;t use M2_HOME in mvn shell/command scripts anymore 3.5.0 リリースノート &amp;ldquo;Based on problems in using M2_HOME related to different Maven versions installed and to simplify things, the usage of M2_HOME has been removed and is not supported any more MNG-5823, MNG-5836, MNG-5607.&amp;rdquo; (変更 commit) 敢え</description>
       </item>
       
       <item>

@@ -979,7 +979,7 @@
 <meta property="og:url" content="https://yukihane.github.io/blog/202007/02/minimal-webmvc-with-springboot/">
 <meta property="og:type" content="article">
 
-<meta name="generator" content="Hugo 0.62.2" />
+<meta name="generator" content="Hugo 0.74.1" />
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="theme-color" content="#ffffff">
 <link rel="canonical" href="https://yukihane.github.io/blog/202007/02/minimal-webmvc-with-springboot/">
@@ -3546,7 +3546,7 @@
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">MyController</span> <span class="o">{</span>
 
     <span class="nd">@GetMapping</span><span class="o">(</span><span class="s">&#34;/&#34;</span><span class="o">)</span>
-    <span class="kd">public</span> <span class="n">String</span> <span class="nf">index</span><span class="o">(</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">index</span><span class="o">()</span> <span class="o">{</span>
         <span class="k">return</span> <span class="s">&#34;hello&#34;</span><span class="o">;</span>
     <span class="o">}</span>
 <span class="o">}</span>
@@ -3569,17 +3569,17 @@
 </span><span class="lnt">12
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-xml:pom.xml" data-lang="xml:pom.xml">    <span class="nt">&lt;dependency</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;groupId</span><span class="nt">&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
-      <span class="nt">&lt;artifactId</span><span class="nt">&gt;</span>spring-boot<span class="nt">&lt;/artifactId&gt;</span>
+<pre class="chroma"><code class="language-xml:pom.xml" data-lang="xml:pom.xml">    <span class="nt">&lt;dependency&gt;</span>
+      <span class="nt">&lt;groupId&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
+      <span class="nt">&lt;artifactId&gt;</span>spring-boot<span class="nt">&lt;/artifactId&gt;</span>
     <span class="nt">&lt;/dependency&gt;</span>
-    <span class="nt">&lt;dependency</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;groupId</span><span class="nt">&gt;</span>org.springframework<span class="nt">&lt;/groupId&gt;</span>
-      <span class="nt">&lt;artifactId</span><span class="nt">&gt;</span>spring-webmvc<span class="nt">&lt;/artifactId&gt;</span>
+    <span class="nt">&lt;dependency&gt;</span>
+      <span class="nt">&lt;groupId&gt;</span>org.springframework<span class="nt">&lt;/groupId&gt;</span>
+      <span class="nt">&lt;artifactId&gt;</span>spring-webmvc<span class="nt">&lt;/artifactId&gt;</span>
     <span class="nt">&lt;/dependency&gt;</span>
-    <span class="nt">&lt;dependency</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;groupId</span><span class="nt">&gt;</span>org.apache.tomcat.embed<span class="nt">&lt;/groupId&gt;</span>
-      <span class="nt">&lt;artifactId</span><span class="nt">&gt;</span>tomcat-embed-core<span class="nt">&lt;/artifactId&gt;</span>
+    <span class="nt">&lt;dependency&gt;</span>
+      <span class="nt">&lt;groupId&gt;</span>org.apache.tomcat.embed<span class="nt">&lt;/groupId&gt;</span>
+      <span class="nt">&lt;artifactId&gt;</span>tomcat-embed-core<span class="nt">&lt;/artifactId&gt;</span>
     <span class="nt">&lt;/dependency&gt;</span>
 </code></pre></td></tr></table>
 </div>
@@ -3606,13 +3606,13 @@
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">WebConfig</span> <span class="o">{</span>
 
     <span class="nd">@Bean</span>
-    <span class="n">ServletWebServerFactory</span> <span class="nf">servletWebServerFactory</span><span class="o">(</span><span class="o">)</span> <span class="o">{</span>
-        <span class="k">return</span> <span class="k">new</span> <span class="n">TomcatServletWebServerFactory</span><span class="o">(</span><span class="n">8080</span><span class="o">)</span><span class="o">;</span>
+    <span class="n">ServletWebServerFactory</span> <span class="nf">servletWebServerFactory</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="k">new</span> <span class="n">TomcatServletWebServerFactory</span><span class="o">(</span><span class="n">8080</span><span class="o">);</span>
     <span class="o">}</span>
 
     <span class="nd">@Bean</span>
-    <span class="n">DispatcherServlet</span> <span class="nf">dispatcherServlet</span><span class="o">(</span><span class="o">)</span> <span class="o">{</span>
-        <span class="k">return</span> <span class="k">new</span> <span class="n">DispatcherServlet</span><span class="o">(</span><span class="o">)</span><span class="o">;</span>
+    <span class="n">DispatcherServlet</span> <span class="nf">dispatcherServlet</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="k">new</span> <span class="n">DispatcherServlet</span><span class="o">();</span>
     <span class="o">}</span>
 <span class="o">}</span>
 </code></pre></td></tr></table>
@@ -3629,8 +3629,8 @@
 <td class="lntd">
 <pre class="chroma"><code class="language-java:MyApplication.java" data-lang="java:MyApplication.java"><span class="nd">@ComponentScan</span>
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">MyApplication</span> <span class="o">{</span>
-	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="kd">final</span> <span class="n">String</span><span class="o">[</span><span class="o">]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
-		<span class="n">SpringApplication</span><span class="o">.</span><span class="na">run</span><span class="o">(</span><span class="n">MyApplication</span><span class="o">.</span><span class="na">class</span><span class="o">,</span> <span class="n">args</span><span class="o">)</span><span class="o">;</span>
+	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="kd">final</span> <span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+		<span class="n">SpringApplication</span><span class="o">.</span><span class="na">run</span><span class="o">(</span><span class="n">MyApplication</span><span class="o">.</span><span class="na">class</span><span class="o">,</span> <span class="n">args</span><span class="o">);</span>
 	<span class="o">}</span>
 <span class="o">}</span>
 </code></pre></td></tr></table>

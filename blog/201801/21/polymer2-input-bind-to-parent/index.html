@@ -979,7 +979,7 @@
 <meta property="og:url" content="https://yukihane.github.io/blog/201801/21/polymer2-input-bind-to-parent/">
 <meta property="og:type" content="article">
 
-<meta name="generator" content="Hugo 0.62.2" />
+<meta name="generator" content="Hugo 0.74.1" />
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="theme-color" content="#ffffff">
 <link rel="canonical" href="https://yukihane.github.io/blog/201801/21/polymer2-input-bind-to-parent/">
@@ -3538,13 +3538,13 @@
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">dom-module</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;my-input&#34;</span><span class="p"></span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">template</span><span class="p"></span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;{{text::input}}&#34;</span> <span class="p">/</span><span class="p">&gt;</span>
+<pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">dom-module</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;my-input&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;{{text::input}}&#34;</span> <span class="p">/&gt;</span>
     [[text]]
-  <span class="p">&lt;</span><span class="p">/</span><span class="nt">template</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
   ...
-<span class="p">&lt;</span><span class="p">/</span><span class="nt">dom-module</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">dom-module</span><span class="p">&gt;</span>
 </code></pre></td></tr></table>
 </div>
 </div><p>さて、この入力値を受け取れるよう、親エレメントを次のように作成しました。</p>
@@ -3559,13 +3559,13 @@
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">dom-module</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;my-parent&#34;</span><span class="p"></span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">template</span><span class="p"></span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">my-input</span> <span class="na">text</span><span class="o">=</span><span class="s">&#34;{{parentText}}&#34;</span><span class="p"></span><span class="p">&gt;</span><span class="p">&lt;</span><span class="p">/</span><span class="nt">my-input</span><span class="p">&gt;</span>
+<pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">dom-module</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;my-parent&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">my-input</span> <span class="na">text</span><span class="o">=</span><span class="s">&#34;{{parentText}}&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">my-input</span><span class="p">&gt;</span>
     [[parentText]]
-  <span class="p">&lt;</span><span class="p">/</span><span class="nt">template</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
   ...
-<span class="p">&lt;</span><span class="p">/</span><span class="nt">dom-module</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">dom-module</span><span class="p">&gt;</span>
 </code></pre></td></tr></table>
 </div>
 </div><p>そして<code>&lt;input&gt;</code>に値を入力してみると…親に反映されない。</p>
@@ -3581,13 +3581,13 @@
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">dom-module</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;my-parent&#34;</span><span class="p"></span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">template</span><span class="p"></span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">my-input</span> <span class="na">text</span><span class="o">=</span><span class="s">&#34;{{parentText::input}}&#34;</span><span class="p"></span><span class="p">&gt;</span><span class="p">&lt;</span><span class="p">/</span><span class="nt">my-input</span><span class="p">&gt;</span>
+<pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">dom-module</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;my-parent&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">my-input</span> <span class="na">text</span><span class="o">=</span><span class="s">&#34;{{parentText::input}}&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">my-input</span><span class="p">&gt;</span>
     [[parentText]]
-  <span class="p">&lt;</span><span class="p">/</span><span class="nt">template</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
   ...
-<span class="p">&lt;</span><span class="p">/</span><span class="nt">dom-module</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">dom-module</span><span class="p">&gt;</span>
 </code></pre></td></tr></table>
 </div>
 </div><p>とすれば反映されるようになりました。けど、これはどうなんだろう？<br />
@@ -3604,7 +3604,7 @@
 </blockquote>
 <p><span></span></p>
 <blockquote>
-<p><code>notify</code>. A notifying property supports upward data flow. By default, properties are non-notifying, and don't support upward data flow.</p>
+<p><code>notify</code>. A notifying property supports upward data flow. By default, properties are non-notifying, and don&rsquo;t support upward data flow.</p>
 </blockquote>
 <p>そんなわけで、<code>notify</code>を明示的に<code>true</code>に設定してやる必要がありました。</p>
 <p>子エレメント(今回の場合だと<code>my-input</code>)のプロパティ定義で次のようにすれば良いことになります。</p>
@@ -3621,7 +3621,7 @@
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-js" data-lang="js">      <span class="kr">static</span> <span class="nx">get</span> <span class="nx">properties</span><span class="p">(</span><span class="p">)</span> <span class="p">{</span>
+<pre class="chroma"><code class="language-js" data-lang="js">      <span class="kr">static</span> <span class="nx">get</span> <span class="nx">properties</span><span class="p">()</span> <span class="p">{</span>
         <span class="k">return</span> <span class="p">{</span>
           <span class="nx">text</span><span class="o">:</span><span class="p">{</span>
             <span class="nx">type</span><span class="o">:</span> <span class="nb">String</span><span class="p">,</span>

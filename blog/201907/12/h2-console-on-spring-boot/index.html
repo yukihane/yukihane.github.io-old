@@ -979,7 +979,7 @@
 <meta property="og:url" content="https://yukihane.github.io/blog/201907/12/h2-console-on-spring-boot/">
 <meta property="og:type" content="article">
 
-<meta name="generator" content="Hugo 0.62.2" />
+<meta name="generator" content="Hugo 0.74.1" />
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="theme-color" content="#ffffff">
 <link rel="canonical" href="https://yukihane.github.io/blog/201907/12/h2-console-on-spring-boot/">
@@ -3550,19 +3550,19 @@
 </span><span class="lnt">15
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-pom.xml" data-lang="pom.xml">    <span class="nt">&lt;dependencies</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;dependency</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;groupId</span><span class="nt">&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
-            <span class="nt">&lt;artifactId</span><span class="nt">&gt;</span>spring-boot-starter-web<span class="nt">&lt;/artifactId&gt;</span>
+<pre class="chroma"><code class="language-pom.xml" data-lang="pom.xml">    <span class="nt">&lt;dependencies&gt;</span>
+        <span class="nt">&lt;dependency&gt;</span>
+            <span class="nt">&lt;groupId&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
+            <span class="nt">&lt;artifactId&gt;</span>spring-boot-starter-web<span class="nt">&lt;/artifactId&gt;</span>
         <span class="nt">&lt;/dependency&gt;</span>
-        <span class="nt">&lt;dependency</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;groupId</span><span class="nt">&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
-            <span class="nt">&lt;artifactId</span><span class="nt">&gt;</span>spring-boot-starter-jdbc<span class="nt">&lt;/artifactId&gt;</span>
+        <span class="nt">&lt;dependency&gt;</span>
+            <span class="nt">&lt;groupId&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
+            <span class="nt">&lt;artifactId&gt;</span>spring-boot-starter-jdbc<span class="nt">&lt;/artifactId&gt;</span>
         <span class="nt">&lt;/dependency&gt;</span>
-        <span class="nt">&lt;dependency</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;groupId</span><span class="nt">&gt;</span>com.h2database<span class="nt">&lt;/groupId&gt;</span>
-            <span class="nt">&lt;artifactId</span><span class="nt">&gt;</span>h2<span class="nt">&lt;/artifactId&gt;</span>
-            <span class="nt">&lt;scope</span><span class="nt">&gt;</span>runtime<span class="nt">&lt;/scope&gt;</span>
+        <span class="nt">&lt;dependency&gt;</span>
+            <span class="nt">&lt;groupId&gt;</span>com.h2database<span class="nt">&lt;/groupId&gt;</span>
+            <span class="nt">&lt;artifactId&gt;</span>h2<span class="nt">&lt;/artifactId&gt;</span>
+            <span class="nt">&lt;scope&gt;</span>runtime<span class="nt">&lt;/scope&gt;</span>
         <span class="nt">&lt;/dependency&gt;</span>
 
 </code></pre></td></tr></table>
@@ -3579,7 +3579,7 @@ spring.datasource.generate-unique-name=false
 <td class="lntd">
 <pre class="chroma"><code class="language-schema.sql" data-lang="schema.sql"><span class="k">create</span> <span class="k">table</span> <span class="nf">greeting_table</span> <span class="p">(</span>
   <span class="n">message</span> <span class="kt">varchar</span><span class="p">(</span><span class="mi">256</span><span class="p">)</span> <span class="k">not</span> <span class="no">null</span>
-<span class="p">)</span><span class="p">;</span>
+<span class="p">);</span>
 </code></pre></td></tr></table>
 </div>
 </div><p>(注: <code>spring.datasource.generate-unique-name</code> 設定は Spring Boot 2.3.0 からデフォルト値が変わったため必要になったもので、リンク先 Git リポジトリには含まれていません(<a href="https://qiita.com/yukihane/items/2be37518f42525c8327d" target="_blank">参考</a>))</p>
@@ -3632,22 +3632,22 @@ spring.datasource.generate-unique-name=false
 </span><span class="lnt">17
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-pom.xml" data-lang="pom.xml">        <span class="nt">&lt;dependency</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;groupId</span><span class="nt">&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
-            <span class="nt">&lt;artifactId</span><span class="nt">&gt;</span>spring-boot-starter-web<span class="nt">&lt;/artifactId&gt;</span>
+<pre class="chroma"><code class="language-pom.xml" data-lang="pom.xml">        <span class="nt">&lt;dependency&gt;</span>
+            <span class="nt">&lt;groupId&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
+            <span class="nt">&lt;artifactId&gt;</span>spring-boot-starter-web<span class="nt">&lt;/artifactId&gt;</span>
         <span class="nt">&lt;/dependency&gt;</span>
-        <span class="nt">&lt;dependency</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;groupId</span><span class="nt">&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
-            <span class="nt">&lt;artifactId</span><span class="nt">&gt;</span>spring-boot-starter-jdbc<span class="nt">&lt;/artifactId&gt;</span>
+        <span class="nt">&lt;dependency&gt;</span>
+            <span class="nt">&lt;groupId&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
+            <span class="nt">&lt;artifactId&gt;</span>spring-boot-starter-jdbc<span class="nt">&lt;/artifactId&gt;</span>
         <span class="nt">&lt;/dependency&gt;</span>
-        <span class="nt">&lt;dependency</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;groupId</span><span class="nt">&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
-            <span class="nt">&lt;artifactId</span><span class="nt">&gt;</span>spring-boot-starter-security<span class="nt">&lt;/artifactId&gt;</span>
+        <span class="nt">&lt;dependency&gt;</span>
+            <span class="nt">&lt;groupId&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
+            <span class="nt">&lt;artifactId&gt;</span>spring-boot-starter-security<span class="nt">&lt;/artifactId&gt;</span>
         <span class="nt">&lt;/dependency&gt;</span>
-        <span class="nt">&lt;dependency</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;groupId</span><span class="nt">&gt;</span>com.h2database<span class="nt">&lt;/groupId&gt;</span>
-            <span class="nt">&lt;artifactId</span><span class="nt">&gt;</span>h2<span class="nt">&lt;/artifactId&gt;</span>
-            <span class="nt">&lt;scope</span><span class="nt">&gt;</span>runtime<span class="nt">&lt;/scope&gt;</span>
+        <span class="nt">&lt;dependency&gt;</span>
+            <span class="nt">&lt;groupId&gt;</span>com.h2database<span class="nt">&lt;/groupId&gt;</span>
+            <span class="nt">&lt;artifactId&gt;</span>h2<span class="nt">&lt;/artifactId&gt;</span>
+            <span class="nt">&lt;scope&gt;</span>runtime<span class="nt">&lt;/scope&gt;</span>
         <span class="nt">&lt;/dependency&gt;</span>
 </code></pre></td></tr></table>
 </div>
@@ -3719,9 +3719,9 @@ public class MyWebSecConfig extends WebSecurityConfigurerAdapter {
   <div class="toc__body">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#h2-console-が使える依存関係を追加してプロジェクトセットアップ-8113d7httpsgithubcomyukihanehello-javacommit8113d7bc552c11f3e1cf3d6e64fe97be922d2596">h2-console が使える依存関係を追加してプロジェクトセットアップ 8113d7</a></li>
-    <li><a href="#h2-console-を表示してみる-1b16dchttpsgithubcomyukihanehello-javacommit1b16dcc49ca9a83dd0a80b947800a63be0d39422">h2-console を表示してみる 1b16dc</a></li>
-    <li><a href="#spring-boot-starter-security-を追加してアクセスしてみる-61357fehttpsgithubcomyukihanehello-javacommit61357fe7316c4fca72090466d1cb66a874fcb055">spring-boot-starter-security を追加してアクセスしてみる 61357fe</a></li>
+    <li><a href="#h2-console-が使える依存関係を追加してプロジェクトセットアップ-8113d7httpsgithubcomyukihanehello-javacommit8113d7bc552c11f3e1cf3d6e64fe97be922d2596">h2-console が使える依存関係を追加してプロジェクトセットアップ <a href="https://github.com/yukihane/hello-java/commit/8113d7bc552c11f3e1cf3d6e64fe97be922d2596">8113d7</a></a></li>
+    <li><a href="#h2-console-を表示してみる-1b16dchttpsgithubcomyukihanehello-javacommit1b16dcc49ca9a83dd0a80b947800a63be0d39422">h2-console を表示してみる <a href="https://github.com/yukihane/hello-java/commit/1b16dcc49ca9a83dd0a80b947800a63be0d39422">1b16dc</a></a></li>
+    <li><a href="#spring-boot-starter-security-を追加してアクセスしてみる-61357fehttpsgithubcomyukihanehello-javacommit61357fe7316c4fca72090466d1cb66a874fcb055"><code>spring-boot-starter-security</code> を追加してアクセスしてみる <a href="https://github.com/yukihane/hello-java/commit/61357fe7316c4fca72090466d1cb66a874fcb055">61357fe</a></a></li>
   </ul>
 </nav>
   </div>
