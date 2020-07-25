@@ -7,12 +7,390 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Mon, 20 Jul 2020 17:59:29 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 25 Jul 2020 18:11:15 +0000</lastBuildDate>
     
         <atom:link href="https://yukihane.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     
+      
+      <item>
+        <title>GradleでSpring Bootプロジェクトを作成してSTS(Eclipse)でインポートする手順</title>
+        <link>https://yukihane.github.io/blog/202007/26/spring-boot-gradle-eclipse/</link>
+        <pubDate>Sat, 25 Jul 2020 18:11:15 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/blog/202007/26/spring-boot-gradle-eclipse/</guid>
+        <description>はじめに Spring Initializrを使ってGradle形式でプロジェクトを作成した場合、どうやってSTS(Eclipse)へインポートするのか逡</description>
+      </item>
+      
+      <item>
+        <title>UbuntuでdGPU/iGPUのデュアルモニタ設定</title>
+        <link>https://yukihane.github.io/docs/ubuntu/dual-monitor/</link>
+        <pubDate>Fri, 24 Jul 2020 02:17:53 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/docs/ubuntu/dual-monitor/</guid>
+        <description>1枚のNVIDIA GPUと、CPUの統合グラフィクス(iGPU)の2つのGPUにそれぞれモニタを接続してデュアルディスプレイ環境をセットアッ</description>
+      </item>
+      
+      <item>
+        <title>NASを自動マウント</title>
+        <link>https://yukihane.github.io/docs/ubuntu/nas/</link>
+        <pubDate>Fri, 24 Jul 2020 02:15:31 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/docs/ubuntu/nas/</guid>
+        <description>参考リンク Ubuntu 18.04: SMBクライアントのcifs-utilsをインストールする - Narrow Escape Ubuntu18.04でcifs mountが失敗する場合 - Qiita 設</description>
+      </item>
+      
+      <item>
+        <title>CentOS 7</title>
+        <link>https://yukihane.github.io/docs/linux/centos7/</link>
+        <pubDate>Fri, 24 Jul 2020 02:13:19 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/docs/linux/centos7/</guid>
+        <description>CentOS7について。 firewall 許可するポートを追加: sudo firewall-cmd --list-all sudo firewall-cmd --permanent --add-port=8080/tcp sudo firewall-cmd --reload firewallを停止し無効化する: sudo systemctl stop firewalld.service sudo systemctl disable firewalld.service</description>
+      </item>
+      
+      <item>
+        <title>Unix</title>
+        <link>https://yukihane.github.io/docs/linux/unix/</link>
+        <pubDate>Fri, 24 Jul 2020 01:51:44 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/docs/linux/unix/</guid>
+        <description>ログインシェル変更 さくらレンタルサーバのデフォルトログインシェルは`/bin/csh`なのでLinuxユーザにはちょっと馴染みがない… /etc/shells に利</description>
+      </item>
+      
+      <item>
+        <title>Angular</title>
+        <link>https://yukihane.github.io/docs/frontend/angular/</link>
+        <pubDate>Fri, 24 Jul 2020 01:49:16 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/docs/frontend/angular/</guid>
+        <description>参考 Angular2によるモダンWeb開発 TypeScriptを使った基本プログラミング データダウンロードページ 用語 コンポーネント(comp</description>
+      </item>
+      
+      <item>
+        <title>CORS</title>
+        <link>https://yukihane.github.io/docs/wildfly/cors/</link>
+        <pubDate>Fri, 24 Jul 2020 01:45:25 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/docs/wildfly/cors/</guid>
+        <description>RestyGwtを使用してWildFlyへクロスドメインのリクエストを投げたい場合の設定。 下記のURLあたりを参考に。 jboss - CORS: AngularJS Resteasy 3 + Wildfly - Stack Overflow</description>
+      </item>
+      
+      <item>
+        <title>Swagger</title>
+        <link>https://yukihane.github.io/docs/wildfly/swagger/</link>
+        <pubDate>Fri, 24 Jul 2020 01:42:56 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/docs/wildfly/swagger/</guid>
+        <description>WildFlyにはRestEasyが組み込まれているのでそれを前提に。 公式Wiki Swagger セットアップ pom.xml `swagger-jaxrs`を依存関係に</description>
+      </item>
+      
+      <item>
+        <title>JAAS</title>
+        <link>https://yukihane.github.io/docs/wildfly/jaas/</link>
+        <pubDate>Fri, 24 Jul 2020 01:16:09 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/docs/wildfly/jaas/</guid>
+        <description>https://github.com/yukihane/hello-rest-environment の hello-wildfly-rest にサンプルコードを置いている。 WildFly設定 standalone/configuration/standalone.xml Security subsystem configuration - WildFly 10 - Project Documentation Editor Authentication Modules - WildFly 10 - Project Documentation Editor Wildfly 8でJAAS - hatenob standalone/configuration/standalone.xml の security サブシステム設定部分に</description>
+      </item>
+      
+      <item>
+        <title>Wildfly Security</title>
+        <link>https://yukihane.github.io/docs/wildfly/wildfly-security/</link>
+        <pubDate>Fri, 24 Jul 2020 01:14:53 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/docs/wildfly/wildfly-security/</guid>
+        <description>Security-Realm と Security-Domain EAP6：http://www.natswell.com/techcolumn/2013/08/22/eap6%EF%BC%9A%E3</description>
+      </item>
+      
+      <item>
+        <title>Rust 勝手に FAQ</title>
+        <link>https://yukihane.github.io/docs/rust/rust-faq/</link>
+        <pubDate>Fri, 24 Jul 2020 01:08:11 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/docs/rust/rust-faq/</guid>
+        <description>自身の勉強中にまとめているページなので誤っている可能性も大きいです。 簡単に実行できる環境が欲しい Webブラウザ上で実行結果が確認できます: https://play.rust-lang.org/</description>
+      </item>
+      
+      <item>
+        <title>Rust学習メモ</title>
+        <link>https://yukihane.github.io/docs/rust/rust-memo/</link>
+        <pubDate>Fri, 24 Jul 2020 01:06:39 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/docs/rust/rust-memo/</guid>
+        <description>リンク Rust Playground https://imoz.jp/note/rust-functions.html[Rustは何が新しいのか（基本的な言語機能の紹介</description>
+      </item>
+      
+      <item>
+        <title>QML-rust</title>
+        <link>https://yukihane.github.io/docs/rust/qml-rust/</link>
+        <pubDate>Fri, 24 Jul 2020 00:48:19 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/docs/rust/qml-rust/</guid>
+        <description>https://github.com/White-Oak/qml-rust インストール リポジトリをcloneし、そのディレクトリに移動します。 git clone `https://github.com/White-Oak/qml-rust.git[`https://github.com/White-Oak/qml-rust.git] cd qml-rust サブモジュールを取得します。 git submodule init git submodule update build.rs をMinGW向けに</description>
+      </item>
+      
+      <item>
+        <title>MSYS2インストール</title>
+        <link>https://yukihane.github.io/docs/rust/msys2/</link>
+        <pubDate>Fri, 24 Jul 2020 00:46:39 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/docs/rust/msys2/</guid>
+        <description>RustでデバッグするためのGDBと、Qtコンパイル用環境をMSYS2上でセットアップします。 インストール オフィシャルページ http://www.msys2.org/ から64bit</description>
+      </item>
+      
+      <item>
+        <title>Rust環境セットアップ</title>
+        <link>https://yukihane.github.io/docs/rust/rust-setup/</link>
+        <pubDate>Fri, 24 Jul 2020 00:41:54 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/docs/rust/rust-setup/</guid>
+        <description>Windows インストール WinodowsにRustとEclipseベースIDEをインストールする手順。 資料 Rustのインストール およびここからたどれる</description>
+      </item>
+      
+      <item>
+        <title>Mistel Barocco</title>
+        <link>https://yukihane.github.io/docs/mistel-barocco/</link>
+        <pubDate>Fri, 24 Jul 2020 00:37:41 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/docs/mistel-barocco/</guid>
+        <description>Windows(Windows10) Windows10でUSキーボード設定を行う Windowsメニュー &amp;gt; 設定(ギアのアイコン) &amp;gt; 時刻と言語 &amp;gt; 地域と言語 &amp;gt; 日本語 &amp;gt; オプション &amp;gt; レ</description>
+      </item>
+      
+      <item>
+        <title>Minor Framework</title>
+        <link>https://yukihane.github.io/docs/java/minor-framework/</link>
+        <pubDate>Fri, 24 Jul 2020 00:36:09 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/docs/java/minor-framework/</guid>
+        <description>いわゆるオレオレフレームワークについて。 パターンについて (Java Servletコンテナを利用した)オレオレフレームワークパターン オレオレフレームワ</description>
+      </item>
+      
+      <item>
+        <title>Object to Object Mapper</title>
+        <link>https://yukihane.github.io/docs/java/object-to-object-mapper/</link>
+        <pubDate>Fri, 24 Jul 2020 00:34:25 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/docs/java/object-to-object-mapper/</guid>
+        <description>一覧 GitHubのstarが多い順に並べている。 Dozer MapStruct Orika Selma 上記以外: https://www.javacodegeeks.com/2013/10/java-object-to-object-mapper.html Dozerが最もメジャーであると思われるものの、開発が停滞している(※ 2017/04</description>
+      </item>
+      
+      <item>
+        <title>Commons Daemon</title>
+        <link>https://yukihane.github.io/docs/java/commons-daemon/</link>
+        <pubDate>Fri, 24 Jul 2020 00:33:01 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/docs/java/commons-daemon/</guid>
+        <description>http://commons.apache.org/proper/commons-daemon/procrun.html prunsrv, procrun とか、呼び方は色々？(厳密には指しているものが違うと思うが…)</description>
+      </item>
+      
+      <item>
+        <title>JPA Criteria Query</title>
+        <link>https://yukihane.github.io/docs/java/jpa-criteria-query/</link>
+        <pubDate>Thu, 23 Jul 2020 18:37:41 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/docs/java/jpa-criteria-query/</guid>
+        <description>https://docs.oracle.com/javaee/6/tutorial/doc/gjivm.html // CriteriaBuilder を使用したクエリ構築 // ここでは メールアドレス hello@example.co.jp を持つ Member の検索を行います // CriteriaBuilder インスタンスを生成します. final CriteriaBuilder cb = em.getCriteriaBuilder(); // CriteriaQuery インスタンスを生成し</description>
+      </item>
+      
+      <item>
+        <title>Maven Repository</title>
+        <link>https://yukihane.github.io/docs/java/maven-repository/</link>
+        <pubDate>Thu, 23 Jul 2020 18:36:13 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/docs/java/maven-repository/</guid>
+        <description>通常は リポジトリマネージャ(Sonatypeの Nexusなど)を使うのが便利で良いが、レンタルサーバではJavaを動作させられなかったりする</description>
+      </item>
+      
+      <item>
+        <title>Jigsaw</title>
+        <link>https://yukihane.github.io/docs/java/jigsaw/</link>
+        <pubDate>Thu, 23 Jul 2020 18:32:39 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/docs/java/jigsaw/</guid>
+        <description>参考リンク Webサイト Project Jigsaw: Quick Start Guide - OpenJDKのページ Java 9のモジュール機能「Project Jigsaw」の基本を紹介 (1/2)：CodeZ</description>
+      </item>
+      
+      <item>
+        <title>Bazel</title>
+        <link>https://yukihane.github.io/docs/java/bazel/</link>
+        <pubDate>Thu, 23 Jul 2020 18:30:32 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/docs/java/bazel/</guid>
+        <description>Bazelとは ビルドシステム。Ant, Mavenなどと同系統。 ビルド対象はJavaに限らない。 Google社内のJava/JavaScrip</description>
+      </item>
+      
+      <item>
+        <title>Java</title>
+        <link>https://yukihane.github.io/docs/java/java/</link>
+        <pubDate>Thu, 23 Jul 2020 17:19:26 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/docs/java/java/</guid>
+        <description>Mavenで差分コンパイルできない 常に [INFO] Changes detected - recompiling the module! というメッセージが出て全コンパイルが行われる事象。 http://stackoverflow.com/a/19653164/4506703 http://stackoverflow.com/a/17948010/4506703 false を設定することで、本来この機能に</description>
+      </item>
+      
+      <item>
+        <title>用語集</title>
+        <link>https://yukihane.github.io/docs/biz/term/</link>
+        <pubDate>Thu, 23 Jul 2020 17:16:55 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/docs/biz/term/</guid>
+        <description>CTIソリューション CTIとは Computer Telephony Integration の略。 コールセンターで利用するシステムのこと？</description>
+      </item>
+      
+      <item>
+        <title>フリーランス契約</title>
+        <link>https://yukihane.github.io/docs/biz/contract/</link>
+        <pubDate>Thu, 23 Jul 2020 17:13:25 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/docs/biz/contract/</guid>
+        <description>フリーランスで働く上での契約についての知識。 契約形態 請負契約と準委任契約、どっちで契約すればいいの？〜請負契約・準委任契約・労働者派遣契約の</description>
+      </item>
+      
+      <item>
+        <title>確定申告</title>
+        <link>https://yukihane.github.io/docs/biz/report/</link>
+        <pubDate>Thu, 23 Jul 2020 17:09:11 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/docs/biz/report/</guid>
+        <description>初めて青色申告、はやめにやっておくこと 確定申告に使うサービスの初期セットアップ 自分は当初http://www.yayoi-kk.co.jp/</description>
+      </item>
+      
+      <item>
+        <title>freee</title>
+        <link>https://yukihane.github.io/docs/biz/freee/</link>
+        <pubDate>Thu, 23 Jul 2020 17:07:53 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/docs/biz/freee/</guid>
+        <description>売掛金 未決済の取引を登録する・消し込む(売掛金・買掛金など) – freee ヘルプセンター</description>
+      </item>
+      
+      <item>
+        <title>Kubernetes</title>
+        <link>https://yukihane.github.io/docs/devops/kubernetes/</link>
+        <pubDate>Thu, 23 Jul 2020 17:03:23 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/docs/devops/kubernetes/</guid>
+        <description>Kubernetesとは？ Kubernetes とは(Red Hat社サイト) Linux コンテナを実行しているホストをまとめてクラスタ化できるということです。Kubern</description>
+      </item>
+      
+      <item>
+        <title>Docker</title>
+        <link>https://yukihane.github.io/docs/devops/docker/</link>
+        <pubDate>Thu, 23 Jul 2020 17:03:16 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/docs/devops/docker/</guid>
+        <description>取り敢えず実行したい docker run -it --rm centos:7 /bin/bash</description>
+      </item>
+      
+      <item>
+        <title>hugo</title>
+        <link>https://yukihane.github.io/docs/apps/hugo/</link>
+        <pubDate>Thu, 23 Jul 2020 17:01:48 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/docs/apps/hugo/</guid>
+        <description>AsciiDoc形式でblogを書くためにHugoをセットアップする。 Hugo自体はGo言語製、またAsciiDocの処理にはAsciido</description>
+      </item>
+      
+      <item>
+        <title>VS Code</title>
+        <link>https://yukihane.github.io/docs/apps/vscode/</link>
+        <pubDate>Thu, 23 Jul 2020 16:31:20 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/docs/apps/vscode/</guid>
+        <description>設定 開いたタブをそのままにする { &#34;workbench.editor.enablePreview&#34;: false }</description>
+      </item>
+      
+      <item>
+        <title>ラノゲメーカーMV</title>
+        <link>https://yukihane.github.io/docs/apps/visual-novel-maker/</link>
+        <pubDate>Thu, 23 Jul 2020 16:28:57 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/docs/apps/visual-novel-maker/</guid>
+        <description>リンク 基本情報 オフィシャルサイト オフィシャルのDL版 Steam メモ: ストア版(非Steam版)ではインストールできるのは1台(RPGツクールMVのみ</description>
+      </item>
+      
+      <item>
+        <title>Davinci Resolve</title>
+        <link>https://yukihane.github.io/docs/apps/davinci-resolve/</link>
+        <pubDate>Thu, 23 Jul 2020 16:26:52 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/docs/apps/davinci-resolve/</guid>
+        <description>録画フォーマット OBS Studioでオーディオをマルチトラックで録画する場合にはmkvを使うのがよさそう。 ただしそのままではDavinci Res</description>
+      </item>
+      
+      <item>
+        <title>Google Chrome</title>
+        <link>https://yukihane.github.io/docs/apps/google-chrome/</link>
+        <pubDate>Thu, 23 Jul 2020 16:22:28 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/docs/apps/google-chrome/</guid>
+        <description>インストールする機能拡張 octotree Quick Javascript Switcher uBlock Origin 検索エンジン設定 検索エンジン キーワード URL alc alc https://eow.alc.co.jp/search?q=%s Maven Central mvn https://search.maven.org/search?q=%s</description>
+      </item>
+      
+      <item>
+        <title>Firefox Webextension</title>
+        <link>https://yukihane.github.io/docs/frontend/firefox-webextension/</link>
+        <pubDate>Thu, 23 Jul 2020 15:59:39 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/docs/frontend/firefox-webextension/</guid>
+        <description>リンク パッケージ化とインストール - Mozilla | MDN アドオンを投稿する - Mozilla | MDN Developer Hub :: Add-ons for Firefox</description>
+      </item>
+      
+      <item>
+        <title>vue.js</title>
+        <link>https://yukihane.github.io/docs/frontend/vue/</link>
+        <pubDate>Thu, 23 Jul 2020 15:53:22 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/docs/frontend/vue/</guid>
+        <description>初歩的な疑問/TIPSなど htmlの書き下しを簡単に行う Emmetというプラグイン？がある。 VSCodeには標準で入っていた。 使い方はググろ</description>
+      </item>
+      
+      <item>
+        <title>フロントエンド基礎知識</title>
+        <link>https://yukihane.github.io/docs/frontend/js-fundamentals/</link>
+        <pubDate>Thu, 23 Jul 2020 15:38:25 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/docs/frontend/js-fundamentals/</guid>
+        <description>言語仕様 JavaScriptの「オブジェクト」 JavaScriptのオブジェクトは、カッコ {&amp;#8230;&amp;#8203;} で表される。 JavaScriptのオブジェクトは</description>
+      </item>
+      
+      <item>
+        <title>curl</title>
+        <link>https://yukihane.github.io/docs/apps/curl/</link>
+        <pubDate>Thu, 23 Jul 2020 15:32:22 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/docs/apps/curl/</guid>
+        <description>〜がしたい Basic認証 -u オプション。 curl -u user:password http://example.com HTTPステータスコード表示 -i オプションで出力にHTTPヘッダ情報を含められる。 curl -i http://example.com</description>
+      </item>
+      
+      <item>
+        <title>JavaプログラマのためのC#</title>
+        <link>https://yukihane.github.io/docs/csharp/</link>
+        <pubDate>Thu, 23 Jul 2020 15:27:19 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/docs/csharp/</guid>
+        <description>1文字目にJavaとは異なり大文字を使う場所 実は書く際にはIDEが補完してくれるのでさほど違和感は無く始められました。 問題はコード・リーディ</description>
+      </item>
+      
+      <item>
+        <title>JS覚え書き</title>
+        <link>https://yukihane.github.io/docs/frontend/js-memo/</link>
+        <pubDate>Thu, 23 Jul 2020 14:50:04 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/docs/frontend/js-memo/</guid>
+        <description>TypeScript ReturnType Redux reducer の 戻り値型として初出。 関数型を簡単に？定義するための構文だろうか。 公式サイトリンク JavaScript 角カッコ [] の戻り値 分割代入 関数の戻り値が配列で、</description>
+      </item>
+      
+      <item>
+        <title>IntellJ IDEA</title>
+        <link>https://yukihane.github.io/docs/intellij-idea/</link>
+        <pubDate>Thu, 23 Jul 2020 06:40:03 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/docs/intellij-idea/</guid>
+        <description>プラグインインストール Lombok MapStruct annotation processor 有効化 https://www.jetbrains.com/help/idea/annotation-processors-support.html</description>
+      </item>
       
       <item>
         <title>いつもGitブランチ運用でこまること、考慮すべきポイントのまとめ</title>
@@ -164,7 +542,7 @@
         <pubDate>Sat, 20 Jun 2020 08:16:28 +0000</pubDate>
         
         <guid>https://yukihane.github.io/blog/202006/20/spring-boot-thymeleaf-converts-id-to-entity/</guid>
-        <description>Spring Bootは[Spring Data Commons](https://docs.spring.io/spring-data/commons/docs</description>
+        <description>追記: 2020-07-24にリリースされた2.3.2, 2.2.9 でこの問題は修正されました。ただし、2.1.16では未修正のままのようでした。 Spring Bo</description>
       </item>
       
       <item>

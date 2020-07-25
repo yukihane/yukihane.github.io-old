@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Docs on 発火後忘失</title>
+    <link>https://yukihane.github.io/docs/</link>
+    <description>Recent content in Docs on 発火後忘失</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
+    <lastBuildDate>Fri, 24 Jul 2020 02:17:53 +0000</lastBuildDate>
+    
+        <atom:link href="https://yukihane.github.io/docs/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+      
+      <item>
+        <title>Ubuntu</title>
+        <link>https://yukihane.github.io/docs/ubuntu/</link>
+        <pubDate>Fri, 24 Jul 2020 02:14:29 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/docs/ubuntu/</guid>
+        <description></description>
+      </item>
+      
+      <item>
+        <title>Linux</title>
+        <link>https://yukihane.github.io/docs/linux/</link>
+        <pubDate>Fri, 24 Jul 2020 01:51:30 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/docs/linux/</guid>
+        <description></description>
+      </item>
+      
+      <item>
+        <title>WildFly</title>
+        <link>https://yukihane.github.io/docs/wildfly/</link>
+        <pubDate>Fri, 24 Jul 2020 01:09:21 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/docs/wildfly/</guid>
+        <description></description>
+      </item>
+      
+      <item>
+        <title>Rust</title>
+        <link>https://yukihane.github.io/docs/rust/</link>
+        <pubDate>Fri, 24 Jul 2020 00:42:44 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/docs/rust/</guid>
+        <description></description>
+      </item>
+      
+      <item>
+        <title>Mistel Barocco</title>
+        <link>https://yukihane.github.io/docs/mistel-barocco/</link>
+        <pubDate>Fri, 24 Jul 2020 00:37:41 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/docs/mistel-barocco/</guid>
+        <description>Windows(Windows10) Windows10でUSキーボード設定を行う Windowsメニュー &amp;gt; 設定(ギアのアイコン) &amp;gt; 時刻と言語 &amp;gt; 地域と言語 &amp;gt; 日本語 &amp;gt; オプション &amp;gt; レ</description>
+      </item>
+      
+      <item>
+        <title>Java</title>
+        <link>https://yukihane.github.io/docs/java/</link>
+        <pubDate>Thu, 23 Jul 2020 17:18:09 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/docs/java/</guid>
+        <description></description>
+      </item>
+      
+      <item>
+        <title>仕事</title>
+        <link>https://yukihane.github.io/docs/biz/</link>
+        <pubDate>Thu, 23 Jul 2020 17:06:52 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/docs/biz/</guid>
+        <description></description>
+      </item>
+      
+      <item>
+        <title>DevOps</title>
+        <link>https://yukihane.github.io/docs/devops/</link>
+        <pubDate>Thu, 23 Jul 2020 17:03:06 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/docs/devops/</guid>
+        <description></description>
+      </item>
+      
+      <item>
+        <title>Apps</title>
+        <link>https://yukihane.github.io/docs/apps/</link>
+        <pubDate>Thu, 23 Jul 2020 15:31:22 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/docs/apps/</guid>
+        <description></description>
+      </item>
+      
+      <item>
+        <title>JavaプログラマのためのC#</title>
+        <link>https://yukihane.github.io/docs/csharp/</link>
+        <pubDate>Thu, 23 Jul 2020 15:27:19 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/docs/csharp/</guid>
+        <description>1文字目にJavaとは異なり大文字を使う場所 実は書く際にはIDEが補完してくれるのでさほど違和感は無く始められました。 問題はコード・リーディ</description>
+      </item>
+      
+      <item>
+        <title>Frontend</title>
+        <link>https://yukihane.github.io/docs/frontend/</link>
+        <pubDate>Thu, 23 Jul 2020 14:46:07 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/docs/frontend/</guid>
+        <description></description>
+      </item>
+      
+      <item>
+        <title>IntellJ IDEA</title>
+        <link>https://yukihane.github.io/docs/intellij-idea/</link>
+        <pubDate>Thu, 23 Jul 2020 06:40:03 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/docs/intellij-idea/</guid>
+        <description>プラグインインストール Lombok MapStruct annotation processor 有効化 https://www.jetbrains.com/help/idea/annotation-processors-support.html</description>
+      </item>
+      
+    
+  </channel>
+</rss>

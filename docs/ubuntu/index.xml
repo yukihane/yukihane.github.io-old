@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ubuntu on 発火後忘失</title>
+    <link>https://yukihane.github.io/docs/ubuntu/</link>
+    <description>Recent content in Ubuntu on 発火後忘失</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
+    <lastBuildDate>Fri, 24 Jul 2020 02:14:29 +0000</lastBuildDate>
+    
+        <atom:link href="https://yukihane.github.io/docs/ubuntu/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+      
+      <item>
+        <title>UbuntuでdGPU/iGPUのデュアルモニタ設定</title>
+        <link>https://yukihane.github.io/docs/ubuntu/dual-monitor/</link>
+        <pubDate>Fri, 24 Jul 2020 02:17:53 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/docs/ubuntu/dual-monitor/</guid>
+        <description>1枚のNVIDIA GPUと、CPUの統合グラフィクス(iGPU)の2つのGPUにそれぞれモニタを接続してデュアルディスプレイ環境をセットアッ</description>
+      </item>
+      
+      <item>
+        <title>NASを自動マウント</title>
+        <link>https://yukihane.github.io/docs/ubuntu/nas/</link>
+        <pubDate>Fri, 24 Jul 2020 02:15:31 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/docs/ubuntu/nas/</guid>
+        <description>参考リンク Ubuntu 18.04: SMBクライアントのcifs-utilsをインストールする - Narrow Escape Ubuntu18.04でcifs mountが失敗する場合 - Qiita 設</description>
+      </item>
+      
+    
+  </channel>
+</rss>

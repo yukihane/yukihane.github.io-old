@@ -7,12 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Mon, 20 Jul 2020 17:59:29 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 25 Jul 2020 18:11:15 +0000</lastBuildDate>
     
         <atom:link href="https://yukihane.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     
     
     
+      
+      <item>
+        <title>GradleでSpring Bootプロジェクトを作成してSTS(Eclipse)でインポートする手順</title>
+        <link>https://yukihane.github.io/blog/202007/26/spring-boot-gradle-eclipse/</link>
+        <pubDate>Sat, 25 Jul 2020 18:11:15 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/blog/202007/26/spring-boot-gradle-eclipse/</guid>
+        <description>はじめに Spring Initializrを使ってGradle形式でプロジェクトを作成した場合、どうやってSTS(Eclipse)へインポートするのか逡</description>
+      </item>
       
       <item>
         <title>いつもGitブランチ運用でこまること、考慮すべきポイントのまとめ</title>
@@ -164,7 +173,7 @@
         <pubDate>Sat, 20 Jun 2020 08:16:28 +0000</pubDate>
         
         <guid>https://yukihane.github.io/blog/202006/20/spring-boot-thymeleaf-converts-id-to-entity/</guid>
-        <description>Spring Bootは[Spring Data Commons](https://docs.spring.io/spring-data/commons/docs</description>
+        <description>追記: 2020-07-24にリリースされた2.3.2, 2.2.9 でこの問題は修正されました。ただし、2.1.16では未修正のままのようでした。 Spring Bo</description>
       </item>
       
       <item>
