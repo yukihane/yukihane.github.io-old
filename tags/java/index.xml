@@ -7,12 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Tue, 14 Jul 2020 15:58:57 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 25 Jul 2020 23:42:57 +0000</lastBuildDate>
     
         <atom:link href="https://yukihane.github.io/tags/java/index.xml" rel="self" type="application/rss+xml" />
     
     
     
+      
+      <item>
+        <title>SWTのFindWindowはもはや存在しない</title>
+        <link>https://yukihane.github.io/blog/202007/26/swt-findwindowi-is-deprecated/</link>
+        <pubDate>Sat, 25 Jul 2020 23:42:57 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/blog/202007/26/swt-findwindowi-is-deprecated/</guid>
+        <description>元ネタ: 古い Eclipse の起動時に UnsatisfiedLinkError が発生する - スタック・オーバーフロー いにしえのJava世界では、Win32APIにアクセスするためにSWTを利用し</description>
+      </item>
       
       <item>
         <title>Gradleプラグイン/アノテーションプロセッシング調査</title>

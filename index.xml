@@ -7,12 +7,219 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Sat, 25 Jul 2020 18:11:15 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 26 Jan 2020 04:15:05 +0900</lastBuildDate>
     
         <atom:link href="https://yukihane.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     
+      
+      <item>
+        <title>Git</title>
+        <link>https://yukihane.github.io/docs/git/</link>
+        <pubDate>Sun, 26 Jul 2020 03:10:06 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/docs/git/</guid>
+        <description>オンラインマニュアル https://git-scm.com/docs password記憶 git config --global credential.helper &#39;cache --timeout=21600&#39; 21600秒(6時間)デーモンがパスワードを保持する。 単語単位diff git config --global alias.diffw &#34;diff --word-diff-regex=.&#34; 上記</description>
+      </item>
+      
+      <item>
+        <title>Ansible</title>
+        <link>https://yukihane.github.io/docs/ansible/</link>
+        <pubDate>Sun, 26 Jul 2020 03:08:10 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/docs/ansible/</guid>
+        <description>チュートリアル http://docs.ansible.com/ansible/intro_getting_started.html の通り実行しようとすると以下のエラーとなった。 ubuntu:~$ ansible all -m ping mama | UNREACHABLE! =&amp;gt; { &#34;changed&#34;: false, &#34;msg&#34;: &#34;Failed to connect to the host via ssh: Permission denied (publickey,gssapi-keyex,gssapi-with-mic,password).\r\n&#34;, &#34;unreachable&#34;: true } ubuntu:~$ ansible all -m ping --ask-pass SSH password: mama | FAILED! =&amp;gt;</description>
+      </item>
+      
+      <item>
+        <title>VirtualBox</title>
+        <link>https://yukihane.github.io/docs/virtualbox/</link>
+        <pubDate>Sun, 26 Jul 2020 03:07:00 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/docs/virtualbox/</guid>
+        <description>tips 仮想ハードディスクのUUID変更 仮想ハードディスクはVirtualBox上ではUUIDによって識別されています。 このため、仮想ハードディス</description>
+      </item>
+      
+      <item>
+        <title>Windows Python</title>
+        <link>https://yukihane.github.io/docs/python/windows-python/</link>
+        <pubDate>Sun, 26 Jul 2020 03:02:03 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/docs/python/windows-python/</guid>
+        <description>ChocolateyでインストールしたPython3の運用について。 proxy pip コマンドは環境変数 http_proxy , https_proxy を見ているので、プロキシ環境下ではこれらの設</description>
+      </item>
+      
+      <item>
+        <title>Python</title>
+        <link>https://yukihane.github.io/docs/python/python/</link>
+        <pubDate>Sun, 26 Jul 2020 02:59:15 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/docs/python/python/</guid>
+        <description>セットアップ pip pip を使い、非rootでインストールするには --user オプションを付ける。 このオプションをつけると ~/.local 以下にインストールされる。 ただ、 pip の</description>
+      </item>
+      
+      <item>
+        <title>バッチファイル</title>
+        <link>https://yukihane.github.io/docs/windows/batch/</link>
+        <pubDate>Sun, 26 Jul 2020 02:56:23 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/docs/windows/batch/</guid>
+        <description>エスケープ ^ でエスケープ。改行をエスケープする場合は文末に置けばよい。</description>
+      </item>
+      
+      <item>
+        <title>Chocolatey</title>
+        <link>https://yukihane.github.io/docs/windows/chocolatey/</link>
+        <pubDate>Sun, 26 Jul 2020 02:52:35 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/docs/windows/chocolatey/</guid>
+        <description>https://chocolatey.org/ インストール PowerShell プロファイル作成 プロファイルが存在しない状態でChocolateyインストールを行うと警告が出て気持ち悪いので、プロファイル</description>
+      </item>
+      
+      <item>
+        <title>Windows</title>
+        <link>https://yukihane.github.io/docs/windows/windows/</link>
+        <pubDate>Sun, 26 Jul 2020 02:50:26 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/docs/windows/windows/</guid>
+        <description>システムイメージ作成(Windows7) https://121ware.com/qasearch/1007/app/servlet/relatedqa?QID=012941 https://121ware.com/qasearch/1007/app/servlet/qadoc?QID=013667 コントロールパネル &amp;gt; バックアップの作成 &amp;gt; システムイメージの作成 ハードディスクに作成する場合は起動</description>
+      </item>
+      
+      <item>
+        <title>ドキュメンテーションツールメモ</title>
+        <link>https://yukihane.github.io/docs/documentation-tool/</link>
+        <pubDate>Sun, 26 Jul 2020 02:48:10 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/docs/documentation-tool/</guid>
+        <description>Sphinx Swagger Pandoc AsciiDoc入門 - Qiita https://azu.github.io/slide/individual/ 文書作成環境の比較 - TeX Wiki ドキュメントシステムはこれを使え2015年版 asciidoctor asciidocをPDFに変換してみた</description>
+      </item>
+      
+      <item>
+        <title>Eclipse Plugin</title>
+        <link>https://yukihane.github.io/docs/java/eclipse-plugin/</link>
+        <pubDate>Sun, 26 Jul 2020 02:46:12 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/docs/java/eclipse-plugin/</guid>
+        <description>Eclipse4 e4 RCP2.0 Eclipse 4 (e4) Tutorial Part 1 – The e4 Application Model - Qiita Eclipse4/RCP - Eclipsepedia Tycho Eclipse Plugin TychoとTycho用archetypeを用いた開発手順。 参考 Eclipse Pluginを簡単に作成する方</description>
+      </item>
+      
+      <item>
+        <title>Eclipse</title>
+        <link>https://yukihane.github.io/docs/java/eclipse/</link>
+        <pubDate>Sun, 26 Jul 2020 02:45:24 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/docs/java/eclipse/</guid>
+        <description>dropins ディレクトリ構成パターン 参考: The dropins folder and supported file layouts eclipse/ dropins/ org.eclipse.core.tools_1.4.0.200710121455.jar org.eclipse.releng.tools_3.3.0.v20070412/ plugin.xml tools.jar ... etc ... ... eclipse/ dropins/ eclipse/ features/ plugins/ eclipse/ dropins/ emf/ eclipse/ features/ plugins/ gef/ eclipse/ features/ plugins/ ... etc ... テンプレート変数 オフィシャルマニュアル</description>
+      </item>
+      
+      <item>
+        <title>QuickJUnit</title>
+        <link>https://yukihane.github.io/docs/java/quick-junit/</link>
+        <pubDate>Sun, 26 Jul 2020 02:43:41 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/docs/java/quick-junit/</guid>
+        <description>マニュアルなど https://github.com/yukihane/quick-junit/blob/develop/ja/README.textile (英版にのみ書かれている情報も) http://web.archive.org/web/20080422234145/www.morijp.com/masarl/homepage3.nifty.com/masarl/article/eclipse/quick-junit.html モジュール 以下の種類のfeatureが`repository/target/reposit</description>
+      </item>
+      
+      <item>
+        <title>GWT用語集</title>
+        <link>https://yukihane.github.io/docs/gwt/gwt-term/</link>
+        <pubDate>Sun, 26 Jul 2020 02:36:40 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/docs/gwt/gwt-term/</guid>
+        <description>JsInterop こちらより: a spec &amp;amp; collection of Java annotations for interoperability with JavaScript. A way to “consume” existing JavaScript libraries as well as to export Java code for consumption from JS https://docs.google.com/document/d/10fmlEYIHcyead_4R1S5wKGs1t2I7Fnp_PaNaa7XTEk0/edit?usp=sharing ERRAI 4 AND JSINTEROP BEST PRACTICES - Erraiに特化した話でなく基礎の説</description>
+      </item>
+      
+      <item>
+        <title>GwtCon2017</title>
+        <link>https://yukihane.github.io/docs/gwt/gwtcon2017/</link>
+        <pubDate>Sun, 26 Jul 2020 02:34:19 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/docs/gwt/gwtcon2017/</guid>
+        <description>スライド要旨 GwtCon2017のスライドを簡単にまとめます。 Present and Future of GWT from a developer perspective 既に陳腐化した(使うべきでない)GWT要素技術の紹介。代替方</description>
+      </item>
+      
+      <item>
+        <title>GWTコンパイル時間増大問題</title>
+        <link>https://yukihane.github.io/docs/gwt/gwt-compilation-time/</link>
+        <pubDate>Sun, 26 Jul 2020 02:22:47 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/docs/gwt/gwt-compilation-time/</guid>
+        <description>問題解説 GWTアプリケーションの規模が大きくなると、コンパイル時間が非常に長くかかってしまうようになる問題。 非常に長くかかる、というのは、自</description>
+      </item>
+      
+      <item>
+        <title>GXT</title>
+        <link>https://yukihane.github.io/docs/gwt/gxt/</link>
+        <pubDate>Sun, 26 Jul 2020 02:19:25 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/docs/gwt/gxt/</guid>
+        <description>オフィシャルサイト GXT3 GXT4 GXTのマニュアルのURLはこれまで頻繁に変わってきたので、上記のリンクもいつの間にか切れている可能性もある。 またSe</description>
+      </item>
+      
+      <item>
+        <title>GWT</title>
+        <link>https://yukihane.github.io/docs/gwt/gwt/</link>
+        <pubDate>Sun, 26 Jul 2020 02:07:09 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/docs/gwt/gwt/</guid>
+        <description>プロジェクトのセットアップ 手順 Mavenを用い、次のコマンドで pom.xml を生成する。 mvn archetype:generate \ -DarchetypeGroupId=net.ltgt.gwt.archetypes \ -DarchetypeVersion=2017.10.20 \ -DarchetypeArtifactId=modular-webapp 備考 オフィシャルサイトにはAntでのセットアップ</description>
+      </item>
+      
+      <item>
+        <title>シェルプログラミング</title>
+        <link>https://yukihane.github.io/docs/shell-programming/</link>
+        <pubDate>Sun, 26 Jul 2020 02:05:07 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/docs/shell-programming/</guid>
+        <description>安全な一時ファイルの作成と削除の方法 - 拡張 POSIX シェルスクリプト Advent Calendar 2013 - ダメ出し Blog</description>
+      </item>
+      
+      <item>
+        <title>Ubuntuその他設定</title>
+        <link>https://yukihane.github.io/docs/ubuntu/ubuntu-misc/</link>
+        <pubDate>Sun, 26 Jul 2020 02:03:01 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/docs/ubuntu/ubuntu-misc/</guid>
+        <description>Ubuntu18.04で入力ソース切り替え(日本語/英語切り替え)を Shift+Spaceに変更する 設定画面からShift+Spaceに変更</description>
+      </item>
+      
+      <item>
+        <title>gromit-mpx</title>
+        <link>https://yukihane.github.io/docs/ubuntu/gromit-mpx/</link>
+        <pubDate>Sun, 26 Jul 2020 02:01:32 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/docs/ubuntu/gromit-mpx/</guid>
+        <description>プレゼンテーションツール。 https://github.com/bk138/gromit-mpx sudo apt install cmake libgtk-3-dev libappindicator3-dev cmake -DCMAKE_INSTALL_PREFIX=$HOME/local make make install</description>
+      </item>
+      
+      <item>
+        <title>UbuntuでKindle for PCを使う</title>
+        <link>https://yukihane.github.io/docs/ubuntu/kindle-for-pc/</link>
+        <pubDate>Sun, 26 Jul 2020 01:57:49 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/docs/ubuntu/kindle-for-pc/</guid>
+        <description>書きかけのページです。次のリンク先が参考になります。 https://qiita.com/giwagiwa/items/d2e447af5225c1ce9800 Ubuntu16.04上で、PlayOnLinxで管理されたWine環境でKindle</description>
+      </item>
+      
+      <item>
+        <title>Ubuntu18.04 ハイバネート(休止)</title>
+        <link>https://yukihane.github.io/docs/ubuntu/hibernate/</link>
+        <pubDate>Sun, 26 Jul 2020 01:39:30 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/docs/ubuntu/hibernate/</guid>
+        <description>Ubuntu16.04 の頃には特に問題なくハイバネートできていたがそれ以降のバージョンでうまくいかない/設定方法がわからない、という記事をよく見かけます。 自分も</description>
+      </item>
+      
+      <item>
+        <title>SWTのFindWindowはもはや存在しない</title>
+        <link>https://yukihane.github.io/blog/202007/26/swt-findwindowi-is-deprecated/</link>
+        <pubDate>Sat, 25 Jul 2020 23:42:57 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/blog/202007/26/swt-findwindowi-is-deprecated/</guid>
+        <description>元ネタ: 古い Eclipse の起動時に UnsatisfiedLinkError が発生する - スタック・オーバーフロー いにしえのJava世界では、Win32APIにアクセスするためにSWTを利用し</description>
+      </item>
       
       <item>
         <title>GradleでSpring Bootプロジェクトを作成してSTS(Eclipse)でインポートする手順</title>
