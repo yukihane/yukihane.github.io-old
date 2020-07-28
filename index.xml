@@ -15,6 +15,15 @@
     
       
       <item>
+        <title>LombokとMapStructをEclipseで併用しようとした際の不具合がMapStruct1.4.0で解消されていた</title>
+        <link>https://yukihane.github.io/blog/202007/28/lombok-and-mapstruct-problem-is-fixed/</link>
+        <pubDate>Tue, 28 Jul 2020 12:06:03 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/blog/202007/28/lombok-and-mapstruct-problem-is-fixed/</guid>
+        <description>これまで、LombokとMapStructを併用しようとした場合、そのままだと不具合(MapStructのアノテーションプロセッシングが動作</description>
+      </item>
+      
+      <item>
         <title>Git</title>
         <link>https://yukihane.github.io/docs/git/</link>
         <pubDate>Sun, 26 Jul 2020 03:10:06 +0000</pubDate>
