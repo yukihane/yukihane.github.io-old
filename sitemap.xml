@@ -418,6 +418,26 @@
   </url>
   
   <url>
+    <loc>https://yukihane.github.io/blog/202007/21/hello-oidc-with-keycloak/</loc>
+    <lastmod>2020-07-20T18:54:23+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yukihane.github.io/tags/oauth/</loc>
+    <lastmod>2020-07-20T18:54:23+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yukihane.github.io/tags/oidc/</loc>
+    <lastmod>2020-07-20T18:54:23+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yukihane.github.io/tags/spring-security/</loc>
+    <lastmod>2020-07-20T18:54:23+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://yukihane.github.io/tags/git/</loc>
     <lastmod>2020-07-20T17:59:29+00:00</lastmod>
   </url>
@@ -429,11 +449,6 @@
   
   <url>
     <loc>https://yukihane.github.io/blog/202007/20/spring-security-oauth-2.0-client/</loc>
-    <lastmod>2020-07-20T06:36:51+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://yukihane.github.io/tags/spring-security/</loc>
     <lastmod>2020-07-20T06:36:51+00:00</lastmod>
   </url>
   
@@ -450,11 +465,6 @@
   <url>
     <loc>https://yukihane.github.io/blog/202007/19/use-git-pull-ff-only/</loc>
     <lastmod>2020-07-19T06:47:48+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://yukihane.github.io/tags/oauth/</loc>
-    <lastmod>2020-07-19T06:10:14+00:00</lastmod>
   </url>
   
   <url>

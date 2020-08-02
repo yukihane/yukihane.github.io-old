@@ -24,6 +24,15 @@
       </item>
       
       <item>
+        <title>KeycloakをIdPにしてSpring Security OAuth 2.0 Login/Client を試してみる</title>
+        <link>https://yukihane.github.io/blog/202007/21/hello-oidc-with-keycloak/</link>
+        <pubDate>Mon, 20 Jul 2020 18:54:23 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/blog/202007/21/hello-oidc-with-keycloak/</guid>
+        <description>はじめに Spring Boot で Spring Security OAuth 2.0 Login / Client を利用する手順をまとめます。 また、認可サーバ(IdP)にはローカルで立てたKeycloakを用いますのでそちらの</description>
+      </item>
+      
+      <item>
         <title>Spring Security OAuth 2.0 Client の auto-configuration</title>
         <link>https://yukihane.github.io/blog/202007/20/spring-security-oauth-2.0-client/</link>
         <pubDate>Mon, 20 Jul 2020 06:36:51 +0000</pubDate>
