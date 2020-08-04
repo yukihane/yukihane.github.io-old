@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Spring Boot 2.1 でテスト時 @Bean を挿げ替えたかった – 発火後忘失</title>
+    <title>Spring Security OAuth 2.0 Login を自動テストする – 発火後忘失</title>
     
 
 
@@ -970,19 +970,19 @@
 
     <meta name="description" content="" />
 <meta name="keywords" content="">
-<meta name="created" content="2019-05-31T20:14:41&#43;0000">
-<meta name="modified" content="2019-05-31T20:14:41&#43;0000">
+<meta name="created" content="2020-08-04T21:39:37&#43;0000">
+<meta name="modified" content="2020-08-04T21:39:37&#43;0000">
 
 
 <meta property="og:site_name" content="発火後忘失">
-<meta property="og:title" content="Spring Boot 2.1 でテスト時 @Bean を挿げ替えたかった">
-<meta property="og:url" content="https://yukihane.github.io/blog/201905/31/spring-boot-bean-on-testing/">
+<meta property="og:title" content="Spring Security OAuth 2.0 Login を自動テストする">
+<meta property="og:url" content="https://yukihane.github.io/blog/202008/05/spring-boot-oidc-testing/">
 <meta property="og:type" content="article">
 
 <meta name="generator" content="Hugo 0.74.1" />
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="theme-color" content="#ffffff">
-<link rel="canonical" href="https://yukihane.github.io/blog/201905/31/spring-boot-bean-on-testing/">
+<link rel="canonical" href="https://yukihane.github.io/blog/202008/05/spring-boot-oidc-testing/">
 <link rel="manifest" href="/manifest.json">
 
   <link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
@@ -1006,12 +1006,12 @@
   {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "headline": "Spring Boot 2.1 でテスト時 @Bean を挿げ替えたかった",
-    "datePublished": "2019-05-31T20:14:41Z",
-    "dateModified": "2019-05-31T20:14:41Z",
-    "url" : "https://yukihane.github.io/blog/201905/31/spring-boot-bean-on-testing/",
-    "description": "動機 ユニットテスト実行時に java.time.Clock を挿げ替えてストップ・ザ・ワールド(GC的な意味でなくジョジョ的な意味で)したかった。 考え方/方針 @Configuration で @Bean を定義し",
-    "keywords": ["spring-boot"],
+    "headline": "Spring Security OAuth 2.0 Login を自動テストする",
+    "datePublished": "2020-08-04T21:39:37Z",
+    "dateModified": "2020-08-04T21:39:37Z",
+    "url" : "https://yukihane.github.io/blog/202008/05/spring-boot-oidc-testing/",
+    "description": "KeycloakをIdPにしてSpring Security OAuth 2.0 Login/Client を試してみる で作成したプログラムの自動テスト方法です。 今回のコードも前回と同じく次のディレ",
+    "keywords": ["spring-boot","spring-security","oauth","oidc"],
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": "https://yukihane.github.io"
@@ -1052,7 +1052,7 @@
     <div class="menu">
   <h6 class="menu__label">
     
-      Spring Boot 2.1 でテスト時 @Bean を挿げ替えたかった
+      Spring Security OAuth 2.0 Login を自動テストする
     
   </h6>
   <ul>
@@ -1074,9 +1074,9 @@
   
   
   
-  <li class="">
+  <li class="active">
     <a href="https://yukihane.github.io/blog/202008/05/spring-boot-oidc-testing/"
-      class="menu__title ">Spring Security OAuth 2.0 Login を自動テストする</a>
+      class="menu__title active">Spring Security OAuth 2.0 Login を自動テストする</a>
   </li>
   
 
@@ -2684,9 +2684,9 @@
   
   
   
-  <li class="active">
+  <li class="">
     <a href="https://yukihane.github.io/blog/201905/31/spring-boot-bean-on-testing/"
-      class="menu__title active">Spring Boot 2.1 でテスト時 @Bean を挿げ替えたかった</a>
+      class="menu__title ">Spring Boot 2.1 でテスト時 @Bean を挿げ替えたかった</a>
   </li>
   
 
@@ -3625,7 +3625,7 @@
   
   <li  class="is-active" >
     
-      <span>Spring Boot 2.1 でテスト時 @Bean を挿げ替えたかった</span>
+      <span>Spring Security OAuth 2.0 Login を自動テストする</span>
     
   </li>
   
@@ -3649,75 +3649,99 @@
       <div class="single" data-display="block">
   
     <div class="single__title">
-      Spring Boot 2.1 でテスト時 @Bean を挿げ替えたかった
+      Spring Security OAuth 2.0 Login を自動テストする
     </div>
     <div class="single__meta">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M4 4H20V8H4z" opacity=".3"/><path d="M6 1H8V5H6zM16 1H18V5H16z"/><path d="M19,3H5C3.9,3,3,3.9,3,5v14c0,1.1,0.9,2,2,2h14c1.1,0,2-0.9,2-2V5C21,3.9,20.1,3,19,3z M19,19H5V9h14V19z M19,7H5V5h14V7z"/></svg><time title="Written At">2019-05-31 </time> &nbsp;&nbsp; <svg fill="#000000" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16"><path fill="currentColor" d="M 9 1 L 9 3 L 15 3 L 15 1 L 9 1 z M 18.958984 2.7929688 L 17.666016 4.3183594 L 20.615234 6.8183594 L 21.908203 5.2929688 L 18.958984 2.7929688 z M 12 4 C 7.0225467 4 3 8.0225467 3 13 C 3 17.977453 7.0225467 22 12 22 C 16.977453 22 21 17.977453 21 13 C 21 8.0225467 16.977453 4 12 4 z M 12 6 C 15.910547 6 19 9.0894533 19 13 C 19 16.910547 15.910547 20 12 20 C 8.0894533 20 5 16.910547 5 13 C 5 9.0894533 8.0894533 6 12 6 z M 11 8 L 11 14 L 13 14 L 13 8 L 11 8 z"/></svg> <span title="Reading Time"> 2 min read</span>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M4 4H20V8H4z" opacity=".3"/><path d="M6 1H8V5H6zM16 1H18V5H16z"/><path d="M19,3H5C3.9,3,3,3.9,3,5v14c0,1.1,0.9,2,2,2h14c1.1,0,2-0.9,2-2V5C21,3.9,20.1,3,19,3z M19,19H5V9h14V19z M19,7H5V5h14V7z"/></svg><time title="Written At">2020-08-04 </time> &nbsp;&nbsp; <svg fill="#000000" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16"><path fill="currentColor" d="M 9 1 L 9 3 L 15 3 L 15 1 L 9 1 z M 18.958984 2.7929688 L 17.666016 4.3183594 L 20.615234 6.8183594 L 21.908203 5.2929688 L 18.958984 2.7929688 z M 12 4 C 7.0225467 4 3 8.0225467 3 13 C 3 17.977453 7.0225467 22 12 22 C 16.977453 22 21 17.977453 21 13 C 21 8.0225467 16.977453 4 12 4 z M 12 6 C 15.910547 6 19 9.0894533 19 13 C 19 16.910547 15.910547 20 12 20 C 8.0894533 20 5 16.910547 5 13 C 5 9.0894533 8.0894533 6 12 6 z M 11 8 L 11 14 L 13 14 L 13 8 L 11 8 z"/></svg> <span title="Reading Time"> 2 min read</span>
     </div>
   
 
   <article class="single__contents" data-dir="ltr">
-    <h1 id="動機">動機</h1>
-<p>ユニットテスト実行時に <a href="https://docs.oracle.com/javase/jp/11/docs/api/java.base/java/time/Clock.html" target="_blank">java.time.Clock</a> を挿げ替えてストップ・ザ・ワールド(<a href="https://ja.wikipedia.org/wiki/%E3%82%AC%E3%83%99%E3%83%BC%E3%82%B8%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3" target="_blank">GC</a>的な意味でなく<a href="https://dic.nicovideo.jp/a/%E3%82%B6%E3%83%BB%E3%83%AF%E3%83%BC%E3%83%AB%E3%83%89" target="_blank">ジョジョ</a>的な意味で)したかった。</p>
-<h1 id="考え方方針">考え方/方針</h1>
-<p><code>@Configuration</code> で <code>@Bean</code> を定義して <code>Clock</code> をインジェクションできるようにし、実装ではそれを用いる。</p>
-<p>テストコードでは <a href="https://docs.spring.io/spring-boot/docs/2.1.5.RELEASE/reference/html/boot-features-testing.html#boot-features-testing-spring-boot-applications-detecting-config" target="_blank">@TestConfiguration</a> で上で定義した <code>@Bean</code> をオーバライドしてストップ・ザ・ワールド用<code>Clock</code>を供給する。</p>
-<p>少し迷う点としては、現時点(バージョン 2.1.5)のリファレンスには <code>@TestConfiguration</code> をテストクラスの static inner クラスとして作っておけば優先的に有効化されるように書かれているが、実際はエラーになる。</p>
-<p><a href="https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-2.1-Release-Notes#bean-overriding" target="_blank"><code>2.1.0</code> よりデフォルトでは bean オーバーライドが許可されなくなった</a>ためだろう。</p>
-<p>対応としては、</p>
+    <div class="paragraph">
+<p><a href="/blog/202007/21/hello-oidc-with-keycloak/">KeycloakをIdPにしてSpring Security OAuth 2.0 Login/Client を試してみる</a> で作成したプログラムの自動テスト方法です。</p>
+</div>
+<div class="paragraph">
+<p>今回のコードも前回と同じく次のディレクトリにあります:</p>
+</div>
+<div class="ulist">
 <ul>
-<li>プロパティ<code>spring.main.allow-bean-definition-overriding</code>を<code>true</code>に設定することでオーバライドを許可する</li>
-<li>テストの bean 供給メソッドに<code>@Primary</code>を付与し優先的に用いるようにする
-<ul>
-<li>この際メソッド名は production の供給メソッドと被らないようにしなければならないようだった</li>
-</ul>
+<li>
+<p><a href="https://github.com/yukihane/hello-java/tree/master/spring/oidc-example" class="bare">https://github.com/yukihane/hello-java/tree/master/spring/oidc-example</a></p>
 </li>
 </ul>
-<p>が考えられたが、今回は後者を採用した。</p>
-<h1 id="サンプルコード">サンプルコード</h1>
-<p><code>src/main/java/../ClockConfig.java</code>:</p>
-<pre><code>@Configuration
-public class ClockConfig {
-    @Bean
-    public Clock clock() {
-        return Clock.systemDefaultZone();
-    }
-}
-</code></pre>
-<p><code>src/test/java/../ClockTest.java</code>:</p>
-<pre><code>@SpringBootTest(webEnvironment = WebEnvironment.NONE)
-public class ClockTest {
+</div>
+<div class="paragraph">
+<p>まず結論なのですが、リファレンスに説明がありますのでここを参照しましょう、ということになります:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://docs.spring.io/spring-security/site/docs/5.3.3.RELEASE/reference/html5/#testing-oauth2-client">Testing OAuth 2.0 Clients</a> - 19.2.2. SecurityMockMvcRequestPostProcessors</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>実際のコードがこちらです。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-java" data-lang="java">@WebMvcTest
+class HelloControllerTest {
 
-    private static final ZoneId TOKYO = ZoneId.of(&quot;Asia/Tokyo&quot;);
+    @Autowired
+    ClientRegistrationRepository clientRegistrationRepository;
+
+    /**
+     * 未ログイン状態の場合、IdPへリダイレクトする。
+     */
+    @Test
+    public void 未ログイン状態(@Autowired final MockMvc mvc) throws Exception {
+        mvc.perform(get("/")).andExpect(status().is3xxRedirection())
+            .andExpect(header().exists("Location"));
+    }
+
+    @Test
+    public void ログイン状態(@Autowired final MockMvc mvc) throws Exception {
+
+        // https://docs.spring.io/spring-security/site/docs/current/reference/html5/#testing-oauth2-client
+        mvc.perform(
+            get("/")
+                .with(oidcLogin()
+                    .clientRegistration((this.clientRegistrationRepository.findByRegistrationId("myspring")))
+
+                ))
+            .andExpect(status().isOk());
+    }
 
     @TestConfiguration
-    static class TestDateTimeConfig {
+    static class AuthorizedClientConfig {
         @Bean
-        @Primary
-        public Clock clockMock() {
-            final LocalDate date = LocalDate.of(2010, 8, 15);
-            final Instant fixedInstant = date.atStartOfDay(TOKYO).toInstant();
-            final Clock clock = Clock.fixed(fixedInstant, TOKYO);
-
-            return clock;
+        OAuth2AuthorizedClientRepository authorizedClientRepository() {
+            return new HttpSessionOAuth2AuthorizedClientRepository();
         }
     }
 
-    @Autowired
-    private Clock clock;
-
-    @Test
-    public void stopTheWorld(){
-        final ZonedDateTime now = Instant.now(clock).atZone(TOKYO);
-        assertThat(now.getYear()).isEqualTo(2010);
-    }
-}
-</code></pre>
-<h1 id="参考リンク">参考リンク</h1>
-<ul>
-<li><a href="https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-testing.html#boot-features-testing-spring-boot-applications-detecting-config" target="_blank">46.3.2 Detecting Test Configuration - Spring Boot リファレンス</a></li>
-<li><a href="https://github.com/spring-projects/spring-framework/issues/22051" target="_blank">Add Annotation for bean overriding [SPR-17519] #22051</a></li>
-</ul>
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><code>spring-security-oauth2</code> (何回も書きますが現在利用すべき Spring Security OAuth 2.0 Client とは別のライブラリです)時代は、 <a href="https://docs.spring.io/spring-security/site/docs/5.3.3.RELEASE/reference/html5/#test-method-withmockuser"><code>@WithMockUser</code></a> や、 <a href="https://docs.spring.io/spring-security/site/docs/5.3.3.RELEASE/reference/html5/#test-method-withsecuritycontext"><code>@WithSecurityContext</code></a> を利用してモック認証ユーザを作成していましたが、現在のライブラリではそのようにアノテーションで設定する方針は採らないようです。</p>
+</div>
+<div class="quoteblock">
+<blockquote>
+I think we avoided annotation support for OIDC because it was not very easy for users to customize the OidcUser and OAuth2AuthenticationToken objects (the attributes are rich objects which cannot easily be modified by an annotation). Instead, we felt that user&#8217;s could set SecurityContextHolder directly for method support or use the oidcLogin support for MockMvc style testing.
+</blockquote>
+<div class="attribution">
+&#8212; , <a href="https://github.com/spring-projects/spring-security/pull/8461#issuecomment-624229723">spring-security-test @WithMockOidcuser gh-8459 #8461</a>
+</div>
+</div>
+<hr>
+<div class="paragraph">
+<p>続いて別の話なのですが、<a href="/blog/202007/21/hello-oidc-with-keycloak/">前回</a>、 <code>issuer-uri</code> だけ設定すれば他の設定が色々省略できて便利、と書きましたが、 <code>issuer-uri</code> を設定してしまうと(そして他の設定を省略すると) テスト開始時IdPへアクセスしに行こうとしてしまうようです。IdPに接続できないとテストが失敗します。</p>
+</div>
+<div class="paragraph">
+<p>これを避けるために、結局、 <code>authorization-uri</code> などは明記する、というところで落ち着きました。</p>
+</div>
 
   </article>
 </div>
@@ -3726,17 +3750,10 @@ public class ClockTest {
 <nav class="pagination-single">
   
     
-      <a href="https://yukihane.github.io/blog/201906/01/spring-boot-component-out-of-container/" title="Spring Bootで コンポーネント外からコンポーネントを取得したかった" class="pagination-single__left">
-        <div class="pagination-single__icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M19 11H7.83l4.88-4.88c.39-.39.39-1.03 0-1.42-.39-.39-1.02-.39-1.41 0l-6.59 6.59c-.39.39-.39 1.02 0 1.41l6.59 6.59c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L7.83 13H19c.55 0 1-.45 1-1s-.45-1-1-1z"/></svg>
-        </div>
-        <div class="pagination-single__right-title">Spring Bootで コンポーネント外からコンポーネントを取得したかった</div>
-      </a>
-    
     <div class="grow"></div>
     
-      <a href="https://yukihane.github.io/blog/201905/21/spring-boog-json-convert/" title="text/plain で JSON を投げつけてくるヤツに対処する" class="pagination-single__right">
-        <div class="pagination-single__left-title">text/plain で JSON を投げつけてくるヤツに対処する</div>
+      <a href="https://yukihane.github.io/blog/202007/28/lombok-and-mapstruct-problem-is-fixed/" title="LombokとMapStructをEclipseで併用しようとした際の不具合がMapStruct1.4.0で解消されていた" class="pagination-single__right">
+        <div class="pagination-single__left-title">LombokとMapStructをEclipseで併用しようとした際の不具合がMapStruct1.4.0で解消されていた</div>
         <div class="pagination-single__icon">
           <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M5 13h11.17l-4.88 4.88c-.39.39-.39 1.03 0 1.42.39.39 1.02.39 1.41 0l6.59-6.59c.39-.39.39-1.02 0-1.41l-6.58-6.6c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41L16.17 11H5c-.55 0-1 .45-1 1s.45 1 1 1z"/></svg>
         </div>
@@ -3753,7 +3770,7 @@ public class ClockTest {
         <div class="toc">
   <h6 class="toc__label">What&#39;s on this Page</h6>
   <div class="toc__body">
-    <nav id="TableOfContents"></nav>
+    
   </div>
 </div>
       

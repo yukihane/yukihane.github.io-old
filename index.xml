@@ -15,6 +15,15 @@
     
       
       <item>
+        <title>Spring Security OAuth 2.0 Login を自動テストする</title>
+        <link>https://yukihane.github.io/blog/202008/05/spring-boot-oidc-testing/</link>
+        <pubDate>Tue, 04 Aug 2020 21:39:37 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/blog/202008/05/spring-boot-oidc-testing/</guid>
+        <description>KeycloakをIdPにしてSpring Security OAuth 2.0 Login/Client を試してみる で作成したプログラムの自動テスト方法です。 今回のコードも前回と同じく次のディレ</description>
+      </item>
+      
+      <item>
         <title>LombokとMapStructをEclipseで併用しようとした際の不具合がMapStruct1.4.0で解消されていた</title>
         <link>https://yukihane.github.io/blog/202007/28/lombok-and-mapstruct-problem-is-fixed/</link>
         <pubDate>Tue, 28 Jul 2020 12:06:03 +0000</pubDate>

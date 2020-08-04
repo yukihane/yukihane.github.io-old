@@ -7,12 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Sat, 25 Jul 2020 18:11:15 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 04 Aug 2020 21:39:37 +0000</lastBuildDate>
     
         <atom:link href="https://yukihane.github.io/tags/spring-boot/index.xml" rel="self" type="application/rss+xml" />
     
     
     
+      
+      <item>
+        <title>Spring Security OAuth 2.0 Login を自動テストする</title>
+        <link>https://yukihane.github.io/blog/202008/05/spring-boot-oidc-testing/</link>
+        <pubDate>Tue, 04 Aug 2020 21:39:37 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/blog/202008/05/spring-boot-oidc-testing/</guid>
+        <description>KeycloakをIdPにしてSpring Security OAuth 2.0 Login/Client を試してみる で作成したプログラムの自動テスト方法です。 今回のコードも前回と同じく次のディレ</description>
+      </item>
       
       <item>
         <title>GradleでSpring Bootプロジェクトを作成してSTS(Eclipse)でインポートする手順</title>
