@@ -15,6 +15,15 @@
     
       
       <item>
+        <title>ランダム文字列URL生成に関するメモ</title>
+        <link>https://yukihane.github.io/blog/202008/15/capability-url/</link>
+        <pubDate>Sat, 15 Aug 2020 10:26:40 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/blog/202008/15/capability-url/</guid>
+        <description>推測されないような文字列を動的に生成しURLに利用できるような仕組みを調べていますが、その調査メモです。 ちょうど私が調べている時期と重なって</description>
+      </item>
+      
+      <item>
         <title>Spring Security OAuth 2.0 Login を自動テストする</title>
         <link>https://yukihane.github.io/blog/202008/05/spring-boot-oidc-testing/</link>
         <pubDate>Tue, 04 Aug 2020 21:39:37 +0000</pubDate>
