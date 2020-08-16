@@ -4,7 +4,17 @@
   
   <url>
     <loc>https://yukihane.github.io/blog/</loc>
-    <lastmod>2020-08-15T10:26:40+00:00</lastmod>
+    <lastmod>2020-08-16T14:20:16+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yukihane.github.io/tags/gradle/</loc>
+    <lastmod>2020-08-16T14:20:16+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yukihane.github.io/blog/202008/16/gradle-test-not-working/</loc>
+    <lastmod>2020-08-16T14:20:16+00:00</lastmod>
   </url>
   
   <url>
@@ -500,11 +510,6 @@
   <url>
     <loc>https://yukihane.github.io/blog/202007/15/history-of-spring-oauth2-libraries/</loc>
     <lastmod>2020-07-14T23:47:11+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://yukihane.github.io/tags/gradle/</loc>
-    <lastmod>2020-07-14T15:58:57+00:00</lastmod>
   </url>
   
   <url>
