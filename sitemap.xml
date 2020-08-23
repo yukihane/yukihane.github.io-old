@@ -4,7 +4,22 @@
   
   <url>
     <loc>https://yukihane.github.io/blog/</loc>
-    <lastmod>2020-08-23T05:09:07+00:00</lastmod>
+    <lastmod>2020-08-23T17:24:37+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yukihane.github.io/tags/rest/</loc>
+    <lastmod>2020-08-23T17:24:37+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yukihane.github.io/blog/202008/24/rest-path-or-query/</loc>
+    <lastmod>2020-08-23T17:24:37+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yukihane.github.io/tags/web/</loc>
+    <lastmod>2020-08-23T17:24:37+00:00</lastmod>
   </url>
   
   <url>
@@ -55,11 +70,6 @@
   <url>
     <loc>https://yukihane.github.io/blog/202008/16/gradle-test-not-working/</loc>
     <lastmod>2020-08-16T14:20:16+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://yukihane.github.io/tags/web/</loc>
-    <lastmod>2020-08-15T10:26:40+00:00</lastmod>
   </url>
   
   <url>
