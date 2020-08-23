@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>lombok on 発火後忘失</title>
+    <link>https://yukihane.github.io/tags/lombok/</link>
+    <description>Recent content in lombok on 発火後忘失</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
+    <lastBuildDate>Sun, 23 Aug 2020 03:23:31 +0000</lastBuildDate>
+    
+        <atom:link href="https://yukihane.github.io/tags/lombok/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+      
+      <item>
+        <title>Spring BootプロジェクトにLombokとMapStructを追加する(Eclipse &amp; Maven/Gradle)</title>
+        <link>https://yukihane.github.io/blog/202008/23/spring-lombok-mapstruct/</link>
+        <pubDate>Sun, 23 Aug 2020 03:23:31 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/blog/202008/23/spring-lombok-mapstruct/</guid>
+        <description>Spring Boot プロジェクトにLombokとMapStructを追加し、かつ Eclipse で開発を行う場合の設定です。 同じようなことを何回か書いてきた気がするのです</description>
+      </item>
+      
+    
+  </channel>
+</rss>
