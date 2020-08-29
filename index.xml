@@ -15,6 +15,24 @@
     
       
       <item>
+        <title>gradle bootRun でプロファイルを指定するには？</title>
+        <link>https://yukihane.github.io/blog/202008/30/gradle-bootrun-parameter/</link>
+        <pubDate>Sat, 29 Aug 2020 23:16:09 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/blog/202008/30/gradle-bootrun-parameter/</guid>
+        <description>gradle bootRun を実行する際にアクティブ化するプロファイルの指定を行いたかったのですが、ぱっと思いつかなかったのでメモ。 まず、 gradle bootRun -Dprofiles.active=myproile はうまくいきません。</description>
+      </item>
+      
+      <item>
+        <title>openapi-generaterで生成したcontrollerにカスタム引数を追加する</title>
+        <link>https://yukihane.github.io/blog/202008/30/openapi-spring-mvc-handler-args/</link>
+        <pubDate>Sat, 29 Aug 2020 19:23:06 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/blog/202008/30/openapi-spring-mvc-handler-args/</guid>
+        <description>はじめに openapi generator を Spring Boot で利用してみる で openapi-generator を用いて Spring MVC のコントローラ(のインタフェース)を自動生成してみました。 その後、これを実際に利用してみて気</description>
+      </item>
+      
+      <item>
         <title>Restful API, path を使うか query を使うか</title>
         <link>https://yukihane.github.io/blog/202008/24/rest-path-or-query/</link>
         <pubDate>Sun, 23 Aug 2020 17:24:37 +0000</pubDate>
