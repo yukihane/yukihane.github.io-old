@@ -3953,6 +3953,22 @@
 <h2 id="_備考">備考</h2>
 <div class="sectionbody">
 <div class="paragraph">
+<p>この対応を行った後、</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://github.com/OpenAPITools/openapi-generator/issues/4680#issuecomment-656199687">[REQ] How to add Principal parameter to Spring interface method? #4680</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>というissueがあるのに気づきました。
+しかし、個々に書かれている対応を行ってみたものの上手く行きませんでした。
+( <code>in: query</code> って指定しているから <code>@RequestParam</code> が付く、つまりクエリパラメータとみなされてしまう。リンク先のような出力にはならない、よね…？)</p>
+</div>
+<hr>
+<div class="paragraph">
 <p>そういえば、modelの方にもカスタムバリデーションのアノテーションとかも付与したくなるよな…と考えたのですが、こちらは既に行われている方がいらっしゃいました:</p>
 </div>
 <div class="ulist">
