@@ -15,6 +15,24 @@
     
       
       <item>
+        <title>Ruby on Rails 6 を Centos6 や Centos7 で動かす</title>
+        <link>https://yukihane.github.io/blog/202009/02/ruby-on-rails-on-centos6-centos7/</link>
+        <pubDate>Tue, 01 Sep 2020 15:12:18 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/blog/202009/02/ruby-on-rails-on-centos6-centos7/</guid>
+        <description>CentOS6 上で rails new できません - スタック・オーバーフロー VagrantとCentOS7環境下でRuby及びRailsをインストールしたい。 - スタック・</description>
+      </item>
+      
+      <item>
+        <title>CentOS6にGCC10.2.0をインストールしたときのメモ</title>
+        <link>https://yukihane.github.io/blog/202008/31/gcc-installation/</link>
+        <pubDate>Sun, 30 Aug 2020 21:32:44 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/blog/202008/31/gcc-installation/</guid>
+        <description>ビルド作業は次のページを参考にしました: gcc-10.1.0をCentOS7にソースインストール | 株式会社オルタ 環境は こちら に記載したもので</description>
+      </item>
+      
+      <item>
         <title>gccをビルドするのにどれくらい時間がかかるの？(10分かからなかった) </title>
         <link>https://yukihane.github.io/blog/202008/30/gcc-compilation-time/</link>
         <pubDate>Sun, 30 Aug 2020 06:57:01 +0000</pubDate>

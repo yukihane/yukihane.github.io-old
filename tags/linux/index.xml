@@ -7,12 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Wed, 10 Jun 2020 10:17:55 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 30 Aug 2020 21:32:44 +0000</lastBuildDate>
     
         <atom:link href="https://yukihane.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     
     
     
+      
+      <item>
+        <title>CentOS6にGCC10.2.0をインストールしたときのメモ</title>
+        <link>https://yukihane.github.io/blog/202008/31/gcc-installation/</link>
+        <pubDate>Sun, 30 Aug 2020 21:32:44 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/blog/202008/31/gcc-installation/</guid>
+        <description>ビルド作業は次のページを参考にしました: gcc-10.1.0をCentOS7にソースインストール | 株式会社オルタ 環境は こちら に記載したもので</description>
+      </item>
       
       <item>
         <title>Alpine Linuxでglibcじゃないことに起因する問題ってちょくちょくあるよね</title>
