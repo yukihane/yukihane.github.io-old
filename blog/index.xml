@@ -7,12 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Tue, 01 Sep 2020 15:12:18 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 01 Sep 2020 18:46:13 +0000</lastBuildDate>
     
         <atom:link href="https://yukihane.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     
     
     
+      
+      <item>
+        <title>DevToolsを組み込んでいると再起動してもsessiongが引き継がれる</title>
+        <link>https://yukihane.github.io/blog/202009/02/spring-boot-session-take-over-on-restart-with-devtools/</link>
+        <pubDate>Tue, 01 Sep 2020 18:46:13 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/blog/202009/02/spring-boot-session-take-over-on-restart-with-devtools/</guid>
+        <description>Spring Boot開発中、再起動するとsessionは消失すると思いこんでいたのですが、どうも引き継がれているように見えて混乱しました。 その後、調査</description>
+      </item>
       
       <item>
         <title>Ruby on Rails 6 を Centos6 や Centos7 で動かす</title>
