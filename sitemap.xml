@@ -4,16 +4,36 @@
   
   <url>
     <loc>https://yukihane.github.io/blog/</loc>
-    <lastmod>2020-09-01T18:46:13+00:00</lastmod>
+    <lastmod>2020-09-03T23:24:39+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://yukihane.github.io/blog/202009/02/spring-boot-session-take-over-on-restart-with-devtools/</loc>
-    <lastmod>2020-09-01T18:46:13+00:00</lastmod>
+    <loc>https://yukihane.github.io/blog/202009/04/oidc-add-claim-and-scope/</loc>
+    <lastmod>2020-09-03T23:24:39+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yukihane.github.io/tags/oidc/</loc>
+    <lastmod>2020-09-03T23:24:39+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://yukihane.github.io/tags/spring-boot/</loc>
+    <lastmod>2020-09-03T23:24:39+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yukihane.github.io/tags/spring-security/</loc>
+    <lastmod>2020-09-03T23:24:39+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yukihane.github.io/blog/202009/04/oidc-change-redirect-uri/</loc>
+    <lastmod>2020-09-03T22:50:21+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yukihane.github.io/blog/202009/02/spring-boot-session-take-over-on-restart-with-devtools/</loc>
     <lastmod>2020-09-01T18:46:13+00:00</lastmod>
   </url>
   
@@ -138,17 +158,7 @@
   </url>
   
   <url>
-    <loc>https://yukihane.github.io/tags/oidc/</loc>
-    <lastmod>2020-08-04T21:39:37+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://yukihane.github.io/blog/202008/05/spring-boot-oidc-testing/</loc>
-    <lastmod>2020-08-04T21:39:37+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://yukihane.github.io/tags/spring-security/</loc>
     <lastmod>2020-08-04T21:39:37+00:00</lastmod>
   </url>
   
@@ -565,6 +575,11 @@
   <url>
     <loc>https://yukihane.github.io/blog/202007/21/why-git-branching-is-difficult/</loc>
     <lastmod>2020-07-20T17:59:29+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yukihane.github.io/tags/oauth2/</loc>
+    <lastmod>2020-07-20T06:36:51+00:00</lastmod>
   </url>
   
   <url>

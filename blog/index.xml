@@ -7,12 +7,30 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Tue, 01 Sep 2020 18:46:13 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 03 Sep 2020 23:24:39 +0000</lastBuildDate>
     
         <atom:link href="https://yukihane.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     
     
     
+      
+      <item>
+        <title>claimとscopeを追加して取得してみる</title>
+        <link>https://yukihane.github.io/blog/202009/04/oidc-add-claim-and-scope/</link>
+        <pubDate>Thu, 03 Sep 2020 23:24:39 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/blog/202009/04/oidc-add-claim-and-scope/</guid>
+        <description>はじめに Keycloak上で新しいclaimと、それを取得できる新しいscopeを定義し、Spring Securityを使って参照してみます</description>
+      </item>
+      
+      <item>
+        <title>Spring Security: OIDC の redirect_uri を変更する</title>
+        <link>https://yukihane.github.io/blog/202009/04/oidc-change-redirect-uri/</link>
+        <pubDate>Thu, 03 Sep 2020 22:50:21 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/blog/202009/04/oidc-change-redirect-uri/</guid>
+        <description>はじめに KeycloakをIdPにしてSpring Security OAuth 2.0 Login/Client を試してみる で作成したコードに対して、 カスタム redirect_uri の設定を行ってみます。 今回のコード</description>
+      </item>
       
       <item>
         <title>DevToolsを組み込んでいると再起動してもsessiongが引き継がれる</title>

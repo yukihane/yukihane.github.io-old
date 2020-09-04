@@ -1075,6 +1075,52 @@
   
   
   <li class="">
+    <a href="https://yukihane.github.io/blog/202009/04/oidc-add-claim-and-scope/"
+      class="menu__title ">claimとscopeを追加して取得してみる</a>
+  </li>
+  
+
+    
+      
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+  <li class="">
+    <a href="https://yukihane.github.io/blog/202009/04/oidc-change-redirect-uri/"
+      class="menu__title ">Spring Security: OIDC の redirect_uri を変更する</a>
+  </li>
+  
+
+    
+      
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+  <li class="">
     <a href="https://yukihane.github.io/blog/202009/02/spring-boot-session-take-over-on-restart-with-devtools/"
       class="menu__title ">DevToolsを組み込んでいると再起動してもsessiongが引き継がれる</a>
   </li>
@@ -3944,14 +3990,14 @@
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-bash" data-lang="bash">./bin/standalone.sh</code></pre>
+<pre class="highlight"><code class="language-bash" data-lang="bash">./bin/standalone.sh -Djboss.socket.binding.port-offset=1</code></pre>
 </div>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_admin_ユーザ作成">admin ユーザ作成</h3>
 <div class="paragraph">
-<p>adminユーザ未作成状態で <a href="http://localhost:8080/auth/" class="bare">http://localhost:8080/auth/</a> へアクセスすると、adminユーザのユーザ名とパスワード入力を促されます。</p>
+<p>adminユーザ未作成状態で <a href="http://localhost:8081/auth/" class="bare">http://localhost:8081/auth/</a> へアクセスすると、adminユーザのユーザ名とパスワード入力を促されます。</p>
 </div>
 <div class="paragraph">
 <p>ここではユーザ名、パスワードとも <code>admin</code> とすることにします。</p>
@@ -3976,7 +4022,7 @@
 <p><strong>Create</strong> ボタンを押すと上記で入力したadminユーザが作成されます。</p>
 </div>
 <div class="paragraph">
-<p><a href="http://localhost:8080/auth/admin/">Administration Console</a> リンクを押して次の画面に進みます。</p>
+<p><a href="http://localhost:8081/auth/admin/">Administration Console</a> リンクを押して次の画面に進みます。</p>
 </div>
 </div>
 <div class="sect2">
@@ -3985,7 +4031,7 @@
 <p>Administration Console を開くと、左上に "Master" というプルダウンメニューのようなものがあると思います。</p>
 </div>
 <div class="paragraph">
-<p>ここにマウスカーソルを合わせると "Add realm" というボタンが表れるのでそれを押します。そうすると <a href="http://localhost:8080/auth/admin/master/console/#/create/realm" class="bare">http://localhost:8080/auth/admin/master/console/#/create/realm</a> へ遷移します。</p>
+<p>ここにマウスカーソルを合わせると "Add realm" というボタンが表れるのでそれを押します。そうすると <a href="http://localhost:8081/auth/admin/master/console/#/create/realm" class="bare">http://localhost:8081/auth/admin/master/console/#/create/realm</a> へ遷移します。</p>
 </div>
 <div class="paragraph">
 <p>Nameに <code>myrealm</code> と入力ｋし、 Create ボタンを押します。</p>
@@ -4013,7 +4059,7 @@
 <div class="sect2">
 <h3 id="_ユーザ作成">ユーザ作成</h3>
 <div class="paragraph">
-<p>画面左のメニュー <a href="http://localhost:8080/auth/admin/master/console/#/realms/myrealm/users">Users</a> を選択し、 "Add user" ボタンを押します。</p>
+<p>画面左のメニュー <a href="http://localhost:8081/auth/admin/master/console/#/realms/myrealm/users">Users</a> を選択し、 "Add user" ボタンを押します。</p>
 </div>
 <div class="paragraph">
 <p>Usernameに <code>myuser</code> を、それ以外の項目も適当に埋め "Save" ボタンを押します。</p>
@@ -4077,10 +4123,10 @@
 <p>ここでいう "クライアント" というのはOAuth2.0でいうところの認可クライアント、OIDCでいうところのRPです。</p>
 </div>
 <div class="paragraph">
-<p>画面左のメニュー <a href="http://localhost:8080/auth/admin/master/console/#/realms/myrealm/clients">Clients</a> をクリックします。</p>
+<p>画面左のメニュー <a href="http://localhost:8081/auth/admin/master/console/#/realms/myrealm/clients">Clients</a> をクリックします。</p>
 </div>
 <div class="paragraph">
-<p>続いて画面右の <a href="http://localhost:8080/auth/admin/master/console/#/create/client/myrealm">Create</a>ボタンを押します。</p>
+<p>続いて画面右の <a href="http://localhost:8081/auth/admin/master/console/#/create/client/myrealm">Create</a>ボタンを押します。</p>
 </div>
 <div class="paragraph">
 <p>この画面で次のように入力して、 "Save" ボタンを押します。</p>
@@ -4108,6 +4154,9 @@
 <div class="paragraph">
 <p>クライアント作成が完了したら続いてこのクライアント設定画面で 次の通り設定変更し "Save" ボタンを押します。</p>
 </div>
+<div class="paragraph">
+<p>( <code>myspring</code> というのは、後でSpring Bootに設定する <code>registration-id</code> です。詳細は <a href="https://docs.spring.io/spring-security/site/docs/current/reference/html5/#oauth2login-sample-redirect-uri">Spring Security リファレンス</a>を "/login/oauth2/code" で検索してみてください)</p>
+</div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 50%;">
@@ -4120,7 +4169,7 @@
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valid Redirect URL</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">http://localhost:8081/*</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">http://localhost:8080/login/oauth2/code/myspring</p></td>
 </tr>
 </tbody>
 </table>
@@ -4219,18 +4268,15 @@
 <div class="listingblock">
 <div class="title"><a href="https://github.com/yukihane/hello-java/blob/0d49734ccc5758e05a2acc9d472f1acd43b0e6a3/spring/oidc-example/src/main/resources/application.yml">application.yml</a></div>
 <div class="content">
-<pre>server:
-  port: 8081
-
-spring:
+<pre>spring:
   security:
     oauth2:
       client:
         provider:
           mykeycloak:
             # https://www.keycloak.org/docs/latest/securing_apps/index.html#endpoints-2
-            # http://localhost:8080/auth/realms/myrealm/.well-known/openid-configuration
-            issuer-uri: http://localhost:8080/auth/realms/myrealm
+            # http://localhost:8081/auth/realms/myrealm/.well-known/openid-configuration
+            issuer-uri: http://localhost:8081/auth/realms/myrealm
             # https://www.keycloak.org/docs/11.0/securing_apps/index.html
             user-name-attribute: preferred_username
         registration:
@@ -4239,7 +4285,7 @@ spring:
             # 上で定義しているprovider名
             provider: mykeycloak
             # keycloakに登録したidと対応するsecret
-            # http://localhost:8080/auth/admin/master/console/#/realms/myrealm/clients
+            # http://localhost:8081/auth/admin/master/console/#/realms/myrealm/clients
             client-id: myclient
             client-secret: e3b8886b-5b6e-49a7-91c2-c28caadf0a2b</pre>
 </div>
@@ -4248,9 +4294,6 @@ spring:
 <ul>
 <li>
 <p>client-secret は、実際にはKeycloakの設定画面で表示されているもので差し替える必要があります。</p>
-</li>
-<li>
-<p><code>8080</code> ポートは今回Keycloakが利用しているので <code>8081</code> を使います。</p>
 </li>
 <li>
 <p>いくつかのサンプルと見ているとエンドポイント(<code>authorization-uri</code> など)をそれぞれ設定していましたが、 <code>issuer-uri</code> だけ設定すれば後はそこから自動設定できるようです。</p>
@@ -4264,7 +4307,7 @@ spring:
 <div class="sect2">
 <h3 id="_コントローラを作成してアクセスしてみる">コントローラを作成してアクセスしてみる</h3>
 <div class="paragraph">
-<p><a href="https://github.com/yukihane/hello-java/blob/0d49734ccc5758e05a2acc9d472f1acd43b0e6a3/spring/oidc-example/src/main/java/com/example/oidcexample/HelloController.java">適当にコントローラを作成</a>して <a href="http://localhost:8081/" class="bare">http://localhost:8081/</a> へアクセスしてみます。</p>
+<p><a href="https://github.com/yukihane/hello-java/blob/0d49734ccc5758e05a2acc9d472f1acd43b0e6a3/spring/oidc-example/src/main/java/com/example/oidcexample/HelloController.java">適当にコントローラを作成</a>して <a href="http://localhost:8080/" class="bare">http://localhost:8080/</a> へアクセスしてみます。</p>
 </div>
 <div class="paragraph">
 <p>Keycloakのログイン画面へリダイレクトされるので、事前に作成したユーザのid, password(myuser, myuser)を入力すれば、コントローラが結果を返してくれます。</p>
