@@ -15,6 +15,24 @@
     
       
       <item>
+        <title>Spring SecurityのOAuth 2.0 Login でログインしても UserInfo Endpoint にアクセスしてくれない</title>
+        <link>https://yukihane.github.io/blog/202009/12/oidc-userinfo-not-fetched-for-custom-claims/</link>
+        <pubDate>Sat, 12 Sep 2020 12:56:30 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/blog/202009/12/oidc-userinfo-not-fetched-for-custom-claims/</guid>
+        <description>Spring Security OAuth 2.0 Login を利用してログインしたのですが、通常ログイン後 UserInfo Endpoint へアクセスしてくれるはずなのにこの処理がスキップされてしまうような事象に出会いま</description>
+      </item>
+      
+      <item>
+        <title>WindowsでGradleが扱うリソースのファイルエンコーディング設定</title>
+        <link>https://yukihane.github.io/blog/202009/12/gradle-resource-encoding/</link>
+        <pubDate>Sat, 12 Sep 2020 12:26:22 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/blog/202009/12/gradle-resource-encoding/</guid>
+        <description>問題 Spring Bootの自動テストで data.sql を作成しているのですが、 gradle check でテストを実行すると、失敗してしまう。 原因を調べたのですが、どうも日本語のカラムを</description>
+      </item>
+      
+      <item>
         <title>claimとscopeを追加して取得してみる</title>
         <link>https://yukihane.github.io/blog/202009/04/oidc-add-claim-and-scope/</link>
         <pubDate>Thu, 03 Sep 2020 23:24:39 +0000</pubDate>

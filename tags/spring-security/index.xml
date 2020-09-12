@@ -7,12 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Thu, 03 Sep 2020 23:24:39 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 12 Sep 2020 12:56:30 +0000</lastBuildDate>
     
         <atom:link href="https://yukihane.github.io/tags/spring-security/index.xml" rel="self" type="application/rss+xml" />
     
     
     
+      
+      <item>
+        <title>Spring SecurityのOAuth 2.0 Login でログインしても UserInfo Endpoint にアクセスしてくれない</title>
+        <link>https://yukihane.github.io/blog/202009/12/oidc-userinfo-not-fetched-for-custom-claims/</link>
+        <pubDate>Sat, 12 Sep 2020 12:56:30 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/blog/202009/12/oidc-userinfo-not-fetched-for-custom-claims/</guid>
+        <description>Spring Security OAuth 2.0 Login を利用してログインしたのですが、通常ログイン後 UserInfo Endpoint へアクセスしてくれるはずなのにこの処理がスキップされてしまうような事象に出会いま</description>
+      </item>
       
       <item>
         <title>claimとscopeを追加して取得してみる</title>
