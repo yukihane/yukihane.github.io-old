@@ -7,12 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Sat, 12 Sep 2020 12:56:30 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 14 Nov 2020 07:41:01 +0000</lastBuildDate>
     
         <atom:link href="https://yukihane.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     
     
     
+      
+      <item>
+        <title>Spring Boot 2.3.5 で MapStruct を利用しているプロジェクトのビルドが失敗した</title>
+        <link>https://yukihane.github.io/blog/202011/14/mapstruct-with-spring-boot-2.3.5/</link>
+        <pubDate>Sat, 14 Nov 2020 07:41:01 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/blog/202011/14/mapstruct-with-spring-boot-2.3.5/</guid>
+        <description>調査したところSpring Bootの問題と言うよりは、Lombokのバージョンが 1.18.12 から 1.18.16 に上がったことによる非互換性の問題でした。 Lombo</description>
+      </item>
       
       <item>
         <title>Spring SecurityのOAuth 2.0 Login でログインしても UserInfo Endpoint にアクセスしてくれない</title>
