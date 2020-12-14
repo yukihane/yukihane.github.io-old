@@ -8,7 +8,22 @@
   </url>
   
   <url>
+    <loc>https://yukihane.github.io/tags/lombok/</loc>
+    <lastmod>2020-11-14T07:41:01+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yukihane.github.io/tags/mapstruct/</loc>
+    <lastmod>2020-11-14T07:41:01+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://yukihane.github.io/blog/202011/14/mapstruct-with-spring-boot-2.3.5/</loc>
+    <lastmod>2020-11-14T07:41:01+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yukihane.github.io/tags/spring-boot/</loc>
     <lastmod>2020-11-14T07:41:01+00:00</lastmod>
   </url>
   
@@ -39,11 +54,6 @@
   
   <url>
     <loc>https://yukihane.github.io/blog/202009/04/oidc-add-claim-and-scope/</loc>
-    <lastmod>2020-09-03T23:24:39+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://yukihane.github.io/tags/spring-boot/</loc>
     <lastmod>2020-09-03T23:24:39+00:00</lastmod>
   </url>
   
@@ -134,16 +144,6 @@
   
   <url>
     <loc>https://yukihane.github.io/tags/eclipse/</loc>
-    <lastmod>2020-08-23T03:23:31+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://yukihane.github.io/tags/lombok/</loc>
-    <lastmod>2020-08-23T03:23:31+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://yukihane.github.io/tags/mapstruct/</loc>
     <lastmod>2020-08-23T03:23:31+00:00</lastmod>
   </url>
   
