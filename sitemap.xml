@@ -4,6 +4,21 @@
   
   <url>
     <loc>https://yukihane.github.io/blog/</loc>
+    <lastmod>2021-01-21T15:51:37+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yukihane.github.io/blog/202101/21/ploblem-in-springboot2.4.2/</loc>
+    <lastmod>2021-01-21T15:51:37+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yukihane.github.io/tags/spring-boot/</loc>
+    <lastmod>2021-01-21T15:51:37+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yukihane.github.io/tags/ubuntu/</loc>
     <lastmod>2021-01-21T14:55:11+00:00</lastmod>
   </url>
   
@@ -24,11 +39,6 @@
   
   <url>
     <loc>https://yukihane.github.io/blog/202011/14/mapstruct-with-spring-boot-2.3.5/</loc>
-    <lastmod>2020-11-14T07:41:01+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://yukihane.github.io/tags/spring-boot/</loc>
     <lastmod>2020-11-14T07:41:01+00:00</lastmod>
   </url>
   
@@ -1100,11 +1110,6 @@
   <url>
     <loc>https://yukihane.github.io/tags/mac/</loc>
     <lastmod>2019-01-16T19:58:26+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://yukihane.github.io/tags/ubuntu/</loc>
-    <lastmod>2018-11-10T19:56:46+00:00</lastmod>
   </url>
   
   <url>
