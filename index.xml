@@ -15,6 +15,15 @@
     
       
       <item>
+        <title>Spring Sessionをインメモリで利用する</title>
+        <link>https://yukihane.github.io/blog/202101/24/spring-session-in-memory/</link>
+        <pubDate>Sun, 24 Jan 2021 13:31:55 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/blog/202101/24/spring-session-in-memory/</guid>
+        <description>What should be a replacement for StoreType.HASH_MAP in spring-boot 2 昔は spring.session.store-type の選択肢に hash_map というものがあったようですが、現在は存在しません。(ちなみに none は Spring Session を利用しない、という意味になるよう</description>
+      </item>
+      
+      <item>
         <title>ControllerでUnauthorizedExceptionを投げると401でなく403になる</title>
         <link>https://yukihane.github.io/blog/202101/23/throw-unauthorizedexception-in-controller/</link>
         <pubDate>Sat, 23 Jan 2021 14:14:04 +0000</pubDate>
