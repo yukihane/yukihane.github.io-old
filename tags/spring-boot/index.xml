@@ -7,12 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Sun, 24 Jan 2021 13:59:39 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 30 Jan 2021 06:29:06 +0000</lastBuildDate>
     
         <atom:link href="https://yukihane.github.io/tags/spring-boot/index.xml" rel="self" type="application/rss+xml" />
     
     
     
+      
+      <item>
+        <title>ガバガバOIDCモックサーバを作る</title>
+        <link>https://yukihane.github.io/blog/202101/30/gaba-oidc/</link>
+        <pubDate>Sat, 30 Jan 2021 06:29:06 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/blog/202101/30/gaba-oidc/</guid>
+        <description>OIDCフローの調査などで本物でないOIDC IdP Mock Serverが欲しくなったので検索してみました。 世に数多あるように見えたのですが、結構真面目</description>
+      </item>
       
       <item>
         <title>Spring Boot の CORS 設定を全許可する</title>
