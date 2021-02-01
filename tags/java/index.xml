@@ -7,12 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Tue, 28 Jul 2020 12:06:03 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 01 Feb 2021 16:38:42 +0000</lastBuildDate>
     
         <atom:link href="https://yukihane.github.io/tags/java/index.xml" rel="self" type="application/rss+xml" />
     
     
     
+      
+      <item>
+        <title>SLF4Jでplaceholderも使いつつstacktraceも出力したい</title>
+        <link>https://yukihane.github.io/blog/202102/02/slf4j-placeholder-throwable/</link>
+        <pubDate>Mon, 01 Feb 2021 16:38:42 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/blog/202102/02/slf4j-placeholder-throwable/</guid>
+        <description>SLF4J の Logger のメソッドを眺めていると、 Throwable を引数にとれるのは 他に Marker と String メッセージだけを持つものばかりで、プレースホルダを利用したい場合にはどうしたら</description>
+      </item>
       
       <item>
         <title>LombokとMapStructをEclipseで併用しようとした際の不具合がMapStruct1.4.0で解消されていた</title>

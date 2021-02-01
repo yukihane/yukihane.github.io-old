@@ -16,10 +16,10 @@
       
       <item>
         <title>ガバガバOIDCモックサーバを作る</title>
-        <link>https://yukihane.github.io/blog/202101/30/gaba-oidc/</link>
+        <link>https://yukihane.github.io/blog/202101/30/gava-oidc-idp/</link>
         <pubDate>Sat, 30 Jan 2021 06:29:06 +0000</pubDate>
         
-        <guid>https://yukihane.github.io/blog/202101/30/gaba-oidc/</guid>
+        <guid>https://yukihane.github.io/blog/202101/30/gava-oidc-idp/</guid>
         <description>OIDCフローの調査などで本物でないOIDC IdP Mock Serverが欲しくなったので検索してみました。 世に数多あるように見えたのですが、結構真面目</description>
       </item>
       
