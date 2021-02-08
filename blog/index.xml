@@ -38,7 +38,7 @@
         <pubDate>Sun, 24 Jan 2021 13:59:39 +0000</pubDate>
         
         <guid>https://yukihane.github.io/blog/202101/24/spring-boot-cors-permit-all/</guid>
-        <description>How to configure CORS in a Spring Boot + Spring Security application? - Stack Overflow // https://docs.spring.io/spring-boot/docs/2.4.2/reference/htmlsingle/#boot-features-cors @Configuration public class MyConfiguration { @Bean public WebMvcConfigurer corsConfigurer() { return new WebMvcConfigurer() { @Override public void addCorsMappings(final CorsRegistry registry) { registry.addMapping(&#34;/**&#34;); } }; } } Spring Security を利用しているのであれば、追加で次の設定も行います</description>
+        <description>How to configure CORS in a Spring Boot + Spring Security application? - Stack Overflow // https://docs.spring.io/spring-boot/docs/2.4.2/reference/htmlsingle/#boot-features-cors @Configuration public class MyConfiguration { @Bean public WebMvcConfigurer corsConfigurer() { return new WebMvcConfigurer() { @Override public void addCorsMappings(final CorsRegistry registry) { registry.addMapping(&#34;/**&#34;).allowedMethods(&#34;*&#34;); } }; } } Spring Security を利用しているのであれば、追加で次の設定も行います</description>
       </item>
       
       <item>
