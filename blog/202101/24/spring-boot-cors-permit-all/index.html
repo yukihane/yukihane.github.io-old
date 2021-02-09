@@ -1114,7 +1114,7 @@
     "datePublished": "2021-01-24T13:59:39Z",
     "dateModified": "2021-01-24T13:59:39Z",
     "url" : "https://yukihane.github.io/blog/202101/24/spring-boot-cors-permit-all/",
-    "description": "How to configure CORS in a Spring Boot + Spring Security application? - Stack Overflow // …",
+    "description": "How to configure CORS in a Spring Boot + Spring Security application? - Stack Overflow Spring Boot のリファレンス 4.7.1. The “Spring Web MVC Framework” \u0026gt; CORS Support を見ると、次の …",
     "keywords": ["spring-boot"],
     "mainEntityOfPage": {
       "@type": "WebPage",
@@ -4296,6 +4296,9 @@
 </li>
 </ul>
 </div>
+<div class="paragraph">
+<p>Spring Boot のリファレンス <a href="https://docs.spring.io/spring-boot/docs/2.4.2/reference/htmlsingle/#boot-features-cors">4.7.1. The “Spring Web MVC Framework” &gt; CORS Support</a> を見ると、次のように設定すれば良いように見えます。</p>
+</div>
 <div class="listingblock">
 <div class="content">
 <pre class="highlight"><code class="language-java" data-lang="java">// https://docs.spring.io/spring-boot/docs/2.4.2/reference/htmlsingle/#boot-features-cors
@@ -4307,7 +4310,7 @@ public class MyConfiguration {
         return new WebMvcConfigurer() {
             @Override
             public void addCorsMappings(final CorsRegistry registry) {
-                registry.addMapping("/**").allowedMethods("*");
+                registry.addMapping("/**").allowedMethods("*").allowedHeaders("*");
             }
         };
     }
@@ -4315,7 +4318,14 @@ public class MyConfiguration {
 </div>
 </div>
 <div class="paragraph">
-<p>Spring Security を利用しているのであれば、追加で次の設定も行います:</p>
+<p>この設定は Spring MVC だけを使っている場合には上手くいきますが、 <code>spring-boot-starter-security</code> を導入するとクライアントサイドでCORSの問題で通信が失敗するような状況が発生します。</p>
+</div>
+<div class="paragraph">
+<p>なぜならば、 <a href="https://developer.mozilla.org/ja/docs/Web/HTTP/CORS#preflighted_requests">プリフライトリクエスト</a> には <a href="https://fetch.spec.whatwg.org/#cors-preflight-fetch"><code>Authorization</code> ヘッダ(等、規定されていないヘッダ)が含まれない</a>ため、プリフライトリクエストがSpring Securityフィルタで <code>401 Unauthorized</code> になって Spring MVC 部分まで到達しないからです。</p>
+</div>
+<div class="paragraph">
+<p>幸い、Spring Securityには <a href="https://docs.spring.io/spring-security/site/docs/5.4.2/reference/html5/#cors">上記で設定したCORS設定を <code>CorsFilter</code> で統合できます</a>。
+コンフィグで CORS 有効化すればデフォルトでそのような設定になります。</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -4327,12 +4337,19 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(final HttpSecurity http) throws Exception {
         // ...
 
+        // 大抵の場合、CSRF対策機能は無効化する必要があるでしょう
+        // (CORSを許可する必要がある = JSリクエスト なので)
+        http.csrf().disabled();
+
         // if Spring MVC is on classpath and no CorsConfigurationSource is provided,
         // Spring Security will use CORS configuration provided to Spring MVC
         http.cors(Customizer.withDefaults());
     }
 }</code></pre>
 </div>
+</div>
+<div class="paragraph">
+<p><a href="https://github.com/yukihane/hello-java/tree/master/spring/cors/cors-sample">サンプルコード</a></p>
 </div>
 
   </article>
