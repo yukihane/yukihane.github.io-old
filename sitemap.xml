@@ -4,7 +4,17 @@
   
   <url>
     <loc>https://yukihane.github.io/blog/</loc>
-    <lastmod>2021-02-01T16:38:42+00:00</lastmod>
+    <lastmod>2021-03-06T05:21:25+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yukihane.github.io/tags/ubuntu/</loc>
+    <lastmod>2021-03-06T05:21:25+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yukihane.github.io/blog/202103/06/kindle-menu-tofu/</loc>
+    <lastmod>2021-03-06T05:21:25+00:00</lastmod>
   </url>
   
   <url>
@@ -60,11 +70,6 @@
   <url>
     <loc>https://yukihane.github.io/blog/202101/21/ploblem-in-springboot2.4.2/</loc>
     <lastmod>2021-01-21T15:51:37+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://yukihane.github.io/tags/ubuntu/</loc>
-    <lastmod>2021-01-21T14:55:11+00:00</lastmod>
   </url>
   
   <url>
