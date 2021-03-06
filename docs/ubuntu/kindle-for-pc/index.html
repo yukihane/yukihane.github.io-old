@@ -3713,13 +3713,63 @@ PCについて、PlayOnLinuxからダウンロードはできるものは.co.jp�
 PCのインストーラexeを指定します。</p>
 </div>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_未解決の問題">未解決の問題</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_文字化けの解消">文字化けの解消</h3>
 <div class="paragraph">
-<p>Kindle for PCアプリケーション上の日本語が豆腐になっている。</p>
+<p>ここまでの設定でKindleは起動できるようになります。
+が、起動してみると分かる通りメニューの日本語が豆腐表示になっています。
+これを解消します。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>参考: <a href="https://pri-light.hatenadiary.org/entry/20170723/p1">LubuntuにplayonlinuxでKindleをインストール</a> - Jiyu na Blog</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>今回は <a href="https://github.com/miiton/Cica">Cicaフォント</a>(<code>Cica-Regular.ttf</code>)を利用しました。他のフォントを利用する場合は適宜読み替えてください。</p>
+</div>
+<div class="sect3">
+<h4 id="_フォントを配備">フォントを配備</h4>
+<div class="paragraph">
+<p><code>~/PlayOnLinux&#8217;s virtual drives/for_kindle/drive_c/windows/Fonts</code> にフォントファイル <code>Cica-Regular.ttf</code> を置きます。</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_レジストリファイル作成">レジストリファイル作成</h4>
+<div class="paragraph">
+<p><code>~/Documents/kindle_font.reg</code> というファイル名で次の内容を保存します。
+エンコーディングはShift JISとします。(なお、改行コードは今回LFで行いましたが、これで問題ありませんでした。)</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-reg" data-lang="reg">REGEDIT4
+
+[HKEY_CURRENT_USER\Software\Wine\Fonts\Replacements]
+"Andale Mono"="Cica"
+"Arial Unicode MS"="Cica"
+"Batang"="Cica"
+"Dotum"="Cica"
+"MS Gothic"="Cica"
+"MS Mincho"="Cica"
+"MS PGothic"="Cica"
+"MS PMincho"="Cica"
+"MS UI Gothic"="Cica"
+"Tahoma"="Cica"
+"ＭＳ ゴシック"="Cica"
+"ＭＳ 明朝"="Cica"
+"ＭＳ Ｐゴシック"="Cica"
+"ＭＳ Ｐ明朝"="Cica"</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>PlayOnLinuxのランチャー画面でKindleアイコンを右クリックし、コンテキストメニューからレジストリエディタを起動します。</p>
+</div>
+<div class="paragraph">
+<p>レジストリエディタのメニューから「レジストリのインポート」を選択し、上記で作成したファイルを選択するとフォント置換設定がインポートされ、上の設定の通りCicaフォントで表示されるようになります。</p>
+</div>
+</div>
 </div>
 </div>
 </div>
