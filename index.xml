@@ -15,6 +15,15 @@
     
       
       <item>
+        <title>テスト観点</title>
+        <link>https://yukihane.github.io/blog/202103/07/testing-perspective/</link>
+        <pubDate>Sun, 07 Mar 2021 20:21:25 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/blog/202103/07/testing-perspective/</guid>
+        <description>書籍「ソフトウェアテストの教科書 - 品質を決定づけるテスト構成の基本と実践」第4章 ブラックボックステスト 表4-4 分類の基準として利用できる指標</description>
+      </item>
+      
+      <item>
         <title>Ubuntu20.04 で Kindle for PC</title>
         <link>https://yukihane.github.io/blog/202103/07/kindle-for-pc-on-ubuntu20.04/</link>
         <pubDate>Sun, 07 Mar 2021 05:21:25 +0000</pubDate>
