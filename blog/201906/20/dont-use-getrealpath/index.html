@@ -1114,7 +1114,7 @@
     "datePublished": "2019-06-20T20:26:49Z",
     "dateModified": "2019-06-20T20:26:49Z",
     "url" : "https://yukihane.github.io/blog/201906/20/dont-use-getrealpath/",
-    "description": "色んなところでそういうサンプルコードが見つかる、と聞いて嘘やん思いながら検索してみたところ、日本語英語を問わず確かに多い。 例えば Qiita では(順不",
+    "description": "タイトルに書いたような、ファイル出力先として ServletContext#getRealPath を利用しているサンプルコードが見つかる、と聞いて検索してみたところ、日本語、非日本語にかかわら",
     "keywords": ["java","servlet"],
     "mainEntityOfPage": {
       "@type": "WebPage",
@@ -4358,7 +4358,7 @@
   
 
   <article class="single__contents" data-dir="ltr">
-    <p>色んなところでそういうサンプルコードが見つかる、と聞いて嘘やん思いながら検索してみたところ、日本語英語を問わず確かに多い。<br />
+    <p>タイトルに書いたような、ファイル出力先として <code>ServletContext#getRealPath</code> を利用しているサンプルコードが見つかる、と聞いて検索してみたところ、日本語、非日本語にかかわらず確かにそのようなサンプルコードは散見されました。<br />
 例えば Qiita では(順不同):</p>
 <ul>
 <li><a href="https://qiita.com/shibafu/items/a660ce88e3e8a1d6902d" target="_blank">SpringMVC と JasperReports で帳票を印刷してみた 番外編（画像編）</a></li>
@@ -4367,18 +4367,13 @@
 <li><a href="https://qiita.com/yume21116/items/8a6c0117ac866eb9a058" target="_blank">画像の保存と紐付けの同時アップロード</a></li>
 <li><a href="https://qiita.com/k499778/items/0ab656a612456741924b" target="_blank">画像アップロードのパスの設定について</a></li>
 </ul>
-<h4 id="なんでつこたらアカンの">なんでつこたらアカンの？</h4>
-<p><a href="https://ja.stackoverflow.com/a/55904/2808" target="_blank">リンク先</a>に長文書いてもたんでそっち見て。<br />
-どこの馬の骨が書いたかわからん説明信じられるか？はい、そんな人のために upvoted 数の多い Stack Overflow の記事をご用意しました:</p>
+<h4 id="どうして利用しては駄目なのか">どうして利用しては駄目なのか</h4>
+<p><a href="https://ja.stackoverflow.com/a/55904/2808" target="_blank">Stack Overflow</a>に理由を記載しています。<br />
+私の説明だけでは不安なのであれば、次も参照してみてください。</p>
 <ul>
-<li><a href="https://stackoverflow.com/q/18664579/4506703" target="_blank">Recommended way to save uploaded files in a servlet application</a></li>
+<li><a href="https://stackoverflow.com/q/18664579/4506703" target="_blank">Recommended way to save uploaded files in a servlet application</a> - Stack Overflow</li>
 </ul>
-<p><a href="https://www.google.co.jp/search?q=%E3%81%84%E3%81%8B%E3%81%8C%E3%81%A7%E3%81%97%E3%81%9F%E3%81%8B%EF%BC%9F" target="_blank">いかがでしたか？</a></p>
-<h1 id="何も考えずに今までファイルアップロードをコピペ実装したことがある人先生怒らないから手を挙げなさい">何も考えずに今までファイルアップロードをコピペ実装したことがある人、先生怒らないから手を挙げなさい</h1>
-<p>てかなんでこんな実装インターネット上に氾濫してんのやろ？<br />
-オフィシャルがそうやってるからやろか…と思て<a href="https://docs.oracle.com/javaee/7/tutorial/servlets016.htm" target="_blank">The Java EE Tutorial</a>見てみたらクライアントが path 指定するようになってた。</p>
-<p><strong>なお悪いわ！！</strong></p>
-<p>(おわり)</p>
+<p>ちなみに、<a href="https://docs.oracle.com/javaee/7/tutorial/servlets016.htm" target="_blank">The Java EE Tutorial</a>見てみたらクライアントが path 指定するようになってました…まあ、変に正しい実装はこれだと混乱させることは無い分まし、なの、かな…？</p>
 
   </article>
 </div>
