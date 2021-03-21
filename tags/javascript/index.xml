@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>javascript on 発火後忘失</title>
+    <link>https://yukihane.github.io/tags/javascript/</link>
+    <description>Recent content in javascript on 発火後忘失</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
+    <lastBuildDate>Sun, 21 Mar 2021 09:54:35 +0000</lastBuildDate>
+    
+        <atom:link href="https://yukihane.github.io/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+      
+      <item>
+        <title>formで(送信ボタンを押さずに)エンターキーで送信する</title>
+        <link>https://yukihane.github.io/blog/202103/21/implicit-submission/</link>
+        <pubDate>Sun, 21 Mar 2021 09:54:35 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/blog/202103/21/implicit-submission/</guid>
+        <description>入力フォームに値を入力して、(送信ボタンを押すのではなく)入力フィールド内でエンターキーを押すと送信される機能、&#34;Implicit Submi</description>
+      </item>
+      
+    
+  </channel>
+</rss>
