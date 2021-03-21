@@ -4394,17 +4394,20 @@
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-bash" data-lang="bash">gradle eclipse</code></pre>
+<pre class="highlight"><code class="language-bash" data-lang="bash">gradle build cleanEclipse eclipse</code></pre>
 </div>
+</div>
+<div class="paragraph">
+<p><code>eclipse</code> プラグインは、実行した時点で存在しないディレクトリは無視するようになっているようです。そのため上記では一旦 <code>build</code> を行って自動生成ディレクトリなどを確実に作成するようにしています。</p>
 </div>
 <div class="paragraph">
 <p>そして、Eclipseでインポートします。このとき選択するのは <strong>Existing Projects into Workspace</strong> です。Existing Gradle Projectではないことに注意してください(こちらを選ぶとBuildshipでインポートされ、annotation processorの設定が行われません)。</p>
 </div>
 <div class="paragraph">
-<p>Gradleの設定を変更した場合は、 <code>gradle eclipse</code> コマンドを実行し直し、インポートし直せばよいかと思います。</p>
+<p>Gradleの設定を変更した場合は、 <code>gradle cleanEclipse eclipse</code> コマンドを実行し直し、インポートし直せばよいかと思います。</p>
 </div>
 <div class="paragraph">
-<p>なお、Gradleが種t力するディレクトリ(<code>/build</code>)と、Eclipseが出力するディレクトリ(<code>/bin</code>, <code>.apt_generated</code> など)が異なるのは敢えてのようです？</p>
+<p>なお、Gradleが種t力するディレクトリ(<code>/build</code>)と、Eclipseが出力するディレクトリ(<code>/bin</code>, <code>.apt_generated</code> など)が異なるのは敢えてそうなっているようです。 Maven を利用し続けてきた身からすると違和感がありますが、問題が起きたときの切り分けのしやすさ的にはこちらの方が良いですよね。</p>
 </div>
 </div>
 </div>
