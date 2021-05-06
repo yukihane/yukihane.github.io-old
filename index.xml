@@ -15,6 +15,15 @@
     
       
       <item>
+        <title>LINEログインを試してみる(Spring Boot 2.4.5/Spring Security 5.4.6)</title>
+        <link>https://yukihane.github.io/blog/202105/06/ling-login-202105/</link>
+        <pubDate>Thu, 06 May 2021 10:43:04 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/blog/202105/06/ling-login-202105/</guid>
+        <description>はじめに LINEログイン機能を試してみる – 発火後忘失 で、 Spring Boot 2.1.7 (Spring Security 5.1.6) を利用してLINEログインを行ってみました。 本ドキュメントは、このコード</description>
+      </item>
+      
+      <item>
         <title>MySQL Connector/J 8.0.23 でタイムゾーン変換メカニズムが変更になった</title>
         <link>https://yukihane.github.io/blog/202104/29/mysql-connector-j-8.0.23/</link>
         <pubDate>Wed, 28 Apr 2021 15:55:52 +0000</pubDate>
@@ -1437,12 +1446,12 @@
       </item>
       
       <item>
-        <title>LINEログイン機能を試してみる</title>
+        <title>LINEログイン機能を試してみる(Spring Boot 2.1.7/Spring Security 5.1.6)</title>
         <link>https://yukihane.github.io/blog/201908/line-login-sample/</link>
         <pubDate>Sun, 25 Aug 2019 00:00:00 +0000</pubDate>
         
         <guid>https://yukihane.github.io/blog/201908/line-login-sample/</guid>
-        <description>Spring SecurityのOAuth実装は こちらに書いたとおり 歴史的経緯により複数存在しますが、 https://start.spring.io/ の Dependencies で &#34;OAuth2 Client&#34; を選択した場合に追加されるものは一番新</description>
+        <description>Important 本ページは Spring Boot 2.1.7 の頃のものですが、後続として 2.4.5 対応版があります: LINEログインを試してみる(Spring Boot 2.4.5/Spring Security 5.4.6) – 発火後忘失 Spring Secur</description>
       </item>
       
       <item>
