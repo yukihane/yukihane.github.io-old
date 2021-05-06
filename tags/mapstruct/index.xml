@@ -32,6 +32,15 @@
         <description>Spring Boot プロジェクトにLombokとMapStructを追加し、かつ Eclipse で開発を行う場合の設定です。 同じようなことを何回か書いてきた気がするのです</description>
       </item>
       
+      <item>
+        <title>Lombokプラグインを入れているEclipseでMapStruct自動生成が機能しない</title>
+        <link>https://yukihane.github.io/blog/201908/eclipse-lombok-mapstruct/</link>
+        <pubDate>Sun, 18 Aug 2019 00:00:00 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/blog/201908/eclipse-lombok-mapstruct/</guid>
+        <description>サンプルコード: https://github.com/yukihane/hello-java/tree/master/mapstruct/hello-mapstruct 上記のコードのようにLombokとMapStructを併用しているプロジェクトを、 Lombokプラグインを適用したEcli</description>
+      </item>
+      
     
   </channel>
 </rss>

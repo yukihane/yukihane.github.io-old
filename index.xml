@@ -33,7 +33,7 @@
       </item>
       
       <item>
-        <title>テスト観点</title>
+        <title>メモ: テスト観点</title>
         <link>https://yukihane.github.io/blog/202103/07/testing-perspective/</link>
         <pubDate>Sun, 07 Mar 2021 20:21:25 +0000</pubDate>
         
@@ -1338,6 +1338,15 @@
       </item>
       
       <item>
+        <title>Rustでライブラリを作成する</title>
+        <link>https://yukihane.github.io/blog/202001/rust-create-library/</link>
+        <pubDate>Tue, 31 Dec 2019 00:00:00 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/blog/202001/rust-create-library/</guid>
+        <description>はじめに 他の言語で言うところの&#34;ライブラリ&#34;は、Rustでは &#34;ライブラリクレート&#34;(library crate) と呼ぶようです。 またcrateはmodu</description>
+      </item>
+      
+      <item>
         <title>RestTemplateBuilderに関する覚書</title>
         <link>https://yukihane.github.io/blog/201912/10/resttemplatebuilder/</link>
         <pubDate>Tue, 10 Dec 2019 20:41:15 +0000</pubDate>
@@ -1380,6 +1389,141 @@
         
         <guid>https://yukihane.github.io/blog/201910/29/encoded-url-passing-to-mockmvc/</guid>
         <description>OAuth2.0 の redirect_uri をゴニョった実装をテストしたいときにハマった。 mockMvc.perform(get(new URI(&amp;quot;/line/oauth/authorize?redirece_uri=https%3A%2F%2Fexample.com&amp;quot;) ってやらないと二重にエンコードされてしまう。 参考 MockMvc needs to accept prepared URI with encoded URI path variables [SPR-11441] #16067 EncodedUriTests.java</description>
+      </item>
+      
+      <item>
+        <title>Intel iGPU環境でのAmethyst 開発環境セットアップ</title>
+        <link>https://yukihane.github.io/blog/201910/setup-amethyst/</link>
+        <pubDate>Tue, 08 Oct 2019 00:00:00 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/blog/201910/setup-amethyst/</guid>
+        <description>TL;DR Ubuntu18.04, Coffee Lake iGPU で vulkan での実行を可能にするには mesa-vulkan-drivers パッケージインストール /etc/X11/xorg.conf.d/20-intel.conf で DRI3 有効化 の2点が必要。 (おそらく実際には、実行に libvulkan1 、及び開発には加えて libvulkan-dev も</description>
+      </item>
+      
+      <item>
+        <title>Cargo.lock をバージョン管理するや否や</title>
+        <link>https://yukihane.github.io/blog/201909/rust-cago.lock/</link>
+        <pubDate>Sun, 01 Sep 2019 00:00:00 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/blog/201909/rust-cago.lock/</guid>
+        <description>cargo new --bin したパッケージに対して、たまたまデフォルで生成される .gitignore を用いずに https://gitignore.io/ で生成してものを用いていたのですが、 Cargo.lock ファイルの扱いが異なるように思</description>
+      </item>
+      
+      <item>
+        <title>電子キーボードを買いました</title>
+        <link>https://yukihane.github.io/blog/201908/begin-piano/</link>
+        <pubDate>Sat, 31 Aug 2019 00:00:00 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/blog/201908/begin-piano/</guid>
+        <description>経緯 プログラミングとかビデオゲームとか、かなり目を酷使することばかりやっているので、そうではない趣味を持とうと考えた末、何か楽器を入門するこ</description>
+      </item>
+      
+      <item>
+        <title>LINE Messaging API を試してみる</title>
+        <link>https://yukihane.github.io/blog/201908/line-bot-sample/</link>
+        <pubDate>Sun, 25 Aug 2019 00:00:00 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/blog/201908/line-bot-sample/</guid>
+        <description>準備 Spring Boot セットアップ https://start.spring.io/ でテンプレートを作成して次の依存関係を追加します。 &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;com.linecorp.bot&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;line-bot-spring-boot&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;2.7.0&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; リポジトリ: https://github.com/line/line-bot-sdk-java/tree/master/line-bot-spring-boot Heroku セットアップ 今回は linebotbeta というアプリケーション</description>
+      </item>
+      
+      <item>
+        <title>LINE リッチメニューを試してみる</title>
+        <link>https://yukihane.github.io/blog/201908/line-richmenu-sample/</link>
+        <pubDate>Sun, 25 Aug 2019 00:00:00 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/blog/201908/line-richmenu-sample/</guid>
+        <description>https://github.com/yukihane/hello-java/tree/master/line/richmenu-sample 公式リファレンス に書いてある通りですが、リッチメニューを試してみました。 メニューをタップするとPostBackEventを送信します。 bo</description>
+      </item>
+      
+      <item>
+        <title>LINEログイン機能を試してみる</title>
+        <link>https://yukihane.github.io/blog/201908/line-login-sample/</link>
+        <pubDate>Sun, 25 Aug 2019 00:00:00 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/blog/201908/line-login-sample/</guid>
+        <description>Spring SecurityのOAuth実装は こちらに書いたとおり 歴史的経緯により複数存在しますが、 https://start.spring.io/ の Dependencies で &#34;OAuth2 Client&#34; を選択した場合に追加されるものは一番新</description>
+      </item>
+      
+      <item>
+        <title>Gradleプロジェクトで生成した実行スクリプトがGitBash(MSYS環境)でうまく動かない</title>
+        <link>https://yukihane.github.io/blog/201908/gradle-msys/</link>
+        <pubDate>Fri, 23 Aug 2019 00:00:00 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/blog/201908/gradle-msys/</guid>
+        <description>GitBash環境でSDKMAN!を使ってJBakeをインストールしたのですが、 jbake コマンドを実行すると次のようなエラーが出てうまく動きません</description>
+      </item>
+      
+      <item>
+        <title>Windows10上に開発環境を整える</title>
+        <link>https://yukihane.github.io/blog/201908/setup-windows-devenv/</link>
+        <pubDate>Fri, 23 Aug 2019 00:00:00 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/blog/201908/setup-windows-devenv/</guid>
+        <description>前提 主にJava開発を行う人(要は私自身)向け記述多し パッケージ管理はscoopを使いますが、Java関係はなるべくSDKMAN!を使います</description>
+      </item>
+      
+      <item>
+        <title>HerokuでSpringBootアプリを動かしてみる</title>
+        <link>https://yukihane.github.io/blog/201908/hello-heroku-with-springboot/</link>
+        <pubDate>Thu, 22 Aug 2019 00:00:00 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/blog/201908/hello-heroku-with-springboot/</guid>
+        <description>背景 最終的にはLINE platformのAPIを理解したいのですが、 リファレンスを読んでいるとサンプルプログラム(サンプルbot)をHero</description>
+      </item>
+      
+      <item>
+        <title>JBakeのタグページが想定通り動いていない</title>
+        <link>https://yukihane.github.io/blog/201908/jbake-tags/</link>
+        <pubDate>Thu, 22 Aug 2019 00:00:00 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/blog/201908/jbake-tags/</guid>
+        <description>タグのindexページは正しくタグを収集しているようですが、それぞれのタグ個別ページがちゃんと生成されていないですね… テンプレートは 標準のも</description>
+      </item>
+      
+      <item>
+        <title>bashで標準出力をファイルに、標準エラー出力を画面とファイルに出力したい</title>
+        <link>https://yukihane.github.io/blog/201908/bash-redirect-earch-other/</link>
+        <pubDate>Mon, 19 Aug 2019 00:00:00 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/blog/201908/bash-redirect-earch-other/</guid>
+        <description>Git の pre-push でテスト実行を行おうとした際、通常テスト実行ではデバッグログを出しているところを、エラーを表すものだけに絞って出すようにしようと考えま</description>
+      </item>
+      
+      <item>
+        <title>Lombokプラグインを入れているEclipseでMapStruct自動生成が機能しない</title>
+        <link>https://yukihane.github.io/blog/201908/eclipse-lombok-mapstruct/</link>
+        <pubDate>Sun, 18 Aug 2019 00:00:00 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/blog/201908/eclipse-lombok-mapstruct/</guid>
+        <description>サンプルコード: https://github.com/yukihane/hello-java/tree/master/mapstruct/hello-mapstruct 上記のコードのようにLombokとMapStructを併用しているプロジェクトを、 Lombokプラグインを適用したEcli</description>
+      </item>
+      
+      <item>
+        <title>VSCodeでRustの整形ができない？</title>
+        <link>https://yukihane.github.io/blog/201908/rust-format-on-vscode/</link>
+        <pubDate>Sun, 18 Aug 2019 00:00:00 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/blog/201908/rust-format-on-vscode/</guid>
+        <description>Format not work #534 - rust-lang/rls-vscode VSCodeでRustの勉強をしているのですが、現在、どうもコード整形機能が上手く働いていない…？ 代替策としては、 rustfmt を使って、 cargo</description>
+      </item>
+      
+      <item>
+        <title>cargo build で特定のバージョンの rustc を利用する</title>
+        <link>https://yukihane.github.io/blog/201908/use-specific-rustc-version/</link>
+        <pubDate>Sat, 03 Aug 2019 00:00:00 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/blog/201908/use-specific-rustc-version/</guid>
+        <description>rustup run 1.15.1 cargo build もちろん事前に使用するバージョンをインストールしておく必要がある: rustup install 1.15.1 参考: Rustup for managing Rust versions</description>
+      </item>
+      
+      <item>
+        <title>JBakeはじめました</title>
+        <link>https://yukihane.github.io/blog/201908/hello/</link>
+        <pubDate>Sat, 03 Aug 2019 00:00:00 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/blog/201908/hello/</guid>
+        <description>個人的にMarkDownはあまり好きではなく(標準だと表現力が弱いし方言が多い！)、ずっとblogをAsciiDocで書く方法を模索していま</description>
       </item>
       
       <item>
@@ -1722,6 +1866,24 @@
         
         <guid>https://yukihane.github.io/blog/201801/21/polymer2-input-bind/</guid>
         <description>ドキュメントのstartを読み終えて、さあなにか作ってみるか、そうだよく 2-way binding の例で出てくるinputタグ入力値を画面に反映させるのをやってみ</description>
+      </item>
+      
+      <item>
+        <title></title>
+        <link>https://yukihane.github.io/blog/201908/spring-postconstruct-deadlock/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/blog/201908/spring-postconstruct-deadlock/</guid>
+        <description></description>
+      </item>
+      
+      <item>
+        <title></title>
+        <link>https://yukihane.github.io/blog/201908/spring-test-number-of-context/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/blog/201908/spring-test-number-of-context/</guid>
+        <description></description>
       </item>
       
     

@@ -42,6 +42,15 @@
       </item>
       
       <item>
+        <title>Intel iGPU環境でのAmethyst 開発環境セットアップ</title>
+        <link>https://yukihane.github.io/blog/201910/setup-amethyst/</link>
+        <pubDate>Tue, 08 Oct 2019 00:00:00 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/blog/201910/setup-amethyst/</guid>
+        <description>TL;DR Ubuntu18.04, Coffee Lake iGPU で vulkan での実行を可能にするには mesa-vulkan-drivers パッケージインストール /etc/X11/xorg.conf.d/20-intel.conf で DRI3 有効化 の2点が必要。 (おそらく実際には、実行に libvulkan1 、及び開発には加えて libvulkan-dev も</description>
+      </item>
+      
+      <item>
         <title>Ubuntu18.04 端末の不快なエラー音 消す方法</title>
         <link>https://yukihane.github.io/blog/201811/10/ubuntu-mute-tab-sound/</link>
         <pubDate>Sat, 10 Nov 2018 19:56:46 +0000</pubDate>

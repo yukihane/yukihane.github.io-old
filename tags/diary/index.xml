@@ -23,6 +23,33 @@
         <description>gccをビルドしようと思ったのですが、結構時間がかかるイメージがあって、先にどれくらいかかるのか調べたかったのだけれど検索しても見つかりませ</description>
       </item>
       
+      <item>
+        <title>電子キーボードを買いました</title>
+        <link>https://yukihane.github.io/blog/201908/begin-piano/</link>
+        <pubDate>Sat, 31 Aug 2019 00:00:00 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/blog/201908/begin-piano/</guid>
+        <description>経緯 プログラミングとかビデオゲームとか、かなり目を酷使することばかりやっているので、そうではない趣味を持とうと考えた末、何か楽器を入門するこ</description>
+      </item>
+      
+      <item>
+        <title>JBakeのタグページが想定通り動いていない</title>
+        <link>https://yukihane.github.io/blog/201908/jbake-tags/</link>
+        <pubDate>Thu, 22 Aug 2019 00:00:00 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/blog/201908/jbake-tags/</guid>
+        <description>タグのindexページは正しくタグを収集しているようですが、それぞれのタグ個別ページがちゃんと生成されていないですね… テンプレートは 標準のも</description>
+      </item>
+      
+      <item>
+        <title>JBakeはじめました</title>
+        <link>https://yukihane.github.io/blog/201908/hello/</link>
+        <pubDate>Sat, 03 Aug 2019 00:00:00 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/blog/201908/hello/</guid>
+        <description>個人的にMarkDownはあまり好きではなく(標準だと表現力が弱いし方言が多い！)、ずっとblogをAsciiDocで書く方法を模索していま</description>
+      </item>
+      
     
   </channel>
 </rss>

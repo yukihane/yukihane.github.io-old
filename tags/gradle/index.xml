@@ -77,6 +77,15 @@
         <description>gradle bootRun --debug-jvm というように、--debug-jvm オプションを付与すれば良いようです。 これで、デバッガ接続の待受状態で起動します。 BootRun は JavaExec を継承してい</description>
       </item>
       
+      <item>
+        <title>Gradleプロジェクトで生成した実行スクリプトがGitBash(MSYS環境)でうまく動かない</title>
+        <link>https://yukihane.github.io/blog/201908/gradle-msys/</link>
+        <pubDate>Fri, 23 Aug 2019 00:00:00 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/blog/201908/gradle-msys/</guid>
+        <description>GitBash環境でSDKMAN!を使ってJBakeをインストールしたのですが、 jbake コマンドを実行すると次のようなエラーが出てうまく動きません</description>
+      </item>
+      
     
   </channel>
 </rss>

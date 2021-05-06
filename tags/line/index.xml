@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>line on 発火後忘失</title>
+    <link>https://yukihane.github.io/tags/line/</link>
+    <description>Recent content in line on 発火後忘失</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
+    <lastBuildDate>Sun, 25 Aug 2019 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="https://yukihane.github.io/tags/line/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+      
+      <item>
+        <title>LINE Messaging API を試してみる</title>
+        <link>https://yukihane.github.io/blog/201908/line-bot-sample/</link>
+        <pubDate>Sun, 25 Aug 2019 00:00:00 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/blog/201908/line-bot-sample/</guid>
+        <description>準備 Spring Boot セットアップ https://start.spring.io/ でテンプレートを作成して次の依存関係を追加します。 &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;com.linecorp.bot&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;line-bot-spring-boot&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;2.7.0&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; リポジトリ: https://github.com/line/line-bot-sdk-java/tree/master/line-bot-spring-boot Heroku セットアップ 今回は linebotbeta というアプリケーション</description>
+      </item>
+      
+      <item>
+        <title>LINE リッチメニューを試してみる</title>
+        <link>https://yukihane.github.io/blog/201908/line-richmenu-sample/</link>
+        <pubDate>Sun, 25 Aug 2019 00:00:00 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/blog/201908/line-richmenu-sample/</guid>
+        <description>https://github.com/yukihane/hello-java/tree/master/line/richmenu-sample 公式リファレンス に書いてある通りですが、リッチメニューを試してみました。 メニューをタップするとPostBackEventを送信します。 bo</description>
+      </item>
+      
+      <item>
+        <title>LINEログイン機能を試してみる</title>
+        <link>https://yukihane.github.io/blog/201908/line-login-sample/</link>
+        <pubDate>Sun, 25 Aug 2019 00:00:00 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/blog/201908/line-login-sample/</guid>
+        <description>Spring SecurityのOAuth実装は こちらに書いたとおり 歴史的経緯により複数存在しますが、 https://start.spring.io/ の Dependencies で &#34;OAuth2 Client&#34; を選択した場合に追加されるものは一番新</description>
+      </item>
+      
+    
+  </channel>
+</rss>

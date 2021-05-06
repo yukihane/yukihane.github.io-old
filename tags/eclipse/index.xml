@@ -42,6 +42,15 @@
       </item>
       
       <item>
+        <title>Lombokプラグインを入れているEclipseでMapStruct自動生成が機能しない</title>
+        <link>https://yukihane.github.io/blog/201908/eclipse-lombok-mapstruct/</link>
+        <pubDate>Sun, 18 Aug 2019 00:00:00 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/blog/201908/eclipse-lombok-mapstruct/</guid>
+        <description>サンプルコード: https://github.com/yukihane/hello-java/tree/master/mapstruct/hello-mapstruct 上記のコードのようにLombokとMapStructを併用しているプロジェクトを、 Lombokプラグインを適用したEcli</description>
+      </item>
+      
+      <item>
         <title>Eclipseの起動に使用するJDKを指定する（Mac）</title>
         <link>https://yukihane.github.io/blog/201901/16/set-jvm-to-eclipse-on-mac/</link>
         <pubDate>Wed, 16 Jan 2019 19:58:26 +0000</pubDate>

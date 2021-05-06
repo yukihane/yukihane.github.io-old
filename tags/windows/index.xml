@@ -7,12 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Sun, 30 Sep 2018 19:53:56 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 23 Aug 2019 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://yukihane.github.io/tags/windows/index.xml" rel="self" type="application/rss+xml" />
     
     
     
+      
+      <item>
+        <title>Windows10上に開発環境を整える</title>
+        <link>https://yukihane.github.io/blog/201908/setup-windows-devenv/</link>
+        <pubDate>Fri, 23 Aug 2019 00:00:00 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/blog/201908/setup-windows-devenv/</guid>
+        <description>前提 主にJava開発を行う人(要は私自身)向け記述多し パッケージ管理はscoopを使いますが、Java関係はなるべくSDKMAN!を使います</description>
+      </item>
       
       <item>
         <title>OpenJDK11をWindowsで自前ビルドする</title>

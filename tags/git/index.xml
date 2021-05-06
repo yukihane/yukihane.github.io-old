@@ -33,6 +33,15 @@
       </item>
       
       <item>
+        <title>bashで標準出力をファイルに、標準エラー出力を画面とファイルに出力したい</title>
+        <link>https://yukihane.github.io/blog/201908/bash-redirect-earch-other/</link>
+        <pubDate>Mon, 19 Aug 2019 00:00:00 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/blog/201908/bash-redirect-earch-other/</guid>
+        <description>Git の pre-push でテスト実行を行おうとした際、通常テスト実行ではデバッグログを出しているところを、エラーを表すものだけに絞って出すようにしようと考えま</description>
+      </item>
+      
+      <item>
         <title>gitで利用するエディタを設定したかった</title>
         <link>https://yukihane.github.io/blog/201807/27/set-git-commit-editor/</link>
         <pubDate>Fri, 27 Jul 2018 19:40:03 +0000</pubDate>

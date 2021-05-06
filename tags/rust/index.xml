@@ -50,6 +50,51 @@
         <description>はじめに 年の瀬にスクレイピングしたくなって Rust 勉強し始めたけれど、直前に reqwest ライブラリに更新が入ったみたいでコピペコーディングが阻まれた。 知っと</description>
       </item>
       
+      <item>
+        <title>Rustでライブラリを作成する</title>
+        <link>https://yukihane.github.io/blog/202001/rust-create-library/</link>
+        <pubDate>Tue, 31 Dec 2019 00:00:00 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/blog/202001/rust-create-library/</guid>
+        <description>はじめに 他の言語で言うところの&#34;ライブラリ&#34;は、Rustでは &#34;ライブラリクレート&#34;(library crate) と呼ぶようです。 またcrateはmodu</description>
+      </item>
+      
+      <item>
+        <title>Intel iGPU環境でのAmethyst 開発環境セットアップ</title>
+        <link>https://yukihane.github.io/blog/201910/setup-amethyst/</link>
+        <pubDate>Tue, 08 Oct 2019 00:00:00 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/blog/201910/setup-amethyst/</guid>
+        <description>TL;DR Ubuntu18.04, Coffee Lake iGPU で vulkan での実行を可能にするには mesa-vulkan-drivers パッケージインストール /etc/X11/xorg.conf.d/20-intel.conf で DRI3 有効化 の2点が必要。 (おそらく実際には、実行に libvulkan1 、及び開発には加えて libvulkan-dev も</description>
+      </item>
+      
+      <item>
+        <title>Cargo.lock をバージョン管理するや否や</title>
+        <link>https://yukihane.github.io/blog/201909/rust-cago.lock/</link>
+        <pubDate>Sun, 01 Sep 2019 00:00:00 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/blog/201909/rust-cago.lock/</guid>
+        <description>cargo new --bin したパッケージに対して、たまたまデフォルで生成される .gitignore を用いずに https://gitignore.io/ で生成してものを用いていたのですが、 Cargo.lock ファイルの扱いが異なるように思</description>
+      </item>
+      
+      <item>
+        <title>VSCodeでRustの整形ができない？</title>
+        <link>https://yukihane.github.io/blog/201908/rust-format-on-vscode/</link>
+        <pubDate>Sun, 18 Aug 2019 00:00:00 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/blog/201908/rust-format-on-vscode/</guid>
+        <description>Format not work #534 - rust-lang/rls-vscode VSCodeでRustの勉強をしているのですが、現在、どうもコード整形機能が上手く働いていない…？ 代替策としては、 rustfmt を使って、 cargo</description>
+      </item>
+      
+      <item>
+        <title>cargo build で特定のバージョンの rustc を利用する</title>
+        <link>https://yukihane.github.io/blog/201908/use-specific-rustc-version/</link>
+        <pubDate>Sat, 03 Aug 2019 00:00:00 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/blog/201908/use-specific-rustc-version/</guid>
+        <description>rustup run 1.15.1 cargo build もちろん事前に使用するバージョンをインストールしておく必要がある: rustup install 1.15.1 参考: Rustup for managing Rust versions</description>
+      </item>
+      
     
   </channel>
 </rss>
