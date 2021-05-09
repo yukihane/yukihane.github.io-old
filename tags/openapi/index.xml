@@ -29,7 +29,7 @@
         <pubDate>Sun, 23 Aug 2020 05:09:07 +0000</pubDate>
         
         <guid>https://yukihane.github.io/blog/202008/23/openapi-generator/</guid>
-        <description>今回の成果物 https://github.com/yukihane/hello-java/tree/master/spring/openapi-sample 設定 build.gradle openapi-generator-gradle-plugin spring generator 辺りを参考にしています。 build.gradle plugins { id &#39;eclipse&#39; id &#39;org.openapi.generator&#39; version &#39;4.3.1&#39; } ext { openApiOutputDir = &#34;$rootDir/build/generated/openapi&#34; } sourceSets.main.java.srcDirs += [&#34;$openApiOutputDir/src/main/java&#34;] dependencies { // これらは自動生成クラスが import しているので必要 implementation &#39;org.springframework.boot:spring-boot-starter-validation&#39;</description>
+        <description>今回の成果物 https://github.com/yukihane/hello-java/tree/master/spring/openapi-sample 設定 build.gradle openapi-generator-gradle-plugin spring generator 辺りを参考にしています。 build.gradle plugins { id &amp;#39;eclipse&amp;#39; id &amp;#39;org.openapi.generator&amp;#39; version &amp;#39;4.3.1&amp;#39; } ext { openApiOutputDir = &amp;#34;$rootDir/build/generated/openapi&amp;#34; } sourceSets.main.java.srcDirs += [&amp;#34;$openApiOutputDir/src/main/java&amp;#34;] dependencies { // これらは自動生成クラスが import しているので必要 implementation &amp;#39;org.springframework.boot:spring-boot-starter-validation&amp;#39;</description>
       </item>
       
     

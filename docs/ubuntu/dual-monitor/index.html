@@ -17,9 +17,9 @@
 
 <script defer src="/js/lazysizes.min.31dd6a2d3a1ec0f78a8df007535cf23f03aeb5c70f026e6d6a19dac3b3acc340.js"></script>
 
-<script defer src="/js/helper/getParents.min.1618c696be7c98933f9a92677f518b512a74e55bdbb976b09936b4182e93181b.js"></script>
+<script defer src="/js/helper/getParents.min.ccd45f158c1b17849307ba913a72beac239c410f2b6e648496a79842da84e55b.js"></script>
 
-<script defer src="/js/helper/fadeinout.min.93a331f96194789a542f33690bbe4f0c102c7e78ffc018217f5a1c33010bad91.js"></script>
+<script defer src="/js/helper/fadeinout.min.9fb19682560d5fa5596fffec85da605067c4acc86aad05add4d8fff9d362a446.js"></script>
 
 <script>
   "use strict";
@@ -1083,7 +1083,7 @@
 <meta property="og:url" content="https://yukihane.github.io/docs/ubuntu/dual-monitor/">
 <meta property="og:type" content="article">
 
-<meta name="generator" content="Hugo 0.74.1" />
+<meta name="generator" content="Hugo 0.82.1" />
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="theme-color" content="#ffffff">
 <link rel="canonical" href="https://yukihane.github.io/docs/ubuntu/dual-monitor/">
@@ -1128,16 +1128,14 @@
 </script>
 
     
-<script type="application/javascript">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-E9J8FN5B4Q"></script>
+<script>
 var doNotTrack = false;
 if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'G-E9J8FN5B4Q', 'auto');
-	
-	ga('send', 'pageview');
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-E9J8FN5B4Q', { 'anonymize_ip': false });
 }
 </script>
 
@@ -3672,7 +3670,7 @@ sudo apt-get update</pre>
 </div>
 <div class="literalblock">
 <div class="content">
-<pre>lspci | grep NVIDIA | grep -v Audio | sed -e "s/^0*\(.\+\):0*\(.\+\)\.\(.\)\ .*$/PCI:\1:\2:\3/"</pre>
+<pre>lspci | grep NVIDIA | grep -v Audio | sed -e &#34;s/^0*\(.\+\):0*\(.\+\)\.\(.\)\ .*$/PCI:\1:\2:\3/&#34;</pre>
 </div>
 </div>
 <div class="paragraph">
@@ -3694,35 +3692,35 @@ sudo apt-get update</pre>
 </div>
 <div class="literalblock">
 <div class="content">
-<pre>Section "ServerLayout"
-    Identifier "layout"
-    Screen 0 "nvidia"
-    Inactive "intel"
+<pre>Section &#34;ServerLayout&#34;
+    Identifier &#34;layout&#34;
+    Screen 0 &#34;nvidia&#34;
+    Inactive &#34;intel&#34;
 EndSection
 
-Section "Device"
-    Identifier "nvidia"
-    Driver "nvidia"
-    BusID "&lt;BusID for NVIDIA device here&gt;"
+Section &#34;Device&#34;
+    Identifier &#34;nvidia&#34;
+    Driver &#34;nvidia&#34;
+    BusID &#34;&lt;BusID for NVIDIA device here&gt;&#34;
 EndSection
 
-Section "Screen"
-    Identifier "nvidia"
-    Device "nvidia"
+Section &#34;Screen&#34;
+    Identifier &#34;nvidia&#34;
+    Device &#34;nvidia&#34;
     # Uncomment this line if your computer has no display devices connected to
     # the NVIDIA GPU.  Leave it commented if you have display devices
     # connected to the NVIDIA GPU that you would like to use.
-    #Option "UseDisplayDevice" "none"
+    #Option &#34;UseDisplayDevice&#34; &#34;none&#34;
 EndSection
 
-Section "Device"
-    Identifier "intel"
-    Driver "modesetting"
+Section &#34;Device&#34;
+    Identifier &#34;intel&#34;
+    Driver &#34;modesetting&#34;
 EndSection
 
-Section "Screen"
-    Identifier "intel"
-    Device "intel"
+Section &#34;Screen&#34;
+    Identifier &#34;intel&#34;
+    Device &#34;intel&#34;
 EndSection</pre>
 </div>
 </div>
@@ -3731,7 +3729,7 @@ EndSection</pre>
 </div>
 <div class="literalblock">
 <div class="content">
-<pre>    BusID "&lt;BusID for NVIDIA device here&gt;"</pre>
+<pre>    BusID &#34;&lt;BusID for NVIDIA device here&gt;&#34;</pre>
 </div>
 </div>
 <div class="paragraph">
@@ -3739,7 +3737,7 @@ EndSection</pre>
 </div>
 <div class="literalblock">
 <div class="content">
-<pre>    BusID "PCI:1:0:0"</pre>
+<pre>    BusID &#34;PCI:1:0:0&#34;</pre>
 </div>
 </div>
 </div>
@@ -3842,7 +3840,7 @@ sudo apt-get update</pre>
 </div>
 <div class="literalblock">
 <div class="content">
-<pre>lspci | grep NVIDIA | grep -v Audio | sed -e "s/^0*\(.\+\):0*\(.\+\)\.\(.\)\ .*$/PCI:\1:\2:\3/"</pre>
+<pre>lspci | grep NVIDIA | grep -v Audio | sed -e &#34;s/^0*\(.\+\):0*\(.\+\)\.\(.\)\ .*$/PCI:\1:\2:\3/&#34;</pre>
 </div>
 </div>
 <div class="paragraph">
@@ -3864,35 +3862,35 @@ sudo apt-get update</pre>
 </div>
 <div class="literalblock">
 <div class="content">
-<pre>Section "ServerLayout"
-    Identifier "layout"
-    Screen 0 "nvidia"
-    Inactive "intel"
+<pre>Section &#34;ServerLayout&#34;
+    Identifier &#34;layout&#34;
+    Screen 0 &#34;nvidia&#34;
+    Inactive &#34;intel&#34;
 EndSection
 
-Section "Device"
-    Identifier "nvidia"
-    Driver "nvidia"
-    BusID "&lt;BusID for NVIDIA device here&gt;"
+Section &#34;Device&#34;
+    Identifier &#34;nvidia&#34;
+    Driver &#34;nvidia&#34;
+    BusID &#34;&lt;BusID for NVIDIA device here&gt;&#34;
 EndSection
 
-Section "Screen"
-    Identifier "nvidia"
-    Device "nvidia"
+Section &#34;Screen&#34;
+    Identifier &#34;nvidia&#34;
+    Device &#34;nvidia&#34;
     # Uncomment this line if your computer has no display devices connected to
     # the NVIDIA GPU.  Leave it commented if you have display devices
     # connected to the NVIDIA GPU that you would like to use.
-    #Option "UseDisplayDevice" "none"
+    #Option &#34;UseDisplayDevice&#34; &#34;none&#34;
 EndSection
 
-Section "Device"
-    Identifier "intel"
-    Driver "modesetting"
+Section &#34;Device&#34;
+    Identifier &#34;intel&#34;
+    Driver &#34;modesetting&#34;
 EndSection
 
-Section "Screen"
-    Identifier "intel"
-    Device "intel"
+Section &#34;Screen&#34;
+    Identifier &#34;intel&#34;
+    Device &#34;intel&#34;
 EndSection</pre>
 </div>
 </div>
@@ -3901,7 +3899,7 @@ EndSection</pre>
 </div>
 <div class="literalblock">
 <div class="content">
-<pre>    BusID "&lt;BusID for NVIDIA device here&gt;"</pre>
+<pre>    BusID &#34;&lt;BusID for NVIDIA device here&gt;&#34;</pre>
 </div>
 </div>
 <div class="paragraph">
@@ -3909,7 +3907,7 @@ EndSection</pre>
 </div>
 <div class="literalblock">
 <div class="content">
-<pre>    BusID "PCI:1:0:0"</pre>
+<pre>    BusID &#34;PCI:1:0:0&#34;</pre>
 </div>
 </div>
 </div>
@@ -3941,7 +3939,7 @@ xrandr --auto</pre>
 </div>
 </div>
 <div id="footnotes">
-<hr>
+<hr/>
 <div class="footnote" id="_footnotedef_1">
 <a href="#_footnoteref_1">1</a>. 存在していなかったので今回は新規作成しているが、存在している場合はうまくマージする必要があるのかも知れない
 </div>

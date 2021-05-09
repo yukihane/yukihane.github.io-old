@@ -17,9 +17,9 @@
 
 <script defer src="/js/lazysizes.min.31dd6a2d3a1ec0f78a8df007535cf23f03aeb5c70f026e6d6a19dac3b3acc340.js"></script>
 
-<script defer src="/js/helper/getParents.min.1618c696be7c98933f9a92677f518b512a74e55bdbb976b09936b4182e93181b.js"></script>
+<script defer src="/js/helper/getParents.min.ccd45f158c1b17849307ba913a72beac239c410f2b6e648496a79842da84e55b.js"></script>
 
-<script defer src="/js/helper/fadeinout.min.93a331f96194789a542f33690bbe4f0c102c7e78ffc018217f5a1c33010bad91.js"></script>
+<script defer src="/js/helper/fadeinout.min.9fb19682560d5fa5596fffec85da605067c4acc86aad05add4d8fff9d362a446.js"></script>
 
 <script>
   "use strict";
@@ -1083,7 +1083,7 @@
 <meta property="og:url" content="https://yukihane.github.io/docs/python/windows-python/">
 <meta property="og:type" content="article">
 
-<meta name="generator" content="Hugo 0.74.1" />
+<meta name="generator" content="Hugo 0.82.1" />
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="theme-color" content="#ffffff">
 <link rel="canonical" href="https://yukihane.github.io/docs/python/windows-python/">
@@ -1128,16 +1128,14 @@
 </script>
 
     
-<script type="application/javascript">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-E9J8FN5B4Q"></script>
+<script>
 var doNotTrack = false;
 if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'G-E9J8FN5B4Q', 'auto');
-	
-	ga('send', 'pageview');
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-E9J8FN5B4Q', { 'anonymize_ip': false });
 }
 </script>
 
@@ -3574,7 +3572,7 @@ if (!doNotTrack) {
 </li>
 </ul>
 </div>
-<hr>
+<hr/>
 <div class="paragraph">
 <p><code>pip</code> コマンドでインストールしようとすると以下のエラーになる。</p>
 </div>
@@ -3583,17 +3581,17 @@ if (!doNotTrack) {
 <pre class="highlight"><code class="language-winbatch" data-lang="winbatch">&gt;pip install ansible
 (中略)
     warning: GMP or MPIR library not found; Not building Crypto.PublicKey._fastmath.
-    building 'Crypto.Random.OSRNG.winrandom' extension
-    error: Microsoft Visual C++ 14.0 is required. Get it with "Microsoft Visual C++ Build Tools": http://landinghub.visualstudio.com/visual-cpp-build-tools
+    building &#39;Crypto.Random.OSRNG.winrandom&#39; extension
+    error: Microsoft Visual C++ 14.0 is required. Get it with &#34;Microsoft Visual C++ Build Tools&#34;: http://landinghub.visualstudio.com/visual-cpp-build-tools
 
     ----------------------------------------
-Command "c:\python36\python.exe -u -c "import setuptools, tokenize;__file__='C:\\Users\\xxx\\AppData\\Local\\Temp\\pip-build-6vc171ni\\pycrypto\\setup.py';f=getattr(tokenize, 'open', open)(__file__);code=f.read().replace('\r\n', '\n');f.close();exec(compile(code, __file__, 'exec'))" install --record C:\Users\xxx\AppData\Local\Temp\pip-5ckp1rdw-record\install-record.txt --single-version-externally-managed --compile" failed with error code 1 in C:\Users\xxx\AppData\Local\Temp\pip-build-6vc171ni\pycrypto\</code></pre>
+Command &#34;c:\python36\python.exe -u -c &#34;import setuptools, tokenize;__file__=&#39;C:\\Users\\xxx\\AppData\\Local\\Temp\\pip-build-6vc171ni\\pycrypto\\setup.py&#39;;f=getattr(tokenize, &#39;open&#39;, open)(__file__);code=f.read().replace(&#39;\r\n&#39;, &#39;\n&#39;);f.close();exec(compile(code, __file__, &#39;exec&#39;))&#34; install --record C:\Users\xxx\AppData\Local\Temp\pip-5ckp1rdw-record\install-record.txt --single-version-externally-managed --compile&#34; failed with error code 1 in C:\Users\xxx\AppData\Local\Temp\pip-build-6vc171ni\pycrypto\</code></pre>
 </div>
 </div>
 <div class="paragraph">
 <p>メッセージに従い、
-<a href="http://landinghub.visualstudio.com/visual-cpp-build-tools" class="bare">http://landinghub.visualstudio.com/visual-cpp-build-tools</a> で "Visual C++
-Build Tools 2015"
+<a href="http://landinghub.visualstudio.com/visual-cpp-build-tools" class="bare">http://landinghub.visualstudio.com/visual-cpp-build-tools</a> で &#34;Visual C++
+Build Tools 2015&#34;
 をダウンロードしインストールする。インストールオプションはデフォルトのまま。</p>
 </div>
 <div class="paragraph">
@@ -3601,33 +3599,33 @@ Build Tools 2015"
 </div>
 <div class="literalblock">
 <div class="content">
-<pre>    C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\BIN\x86_amd64\cl.exe /c /nologo /Ox /W3 /GL /DNDEBUG /MD -Isrc/ -Isrc/inc-msvc/ -Ic:\python36\include -Ic:\python36\include "-IC:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\INCLUDE" "-IC:\Program Files (x86)\Windows Kits\10\include\10.0.10240.0\ucrt" "-IC:\Program Files (x86)\Windows Kits\8.1\include\shared" "-IC:\Program Files (x86)\Windows Kits\8.1\include\um" "-IC:\Program Files (x86)\Windows Kits\8.1\include\winrt" /Tcsrc/winrand.c /Fobuild\temp.win-amd64-3.6\Release\src/winrand.obj    winrand.c
-    C:\Program Files (x86)\Windows Kits\10\include\10.0.10240.0\ucrt\inttypes.h(26): error C2061: syntax error: identifier 'intmax_t'
-    C:\Program Files (x86)\Windows Kits\10\include\10.0.10240.0\ucrt\inttypes.h(27): error C2061: syntax error: identifier 'rem'
-    C:\Program Files (x86)\Windows Kits\10\include\10.0.10240.0\ucrt\inttypes.h(27): error C2059: syntax error: ';'
-    C:\Program Files (x86)\Windows Kits\10\include\10.0.10240.0\ucrt\inttypes.h(28): error C2059: syntax error: '}'
-    C:\Program Files (x86)\Windows Kits\10\include\10.0.10240.0\ucrt\inttypes.h(30): error C2061: syntax error: identifier 'imaxdiv_t'
-    C:\Program Files (x86)\Windows Kits\10\include\10.0.10240.0\ucrt\inttypes.h(30): error C2059: syntax error: ';'
-    C:\Program Files (x86)\Windows Kits\10\include\10.0.10240.0\ucrt\inttypes.h(40): error C2143: syntax error: missing'{' before '__cdecl'
-    C:\Program Files (x86)\Windows Kits\10\include\10.0.10240.0\ucrt\inttypes.h(41): error C2146: syntax error: missing')' before identifier '_Number'
-    C:\Program Files (x86)\Windows Kits\10\include\10.0.10240.0\ucrt\inttypes.h(41): error C2061: syntax error: identifier '_Number'
-    C:\Program Files (x86)\Windows Kits\10\include\10.0.10240.0\ucrt\inttypes.h(41): error C2059: syntax error: ';'
-    C:\Program Files (x86)\Windows Kits\10\include\10.0.10240.0\ucrt\inttypes.h(42): error C2059: syntax error: ')'
-    C:\Program Files (x86)\Windows Kits\10\include\10.0.10240.0\ucrt\inttypes.h(45): error C2143: syntax error: missing'{' before '__cdecl'
-    C:\Program Files (x86)\Windows Kits\10\include\10.0.10240.0\ucrt\inttypes.h(46): error C2146: syntax error: missing')' before identifier '_Numerator'
-    C:\Program Files (x86)\Windows Kits\10\include\10.0.10240.0\ucrt\inttypes.h(46): error C2061: syntax error: identifier '_Numerator'
-    C:\Program Files (x86)\Windows Kits\10\include\10.0.10240.0\ucrt\inttypes.h(46): error C2059: syntax error: ';'
-    C:\Program Files (x86)\Windows Kits\10\include\10.0.10240.0\ucrt\inttypes.h(46): error C2059: syntax error: ','
-    C:\Program Files (x86)\Windows Kits\10\include\10.0.10240.0\ucrt\inttypes.h(48): error C2059: syntax error: ')'
-    C:\Program Files (x86)\Windows Kits\10\include\10.0.10240.0\ucrt\inttypes.h(50): error C2143: syntax error: missing'{' before '__cdecl'
-    C:\Program Files (x86)\Windows Kits\10\include\10.0.10240.0\ucrt\inttypes.h(56): error C2143: syntax error: missing'{' before '__cdecl'
-    C:\Program Files (x86)\Windows Kits\10\include\10.0.10240.0\ucrt\inttypes.h(63): error C2143: syntax error: missing'{' before '__cdecl'
-    C:\Program Files (x86)\Windows Kits\10\include\10.0.10240.0\ucrt\inttypes.h(69): error C2143: syntax error: missing'{' before '__cdecl'
-    C:\Program Files (x86)\Windows Kits\10\include\10.0.10240.0\ucrt\inttypes.h(76): error C2143: syntax error: missing'{' before '__cdecl'
-    C:\Program Files (x86)\Windows Kits\10\include\10.0.10240.0\ucrt\inttypes.h(82): error C2143: syntax error: missing'{' before '__cdecl'
-    C:\Program Files (x86)\Windows Kits\10\include\10.0.10240.0\ucrt\inttypes.h(89): error C2143: syntax error: missing'{' before '__cdecl'
-    C:\Program Files (x86)\Windows Kits\10\include\10.0.10240.0\ucrt\inttypes.h(95): error C2143: syntax error: missing'{' before '__cdecl'
-    error: command 'C:\\Program Files (x86)\\Microsoft Visual Studio 14.0\\VC\\BIN\\x86_amd64\\cl.exe' failed with exit
+<pre>    C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\BIN\x86_amd64\cl.exe /c /nologo /Ox /W3 /GL /DNDEBUG /MD -Isrc/ -Isrc/inc-msvc/ -Ic:\python36\include -Ic:\python36\include &#34;-IC:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\INCLUDE&#34; &#34;-IC:\Program Files (x86)\Windows Kits\10\include\10.0.10240.0\ucrt&#34; &#34;-IC:\Program Files (x86)\Windows Kits\8.1\include\shared&#34; &#34;-IC:\Program Files (x86)\Windows Kits\8.1\include\um&#34; &#34;-IC:\Program Files (x86)\Windows Kits\8.1\include\winrt&#34; /Tcsrc/winrand.c /Fobuild\temp.win-amd64-3.6\Release\src/winrand.obj    winrand.c
+    C:\Program Files (x86)\Windows Kits\10\include\10.0.10240.0\ucrt\inttypes.h(26): error C2061: syntax error: identifier &#39;intmax_t&#39;
+    C:\Program Files (x86)\Windows Kits\10\include\10.0.10240.0\ucrt\inttypes.h(27): error C2061: syntax error: identifier &#39;rem&#39;
+    C:\Program Files (x86)\Windows Kits\10\include\10.0.10240.0\ucrt\inttypes.h(27): error C2059: syntax error: &#39;;&#39;
+    C:\Program Files (x86)\Windows Kits\10\include\10.0.10240.0\ucrt\inttypes.h(28): error C2059: syntax error: &#39;}&#39;
+    C:\Program Files (x86)\Windows Kits\10\include\10.0.10240.0\ucrt\inttypes.h(30): error C2061: syntax error: identifier &#39;imaxdiv_t&#39;
+    C:\Program Files (x86)\Windows Kits\10\include\10.0.10240.0\ucrt\inttypes.h(30): error C2059: syntax error: &#39;;&#39;
+    C:\Program Files (x86)\Windows Kits\10\include\10.0.10240.0\ucrt\inttypes.h(40): error C2143: syntax error: missing&#39;{&#39; before &#39;__cdecl&#39;
+    C:\Program Files (x86)\Windows Kits\10\include\10.0.10240.0\ucrt\inttypes.h(41): error C2146: syntax error: missing&#39;)&#39; before identifier &#39;_Number&#39;
+    C:\Program Files (x86)\Windows Kits\10\include\10.0.10240.0\ucrt\inttypes.h(41): error C2061: syntax error: identifier &#39;_Number&#39;
+    C:\Program Files (x86)\Windows Kits\10\include\10.0.10240.0\ucrt\inttypes.h(41): error C2059: syntax error: &#39;;&#39;
+    C:\Program Files (x86)\Windows Kits\10\include\10.0.10240.0\ucrt\inttypes.h(42): error C2059: syntax error: &#39;)&#39;
+    C:\Program Files (x86)\Windows Kits\10\include\10.0.10240.0\ucrt\inttypes.h(45): error C2143: syntax error: missing&#39;{&#39; before &#39;__cdecl&#39;
+    C:\Program Files (x86)\Windows Kits\10\include\10.0.10240.0\ucrt\inttypes.h(46): error C2146: syntax error: missing&#39;)&#39; before identifier &#39;_Numerator&#39;
+    C:\Program Files (x86)\Windows Kits\10\include\10.0.10240.0\ucrt\inttypes.h(46): error C2061: syntax error: identifier &#39;_Numerator&#39;
+    C:\Program Files (x86)\Windows Kits\10\include\10.0.10240.0\ucrt\inttypes.h(46): error C2059: syntax error: &#39;;&#39;
+    C:\Program Files (x86)\Windows Kits\10\include\10.0.10240.0\ucrt\inttypes.h(46): error C2059: syntax error: &#39;,&#39;
+    C:\Program Files (x86)\Windows Kits\10\include\10.0.10240.0\ucrt\inttypes.h(48): error C2059: syntax error: &#39;)&#39;
+    C:\Program Files (x86)\Windows Kits\10\include\10.0.10240.0\ucrt\inttypes.h(50): error C2143: syntax error: missing&#39;{&#39; before &#39;__cdecl&#39;
+    C:\Program Files (x86)\Windows Kits\10\include\10.0.10240.0\ucrt\inttypes.h(56): error C2143: syntax error: missing&#39;{&#39; before &#39;__cdecl&#39;
+    C:\Program Files (x86)\Windows Kits\10\include\10.0.10240.0\ucrt\inttypes.h(63): error C2143: syntax error: missing&#39;{&#39; before &#39;__cdecl&#39;
+    C:\Program Files (x86)\Windows Kits\10\include\10.0.10240.0\ucrt\inttypes.h(69): error C2143: syntax error: missing&#39;{&#39; before &#39;__cdecl&#39;
+    C:\Program Files (x86)\Windows Kits\10\include\10.0.10240.0\ucrt\inttypes.h(76): error C2143: syntax error: missing&#39;{&#39; before &#39;__cdecl&#39;
+    C:\Program Files (x86)\Windows Kits\10\include\10.0.10240.0\ucrt\inttypes.h(82): error C2143: syntax error: missing&#39;{&#39; before &#39;__cdecl&#39;
+    C:\Program Files (x86)\Windows Kits\10\include\10.0.10240.0\ucrt\inttypes.h(89): error C2143: syntax error: missing&#39;{&#39; before &#39;__cdecl&#39;
+    C:\Program Files (x86)\Windows Kits\10\include\10.0.10240.0\ucrt\inttypes.h(95): error C2143: syntax error: missing&#39;{&#39; before &#39;__cdecl&#39;
+    error: command &#39;C:\\Program Files (x86)\\Microsoft Visual Studio 14.0\\VC\\BIN\\x86_amd64\\cl.exe&#39; failed with exit
 status 2</pre>
 </div>
 </div>

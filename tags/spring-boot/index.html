@@ -17,9 +17,9 @@
 
 <script defer src="/js/lazysizes.min.31dd6a2d3a1ec0f78a8df007535cf23f03aeb5c70f026e6d6a19dac3b3acc340.js"></script>
 
-<script defer src="/js/helper/getParents.min.1618c696be7c98933f9a92677f518b512a74e55bdbb976b09936b4182e93181b.js"></script>
+<script defer src="/js/helper/getParents.min.ccd45f158c1b17849307ba913a72beac239c410f2b6e648496a79842da84e55b.js"></script>
 
-<script defer src="/js/helper/fadeinout.min.93a331f96194789a542f33690bbe4f0c102c7e78ffc018217f5a1c33010bad91.js"></script>
+<script defer src="/js/helper/fadeinout.min.9fb19682560d5fa5596fffec85da605067c4acc86aad05add4d8fff9d362a446.js"></script>
 
 <script>
   "use strict";
@@ -1084,7 +1084,7 @@
 <meta property="og:url" content="https://yukihane.github.io/tags/spring-boot/">
 <meta property="og:type" content="website">
 
-<meta name="generator" content="Hugo 0.74.1" />
+<meta name="generator" content="Hugo 0.82.1" />
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="theme-color" content="#ffffff">
 <link rel="canonical" href="https://yukihane.github.io/tags/spring-boot/">
@@ -1127,16 +1127,14 @@
 </script>
 
     
-<script type="application/javascript">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-E9J8FN5B4Q"></script>
+<script>
 var doNotTrack = false;
 if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'G-E9J8FN5B4Q', 'auto');
-	
-	ga('send', 'pageview');
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-E9J8FN5B4Q', { 'anonymize_ip': false });
 }
 </script>
 
@@ -3394,7 +3392,7 @@ if (!doNotTrack) {
   <div class="summary-card__content">
     <div class="summary-card__text p2">
       
-        今回の成果物 https://github.com/yukihane/hello-java/tree/master/spring/openapi-sample 設定 build.gradle openapi-generator-gradle-plugin spring generator 辺りを参考にしています。 build.gradle plugins { id 'eclipse' id 'org.openapi.generator' version '4.3.1' } ext { openApiOutputDir = "$rootDir/build/generated/openapi" } sourceSets.main.java.srcDirs += ["$openApiOutputDir/src/main/java"] dependencies { // これらは自動生成クラスが import しているので必要 implementation 'org.springframework.boot:spring-boot-starter-validation'
+        今回の成果物 https://github.com/yukihane/hello-java/tree/master/spring/openapi-sample 設定 build.gradle openapi-generator-gradle-plugin spring generator 辺りを参考にしています。 build.gradle plugins { id &#39;eclipse&#39; id &#39;org.openapi.generator&#39; version &#39;4.3.1&#39; } ext { openApiOutputDir = &#34;$rootDir/build/generated/openapi&#34; } sourceSets.main.java.srcDirs += [&#34;$openApiOutputDir/src/main/java&#34;] dependencies { // これらは自動生成クラスが import しているので必要 implementation &#39;org.springframework.boot:spring-boot-starter-validation&#39;
       
     </div>
     
@@ -3650,7 +3648,7 @@ if (!doNotTrack) {
   <div class="summary-card__content">
     <div class="summary-card__text p2">
       
-        …なんてことができたんですね。こんなコード: @RestController @Repository public interface VehicleInterface extends JpaRepository&lt;vehicle, Long&gt; { @Query("select u from vehicle u where u.year = :year") @RequestMapping(value = "/vehicles", method = RequestMethod.GET) List&lt;vehicle&gt; findByYearEquals(@Param("year") Integer year); } http://localhost:8080/vehicles?year=2010 的なURLでアクセスします。 サンプル
+        …なんてことができたんですね。こんなコード: @RestController @Repository public interface VehicleInterface extends JpaRepository&lt;vehicle, Long&gt; { @Query(&#34;select u from vehicle u where u.year = :year&#34;) @RequestMapping(value = &#34;/vehicles&#34;, method = RequestMethod.GET) List&lt;vehicle&gt; findByYearEquals(@Param(&#34;year&#34;) Integer year); } http://localhost:8080/vehicles?year=2010 的なURLでアクセスします。 サンプル
       
     </div>
     
@@ -3733,7 +3731,7 @@ if (!doNotTrack) {
   <div class="summary-card__content">
     <div class="summary-card__text p2">
       
-        Spring Expression Language (SpEL) with @Value: dollar vs. hash ($ vs. #) より。 ${&#8230;&#8203;} は単なるプロパティのプレースホルダ。 #{&#8230;&#8203;} は Spring Expression Language(SpEL) の構文。 プレースホルダは置き換えるだけだけれども、SpELはも
+        Spring Expression Language (SpEL) with @Value: dollar vs. hash ($ vs. #) より。 ${…​} は単なるプロパティのプレースホルダ。 #{…​} は Spring Expression Language(SpEL) の構文。 プレースホルダは置き換えるだけだけれど
       
     </div>
     
@@ -3961,7 +3959,7 @@ if (!doNotTrack) {
   <div class="summary-card__content">
     <div class="summary-card__text p2">
       
-        要旨 JSONを返してくるのだけれどMIME typeが text/plain;charset=Windows-31J なレスポンスを、RestTemplateで扱いたい。 @GetMapping(produces = "text/plain;charset=Windows-31J") public String response() { return "{\"text\": \"こんにちは世
+        要旨 JSONを返してくるのだけれどMIME typeが text/plain;charset=Windows-31J なレスポンスを、RestTemplateで扱いたい。 @GetMapping(produces = &#34;text/plain;charset=Windows-31J&#34;) public String response() { return &#34;{\&#34;text\&#34;: \&#34;こん
       
     </div>
     

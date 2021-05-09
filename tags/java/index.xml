@@ -92,7 +92,7 @@
         <pubDate>Fri, 03 Apr 2020 02:44:22 +0000</pubDate>
         
         <guid>https://yukihane.github.io/blog/202004/03/java-application-frameworks-cheat-sheet2/</guid>
-        <description>Table of Contents はじめに ポイント: xmlファイルを見逃さないようにする どんな(オレオレ)フレームワークを使っているか: web.xml 起動時処理(等): @PostConstgruct Servlet fileter, Servlet listener JSF</description>
+        <description>はじめに 前回はアプリケーションサーバにデバッガをアタッチする方法までを説明しました。 今回は、ソースコードを眺めているだけでは通ることを見つけ</description>
       </item>
       
       <item>
@@ -101,7 +101,7 @@
         <pubDate>Thu, 02 Apr 2020 06:15:28 +0000</pubDate>
         
         <guid>https://yukihane.github.io/blog/202004/02/java-application-frameworks-cheat-sheet/</guid>
-        <description>Table of Contents 目的 アプリケーションをデプロイする Tomcat にデプロイする WildFly にデプロイする デバッガを接続しステップ実行できるようにする Tomcat へ Eclipse でデバッガをアタッ</description>
+        <description>目的 Javaを用いた開発にある程度慣れている場合でも、初めてアプリケーションフレームワーク上で開発するとなると戸惑うことがあります。 ここでは</description>
       </item>
       
       <item>

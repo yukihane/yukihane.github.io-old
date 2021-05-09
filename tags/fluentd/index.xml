@@ -20,7 +20,7 @@
         <pubDate>Mon, 09 Mar 2020 07:54:53 +0000</pubDate>
         
         <guid>https://yukihane.github.io/blog/202003/09/td-agent-with-proxy/</guid>
-        <description>sudo systemctl edit td-agent で編集画面を開き、次を記述: [Service] Environment=&#34;HTTP_PROXY=http://myproxy.example.com:8080&#34;</description>
+        <description>sudo systemctl edit td-agent で編集画面を開き、次を記述: [Service] Environment=&amp;#34;HTTP_PROXY=http://myproxy.example.com:8080&amp;#34;</description>
       </item>
       
       <item>

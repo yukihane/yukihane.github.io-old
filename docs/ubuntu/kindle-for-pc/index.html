@@ -17,9 +17,9 @@
 
 <script defer src="/js/lazysizes.min.31dd6a2d3a1ec0f78a8df007535cf23f03aeb5c70f026e6d6a19dac3b3acc340.js"></script>
 
-<script defer src="/js/helper/getParents.min.1618c696be7c98933f9a92677f518b512a74e55bdbb976b09936b4182e93181b.js"></script>
+<script defer src="/js/helper/getParents.min.ccd45f158c1b17849307ba913a72beac239c410f2b6e648496a79842da84e55b.js"></script>
 
-<script defer src="/js/helper/fadeinout.min.93a331f96194789a542f33690bbe4f0c102c7e78ffc018217f5a1c33010bad91.js"></script>
+<script defer src="/js/helper/fadeinout.min.9fb19682560d5fa5596fffec85da605067c4acc86aad05add4d8fff9d362a446.js"></script>
 
 <script>
   "use strict";
@@ -1083,7 +1083,7 @@
 <meta property="og:url" content="https://yukihane.github.io/docs/ubuntu/kindle-for-pc/">
 <meta property="og:type" content="article">
 
-<meta name="generator" content="Hugo 0.74.1" />
+<meta name="generator" content="Hugo 0.82.1" />
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="theme-color" content="#ffffff">
 <link rel="canonical" href="https://yukihane.github.io/docs/ubuntu/kindle-for-pc/">
@@ -1128,16 +1128,14 @@
 </script>
 
     
-<script type="application/javascript">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-E9J8FN5B4Q"></script>
+<script>
 var doNotTrack = false;
 if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'G-E9J8FN5B4Q', 'auto');
-	
-	ga('send', 'pageview');
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-E9J8FN5B4Q', { 'anonymize_ip': false });
 }
 </script>
 
@@ -3571,7 +3569,7 @@ PCを動作させる手順です。</p>
 なお<strong>このWineはKindleを動作させるものではない</strong>ので、最新安定版をインストールしておけば良いようです。
 (後述しますが、<strong>Kindleを動作させるWine</strong>は相性問題で必ずしも最新版が良いとは限らないようです。)</p>
 </div>
-<hr>
+<hr/>
 <div class="paragraph">
 <p>古い記事では ppa:wine/wine-builds
 を使用するよう書かれているが、これは既にdeprecatedです(リポジトリ追加時に警告も出る)。</p>
@@ -3594,9 +3592,9 @@ PCを動作させる手順です。</p>
 <p>The following commands can be used to add the new repository:</p>
 </div>
 <div class="paragraph">
-<p><code>   wget `https://dl.winehq.org/wine-builds/Release.key[`https://dl.winehq.org/wine-builds/Release.key</code>]<br>
-<code>   sudo apt-key add Release.key</code><br>
-<code>   sudo apt-add-repository &#8216;<a href="https://dl.winehq.org/wine-builds/ubuntu/">`https://dl.winehq.org/wine-builds/ubuntu/</code></a>&#8217;`</p>
+<p><code>   wget `https://dl.winehq.org/wine-builds/Release.key[`https://dl.winehq.org/wine-builds/Release.key</code>]<br/>
+<code>   sudo apt-key add Release.key</code><br/>
+<code>   sudo apt-add-repository ‘<a href="https://dl.winehq.org/wine-builds/ubuntu/">`https://dl.winehq.org/wine-builds/ubuntu/</a></code>’`</p>
 </div>
 </blockquote>
 </div>
@@ -3615,7 +3613,7 @@ sudo apt-key add winehq.key</pre>
 </div>
 <div class="literalblock">
 <div class="content">
-<pre>sudo apt-add-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ bionic main'</pre>
+<pre>sudo apt-add-repository &#39;deb https://dl.winehq.org/wine-builds/ubuntu/ bionic main&#39;</pre>
 </div>
 </div>
 <div class="paragraph">
@@ -3647,7 +3645,7 @@ sudo apt-key add winehq.key</pre>
 </div>
 <div class="literalblock">
 <div class="content">
-<pre>wget -q "http://deb.playonlinux.com/public.gpg" -O- | sudo apt-key add -
+<pre>wget -q &#34;http://deb.playonlinux.com/public.gpg&#34; -O- | sudo apt-key add -
 sudo wget http://deb.playonlinux.com/playonlinux_xenial.list -O /etc/apt/sources.list.d/playonlinux.list
 sudo apt-get update
 sudo apt-get install playonlinux</pre>
@@ -3723,29 +3721,29 @@ PCについて、PlayOnLinuxからダウンロードはできるものは.co.jp�
 メニューを選択します。(本来ならここでインストール可能なアプリ一覧が表示されるようですが、私が今回インストールしたバージョンでは読み込み中表示のまま止まっています)</p>
 </div>
 <div class="paragraph">
-<p>画面下部の"<em>リストにないプログラムをインストールする</em>"を選択します。</p>
+<p>画面下部の&#34;<em>リストにないプログラムをインストールする</em>&#34;を選択します。</p>
 </div>
 <div class="paragraph">
-<p>"<em>Install a program in a new virtual drive</em>"を選択します。</p>
+<p>&#34;<em>Install a program in a new virtual drive</em>&#34;を選択します。</p>
 </div>
 <div class="paragraph">
 <p>好きな名前を入力します。(私は <em>for_kindle</em> と入力しました)</p>
 </div>
 <div class="paragraph">
-<p>"<em>Use another version of Wine</em>" と "<em>Configure Wine</em>"
+<p>&#34;<em>Use another version of Wine</em>&#34; と &#34;<em>Configure Wine</em>&#34;
 にチェックを入れます。</p>
 </div>
 <div class="paragraph">
 <p>Kindle for PCを動作させるWineのバージョンである <em>2.15</em> を選択します。</p>
 </div>
 <div class="paragraph">
-<p>"<em>32bits windows installation</em>" を選択します。</p>
+<p>&#34;<em>32bits windows installation</em>&#34; を選択します。</p>
 </div>
 <div class="paragraph">
 <p>MonoインストールとGeckoインストールを促されますが、両方キャンセルします。</p>
 </div>
 <div class="paragraph">
-<p>"アプリケーション"タブの "Windowsバージョン" を <strong>Windows 8.1</strong>
+<p>&#34;アプリケーション&#34;タブの &#34;Windowsバージョン&#34; を <strong>Windows 8.1</strong>
 に設定します。</p>
 </div>
 <div class="paragraph">
@@ -3773,7 +3771,7 @@ PCのインストーラexeを指定します。</p>
 <div class="sect3">
 <h4 id="_フォントを配備">フォントを配備</h4>
 <div class="paragraph">
-<p><code>~/PlayOnLinux&#8217;s virtual drives/for_kindle/drive_c/windows/Fonts</code> にフォントファイル <code>Cica-Regular.ttf</code> を置きます。</p>
+<p><code>~/PlayOnLinux’s virtual drives/for_kindle/drive_c/windows/Fonts</code> にフォントファイル <code>Cica-Regular.ttf</code> を置きます。</p>
 </div>
 </div>
 <div class="sect3">
@@ -3787,20 +3785,20 @@ PCのインストーラexeを指定します。</p>
 <pre class="highlight"><code class="language-reg" data-lang="reg">REGEDIT4
 
 [HKEY_CURRENT_USER\Software\Wine\Fonts\Replacements]
-"Andale Mono"="Cica"
-"Arial Unicode MS"="Cica"
-"Batang"="Cica"
-"Dotum"="Cica"
-"MS Gothic"="Cica"
-"MS Mincho"="Cica"
-"MS PGothic"="Cica"
-"MS PMincho"="Cica"
-"MS UI Gothic"="Cica"
-"Tahoma"="Cica"
-"ＭＳ ゴシック"="Cica"
-"ＭＳ 明朝"="Cica"
-"ＭＳ Ｐゴシック"="Cica"
-"ＭＳ Ｐ明朝"="Cica"</code></pre>
+&#34;Andale Mono&#34;=&#34;Cica&#34;
+&#34;Arial Unicode MS&#34;=&#34;Cica&#34;
+&#34;Batang&#34;=&#34;Cica&#34;
+&#34;Dotum&#34;=&#34;Cica&#34;
+&#34;MS Gothic&#34;=&#34;Cica&#34;
+&#34;MS Mincho&#34;=&#34;Cica&#34;
+&#34;MS PGothic&#34;=&#34;Cica&#34;
+&#34;MS PMincho&#34;=&#34;Cica&#34;
+&#34;MS UI Gothic&#34;=&#34;Cica&#34;
+&#34;Tahoma&#34;=&#34;Cica&#34;
+&#34;ＭＳ ゴシック&#34;=&#34;Cica&#34;
+&#34;ＭＳ 明朝&#34;=&#34;Cica&#34;
+&#34;ＭＳ Ｐゴシック&#34;=&#34;Cica&#34;
+&#34;ＭＳ Ｐ明朝&#34;=&#34;Cica&#34;</code></pre>
 </div>
 </div>
 <div class="paragraph">

@@ -29,7 +29,7 @@
         <pubDate>Sun, 26 Jan 2020 14:48:47 +0000</pubDate>
         
         <guid>https://yukihane.github.io/blog/202001/26/resttemplate-with-illformed-json/</guid>
-        <description>要旨 JSONを返してくるのだけれどMIME typeが text/plain;charset=Windows-31J なレスポンスを、RestTemplateで扱いたい。 @GetMapping(produces = &#34;text/plain;charset=Windows-31J&#34;) public String response() { return &#34;{\&#34;text\&#34;: \&#34;こんにちは世</description>
+        <description>要旨 JSONを返してくるのだけれどMIME typeが text/plain;charset=Windows-31J なレスポンスを、RestTemplateで扱いたい。 @GetMapping(produces = &amp;#34;text/plain;charset=Windows-31J&amp;#34;) public String response() { return &amp;#34;{\&amp;#34;text\&amp;#34;: \&amp;#34;こん</description>
       </item>
       
     

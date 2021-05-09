@@ -20,7 +20,7 @@
         <pubDate>Sun, 26 Jul 2020 03:10:06 +0000</pubDate>
         
         <guid>https://yukihane.github.io/docs/git/</guid>
-        <description>オンラインマニュアル https://git-scm.com/docs password記憶 git config --global credential.helper &#39;cache --timeout=21600&#39; 21600秒(6時間)デーモンがパスワードを保持する。 単語単位diff git config --global alias.diffw &#34;diff --word-diff-regex=.&#34; 上記</description>
+        <description>オンラインマニュアル https://git-scm.com/docs password記憶 git config --global credential.helper &amp;#39;cache --timeout=21600&amp;#39; 21600秒(6時間)デーモンがパスワードを保持する。 単語単位diff git config --global alias.diffw &amp;#34;diff --word-diff-regex=.&amp;#34; 上記</description>
       </item>
       
       <item>
@@ -29,7 +29,7 @@
         <pubDate>Sun, 26 Jul 2020 03:08:10 +0000</pubDate>
         
         <guid>https://yukihane.github.io/docs/ansible/</guid>
-        <description>チュートリアル http://docs.ansible.com/ansible/intro_getting_started.html の通り実行しようとすると以下のエラーとなった。 ubuntu:~$ ansible all -m ping mama | UNREACHABLE! =&amp;gt; { &#34;changed&#34;: false, &#34;msg&#34;: &#34;Failed to connect to the host via ssh: Permission denied (publickey,gssapi-keyex,gssapi-with-mic,password).\r\n&#34;, &#34;unreachable&#34;: true } ubuntu:~$ ansible all -m ping --ask-pass SSH password: mama | FAILED! =&amp;gt;</description>
+        <description>チュートリアル http://docs.ansible.com/ansible/intro_getting_started.html の通り実行しようとすると以下のエラーとなった。 ubuntu:~$ ansible all -m ping mama | UNREACHABLE! =&amp;gt; { &amp;#34;changed&amp;#34;: false, &amp;#34;msg&amp;#34;: &amp;#34;Failed to connect to the host via ssh: Permission denied (publickey,gssapi-keyex,gssapi-with-mic,password).\r\n&amp;#34;, &amp;#34;unreachable&amp;#34;: true } ubuntu:~$ ansible all -m ping --ask-pass SSH password: mama | FAILED! =&amp;gt;</description>
       </item>
       
       <item>

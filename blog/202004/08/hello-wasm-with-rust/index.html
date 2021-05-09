@@ -17,9 +17,9 @@
 
 <script defer src="/js/lazysizes.min.31dd6a2d3a1ec0f78a8df007535cf23f03aeb5c70f026e6d6a19dac3b3acc340.js"></script>
 
-<script defer src="/js/helper/getParents.min.1618c696be7c98933f9a92677f518b512a74e55bdbb976b09936b4182e93181b.js"></script>
+<script defer src="/js/helper/getParents.min.ccd45f158c1b17849307ba913a72beac239c410f2b6e648496a79842da84e55b.js"></script>
 
-<script defer src="/js/helper/fadeinout.min.93a331f96194789a542f33690bbe4f0c102c7e78ffc018217f5a1c33010bad91.js"></script>
+<script defer src="/js/helper/fadeinout.min.9fb19682560d5fa5596fffec85da605067c4acc86aad05add4d8fff9d362a446.js"></script>
 
 <script>
   "use strict";
@@ -1083,7 +1083,7 @@
 <meta property="og:url" content="https://yukihane.github.io/blog/202004/08/hello-wasm-with-rust/">
 <meta property="og:type" content="article">
 
-<meta name="generator" content="Hugo 0.74.1" />
+<meta name="generator" content="Hugo 0.82.1" />
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="theme-color" content="#ffffff">
 <link rel="canonical" href="https://yukihane.github.io/blog/202004/08/hello-wasm-with-rust/">
@@ -1129,16 +1129,14 @@
 </script>
 
     
-<script type="application/javascript">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-E9J8FN5B4Q"></script>
+<script>
 var doNotTrack = false;
 if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'G-E9J8FN5B4Q', 'auto');
-	
-	ga('send', 'pageview');
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-E9J8FN5B4Q', { 'anonymize_ip': false });
 }
 </script>
 
@@ -4958,7 +4956,7 @@ if (!doNotTrack) {
 </dl>
 </div>
 <div class="paragraph">
-<p>"Hello, worldをWasmでやってみよう！"という場合、おそらく利用することになるのは rust-webpack-template ではないでしょうか。</p>
+<p>&#34;Hello, worldをWasmでやってみよう！&#34;という場合、おそらく利用することになるのは rust-webpack-template ではないでしょうか。</p>
 </div>
 </div>
 </div>
@@ -4975,7 +4973,7 @@ if (!doNotTrack) {
 </div>
 </div>
 <div class="paragraph">
-<p>( <code>wasm-pack</code> のチュートリアルで用いられているのは <a href="https://github.com/rustwasm/wasm-pack-template"><code>wasm-pack-template</code></a> でなく <a href="https://github.com/rustwasm/rust-webpack-template"><code>rust-webpack-template</code></a> &#8230;&#8203;これだけで混乱するには十分です&#8230;&#8203;)</p>
+<p>( <code>wasm-pack</code> のチュートリアルで用いられているのは <a href="https://github.com/rustwasm/wasm-pack-template"><code>wasm-pack-template</code></a> でなく <a href="https://github.com/rustwasm/rust-webpack-template"><code>rust-webpack-template</code></a> …​これだけで混乱するには十分です…​)</p>
 </div>
 <div class="paragraph">
 <p>ちなみに <code>yarn create rust-webpack</code> は何故か失敗します(<a href="https://github.com/rustwasm/create-wasm-app/issues/143">こちら</a> と同じ原因でしょうか)。
@@ -4993,8 +4991,8 @@ if (!doNotTrack) {
 <div class="title">src/lib.rs</div>
 <div class="content">
 <pre>// Your code goes here!
-let p: web_sys::Node = document.create_element("p")?.into();
-p.set_text_content(Some("Hello from Rust, WebAssembly, and Webpack!"));</pre>
+let p: web_sys::Node = document.create_element(&#34;p&#34;)?.into();
+p.set_text_content(Some(&#34;Hello from Rust, WebAssembly, and Webpack!&#34;));</pre>
 </div>
 </div>
 <div class="paragraph">
@@ -5010,20 +5008,20 @@ p.set_text_content(Some("Hello from Rust, WebAssembly, and Webpack!"));</pre>
 <div class="title">Cargo.toml</div>
 <div class="content">
 <pre>[dependencies.web-sys]
-version = "0.3.22"
-features = ["console", 'Document', 'Element', 'HtmlElement', 'Node', 'Window']</pre>
+version = &#34;0.3.22&#34;
+features = [&#34;console&#34;, &#39;Document&#39;, &#39;Element&#39;, &#39;HtmlElement&#39;, &#39;Node&#39;, &#39;Window&#39;]</pre>
 </div>
 </div>
 <div class="literalblock">
 <div class="title">src/lib.rs</div>
 <div class="content">
 <pre>// Your code goes here!
-let window = web_sys::window().expect("no global `window` exists");
-let document = window.document().expect("should have a document on window");
-let body = document.body().expect("document should have a body");
+let window = web_sys::window().expect(&#34;no global `window` exists&#34;);
+let document = window.document().expect(&#34;should have a document on window&#34;);
+let body = document.body().expect(&#34;document should have a body&#34;);
 
-let val = document.create_element("p")?;
-val.set_text_content(Some("Hello from Rust, WebAssembly, and Webpack!"));
+let val = document.create_element(&#34;p&#34;)?;
+val.set_text_content(Some(&#34;Hello from Rust, WebAssembly, and Webpack!&#34;));
 
 body.append_child(&amp;val)?;</pre>
 </div>

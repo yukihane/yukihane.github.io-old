@@ -17,9 +17,9 @@
 
 <script defer src="/js/lazysizes.min.31dd6a2d3a1ec0f78a8df007535cf23f03aeb5c70f026e6d6a19dac3b3acc340.js"></script>
 
-<script defer src="/js/helper/getParents.min.1618c696be7c98933f9a92677f518b512a74e55bdbb976b09936b4182e93181b.js"></script>
+<script defer src="/js/helper/getParents.min.ccd45f158c1b17849307ba913a72beac239c410f2b6e648496a79842da84e55b.js"></script>
 
-<script defer src="/js/helper/fadeinout.min.93a331f96194789a542f33690bbe4f0c102c7e78ffc018217f5a1c33010bad91.js"></script>
+<script defer src="/js/helper/fadeinout.min.9fb19682560d5fa5596fffec85da605067c4acc86aad05add4d8fff9d362a446.js"></script>
 
 <script>
   "use strict";
@@ -1083,7 +1083,7 @@
 <meta property="og:url" content="https://yukihane.github.io/docs/ubuntu/kindle-for-pc-ubuntu20.04/">
 <meta property="og:type" content="article">
 
-<meta name="generator" content="Hugo 0.74.1" />
+<meta name="generator" content="Hugo 0.82.1" />
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="theme-color" content="#ffffff">
 <link rel="canonical" href="https://yukihane.github.io/docs/ubuntu/kindle-for-pc-ubuntu20.04/">
@@ -1128,16 +1128,14 @@
 </script>
 
     
-<script type="application/javascript">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-E9J8FN5B4Q"></script>
+<script>
 var doNotTrack = false;
 if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'G-E9J8FN5B4Q', 'auto');
-	
-	ga('send', 'pageview');
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-E9J8FN5B4Q', { 'anonymize_ip': false });
 }
 </script>
 
@@ -3622,7 +3620,7 @@ sudo apt-key add winehq.key</pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>sudo add-apt-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ focal main'</pre>
+<pre>sudo add-apt-repository &#39;deb https://dl.winehq.org/wine-builds/ubuntu/ focal main&#39;</pre>
 </div>
 </div>
 <div class="paragraph">
@@ -3659,7 +3657,7 @@ wine-6.0</pre>
 <p><a href="https://forum.manjaro.org/t/is-there-anyone-who-use-amazon-kindle-for-pc-via-wine/46560">Is there anyone who use Amazon Kindle for PC via Wine?</a></p>
 </li>
 <li>
-<p><a href="https://bugs.winehq.org/show_bug.cgi?id=50471">Bug 50471 Kindle for PC 1.16.0 can&#8217;t connect</a></p>
+<p><a href="https://bugs.winehq.org/show_bug.cgi?id=50471">Bug 50471 Kindle for PC 1.16.0 can’t connect</a></p>
 </li>
 </ul>
 </div>
@@ -3670,7 +3668,7 @@ wine-6.0</pre>
 <div class="content">
 <pre>Now I can connect kindle for PC to amazon with Kindle version 1.30.0.
 What I did are following.
-1. uninstall old kindle with command "wine64 uninstaller"
+1. uninstall old kindle with command &#34;wine64 uninstaller&#34;
 2. mkdir -p ${WINEPREFIX:-$HOME/.wine}/drive_c/users/$USER/AppData/Local/Amazon/Kindle
 3. install Kindle for PC version 1.30.0.</pre>
 </div>
@@ -3768,7 +3766,7 @@ What I did are following.
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>echo 'alias kindle="wine64 $HOME/.wine/drive_c/Program\ Files\ \(x86\)/Amazon/Kindle/Kindle.exe"' &gt;&gt; ~/.bashrc</pre>
+<pre>echo &#39;alias kindle=&#34;wine64 $HOME/.wine/drive_c/Program\ Files\ \(x86\)/Amazon/Kindle/Kindle.exe&#34;&#39; &gt;&gt; ~/.bashrc</pre>
 </div>
 </div>
 </div>

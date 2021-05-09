@@ -38,7 +38,7 @@
         <pubDate>Sun, 21 Mar 2021 09:54:35 +0000</pubDate>
         
         <guid>https://yukihane.github.io/blog/202103/21/implicit-submission/</guid>
-        <description>入力フォームに値を入力して、(送信ボタンを押すのではなく)入力フィールド内でエンターキーを押すと送信される機能、&#34;Implicit Submi</description>
+        <description>入力フォームに値を入力して、(送信ボタンを押すのではなく)入力フィールド内でエンターキーを押すと送信される機能、&amp;#34;Implicit S</description>
       </item>
       
       <item>
@@ -245,7 +245,7 @@
         <pubDate>Sun, 23 Aug 2020 05:09:07 +0000</pubDate>
         
         <guid>https://yukihane.github.io/blog/202008/23/openapi-generator/</guid>
-        <description>今回の成果物 https://github.com/yukihane/hello-java/tree/master/spring/openapi-sample 設定 build.gradle openapi-generator-gradle-plugin spring generator 辺りを参考にしています。 build.gradle plugins { id &#39;eclipse&#39; id &#39;org.openapi.generator&#39; version &#39;4.3.1&#39; } ext { openApiOutputDir = &#34;$rootDir/build/generated/openapi&#34; } sourceSets.main.java.srcDirs += [&#34;$openApiOutputDir/src/main/java&#34;] dependencies { // これらは自動生成クラスが import しているので必要 implementation &#39;org.springframework.boot:spring-boot-starter-validation&#39;</description>
+        <description>今回の成果物 https://github.com/yukihane/hello-java/tree/master/spring/openapi-sample 設定 build.gradle openapi-generator-gradle-plugin spring generator 辺りを参考にしています。 build.gradle plugins { id &amp;#39;eclipse&amp;#39; id &amp;#39;org.openapi.generator&amp;#39; version &amp;#39;4.3.1&amp;#39; } ext { openApiOutputDir = &amp;#34;$rootDir/build/generated/openapi&amp;#34; } sourceSets.main.java.srcDirs += [&amp;#34;$openApiOutputDir/src/main/java&amp;#34;] dependencies { // これらは自動生成クラスが import しているので必要 implementation &amp;#39;org.springframework.boot:spring-boot-starter-validation&amp;#39;</description>
       </item>
       
       <item>
@@ -371,7 +371,7 @@
         <pubDate>Sun, 19 Jul 2020 06:10:14 +0000</pubDate>
         
         <guid>https://yukihane.github.io/blog/202007/19/spring-security-authentication-server/</guid>
-        <description>世の中に認可サーバー製品がたくさんあるので、Spring Securityではサポートしないことを決定しました &amp;#8212; Spring Security OAuth2はあと数年でサ</description>
+        <description>世の中に認可サーバー製品がたくさんあるので、Spring Securityではサポートしないことを決定しました — Spring Security OAuth2はあと数年でサ</description>
       </item>
       
       <item>
@@ -416,7 +416,7 @@
         <pubDate>Sat, 11 Jul 2020 00:41:41 +0000</pubDate>
         
         <guid>https://yukihane.github.io/blog/202007/11/same-class-controller-and-repository/</guid>
-        <description>…なんてことができたんですね。こんなコード: @RestController @Repository public interface VehicleInterface extends JpaRepository&amp;lt;vehicle, Long&amp;gt; { @Query(&#34;select u from vehicle u where u.year = :year&#34;) @RequestMapping(value = &#34;/vehicles&#34;, method = RequestMethod.GET) List&amp;lt;vehicle&amp;gt; findByYearEquals(@Param(&#34;year&#34;) Integer year); } http://localhost:8080/vehicles?year=2010 的なURLでアクセスします。 サンプル</description>
+        <description>…なんてことができたんですね。こんなコード: @RestController @Repository public interface VehicleInterface extends JpaRepository&amp;lt;vehicle, Long&amp;gt; { @Query(&amp;#34;select u from vehicle u where u.year = :year&amp;#34;) @RequestMapping(value = &amp;#34;/vehicles&amp;#34;, method = RequestMethod.GET) List&amp;lt;vehicle&amp;gt; findByYearEquals(@Param(&amp;#34;year&amp;#34;) Integer year); } http://localhost:8080/vehicles?year=2010 的なURLでアクセスします。 サンプル</description>
       </item>
       
       <item>
@@ -443,7 +443,7 @@
         <pubDate>Thu, 02 Jul 2020 00:31:47 +0000</pubDate>
         
         <guid>https://yukihane.github.io/blog/202007/02/difference-between-doller-and-hash/</guid>
-        <description>Spring Expression Language (SpEL) with @Value: dollar vs. hash ($ vs. #) より。 ${&amp;#8230;&amp;#8203;} は単なるプロパティのプレースホルダ。 #{&amp;#8230;&amp;#8203;} は Spring Expression Language(SpEL) の構文。 プレースホルダは置き換えるだけだけれども、SpELはも</description>
+        <description>Spring Expression Language (SpEL) with @Value: dollar vs. hash ($ vs. #) より。 ${…​} は単なるプロパティのプレースホルダ。 #{…​} は Spring Expression Language(SpEL) の構文。 プレースホルダは置き換えるだけだけれど</description>
       </item>
       
       <item>
@@ -668,7 +668,7 @@
         <pubDate>Fri, 03 Apr 2020 02:44:22 +0000</pubDate>
         
         <guid>https://yukihane.github.io/blog/202004/03/java-application-frameworks-cheat-sheet2/</guid>
-        <description>Table of Contents はじめに ポイント: xmlファイルを見逃さないようにする どんな(オレオレ)フレームワークを使っているか: web.xml 起動時処理(等): @PostConstgruct Servlet fileter, Servlet listener JSF</description>
+        <description>はじめに 前回はアプリケーションサーバにデバッガをアタッチする方法までを説明しました。 今回は、ソースコードを眺めているだけでは通ることを見つけ</description>
       </item>
       
       <item>
@@ -677,7 +677,7 @@
         <pubDate>Thu, 02 Apr 2020 06:15:28 +0000</pubDate>
         
         <guid>https://yukihane.github.io/blog/202004/02/java-application-frameworks-cheat-sheet/</guid>
-        <description>Table of Contents 目的 アプリケーションをデプロイする Tomcat にデプロイする WildFly にデプロイする デバッガを接続しステップ実行できるようにする Tomcat へ Eclipse でデバッガをアタッ</description>
+        <description>目的 Javaを用いた開発にある程度慣れている場合でも、初めてアプリケーションフレームワーク上で開発するとなると戸惑うことがあります。 ここでは</description>
       </item>
       
       <item>
@@ -704,7 +704,7 @@
         <pubDate>Mon, 09 Mar 2020 07:54:53 +0000</pubDate>
         
         <guid>https://yukihane.github.io/blog/202003/09/td-agent-with-proxy/</guid>
-        <description>sudo systemctl edit td-agent で編集画面を開き、次を記述: [Service] Environment=&#34;HTTP_PROXY=http://myproxy.example.com:8080&#34;</description>
+        <description>sudo systemctl edit td-agent で編集画面を開き、次を記述: [Service] Environment=&amp;#34;HTTP_PROXY=http://myproxy.example.com:8080&amp;#34;</description>
       </item>
       
       <item>
@@ -758,7 +758,7 @@
         <pubDate>Sun, 26 Jan 2020 14:48:47 +0000</pubDate>
         
         <guid>https://yukihane.github.io/blog/202001/26/resttemplate-with-illformed-json/</guid>
-        <description>要旨 JSONを返してくるのだけれどMIME typeが text/plain;charset=Windows-31J なレスポンスを、RestTemplateで扱いたい。 @GetMapping(produces = &#34;text/plain;charset=Windows-31J&#34;) public String response() { return &#34;{\&#34;text\&#34;: \&#34;こんにちは世</description>
+        <description>要旨 JSONを返してくるのだけれどMIME typeが text/plain;charset=Windows-31J なレスポンスを、RestTemplateで扱いたい。 @GetMapping(produces = &amp;#34;text/plain;charset=Windows-31J&amp;#34;) public String response() { return &amp;#34;{\&amp;#34;text\&amp;#34;: \&amp;#34;こん</description>
       </item>
       
       <item>
@@ -776,7 +776,7 @@
         <pubDate>Tue, 31 Dec 2019 00:00:00 +0000</pubDate>
         
         <guid>https://yukihane.github.io/blog/202001/rust-create-library/</guid>
-        <description>はじめに 他の言語で言うところの&#34;ライブラリ&#34;は、Rustでは &#34;ライブラリクレート&#34;(library crate) と呼ぶようです。 またcrateはmodu</description>
+        <description>はじめに 他の言語で言うところの&amp;#34;ライブラリ&amp;#34;は、Rustでは &amp;#34;ライブラリクレート&amp;#34;(library crate) と呼ぶよ</description>
       </item>
       
       <item>

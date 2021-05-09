@@ -56,7 +56,7 @@
         <pubDate>Tue, 31 Dec 2019 00:00:00 +0000</pubDate>
         
         <guid>https://yukihane.github.io/blog/202001/rust-create-library/</guid>
-        <description>はじめに 他の言語で言うところの&#34;ライブラリ&#34;は、Rustでは &#34;ライブラリクレート&#34;(library crate) と呼ぶようです。 またcrateはmodu</description>
+        <description>はじめに 他の言語で言うところの&amp;#34;ライブラリ&amp;#34;は、Rustでは &amp;#34;ライブラリクレート&amp;#34;(library crate) と呼ぶよ</description>
       </item>
       
       <item>

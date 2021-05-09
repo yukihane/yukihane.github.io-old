@@ -17,9 +17,9 @@
 
 <script defer src="/js/lazysizes.min.31dd6a2d3a1ec0f78a8df007535cf23f03aeb5c70f026e6d6a19dac3b3acc340.js"></script>
 
-<script defer src="/js/helper/getParents.min.1618c696be7c98933f9a92677f518b512a74e55bdbb976b09936b4182e93181b.js"></script>
+<script defer src="/js/helper/getParents.min.ccd45f158c1b17849307ba913a72beac239c410f2b6e648496a79842da84e55b.js"></script>
 
-<script defer src="/js/helper/fadeinout.min.93a331f96194789a542f33690bbe4f0c102c7e78ffc018217f5a1c33010bad91.js"></script>
+<script defer src="/js/helper/fadeinout.min.9fb19682560d5fa5596fffec85da605067c4acc86aad05add4d8fff9d362a446.js"></script>
 
 <script>
   "use strict";
@@ -1083,7 +1083,7 @@
 <meta property="og:url" content="https://yukihane.github.io/blog/202007/15/spring-boot-books-review/">
 <meta property="og:type" content="article">
 
-<meta name="generator" content="Hugo 0.74.1" />
+<meta name="generator" content="Hugo 0.82.1" />
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="theme-color" content="#ffffff">
 <link rel="canonical" href="https://yukihane.github.io/blog/202007/15/spring-boot-books-review/">
@@ -1129,16 +1129,14 @@
 </script>
 
     
-<script type="application/javascript">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-E9J8FN5B4Q"></script>
+<script>
 var doNotTrack = false;
 if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'G-E9J8FN5B4Q', 'auto');
-	
-	ga('send', 'pageview');
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-E9J8FN5B4Q', { 'anonymize_ip': false });
 }
 </script>
 
@@ -4902,7 +4900,7 @@ if (!doNotTrack) {
 <p>- がっつりEclipse(STS)を前提としている。が、敢えてIntelliJとかVSCodeとか使ってる人なら読み替えるのは容易なはずだよね :) 個人的にもSTS前提とするのは妥当だと思う。</p>
 </li>
 <li>
-<p>☓ Springマジックをちゃんと説明するのは難しいので「こう書けばこうなります」的な説明になってしまうのは仕方がないのかな、と思う(例: コントローラのハンドラメソッドで <code>return "index";</code> とすれば <code>templates/index.html</code> が呼ばれます)。ただ、なんでそうなるのか調べたい人に対して、オフィシャルへの導線があると良かった。</p>
+<p>☓ Springマジックをちゃんと説明するのは難しいので「こう書けばこうなります」的な説明になってしまうのは仕方がないのかな、と思う(例: コントローラのハンドラメソッドで <code>return &#34;index&#34;;</code> とすれば <code>templates/index.html</code> が呼ばれます)。ただ、なんでそうなるのか調べたい人に対して、オフィシャルへの導線があると良かった。</p>
 </li>
 <li>
 <p>○ オフィシャルリファレンスへのリンクが正しい。ちゃんと特定バージョン(今回の場合 <code>2.3.0.RELEASE</code> )へのリンクになっている。</p>
@@ -4914,7 +4912,7 @@ if (!doNotTrack) {
 <p>☓ 最初からThymeleafを使っているが、Thymeleafに対する説明が少し足りない感じを受ける。オフィシャルリファレンス( <a href="https://www.thymeleaf.org/doc/tutorials/3.0/usingthymeleaf_ja.html">3.0</a>, <a href="https://www.thymeleaf.org/doc/tutorials/3.0/thymeleafspring.html">Springインテグレーション</a>)へのリンクくらいは有っても良いのでは。</p>
 </li>
 <li>
-<p>☓ 細かいですが、3.3.4節の記述「 <code>@RequestParam("message")</code> は、正式には <code>name="message"</code> を省略したものです。」は不正確。正しくは(これはJavaの仕様) 「 <code>value="message"</code> を省略したもの」。(ただしここでは <code>name</code> も <code>value</code> も同じ役割なので結果は同じ。)</p>
+<p>☓ 細かいですが、3.3.4節の記述「 <code>@RequestParam(&#34;message&#34;)</code> は、正式には <code>name=&#34;message&#34;</code> を省略したものです。」は不正確。正しくは(これはJavaの仕様) 「 <code>value=&#34;message&#34;</code> を省略したもの」。(ただしここでは <code>name</code> も <code>value</code> も同じ役割なので結果は同じ。)</p>
 </li>
 <li>
 <p>○ 表紙で「2.3対応」と謳っているだけでなく、ちゃんと内容も2.3での変更点が反映されている。具体的には 4.2.3節で validation が別扱いになったこと、5.3節で h2databese データベース自動命名のランダム化、について触れられている。</p>
@@ -4930,7 +4928,7 @@ if (!doNotTrack) {
 <div class="ulist">
 <ul>
 <li>
-<p>ただ、Spring Data JDBC を誤解しているような気がします。JPAほど複雑さを持ち込まずSpring Data JPAっぽい自動クエリ生成ができるライブラリ、みたいな立ち位置ですよねこれ。(Spring Data JDBC の "JDBC" は "非JPA" みたいなニュアンスの命名。歴史的にも Spring Data JDBC の方が新しい、はず。)</p>
+<p>ただ、Spring Data JDBC を誤解しているような気がします。JPAほど複雑さを持ち込まずSpring Data JPAっぽい自動クエリ生成ができるライブラリ、みたいな立ち位置ですよねこれ。(Spring Data JDBC の &#34;JDBC&#34; は &#34;非JPA&#34; みたいなニュアンスの命名。歴史的にも Spring Data JDBC の方が新しい、はず。)</p>
 </li>
 </ul>
 </div>

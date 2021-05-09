@@ -17,9 +17,9 @@
 
 <script defer src="/js/lazysizes.min.31dd6a2d3a1ec0f78a8df007535cf23f03aeb5c70f026e6d6a19dac3b3acc340.js"></script>
 
-<script defer src="/js/helper/getParents.min.1618c696be7c98933f9a92677f518b512a74e55bdbb976b09936b4182e93181b.js"></script>
+<script defer src="/js/helper/getParents.min.ccd45f158c1b17849307ba913a72beac239c410f2b6e648496a79842da84e55b.js"></script>
 
-<script defer src="/js/helper/fadeinout.min.93a331f96194789a542f33690bbe4f0c102c7e78ffc018217f5a1c33010bad91.js"></script>
+<script defer src="/js/helper/fadeinout.min.9fb19682560d5fa5596fffec85da605067c4acc86aad05add4d8fff9d362a446.js"></script>
 
 <script>
   "use strict";
@@ -1083,7 +1083,7 @@
 <meta property="og:url" content="https://yukihane.github.io/blog/202006/13/userdetailsservice-samples-considered-harmful-for-biginners/">
 <meta property="og:type" content="article">
 
-<meta name="generator" content="Hugo 0.74.1" />
+<meta name="generator" content="Hugo 0.82.1" />
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="theme-color" content="#ffffff">
 <link rel="canonical" href="https://yukihane.github.io/blog/202006/13/userdetailsservice-samples-considered-harmful-for-biginners/">
@@ -1129,16 +1129,14 @@
 </script>
 
     
-<script type="application/javascript">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-E9J8FN5B4Q"></script>
+<script>
 var doNotTrack = false;
 if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'G-E9J8FN5B4Q', 'auto');
-	
-	ga('send', 'pageview');
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-E9J8FN5B4Q', { 'anonymize_ip': false });
 }
 </script>
 
@@ -4883,7 +4881,7 @@ if (!doNotTrack) {
 <p>ちなみに、タイトルでは「一発目に使うのは止めよう」と言っていますが、個人的には二発目以降も別に要らんと思ってます。<br />
 ただ<a href="https://docs.spring.io/spring-security/site/docs/5.1.5.RELEASE/reference/htmlsingle/#tech-userdetailsservice" target="_blank">公式ドキュメントでえらい推されてる</a>んで若干弱気(…と思って最新版のドキュメント見たらこの辺の記述無くなって、やや推し力は弱まっている感じも受けたけど(それでもまだドキュメント内を&quot;userdetails&quot;で検索すると 248 箇所もヒットするんだけどね))。<br />
 <code>UserDetailsService</code>使えばこんな便利なんだぜ！みたいなことがあるのなら教えて欲しいんだぜ。</p>
-<p>更にちなむと、公式ドキュメント中で最も簡潔に<code>UserDetailsService</code>について説明されているのは&rdquo;<a href="https://docs.spring.io/spring-security/site/docs/5.3.3.RELEASE/reference/html5/#appendix-faq-what-is-userdetailservice" target="_blank">What is a UserDetailsService and do I need one?</a>&ldquo;節。そんな長くないので全文引っ張ってくると:</p>
+<p>更にちなむと、公式ドキュメント中で最も簡潔に<code>UserDetailsService</code>について説明されているのは&quot;<a href="https://docs.spring.io/spring-security/site/docs/5.3.3.RELEASE/reference/html5/#appendix-faq-what-is-userdetailservice" target="_blank">What is a UserDetailsService and do I need one?</a>&ldquo;節。そんな長くないので全文引っ張ってくると:</p>
 <blockquote>
 <p><code>UserDetailsService</code> is a DAO interface for loading data that is specific to a user account. It has no other function other to load that data for use by other components within the framework. It is not responsible for authenticating the user. Authenticating a user with a username/password combination is most commonly performed by the <code>DaoAuthenticationProvider</code>, which is injected with a <code>UserDetailsService</code> to allow it to load the password (and other data) for a user in order to compare it with the submitted value. Note that if you are using LDAP, this approach may not work.</p>
 </blockquote>

@@ -17,9 +17,9 @@
 
 <script defer src="/js/lazysizes.min.31dd6a2d3a1ec0f78a8df007535cf23f03aeb5c70f026e6d6a19dac3b3acc340.js"></script>
 
-<script defer src="/js/helper/getParents.min.1618c696be7c98933f9a92677f518b512a74e55bdbb976b09936b4182e93181b.js"></script>
+<script defer src="/js/helper/getParents.min.ccd45f158c1b17849307ba913a72beac239c410f2b6e648496a79842da84e55b.js"></script>
 
-<script defer src="/js/helper/fadeinout.min.93a331f96194789a542f33690bbe4f0c102c7e78ffc018217f5a1c33010bad91.js"></script>
+<script defer src="/js/helper/fadeinout.min.9fb19682560d5fa5596fffec85da605067c4acc86aad05add4d8fff9d362a446.js"></script>
 
 <script>
   "use strict";
@@ -1083,7 +1083,7 @@
 <meta property="og:url" content="https://yukihane.github.io/blog/202007/21/hello-oidc-with-keycloak/">
 <meta property="og:type" content="article">
 
-<meta name="generator" content="Hugo 0.74.1" />
+<meta name="generator" content="Hugo 0.82.1" />
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="theme-color" content="#ffffff">
 <link rel="canonical" href="https://yukihane.github.io/blog/202007/21/hello-oidc-with-keycloak/">
@@ -1129,16 +1129,14 @@
 </script>
 
     
-<script type="application/javascript">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-E9J8FN5B4Q"></script>
+<script>
 var doNotTrack = false;
 if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'G-E9J8FN5B4Q', 'auto');
-	
-	ga('send', 'pageview');
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-E9J8FN5B4Q', { 'anonymize_ip': false });
 }
 </script>
 
@@ -4913,8 +4911,8 @@ if (!doNotTrack) {
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
+<col style="width: 50%;"/>
+<col style="width: 50%;"/>
 </colgroup>
 <tbody>
 <tr>
@@ -4937,18 +4935,18 @@ if (!doNotTrack) {
 <div class="sect2">
 <h3 id="_realm作成">realm作成</h3>
 <div class="paragraph">
-<p>Administration Console を開くと、左上に "Master" というプルダウンメニューのようなものがあると思います。</p>
+<p>Administration Console を開くと、左上に &#34;Master&#34; というプルダウンメニューのようなものがあると思います。</p>
 </div>
 <div class="paragraph">
-<p>ここにマウスカーソルを合わせると "Add realm" というボタンが表れるのでそれを押します。そうすると <a href="http://localhost:8081/auth/admin/master/console/#/create/realm" class="bare">http://localhost:8081/auth/admin/master/console/#/create/realm</a> へ遷移します。</p>
+<p>ここにマウスカーソルを合わせると &#34;Add realm&#34; というボタンが表れるのでそれを押します。そうすると <a href="http://localhost:8081/auth/admin/master/console/#/create/realm" class="bare">http://localhost:8081/auth/admin/master/console/#/create/realm</a> へ遷移します。</p>
 </div>
 <div class="paragraph">
 <p>Nameに <code>myrealm</code> と入力ｋし、 Create ボタンを押します。</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
+<col style="width: 50%;"/>
+<col style="width: 50%;"/>
 </colgroup>
 <tbody>
 <tr>
@@ -4959,7 +4957,7 @@ if (!doNotTrack) {
 </table>
 <div class="paragraph">
 <p>作成が完了すると Administration Console 画面に戻ります。
-このとき、左上のrealm名画先ほど作成した "Myrealm" になっていると思います。</p>
+このとき、左上のrealm名画先ほど作成した &#34;Myrealm&#34; になっていると思います。</p>
 </div>
 <div class="paragraph">
 <p>続いてこの画面からユーザを作成します。</p>
@@ -4968,15 +4966,15 @@ if (!doNotTrack) {
 <div class="sect2">
 <h3 id="_ユーザ作成">ユーザ作成</h3>
 <div class="paragraph">
-<p>画面左のメニュー <a href="http://localhost:8081/auth/admin/master/console/#/realms/myrealm/users">Users</a> を選択し、 "Add user" ボタンを押します。</p>
+<p>画面左のメニュー <a href="http://localhost:8081/auth/admin/master/console/#/realms/myrealm/users">Users</a> を選択し、 &#34;Add user&#34; ボタンを押します。</p>
 </div>
 <div class="paragraph">
-<p>Usernameに <code>myuser</code> を、それ以外の項目も適当に埋め "Save" ボタンを押します。</p>
+<p>Usernameに <code>myuser</code> を、それ以外の項目も適当に埋め &#34;Save&#34; ボタンを押します。</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
+<col style="width: 50%;"/>
+<col style="width: 50%;"/>
 </colgroup>
 <tbody>
 <tr>
@@ -4999,13 +4997,13 @@ if (!doNotTrack) {
 </table>
 <div class="paragraph">
 <p>ユーザ作成が完了したら、続いてパスワード設定を行います。
-画面上部の "Credentials" タブをクリックして開き、パスワードを設定します。ここではユーザ名と同じ <code>myuser</code> としました。
-また、"Temporary"を <code>OFF</code> にしておきます(ONだと初回ログイン時パスワード変更を求められます)。</p>
+画面上部の &#34;Credentials&#34; タブをクリックして開き、パスワードを設定します。ここではユーザ名と同じ <code>myuser</code> としました。
+また、&#34;Temporary&#34;を <code>OFF</code> にしておきます(ONだと初回ログイン時パスワード変更を求められます)。</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
+<col style="width: 50%;"/>
+<col style="width: 50%;"/>
 </colgroup>
 <tbody>
 <tr>
@@ -5023,13 +5021,13 @@ if (!doNotTrack) {
 </tbody>
 </table>
 <div class="paragraph">
-<p>そして、 "Set Password" ボタンを押しパスワード設定完了です。</p>
+<p>そして、 &#34;Set Password&#34; ボタンを押しパスワード設定完了です。</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_クライアント登録">クライアント登録</h3>
 <div class="paragraph">
-<p>ここでいう "クライアント" というのはOAuth2.0でいうところの認可クライアント、OIDCでいうところのRPです。</p>
+<p>ここでいう &#34;クライアント&#34; というのはOAuth2.0でいうところの認可クライアント、OIDCでいうところのRPです。</p>
 </div>
 <div class="paragraph">
 <p>画面左のメニュー <a href="http://localhost:8081/auth/admin/master/console/#/realms/myrealm/clients">Clients</a> をクリックします。</p>
@@ -5038,12 +5036,12 @@ if (!doNotTrack) {
 <p>続いて画面右の <a href="http://localhost:8081/auth/admin/master/console/#/create/client/myrealm">Create</a>ボタンを押します。</p>
 </div>
 <div class="paragraph">
-<p>この画面で次のように入力して、 "Save" ボタンを押します。</p>
+<p>この画面で次のように入力して、 &#34;Save&#34; ボタンを押します。</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
+<col style="width: 50%;"/>
+<col style="width: 50%;"/>
 </colgroup>
 <tbody>
 <tr>
@@ -5061,15 +5059,15 @@ if (!doNotTrack) {
 </tbody>
 </table>
 <div class="paragraph">
-<p>クライアント作成が完了したら続いてこのクライアント設定画面で 次の通り設定変更し "Save" ボタンを押します。</p>
+<p>クライアント作成が完了したら続いてこのクライアント設定画面で 次の通り設定変更し &#34;Save&#34; ボタンを押します。</p>
 </div>
 <div class="paragraph">
-<p>( <code>myspring</code> というのは、後でSpring Bootに設定する <code>registration-id</code> です。詳細は <a href="https://docs.spring.io/spring-security/site/docs/current/reference/html5/#oauth2login-sample-redirect-uri">Spring Security リファレンス</a>を "/login/oauth2/code" で検索してみてください)</p>
+<p>( <code>myspring</code> というのは、後でSpring Bootに設定する <code>registration-id</code> です。詳細は <a href="https://docs.spring.io/spring-security/site/docs/current/reference/html5/#oauth2login-sample-redirect-uri">Spring Security リファレンス</a>を &#34;/login/oauth2/code&#34; で検索してみてください)</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
+<col style="width: 50%;"/>
+<col style="width: 50%;"/>
 </colgroup>
 <tbody>
 <tr>
@@ -5083,7 +5081,7 @@ if (!doNotTrack) {
 </tbody>
 </table>
 <div class="paragraph">
-<p>上記の通り Access Type を <code>confidential</code> に設定すると、この画面上部に "Credentials" タブが表示されます。
+<p>上記の通り Access Type を <code>confidential</code> に設定すると、この画面上部に &#34;Credentials&#34; タブが表示されます。
 このタブで client-secret を確認できます。</p>
 </div>
 <div class="paragraph">
@@ -5112,7 +5110,7 @@ if (!doNotTrack) {
 <p>はじめに、で記載した通り、 Spring Securityの機能を利用します。</p>
 </div>
 <div class="paragraph">
-<p>Spring Boot では、 <a href="https://start.spring.io/" class="bare">https://start.spring.io/</a> で "OAuth 2.0 Client" を選ぶことで追加される <a href="https://github.com/spring-projects/spring-boot/blob/v2.3.1.RELEASE/spring-boot-project/spring-boot-starters/spring-boot-starter-oauth2-client/build.gradle"><code>spring-boot-starter-oauth2-client</code></a> を用いることになります。</p>
+<p>Spring Boot では、 <a href="https://start.spring.io/" class="bare">https://start.spring.io/</a> で &#34;OAuth 2.0 Client&#34; を選ぶことで追加される <a href="https://github.com/spring-projects/spring-boot/blob/v2.3.1.RELEASE/spring-boot-project/spring-boot-starters/spring-boot-starter-oauth2-client/build.gradle"><code>spring-boot-starter-oauth2-client</code></a> を用いることになります。</p>
 </div>
 <div class="paragraph">
 <p>余談ですが(&amp;結構何回も書いてきていますが)、 <a href="https://spring.io/projects/spring-security-oauth"><code>spring-security-auth2</code></a> と、今回利用する <code>spring-security-oauth2-client</code> は名前が似ているだけで別系統のライブラリです(そして前者はdeprecatedです)。</p>
@@ -5208,7 +5206,7 @@ if (!doNotTrack) {
 <p>いくつかのサンプルと見ているとエンドポイント(<code>authorization-uri</code> など)をそれぞれ設定していましたが、 <code>issuer-uri</code> だけ設定すれば後はそこから自動設定できるようです。</p>
 </li>
 <li>
-<p><code>user-name-attribute</code> は、<a href="https://www.keycloak.org/docs/11.0/securing_apps/index.html">リファレンス</a>の "principal-attibute" からそれっぽいものを選びました。</p>
+<p><code>user-name-attribute</code> は、<a href="https://www.keycloak.org/docs/11.0/securing_apps/index.html">リファレンス</a>の &#34;principal-attibute&#34; からそれっぽいものを選びました。</p>
 </li>
 </ul>
 </div>

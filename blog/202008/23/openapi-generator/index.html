@@ -17,9 +17,9 @@
 
 <script defer src="/js/lazysizes.min.31dd6a2d3a1ec0f78a8df007535cf23f03aeb5c70f026e6d6a19dac3b3acc340.js"></script>
 
-<script defer src="/js/helper/getParents.min.1618c696be7c98933f9a92677f518b512a74e55bdbb976b09936b4182e93181b.js"></script>
+<script defer src="/js/helper/getParents.min.ccd45f158c1b17849307ba913a72beac239c410f2b6e648496a79842da84e55b.js"></script>
 
-<script defer src="/js/helper/fadeinout.min.93a331f96194789a542f33690bbe4f0c102c7e78ffc018217f5a1c33010bad91.js"></script>
+<script defer src="/js/helper/fadeinout.min.9fb19682560d5fa5596fffec85da605067c4acc86aad05add4d8fff9d362a446.js"></script>
 
 <script>
   "use strict";
@@ -1083,7 +1083,7 @@
 <meta property="og:url" content="https://yukihane.github.io/blog/202008/23/openapi-generator/">
 <meta property="og:type" content="article">
 
-<meta name="generator" content="Hugo 0.74.1" />
+<meta name="generator" content="Hugo 0.82.1" />
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="theme-color" content="#ffffff">
 <link rel="canonical" href="https://yukihane.github.io/blog/202008/23/openapi-generator/">
@@ -1129,16 +1129,14 @@
 </script>
 
     
-<script type="application/javascript">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-E9J8FN5B4Q"></script>
+<script>
 var doNotTrack = false;
 if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'G-E9J8FN5B4Q', 'auto');
-	
-	ga('send', 'pageview');
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-E9J8FN5B4Q', { 'anonymize_ip': false });
 }
 </script>
 
@@ -4899,33 +4897,33 @@ if (!doNotTrack) {
 <div class="title">build.gradle</div>
 <div class="content">
 <pre class="highlight"><code class="language-groovy" data-lang="groovy">plugins {
-    id 'eclipse'
-    id 'org.openapi.generator' version '4.3.1'
+    id &#39;eclipse&#39;
+    id &#39;org.openapi.generator&#39; version &#39;4.3.1&#39;
 }
 
 ext {
-    openApiOutputDir = "$rootDir/build/generated/openapi"
+    openApiOutputDir = &#34;$rootDir/build/generated/openapi&#34;
 }
 
-sourceSets.main.java.srcDirs += ["$openApiOutputDir/src/main/java"]
+sourceSets.main.java.srcDirs += [&#34;$openApiOutputDir/src/main/java&#34;]
 
 dependencies {
     // これらは自動生成クラスが import しているので必要
-    implementation 'org.springframework.boot:spring-boot-starter-validation'
-    implementation 'org.openapitools:jackson-databind-nullable:0.2.1'
-    compileOnly 'io.swagger:swagger-annotations:1.6.2'
+    implementation &#39;org.springframework.boot:spring-boot-starter-validation&#39;
+    implementation &#39;org.openapitools:jackson-databind-nullable:0.2.1&#39;
+    compileOnly &#39;io.swagger:swagger-annotations:1.6.2&#39;
 }
 
 openApiGenerate {
-    generatorName = 'spring'
-    inputSpec = "$rootDir/specs/test.yml"
-    outputDir = "$openApiOutputDir"
-    apiPackage = 'org.openapi.example.api'
-    modelPackage = 'org.openapi.example.model'
+    generatorName = &#39;spring&#39;
+    inputSpec = &#34;$rootDir/specs/test.yml&#34;
+    outputDir = &#34;$openApiOutputDir&#34;
+    apiPackage = &#39;org.openapi.example.api&#39;
+    modelPackage = &#39;org.openapi.example.model&#39;
     configOptions = [
-        dateLibrary: 'java8',
-        interfaceOnly: 'true',
-        skipDefaultInterface: 'true',
+        dateLibrary: &#39;java8&#39;,
+        interfaceOnly: &#39;true&#39;,
+        skipDefaultInterface: &#39;true&#39;,
     ]
 }
 
@@ -4947,10 +4945,10 @@ compileJava.dependsOn tasks.openApiGenerate</code></pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-yml" data-lang="yml">openapi: "3.0.3"
+<pre class="highlight"><code class="language-yml" data-lang="yml">openapi: &#34;3.0.3&#34;
 info:
   title: OpenAPI Sample Project
-  version: "1.0"
+  version: &#34;1.0&#34;
 servers:
   - url: http://localhost:8080
 
@@ -4964,30 +4962,30 @@ paths:
           schema:
             type: integer
       responses:
-        "200":
+        &#34;200&#34;:
           description: list of books
           content:
             application/json:
               schema:
                 type: object
-                $ref: "#/components/schemas/BookListModel"
+                $ref: &#34;#/components/schemas/BookListModel&#34;
     post:
       description: bookを登録する(description)
       summary: book登録(summary)
       requestBody:
         required: true
         content:
-          "application/json":
+          &#34;application/json&#34;:
             schema:
-              $ref: "#/components/schemas/BookModel"
+              $ref: &#34;#/components/schemas/BookModel&#34;
       responses:
-        "200":
-          description: "登録したbook"
+        &#34;200&#34;:
+          description: &#34;登録したbook&#34;
           content:
             application/json:
               schema:
                 type: object
-                $ref: "#/components/schemas/BookModel"
+                $ref: &#34;#/components/schemas/BookModel&#34;
   /books/{id}:
     get:
       description: books listing
@@ -4999,13 +4997,13 @@ paths:
             type: integer
             format: int64
       responses:
-        "200":
+        &#34;200&#34;:
           description: book
           content:
             application/json:
               schema:
                 type: object
-                $ref: "#/components/schemas/BookModel"
+                $ref: &#34;#/components/schemas/BookModel&#34;
 
 components:
   schemas:
@@ -5014,7 +5012,7 @@ components:
         books:
           type: array
           items:
-            $ref: "#/components/schemas/BookModel"
+            $ref: &#34;#/components/schemas/BookModel&#34;
     BookModel:
       type: object
       properties:

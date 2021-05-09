@@ -17,9 +17,9 @@
 
 <script defer src="/js/lazysizes.min.31dd6a2d3a1ec0f78a8df007535cf23f03aeb5c70f026e6d6a19dac3b3acc340.js"></script>
 
-<script defer src="/js/helper/getParents.min.1618c696be7c98933f9a92677f518b512a74e55bdbb976b09936b4182e93181b.js"></script>
+<script defer src="/js/helper/getParents.min.ccd45f158c1b17849307ba913a72beac239c410f2b6e648496a79842da84e55b.js"></script>
 
-<script defer src="/js/helper/fadeinout.min.93a331f96194789a542f33690bbe4f0c102c7e78ffc018217f5a1c33010bad91.js"></script>
+<script defer src="/js/helper/fadeinout.min.9fb19682560d5fa5596fffec85da605067c4acc86aad05add4d8fff9d362a446.js"></script>
 
 <script>
   "use strict";
@@ -1083,7 +1083,7 @@
 <meta property="og:url" content="https://yukihane.github.io/docs/rust/rust-memo/">
 <meta property="og:type" content="article">
 
-<meta name="generator" content="Hugo 0.74.1" />
+<meta name="generator" content="Hugo 0.82.1" />
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="theme-color" content="#ffffff">
 <link rel="canonical" href="https://yukihane.github.io/docs/rust/rust-memo/">
@@ -1128,16 +1128,14 @@
 </script>
 
     
-<script type="application/javascript">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-E9J8FN5B4Q"></script>
+<script>
 var doNotTrack = false;
 if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'G-E9J8FN5B4Q', 'auto');
-	
-	ga('send', 'pageview');
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-E9J8FN5B4Q', { 'anonymize_ip': false });
 }
 </script>
 
@@ -3607,7 +3605,7 @@ World]を少し読むも、先にテスト方法を見ておいた方がよい�
 <div class="ulist">
 <ul>
 <li>
-<p>新用語: <strong>アトリビュート</strong>(<code><mark>[test]</code>, <code></mark>[cfg(test)]</code>), <strong>モジュール</strong></p>
+<p>新用語: <strong>アトリビュート</strong>(<code><mark>[test]</mark></code>, <code>[cfg(test)]</code>), <strong>モジュール</strong></p>
 </li>
 </ul>
 </div>
@@ -3648,11 +3646,11 @@ Javaのpackageのようなもの。ただし階層(ディレクトリ)ごとに�
 <div class="ulist">
 <ul>
 <li>
-<p>`"hoge".into()`の`into`とは？ (「into() の返り値は result
+<p>`&#34;hoge&#34;.into()`の`into`とは？ (「into() の返り値は result
 の型に依存するので、推論には用いられません。」というコメントがあるが…？)</p>
 </li>
 <li>
-<p>ジェネリクスの`&amp;'a`？(「'a は寿命を表し、orig
+<p>ジェネリクスの`&amp;&#39;a`？(「&#39;a は寿命を表し、orig
 と返り値は同じ寿命であることを表します。」というコメントがあるが…？)</p>
 </li>
 </ul>
@@ -3746,7 +3744,7 @@ Box, スタックとヒープ] より。</p>
 <p><a href="http://rust-lang-ja.org/rust-by-example/generics/impl.html" class="bare">http://rust-lang-ja.org/rust-by-example/generics/impl.html</a>
 のタイトルは「メソッド」だが、英語版では
 <a href="https://rustbyexample.com/generics/impl.html" class="bare">https://rustbyexample.com/generics/impl.html</a>
-"Implementation"(実装)になっている。</p>
+&#34;Implementation&#34;(実装)になっている。</p>
 </li>
 </ul>
 </div>

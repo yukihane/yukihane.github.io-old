@@ -17,9 +17,9 @@
 
 <script defer src="/js/lazysizes.min.31dd6a2d3a1ec0f78a8df007535cf23f03aeb5c70f026e6d6a19dac3b3acc340.js"></script>
 
-<script defer src="/js/helper/getParents.min.1618c696be7c98933f9a92677f518b512a74e55bdbb976b09936b4182e93181b.js"></script>
+<script defer src="/js/helper/getParents.min.ccd45f158c1b17849307ba913a72beac239c410f2b6e648496a79842da84e55b.js"></script>
 
-<script defer src="/js/helper/fadeinout.min.93a331f96194789a542f33690bbe4f0c102c7e78ffc018217f5a1c33010bad91.js"></script>
+<script defer src="/js/helper/fadeinout.min.9fb19682560d5fa5596fffec85da605067c4acc86aad05add4d8fff9d362a446.js"></script>
 
 <script>
   "use strict";
@@ -1083,7 +1083,7 @@
 <meta property="og:url" content="https://yukihane.github.io/docs/git/">
 <meta property="og:type" content="article">
 
-<meta name="generator" content="Hugo 0.74.1" />
+<meta name="generator" content="Hugo 0.82.1" />
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="theme-color" content="#ffffff">
 <link rel="canonical" href="https://yukihane.github.io/docs/git/">
@@ -1114,7 +1114,7 @@
     "datePublished": "2020-07-26T03:10:06Z",
     "dateModified": "2020-07-26T03:10:06Z",
     "url" : "https://yukihane.github.io/docs/git/",
-    "description": "オンラインマニュアル https://git-scm.com/docs password記憶 git config --global credential.helper 'cache --timeout=21600' 21600秒(6時間)デーモンがパスワードを保持する。 単語単位diff git config --global …",
+    "description": "オンラインマニュアル https://git-scm.com/docs password記憶 git config --global credential.helper \u0026#39;cache --timeout=21600\u0026#39; 21600秒(6時間)デーモンがパスワードを保持する。 単語単位diff git config …",
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": "https://yukihane.github.io"
@@ -1128,16 +1128,14 @@
 </script>
 
     
-<script type="application/javascript">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-E9J8FN5B4Q"></script>
+<script>
 var doNotTrack = false;
 if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'G-E9J8FN5B4Q', 'auto');
-	
-	ga('send', 'pageview');
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-E9J8FN5B4Q', { 'anonymize_ip': false });
 }
 </script>
 
@@ -3553,7 +3551,7 @@ if (!doNotTrack) {
 <div class="sectionbody">
 <div class="literalblock">
 <div class="content">
-<pre>git config --global credential.helper 'cache --timeout=21600'</pre>
+<pre>git config --global credential.helper &#39;cache --timeout=21600&#39;</pre>
 </div>
 </div>
 <div class="paragraph">
@@ -3566,7 +3564,7 @@ if (!doNotTrack) {
 <div class="sectionbody">
 <div class="literalblock">
 <div class="content">
-<pre>git config --global alias.diffw "diff --word-diff-regex=."</pre>
+<pre>git config --global alias.diffw &#34;diff --word-diff-regex=.&#34;</pre>
 </div>
 </div>
 <div class="paragraph">
@@ -3574,8 +3572,8 @@ if (!doNotTrack) {
 </div>
 <div class="literalblock">
 <div class="content">
-<pre>git config --global diff.wordRegex $'[^\x80-\xbf][\x80-\xbf]*'
-git config --global alias.diffw "diff --word-diff"</pre>
+<pre>git config --global diff.wordRegex $&#39;[^\x80-\xbf][\x80-\xbf]*&#39;
+git config --global alias.diffw &#34;diff --word-diff&#34;</pre>
 </div>
 </div>
 <div class="paragraph">
@@ -3590,7 +3588,7 @@ git config --global alias.diffw "diff --word-diff"</pre>
 <div class="sectionbody">
 <div class="literalblock">
 <div class="content">
-<pre>git config --global alias.logshort 'log --pretty=format:"%h %an %ai %s"'</pre>
+<pre>git config --global alias.logshort &#39;log --pretty=format:&#34;%h %an %ai %s&#34;&#39;</pre>
 </div>
 </div>
 </div>
@@ -3605,7 +3603,7 @@ bash環境などでは動かない。
 </div>
 <div class="literalblock">
 <div class="content">
-<pre>git config --global alias.oldest-ancestor '!zsh -c '\''diff -u &lt;(git rev-list --first-parent "${1:-master}") &lt;(git rev-list --first-parent "${2:-HEAD}") | sed -ne "s/^ //p" | head -1'\'' -'</pre>
+<pre>git config --global alias.oldest-ancestor &#39;!zsh -c &#39;\&#39;&#39;diff -u &lt;(git rev-list --first-parent &#34;${1:-master}&#34;) &lt;(git rev-list --first-parent &#34;${2:-HEAD}&#34;) | sed -ne &#34;s/^ //p&#34; | head -1&#39;\&#39;&#39; -&#39;</pre>
 </div>
 </div>
 </div>
@@ -3617,11 +3615,11 @@ bash環境などでは動かない。
 <div class="content">
 <pre>diff -u &lt;(git rev-list --first-parent topic) \
              &lt;(git rev-list --first-parent master) | \
-     sed -ne 's/^ //p' | head -1</pre>
+     sed -ne &#39;s/^ //p&#39; | head -1</pre>
 </div>
 </div>
 <div class="paragraph">
-<p>ちなみに`&lt;(&#8230;&#8203;)`という書き方はProcess
+<p>ちなみに`&lt;(…​)`という書き方はProcess
 Substitution<sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnotedef_1" title="View footnote.">1</a>]</sup>という。</p>
 </div>
 <div class="ulist">
@@ -3688,7 +3686,7 @@ a branch point with Git? - Stack Overflow</a></p>
 <div class="literalblock">
 <div class="content">
 <pre>#!/bin/bash
-tika -t "$1"</pre>
+tika -t &#34;$1&#34;</pre>
 </div>
 </div>
 <div class="paragraph">
@@ -3709,10 +3707,10 @@ tika -t "$1"</pre>
 <ul>
 <li>
 <p>tikaをhomebrewでインストールしない場合は、tika-app-x.x.jar
-をダウンロードして <code>tika -t "$1"</code> の代わりに <code>java -jar tika-app-x.x.jar -t "$1"</code> とすれば良いはず。</p>
+をダウンロードして <code>tika -t &#34;$1&#34;</code> の代わりに <code>java -jar tika-app-x.x.jar -t &#34;$1&#34;</code> とすれば良いはず。</p>
 </li>
 <li>
-<p>gitattributes ファイルの置き場所について - <a href="https://stackoverflow.com/questions/28026767/where-should-i-place-my-global-gitattributes-file/">git - Where should I place my global 'gitattributes' file? - Stack Overflow</a></p>
+<p>gitattributes ファイルの置き場所について - <a href="https://stackoverflow.com/questions/28026767/where-should-i-place-my-global-gitattributes-file/">git - Where should I place my global &#39;gitattributes&#39; file? - Stack Overflow</a></p>
 </li>
 </ul>
 </div>
@@ -3727,7 +3725,7 @@ tika -t "$1"</pre>
 </div>
 </div>
 <div id="footnotes">
-<hr>
+<hr/>
 <div class="footnote" id="_footnotedef_1">
 <a href="#_footnoteref_1">1</a>. <a href="https://www.gnu.org/software/bash/manual/html_node/Process-Substitution.html" class="bare">https://www.gnu.org/software/bash/manual/html_node/Process-Substitution.html</a>
 </div>

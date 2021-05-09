@@ -17,9 +17,9 @@
 
 <script defer src="/js/lazysizes.min.31dd6a2d3a1ec0f78a8df007535cf23f03aeb5c70f026e6d6a19dac3b3acc340.js"></script>
 
-<script defer src="/js/helper/getParents.min.1618c696be7c98933f9a92677f518b512a74e55bdbb976b09936b4182e93181b.js"></script>
+<script defer src="/js/helper/getParents.min.ccd45f158c1b17849307ba913a72beac239c410f2b6e648496a79842da84e55b.js"></script>
 
-<script defer src="/js/helper/fadeinout.min.93a331f96194789a542f33690bbe4f0c102c7e78ffc018217f5a1c33010bad91.js"></script>
+<script defer src="/js/helper/fadeinout.min.9fb19682560d5fa5596fffec85da605067c4acc86aad05add4d8fff9d362a446.js"></script>
 
 <script>
   "use strict";
@@ -1083,7 +1083,7 @@
 <meta property="og:url" content="https://yukihane.github.io/docs/rust/rust-setup/">
 <meta property="og:type" content="article">
 
-<meta name="generator" content="Hugo 0.74.1" />
+<meta name="generator" content="Hugo 0.82.1" />
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="theme-color" content="#ffffff">
 <link rel="canonical" href="https://yukihane.github.io/docs/rust/rust-setup/">
@@ -1128,16 +1128,14 @@
 </script>
 
     
-<script type="application/javascript">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-E9J8FN5B4Q"></script>
+<script>
 var doNotTrack = false;
 if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'G-E9J8FN5B4Q', 'auto');
-	
-	ga('send', 'pageview');
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-E9J8FN5B4Q', { 'anonymize_ip': false });
 }
 </script>
 
@@ -3653,7 +3651,7 @@ triple を
 </div>
 <div class="paragraph">
 <p>Rust requires the Microsoft C++ build tools for Visual Studio 2013 or
-later, but they don&#8217;t seem to be installed.</p>
+later, but they don’t seem to be installed.</p>
 </div>
 <div class="paragraph">
 <p>The easiest way to acquire the build tools is by installing Microsoft
@@ -3665,7 +3663,7 @@ tools:</p>
 </div>
 <div class="paragraph">
 <p>Alternately, you can install Visual Studio 2015 or Visual Studio 2013
-and during install select the "C++ tools":</p>
+and during install select the &#34;C++ tools&#34;:</p>
 </div>
 <div class="paragraph">
 <p><code> `https://www.visualstudio.com/downloads/[`https://www.visualstudio.com/downloads/</code>]</p>
@@ -3696,7 +3694,7 @@ ABIがデフォルトになっているためGDBデバッガでデバッグで�
 ABIをデフォルトに設定しなおす。(Build
 Toolsをインストールしていない場合はGNU
 ABIがデフォルトになっていると思われるので本コマンド実行は不要なはず)
-&lt;syntaxhighlight lang="bash&gt; rustup install stable-x86_64-pc-windows-gnu
+&lt;syntaxhighlight lang=&#34;bash&gt; rustup install stable-x86_64-pc-windows-gnu
 rustup set default-host x86_64-pc-windows-gnu</p>
 </div>
 <div class="paragraph">
@@ -3734,9 +3732,9 @@ JDK</a>をインストールする。</p>
 <a href="https://rustdt.github.io/releases/" class="bare">https://rustdt.github.io/releases/</a> を追加する。</p>
 </div>
 <div class="paragraph">
-<p>RustDT にチェックを入れてインストールする。その際、"Contact all update
+<p>RustDT にチェックを入れてインストールする。その際、&#34;Contact all update
 sites during install to find required
-software"にもチェックを入れておくこと(依存モジュールも同時にインストールされるようになる)。</p>
+software&#34;にもチェックを入れておくこと(依存モジュールも同時にインストールされるようになる)。</p>
 </div>
 <div class="paragraph">
 <p>インストール完了後、Eclipse再起動を促されるので再起動する。</p>
@@ -3747,8 +3745,8 @@ software"にもチェックを入れておくこと(依存モジュールも同�
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
+<col style="width: 50%;"/>
+<col style="width: 50%;"/>
 </colgroup>
 <thead>
 <tr>
@@ -3762,7 +3760,7 @@ software"にもチェックを入れておくこと(依存モジュールも同�
 <td class="tableblock halign-left valign-top"><p class="tableblock">%USERPROFILE%\.rustup\toolchains\stable-x86_64-pc-windows-gnu</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Rust 'src' Directory</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Rust &#39;src&#39; Directory</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">%USERPROFILE%\.rustup\toolchains\stable-x86_64-pc-windows-gnu\lib\rustlib\src\rust\src</p></td>
 </tr>
 </tbody>
@@ -3776,8 +3774,8 @@ rustfmtはそれぞれDownloadボタンで自動設定できる(コンパイル�
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
+<col style="width: 50%;"/>
+<col style="width: 50%;"/>
 </colgroup>
 <thead>
 <tr>
@@ -3834,8 +3832,8 @@ Win GNU ABI で実際何か作る時は MinGW-w64 の gcc
 <h3 id="_注意点">注意点</h3>
 <div class="paragraph">
 <p>現状、RustDTのメニューからプロジェクトを生成した場合、テストファイルは1つも生成されないが、この状態だと
-Run や Debug で "Executable file doesnt exist", "Program file doesnt
-exist"などと言われてしまう。</p>
+Run や Debug で &#34;Executable file doesnt exist&#34;, &#34;Program file doesnt
+exist&#34;などと言われてしまう。</p>
 </div>
 <div class="paragraph">
 <p>対処法は
