@@ -3,8 +3,23 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://yukihane.github.io/blog/202105/15/authorization-authentication/</loc>
+    <lastmod>2021-05-15T09:40:22+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://yukihane.github.io/blog/</loc>
-    <lastmod>2021-05-06T10:43:04+00:00</lastmod>
+    <lastmod>2021-05-15T09:40:22+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yukihane.github.io/tags/diary/</loc>
+    <lastmod>2021-05-15T09:40:22+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yukihane.github.io/tags/http/</loc>
+    <lastmod>2021-05-15T09:40:22+00:00</lastmod>
   </url>
   
   <url>
@@ -205,11 +220,6 @@
   <url>
     <loc>https://yukihane.github.io/tags/linux/</loc>
     <lastmod>2020-08-30T21:32:44+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://yukihane.github.io/tags/diary/</loc>
-    <lastmod>2020-08-30T06:57:01+00:00</lastmod>
   </url>
   
   <url>

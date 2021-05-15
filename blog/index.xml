@@ -7,12 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Thu, 06 May 2021 10:43:04 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 15 May 2021 09:40:22 +0000</lastBuildDate>
     
         <atom:link href="https://yukihane.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     
     
     
+      
+      <item>
+        <title>Authorization(認可)リクエストヘッダに設定するのは認証(authentication)情報</title>
+        <link>https://yukihane.github.io/blog/202105/15/authorization-authentication/</link>
+        <pubDate>Sat, 15 May 2021 09:40:22 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/blog/202105/15/authorization-authentication/</guid>
+        <description>今日もOAuthは認証じゃなくて認可の仕組みだ云々という話題でソーシャルネットがもちきりですが、そんなことより表題の方がよっぽど気になりませ</description>
+      </item>
       
       <item>
         <title>LINEログインを試してみる(Spring Boot 2.4.5/Spring Security 5.4.6)</title>
