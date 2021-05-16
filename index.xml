@@ -15,6 +15,15 @@
     
       
       <item>
+        <title>AWS EC2 の Mac インスタンスを試してみた</title>
+        <link>https://yukihane.github.io/blog/202105/16/aws-mac/</link>
+        <pubDate>Sun, 16 May 2021 11:40:48 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/blog/202105/16/aws-mac/</guid>
+        <description>最初に注意点: 初めての場合、使えるようになるまで17時間強かかる。 最低割り当て時間は24時間。つまり1回利用すると最低 3,000円弱はかかる</description>
+      </item>
+      
+      <item>
         <title>Authorization(認可)リクエストヘッダに設定するのは認証(authentication)情報</title>
         <link>https://yukihane.github.io/blog/202105/15/authorization-authentication/</link>
         <pubDate>Sat, 15 May 2021 09:40:22 +0000</pubDate>
