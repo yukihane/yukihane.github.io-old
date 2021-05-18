@@ -15,6 +15,15 @@
     
       
       <item>
+        <title>script src に設定する URL の &amp; はどう書けば良い？</title>
+        <link>https://yukihane.github.io/blog/202105/19/url-amp/</link>
+        <pubDate>Tue, 18 May 2021 22:38:11 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/blog/202105/19/url-amp/</guid>
+        <description>&amp;lt;script&amp;gt; タグの src に URL 書く場合、クエリパラメータ連結の &amp;amp; ってどう書くべきなんだろう、という話です。 結論としては、以下のように、 &amp;amp;amp; とするのが無難、とい</description>
+      </item>
+      
+      <item>
         <title>AWS EC2 の Mac インスタンスを試してみた</title>
         <link>https://yukihane.github.io/blog/202105/16/aws-mac/</link>
         <pubDate>Sun, 16 May 2021 11:40:48 +0000</pubDate>
