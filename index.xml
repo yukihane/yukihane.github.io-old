@@ -15,6 +15,15 @@
     
       
       <item>
+        <title>Git の merge も思いの外危険</title>
+        <link>https://yukihane.github.io/blog/202105/19/git-merge-risk/</link>
+        <pubDate>Tue, 18 May 2021 23:01:49 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/blog/202105/19/git-merge-risk/</guid>
+        <description>次のblogエントリがバズっていました: Gitのワークフローについての私のスタンス | おそらくはそれさえも平凡な日々[https://song</description>
+      </item>
+      
+      <item>
         <title>script src に設定する URL の &amp; はどう書けば良い？</title>
         <link>https://yukihane.github.io/blog/202105/19/url-amp/</link>
         <pubDate>Tue, 18 May 2021 22:38:11 +0000</pubDate>
