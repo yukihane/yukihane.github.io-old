@@ -15,6 +15,15 @@
     
       
       <item>
+        <title>Spring BootでTomcatのデフォルトエラーページが出るのを抑止する</title>
+        <link>https://yukihane.github.io/blog/202105/21/spring-boot-avoid-tomcat-error-page/</link>
+        <pubDate>Thu, 20 May 2021 20:58:00 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/blog/202105/21/spring-boot-avoid-tomcat-error-page/</guid>
+        <description>Spring Boot を実行していると、Tomcatのデフォルトエラーページが表示されるような事象に遭遇することがあります。 Tomcat invokes ErrorReportValve directly for malformed URLs · Issue #21257 · spring-projects/spring-boot このページ</description>
+      </item>
+      
+      <item>
         <title>Git の merge も思いの外危険</title>
         <link>https://yukihane.github.io/blog/202105/19/git-merge-risk/</link>
         <pubDate>Tue, 18 May 2021 23:01:49 +0000</pubDate>
