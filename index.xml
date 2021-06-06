@@ -15,6 +15,15 @@
     
       
       <item>
+        <title>GitHub Actions を使って GitHub Pages を定期更新する</title>
+        <link>https://yukihane.github.io/blog/202106/06/hello-github-actions/</link>
+        <pubDate>Sun, 06 Jun 2021 12:50:13 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/blog/202106/06/hello-github-actions/</guid>
+        <description>これまで GitHub Actions を使ったことがなかったのですが、 GitHub Pagesの更新を自動化したい - スタック・オーバーフロー という質問を見かけ、丁度よいお題だと思</description>
+      </item>
+      
+      <item>
         <title>Spring BootでTomcatのデフォルトエラーページが出るのを抑止する</title>
         <link>https://yukihane.github.io/blog/202105/21/spring-boot-avoid-tomcat-error-page/</link>
         <pubDate>Thu, 20 May 2021 20:58:00 +0000</pubDate>
