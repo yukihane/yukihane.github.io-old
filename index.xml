@@ -15,6 +15,15 @@
     
       
       <item>
+        <title>Spring Boot で Tomcat のメトリクスを出力する</title>
+        <link>https://yukihane.github.io/blog/202106/12/spring-boot-tomcat-metrics/</link>
+        <pubDate>Sat, 12 Jun 2021 10:07:19 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/blog/202106/12/spring-boot-tomcat-metrics/</guid>
+        <description>Spring Boot アプリケーションの性能評価を行っているのですが、実装したアプリケーション部分ではなく、webサーバかどこかがパフォーマンスボトルネックに</description>
+      </item>
+      
+      <item>
         <title>GitHub Actions を使って GitHub Pages を定期更新する</title>
         <link>https://yukihane.github.io/blog/202106/06/hello-github-actions/</link>
         <pubDate>Sun, 06 Jun 2021 12:50:13 +0000</pubDate>
