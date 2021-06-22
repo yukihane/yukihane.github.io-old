@@ -1114,7 +1114,7 @@
     "datePublished": "2021-06-20T23:39:04Z",
     "dateModified": "2021-06-20T23:39:04Z",
     "url" : "https://yukihane.github.io/blog/202106/21/aws-squid-proxy/",
-    "description": "はじめに Steam の DLC 等をダウンロードしようとしたとき、IPアドレスによるアクセス制限が課されている場合があり、それを回避するのに海外リージョンの EC2",
+    "description": "はじめに SteamのDLC等をダウンロードしようとしたとき、IPアドレスによるアクセス制限が課されている場合があり、それを回避する必要が出る",
     "keywords": ["diary"],
     "mainEntityOfPage": {
       "@type": "WebPage",
@@ -5051,10 +5051,16 @@ if (!doNotTrack) {
 <h2 id="_はじめに">はじめに</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Steam の DLC 等をダウンロードしようとしたとき、IPアドレスによるアクセス制限が課されている場合があり、それを回避するのに海外リージョンの EC2 からアクセスする、というのをたまにやります。</p>
+<p>SteamのDLC等をダウンロードしようとしたとき、IPアドレスによるアクセス制限が課されている場合があり、それを回避する必要が出る状況がたまにあります。</p>
 </div>
 <div class="paragraph">
-<p>その時の設定メモです。Windowsから設定します。</p>
+<p>VPNを利用したりする方法が解説されていることもありますが、VPN方式だとPCに別途アプリをインストールしたりする必要があるので煩雑です。</p>
+</div>
+<div class="paragraph">
+<p>私はそのような用途に、AWS EC2 経由でのアクセスを行っているのですが、毎回やり方を思い出すのに時間がかかったりするのでメモを残しておきます。</p>
+</div>
+<div class="paragraph">
+<p>Windowsから設定する前提です。</p>
 </div>
 </div>
 </div>
