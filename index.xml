@@ -15,6 +15,15 @@
     
       
       <item>
+        <title>Spring BootとTypeScriptで開発するためのプロジェクト設定(Gradle)</title>
+        <link>https://yukihane.github.io/blog/202107/10/spring-boot-with-typescript/</link>
+        <pubDate>Fri, 09 Jul 2021 22:54:04 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/blog/202107/10/spring-boot-with-typescript/</guid>
+        <description>Spring Boot で JavaScript を扱うときは素のJSをhtml(Thymeleafテンプレート)に &amp;lt;script&amp;gt; タグで埋め込む、というのが多分一般的で手っ取り早い方法かと思いま</description>
+      </item>
+      
+      <item>
         <title>Spring Boot 2.5.0(Spring Security 5.5.0-M2)でremoteUserの値が変わった</title>
         <link>https://yukihane.github.io/blog/202106/30/spring-boot-remoteuser-is-changed/</link>
         <pubDate>Tue, 29 Jun 2021 20:00:43 +0000</pubDate>
