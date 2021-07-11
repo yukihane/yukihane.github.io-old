@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Fri, 09 Jul 2021 22:54:04 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 10 Jul 2021 23:53:20 +0000</lastBuildDate>
     
         <atom:link href="https://yukihane.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,12 +15,21 @@
     
       
       <item>
+        <title>Spring BootとTypeScriptで開発するためのプロジェクト設定(Gradle) その2</title>
+        <link>https://yukihane.github.io/blog/202107/11/spring-boot-with-babel/</link>
+        <pubDate>Sat, 10 Jul 2021 23:53:20 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/blog/202107/11/spring-boot-with-babel/</guid>
+        <description>はじめに 前回 は ts-loader を用いて TypeScript をビルドしました。 簡潔にセットアップできたのは良いのですが、実際にはPolyfillを行いたいので babel-loader をベースに再構</description>
+      </item>
+      
+      <item>
         <title>Spring BootとTypeScriptで開発するためのプロジェクト設定(Gradle)</title>
         <link>https://yukihane.github.io/blog/202107/10/spring-boot-with-typescript/</link>
         <pubDate>Fri, 09 Jul 2021 22:54:04 +0000</pubDate>
         
         <guid>https://yukihane.github.io/blog/202107/10/spring-boot-with-typescript/</guid>
-        <description>Spring Boot で JavaScript を扱うときは素のJSをhtml(Thymeleafテンプレート)に &amp;lt;script&amp;gt; タグで埋め込む、というのが多分一般的で手っ取り早い方法かと思いま</description>
+        <description>はじめに Spring Boot で JavaScript を扱うときは素のJSをhtml(Thymeleafテンプレート)に &amp;lt;script&amp;gt; タグで埋め込む、というのが多分一般的で手っ取り早い方法か</description>
       </item>
       
       <item>
