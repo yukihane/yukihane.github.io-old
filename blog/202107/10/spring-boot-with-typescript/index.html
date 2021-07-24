@@ -1210,7 +1210,7 @@ if (!doNotTrack) {
   
   <li class="">
     <a href="https://yukihane.github.io/blog/202107/11/spring-boot-with-babel/"
-      class="menu__title ">Spring BootとTypeScriptで開発するためのプロジェクト設定(Gradle) その2</a>
+      class="menu__title ">Spring BootとTypeScriptで開発するためのプロジェクト設定(Gradle) - Polyfillも必要とする場合</a>
   </li>
   
 
@@ -5226,7 +5226,7 @@ yarn webpack init</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p><code>yarn webpack init</code> を実行するとインタラクティブにぷとジェクトが構成されます。
+<p><code>yarn webpack init</code> を実行するとインタラクティブにプロジェクトが構成されます。
 それぞれの質問には次のように返答します:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
@@ -5299,7 +5299,8 @@ yarn webpack init</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p><code>javascript</code> ファイルは <code>src/main/js</code> に、そして出力は <code>build/resources/main/static</code> に出力するよう設定します:</p>
+<p><code>javascript</code> ファイルは <code>src/main/js</code> に、そして出力は <code>build/resources/main/static/static</code> に出力するよう設定します。
+また、 <code>mylib</code> という名前のライブラリとして生成します。</p>
 </div>
 <div class="listingblock">
 <div class="title">webpack.config.js</div>
@@ -5312,9 +5313,14 @@ const path = require(&#34;path&#34;);
 const isProduction = process.env.NODE_ENV == &#34;production&#34;;
 
 const config = {
-  entry: &#34;./src/main/js/index.ts&#34;,
+  // https://webpack.js.org/concepts/output/#multiple-entry-points
+  // https://webpack.js.org/configuration/output/#outputlibrary
+  entry: {
+    mylib: &#34;./src/main/js/index.ts&#34;,
+  },
   output: {
-    path: path.resolve(__dirname, &#34;build/resources/main/static&#34;),
+    library: &#34;[name]&#34;,
+    path: path.resolve(__dirname, &#34;build/resources/main/static/static&#34;),
   },
   plugins: [
     // Add your plugins here
@@ -5363,6 +5369,19 @@ module.exports = () =&gt; {
 <div class="paragraph">
 <p><code>webpack.config.js</code> の設定は、 `ts-loader`のリファレンス中で <a href="https://github.com/TypeStrong/ts-loader#examples">&#34;simplest&#34;</a> と表現されていた <a href="https://github.com/TypeStrong/ts-loader/tree/main/examples/vanilla">こちらのサンプル</a> も参考にしています。</p>
 </div>
+<div class="paragraph">
+<p>また、次の説明も参考にしています:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://webpack.js.org/concepts/output/#multiple-entry-points">Output &gt; Multiple Entry Points | webpack</a></p>
+</li>
+<li>
+<p><a href="https://webpack.js.org/configuration/output/#outputlibrary">Output &gt; output.library | webpack</a></p>
+</li>
+</ul>
+</div>
 </div>
 </div>
 <div class="sect2">
@@ -5393,6 +5412,21 @@ processResources.dependsOn yarn_build</code></pre>
 <p>設定はここまでで完了しました。
 試しにサンプルコードをおいてビルドしてみます。</p>
 </div>
+<div class="paragraph">
+<p>なお、サンプルコードでは  <a href="https://github.com/faisalman/ua-parser-js"><code>UAParser.js</code></a> を利用していますので、事前に</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>yarn add ua-parser-js
+yarn add --dev @types/ua-parser-js</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>を実行しています。</p>
+</div>
+<div class="paragraph">
+<p>以下、サンプルコード:</p>
+</div>
 <div class="listingblock">
 <div class="title">src/main/java/com/github/yukihane/withts/MyController.java</div>
 <div class="content">
@@ -5415,11 +5449,46 @@ public class MyController {
 &lt;html lang=&#34;ja&#34; xmlns:th=&#34;http://www.thymeleaf.org&#34;&gt;
   &lt;head&gt;
     &lt;meta charset=&#34;UTF-8&#34; /&gt;
+    &lt;meta http-equiv=&#34;X-UA-Compatible&#34; content=&#34;IE=edge&#34; /&gt;
+    &lt;meta name=&#34;viewport&#34; content=&#34;width=device-width, initial-scale=1.0&#34; /&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+    &lt;style&gt;
+      table,
+      td,
+      th {
+        border: 1px solid;
+      }
+    &lt;/style&gt;
   &lt;/head&gt;
   &lt;body&gt;
-    &lt;div th:text=&#34;${now}&#34;&gt;&lt;/div&gt;
-    &lt;div id=&#34;client&#34;&gt;&lt;/div&gt;
-    &lt;script src=&#34;main.js&#34;&gt;&lt;/script&gt;
+    &lt;table&gt;
+      &lt;tbody&gt;
+        &lt;tr&gt;
+          &lt;td&gt;サーバ時刻&lt;/td&gt;
+          &lt;td id=&#34;server&#34;&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;ブラウザ&lt;/td&gt;
+          &lt;td id=&#34;client&#34;&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+    &lt;script
+      type=&#34;text/javascript&#34;
+      src=&#34;../../../../build/resources/main/static/static/mylib.js&#34;
+      th:src=&#34;@{/static/mylib.js}&#34;
+    &gt;&lt;/script&gt;
+    &lt;script th:inline=&#34;javascript&#34;&gt;
+      window.addEventListener(&#34;DOMContentLoaded&#34;, (event) =&gt; {
+        const serverTime = /*[[${now}]]*/ &#34;2020-01-01T10:10:10.000+09:00&#34;;
+        const server = document.getElementById(&#34;server&#34;);
+        server.innerText = serverTime;
+
+        const clientTime = mylib.getOS();
+        const client = document.getElementById(&#34;client&#34;);
+        client.innerText = clientTime;
+      });
+    &lt;/script&gt;
   &lt;/body&gt;
 &lt;/html&gt;</code></pre>
 </div>
@@ -5427,21 +5496,11 @@ public class MyController {
 <div class="listingblock">
 <div class="title">src/main/js/index.ts</div>
 <div class="content">
-<pre class="highlight"><code class="language-javascript" data-lang="javascript">import { getDate } from &#34;./date&#34;;
+<pre class="highlight"><code class="language-javascript" data-lang="javascript">import { UAParser } from &#34;ua-parser-js&#34;;
 
-document.addEventListener(&#34;DOMContentLoaded&#34;, (event) =&gt; {
-  const elm = document.getElementById(&#34;client&#34;);
-  if (elm) {
-    elm.innerText = getDate().toString();
-  }
-});</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">src/main/js/date.ts</div>
-<div class="content">
-<pre class="highlight"><code class="language-javascript" data-lang="javascript">export const getDate = () =&gt; {
-  return new Date();
+export const getOS = (userAgent: string) =&gt; {
+  const parser = new UAParser(userAgent);
+  return JSON.stringify(parser.getOS());
 };</code></pre>
 </div>
 </div>
@@ -5455,7 +5514,7 @@ java -jar build/libs/with-ts-0.0.1-SNAPSHOT.jar</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p><a href="http://localhost:8080" class="bare">http://localhost:8080</a> にアクセスすると、サーバ側で取得した時刻がThymeleafによって挿入され、また、ブラウザ側で取得した時刻が JavaScript によって挿入されているのが確認できます。</p>
+<p><a href="http://localhost:8080" class="bare">http://localhost:8080</a> にアクセスすると、サーバ側で取得した時刻がThymeleafによって挿入され、また、ブラウザ側で取得したOS情報が JavaScript によって挿入されているのが確認できます。</p>
 </div>
 </div>
 <div class="sect2">
@@ -5557,6 +5616,20 @@ java -jar build/libs/with-ts-0.0.1-SNAPSHOT.jar</code></pre>
 </div>
 </div>
 </div>
+<div class="sect2">
+<h3 id="_自動テストを実行するjest">自動テストを実行する(Jest)</h3>
+<div class="paragraph">
+<p>説明が前後してしまいますが、次の記事を参照してください。
+次の記事はBabelを組み込む方法ですが、Jestに関しては同じ設定でいけるはずです。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="/blog/202107/11/spring-boot-with-babel/">Spring BootとTypeScriptで開発するためのプロジェクト設定(Gradle) - Polyfillも必要とする場合</a></p>
+</li>
+</ul>
+</div>
+</div>
 </div>
 </div>
 
@@ -5567,11 +5640,11 @@ java -jar build/libs/with-ts-0.0.1-SNAPSHOT.jar</code></pre>
 <nav class="pagination-single">
   
     
-      <a href="https://yukihane.github.io/blog/202107/11/spring-boot-with-babel/" title="Spring BootとTypeScriptで開発するためのプロジェクト設定(Gradle) その2" class="pagination-single__left">
+      <a href="https://yukihane.github.io/blog/202107/11/spring-boot-with-babel/" title="Spring BootとTypeScriptで開発するためのプロジェクト設定(Gradle) - Polyfillも必要とする場合" class="pagination-single__left">
         <div class="pagination-single__icon">
           <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M19 11H7.83l4.88-4.88c.39-.39.39-1.03 0-1.42-.39-.39-1.02-.39-1.41 0l-6.59 6.59c-.39.39-.39 1.02 0 1.41l6.59 6.59c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L7.83 13H19c.55 0 1-.45 1-1s-.45-1-1-1z"/></svg>
         </div>
-        <div class="pagination-single__right-title">Spring BootとTypeScriptで開発するためのプロジェクト設定(Gradle) その2</div>
+        <div class="pagination-single__right-title">Spring BootとTypeScriptで開発するためのプロジェクト設定(Gradle) - Polyfillも必要とする場合</div>
       </a>
     
     <div class="grow"></div>
