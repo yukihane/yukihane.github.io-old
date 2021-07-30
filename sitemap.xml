@@ -4,7 +4,22 @@
   
   <url>
     <loc>https://yukihane.github.io/blog/</loc>
-    <lastmod>2021-07-24T19:53:33+00:00</lastmod>
+    <lastmod>2021-07-30T17:57:08+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yukihane.github.io/tags/jpa/</loc>
+    <lastmod>2021-07-30T17:57:08+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yukihane.github.io/blog/202107/31/dont-use-lombok-with-jpa/</loc>
+    <lastmod>2021-07-30T17:57:08+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yukihane.github.io/tags/lombok/</loc>
+    <lastmod>2021-07-30T17:57:08+00:00</lastmod>
   </url>
   
   <url>
@@ -225,11 +240,6 @@
   <url>
     <loc>https://yukihane.github.io/blog/202101/21/upgrade-to-ubuntu20.04/</loc>
     <lastmod>2021-01-21T14:55:11+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://yukihane.github.io/tags/lombok/</loc>
-    <lastmod>2020-11-14T07:41:01+00:00</lastmod>
   </url>
   
   <url>
