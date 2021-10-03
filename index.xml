@@ -15,6 +15,15 @@
     
       
       <item>
+        <title>Tauri を GUI にして Rust と React に入門する</title>
+        <link>https://yukihane.github.io/blog/202110/03/hello-tauri/</link>
+        <pubDate>Sun, 03 Oct 2021 08:20:21 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/blog/202110/03/hello-tauri/</guid>
+        <description>はじめに Tauri という、 WebView を利用して GUI を実現する Rust 製フレームワークを試してみました。 Rust も React も入門書から陸続きで書き始められるので、余計なことに気を</description>
+      </item>
+      
+      <item>
         <title>JPA Entity には Lombok の @Data(@EqualsAndHashCode) を使用すべきでない</title>
         <link>https://yukihane.github.io/blog/202107/31/dont-use-lombok-with-jpa/</link>
         <pubDate>Fri, 30 Jul 2021 17:57:08 +0000</pubDate>

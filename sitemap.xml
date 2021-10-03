@@ -4,7 +4,22 @@
   
   <url>
     <loc>https://yukihane.github.io/blog/</loc>
-    <lastmod>2021-07-30T17:57:08+00:00</lastmod>
+    <lastmod>2021-10-03T08:20:21+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yukihane.github.io/tags/react/</loc>
+    <lastmod>2021-10-03T08:20:21+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yukihane.github.io/tags/rust/</loc>
+    <lastmod>2021-10-03T08:20:21+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yukihane.github.io/blog/202110/03/hello-tauri/</loc>
+    <lastmod>2021-10-03T08:20:21+00:00</lastmod>
   </url>
   
   <url>
@@ -978,11 +993,6 @@
   </url>
   
   <url>
-    <loc>https://yukihane.github.io/tags/react/</loc>
-    <lastmod>2020-04-24T21:00:56+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://yukihane.github.io/tags/redux/</loc>
     <lastmod>2020-04-24T21:00:56+00:00</lastmod>
   </url>
@@ -1010,11 +1020,6 @@
   <url>
     <loc>https://yukihane.github.io/blog/202004/13/react-router/</loc>
     <lastmod>2020-04-13T20:54:12+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://yukihane.github.io/tags/rust/</loc>
-    <lastmod>2020-04-09T20:52:10+00:00</lastmod>
   </url>
   
   <url>
