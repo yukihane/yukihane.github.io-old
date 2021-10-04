@@ -5458,7 +5458,7 @@ fn main() {
 </div>
 </li>
 <li>
-<p>解説やサンプルが少ないです。公式/非公式ドキュメントも少なく、サンプルコードも動かなくなっているものが多いです。</p>
+<p>解説やサンプルが少ないです。公式/非公式ドキュメントも少なく、 <a href="https://tauri.studio/en/showcase">showcase</a> からリンクされているコードを理解しようにも、まず動かすまでにも至れなかったりしました。</p>
 <div class="ulist">
 <ul>
 <li>
@@ -5466,6 +5466,16 @@ fn main() {
 </li>
 <li>
 <p>examples 以下のコードを実行するには、リポジトリをチェックアウトして <code>cargo run --example commands</code> (など)。</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>現状、 JS - Rust 間のやりとりは JSON のみなので、例えばバイナリを高頻度で送受信する必要があるようなアプリケーションではパフォーマンス問題が表出しそうにも思われます。</p>
+<div class="ulist">
+<ul>
+<li>
+<p>refs: <a href="https://github.com/tauri-apps/tauri/issues/1271">Pass messages between Rust frontend and backend without JSON serialization #1271</a></p>
 </li>
 </ul>
 </div>
