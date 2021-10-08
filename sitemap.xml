@@ -4,16 +4,26 @@
   
   <url>
     <loc>https://yukihane.github.io/blog/</loc>
-    <lastmod>2021-10-03T08:20:21+00:00</lastmod>
+    <lastmod>2021-10-08T04:49:30+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://yukihane.github.io/tags/react/</loc>
-    <lastmod>2021-10-03T08:20:21+00:00</lastmod>
+    <loc>https://yukihane.github.io/blog/202110/08/hello-project-panama-on-java17/</loc>
+    <lastmod>2021-10-08T04:49:30+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yukihane.github.io/tags/java/</loc>
+    <lastmod>2021-10-08T04:49:30+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://yukihane.github.io/tags/rust/</loc>
+    <lastmod>2021-10-08T04:49:30+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yukihane.github.io/tags/react/</loc>
     <lastmod>2021-10-03T08:20:21+00:00</lastmod>
   </url>
   
@@ -210,11 +220,6 @@
   <url>
     <loc>https://yukihane.github.io/blog/202103/06/kindle-menu-tofu/</loc>
     <lastmod>2021-03-06T05:21:25+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://yukihane.github.io/tags/java/</loc>
-    <lastmod>2021-02-01T16:38:42+00:00</lastmod>
   </url>
   
   <url>

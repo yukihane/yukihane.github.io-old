@@ -7,12 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Sun, 03 Oct 2021 08:20:21 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 08 Oct 2021 04:49:30 +0000</lastBuildDate>
     
         <atom:link href="https://yukihane.github.io/tags/rust/index.xml" rel="self" type="application/rss+xml" />
     
     
     
+      
+      <item>
+        <title>Hello Project Panama, on Java17</title>
+        <link>https://yukihane.github.io/blog/202110/08/hello-project-panama-on-java17/</link>
+        <pubDate>Fri, 08 Oct 2021 04:49:30 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/blog/202110/08/hello-project-panama-on-java17/</guid>
+        <description>はじめに Hello Project Panama – 発火後忘失 で、 Project Panama (リンク1, リンク2) の機能を利用して、 Java から Rust を呼び出してみました。 当時(Java14)は Project Panama 用にビルド</description>
+      </item>
       
       <item>
         <title>Tauri を GUI にして Rust と React に入門する</title>
@@ -39,6 +48,15 @@
         
         <guid>https://yukihane.github.io/blog/202004/08/hello-wasm-with-rust/</guid>
         <description>はじめに wasmに挑戦してみようとHello, worldをやってみようとしました。 公式っぽいドキュメントとしてはググると次のものが見つかりま</description>
+      </item>
+      
+      <item>
+        <title>Hello Project Panama</title>
+        <link>https://yukihane.github.io/blog/202002/11/hello-project-panama/</link>
+        <pubDate>Tue, 11 Feb 2020 20:43:43 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/blog/202002/11/hello-project-panama/</guid>
+        <description>はじめに 今個人的にすごく知りたいのはこちらです。ご回答よろしくお願いします！！！！ 動的確保したメモリー領域の解放戦略 - スタック・オーバーフロ</description>
       </item>
       
       <item>
