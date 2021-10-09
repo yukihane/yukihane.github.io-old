@@ -7,12 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Fri, 08 Oct 2021 18:50:43 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 09 Oct 2021 02:14:55 +0000</lastBuildDate>
     
         <atom:link href="https://yukihane.github.io/tags/rust/index.xml" rel="self" type="application/rss+xml" />
     
     
     
+      
+      <item>
+        <title>Rust に reduce は、あります</title>
+        <link>https://yukihane.github.io/blog/202110/09/rust-reduce/</link>
+        <pubDate>Sat, 09 Oct 2021 02:14:55 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/blog/202110/09/rust-reduce/</guid>
+        <description>ググっていると、ちょくちょく 「Rust に reduce は無い、代わりに fold を使え」という話が出てくるのが疑問だったのですが、 reduce が導入されたのって 1.51.</description>
+      </item>
       
       <item>
         <title>Rust の Result を良い感じにまとめるには</title>

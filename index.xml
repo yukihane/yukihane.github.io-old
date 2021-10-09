@@ -15,6 +15,15 @@
     
       
       <item>
+        <title>Rust に reduce は、あります</title>
+        <link>https://yukihane.github.io/blog/202110/09/rust-reduce/</link>
+        <pubDate>Sat, 09 Oct 2021 02:14:55 +0000</pubDate>
+        
+        <guid>https://yukihane.github.io/blog/202110/09/rust-reduce/</guid>
+        <description>ググっていると、ちょくちょく 「Rust に reduce は無い、代わりに fold を使え」という話が出てくるのが疑問だったのですが、 reduce が導入されたのって 1.51.</description>
+      </item>
+      
+      <item>
         <title>Rust の Result を良い感じにまとめるには</title>
         <link>https://yukihane.github.io/blog/202110/09/rust-result/</link>
         <pubDate>Fri, 08 Oct 2021 18:50:43 +0000</pubDate>
